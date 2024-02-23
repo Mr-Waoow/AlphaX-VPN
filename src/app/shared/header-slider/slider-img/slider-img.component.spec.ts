@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeaderSiderComponent } from './header-sider.component';
+import { SliderImgComponent } from './slider-img.component';
 
-describe('HeaderSiderComponent', () => {
-  let component: HeaderSiderComponent;
-  let fixture: ComponentFixture<HeaderSiderComponent>;
+describe('SliderImgComponent', () => {
+  let component: SliderImgComponent;
+  let fixture: ComponentFixture<SliderImgComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [HeaderSiderComponent]
+      declarations: [SliderImgComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(HeaderSiderComponent);
+    fixture = TestBed.createComponent(SliderImgComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

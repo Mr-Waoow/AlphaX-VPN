@@ -1,1 +1,18 @@
-<p>proxy-services works!</p>
+<section class="proxy-service">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="line-after">
+          <span>proxy services for professionals</span>
+        </h4>
+        <div class="row py-2">
+          <div class="col-lg-6 my-3" *ngFor="let list of proxyLists">
+            <!-- Start Pricing Card -->
+            <xvpn-pricing-card [proxyList]="list"></xvpn-pricing-card>
+            <!-- END Pricing Card -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

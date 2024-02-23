@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { NavComponent } from './nav.component';
+import { HeaderSliderComponent } from './header-slider.component';
 
-describe('NavComponent', () => {
-  let component: NavComponent;
-  let fixture: ComponentFixture<NavComponent>;
+describe('HeaderSliderComponent', () => {
+  let component: HeaderSliderComponent;
+  let fixture: ComponentFixture<HeaderSliderComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [NavComponent]
+      declarations: [HeaderSliderComponent]
     })
     .compileComponents();
     
-    fixture = TestBed.createComponent(NavComponent);
+    fixture = TestBed.createComponent(HeaderSliderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

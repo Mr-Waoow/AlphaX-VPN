@@ -1,1 +1,17 @@
-<p>offered-services works!</p>
+<section class="offered-services">
+  <div class="container">
+    <div class="d-lg-flex justify-content-between">
+      <div *ngFor="let offeredService of offeredServices">
+        <a class="d-flex align-items-center" [href]="offeredService.offerdServiceLink">
+          <div class="icon">
+            <img [title]="offeredService.offerdServiceName" alt="{{offeredService.offerdServiceName}}" [src]="offeredService.offerdServiceImgUrl" />
+          </div>
+          <div>
+            <span>{{offeredService.offerdServiceName}}</span>
+            <span class="new" *ngIf="offeredService.offerdServiceIsNew">New</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

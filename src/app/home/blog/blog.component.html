@@ -1,1 +1,36 @@
-<p>blog works!</p>
+<section class="Blog pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="line-after"><span>blog</span></h4>
+      </div>
+      <div class="col-md-4 mt-4" *ngFor="let blog of blogs">
+        <div class="d-flex gap-2 justify-content-left align-items-center">
+          <div class="d-flex gap fw-bold text-center justify-content-between align-items-center">
+            <h3>{{blog.blogDateDay}}</h3>
+            <div class="d-flex flex-column align-items-start">
+              <span>{{blog.blogDateMonth}}</span>
+              <span>{{blog.blogDateYear}}</span>
+            </div>
+          </div>
+          <h6 class="d-inline-block">{{blog.blogName}}</h6>
+        </div>
+        <p class="my-3">{{blog.blogDescription}}</p>
+        <div class="d-flex gap-10 align-items-center justify-content-left fs-12">
+          <div class="d-flex gap-1">
+            <fa-icon class="transition-4 cursor-pointer hov-text-light" [icon]="faShare"></fa-icon><span
+              class="transition-4 cursor-pointer hov-text-light">{{blog.blogShares}}</span>
+          </div>
+          <div class="d-flex gap-1">
+            <fa-icon class="transition-4 cursor-pointer hov-text-light" [icon]="faEye"></fa-icon><span
+              class="transition-4 cursor-pointer hov-text-light">{{blog.blogViwers}}</span>
+          </div>
+          <div class="d-flex gap-1">
+            <fa-icon class="transition-4 cursor-pointer hov-text-light" [icon]="faComment"></fa-icon><span
+              class="transition-4 cursor-pointer hov-text-light">{{blog.blogCommentNumber}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,1 +1,54 @@
-<p>statistics works!</p>
+<section class="statistics">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="popular-rates">
+          <h4 class="line-after"><span>popular rates</span></h4>
+          <div class="d-flex align-items-center mt-4">
+            <div class="content-box" *ngFor="let rate of popularRates">
+              <div class="icon">
+                <img alt="{{rate.popularRateName}}" [src]="rate.popularRateImgUrl" />
+              </div>
+              <h5>{{rate.popularRateName}}</h5>
+              <span class="text-primary text-uppercase fw-bold">{{rate.popularRateIp}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-statistics">
+          <h4 class="line-after">general service statistics</h4>
+          <div class="d-flex align-items-center mt-4">
+            <div class="content-box" *ngFor="let statistic of generalStatistics">
+              <h1 class="icon fs-35 fs-sm-42">{{statistic.generalStatisticNumber}}<sub
+                  *ngIf="statistic.generalStatisticIsK">k</sub></h1>
+              <span class="stat-desc fs-12 fs-sm-18">{{statistic.generalStatisticName}}</span>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <div class="news">
+          <h4 class="line-after"><span>news</span></h4>
+          <div class="d-flex flex-column mt-4 pb-4" *ngFor="let news of blogs">
+            <div class="d-flex gap-1 mb-3">
+              <div class="flex-basis-30">
+                <div class="content-news gap fw-bold">
+                  <h2>{{news.blogDateDay}}</h2>
+                  <div class="d-flex flex-column align-items-start">
+                    <span>{{news.blogDateMonth}}</span>
+                    <span>{{news.blogDateYear}}</span>
+                  </div>
+                </div>
+              </div>
+              <div class="flex-basis-70">
+                <p class="par">{{news.blogName}}</p>
+              </div>
+            </div>
+            <hr class="mt-4 mb-4" />
+            <p>{{news.blogDescription}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

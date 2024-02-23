@@ -1,1 +1,33 @@
-<p>testimonials works!</p>
+<section id="testimonials" class="testimonials">
+  <div class="container">
+    <div class="row text-center text-white">
+      <h4 class="line-before line-after"><span>the feedback from our clients about our proxies</span></h4>
+    </div>
+    <!-- START THE CAROUSEL CONTENT  -->
+    <div class="row align-items-center">
+      <div class="reviews">
+        <owl-carousel-o [options]="customOptions">
+          <ng-container *ngFor="let client of clientsData">
+            <ng-template class="review" carouselSlide [id]="client.clientId.toString()">
+              <!-- client name & client picture  -->
+              <div class="testimonials-picture">
+                <span class="client-name fw-bold">{{client.clientFirstName + ' ' + client.clientLastName}}</span>
+                <span class="client-img">
+                  <img [src]="client.clientImg" [title]="client.clientFirstName + ' ' + client.clientLastName"
+                    alt="client-{{client.clientId}} picture" class="rounded-circle img-fluid"></span>
+                <span class="client-date">{{client.clientCommentDate}}</span>
+              </div>
+              <!-- testimonials card  -->
+              <div class="testimonials-card">
+                <p class="lh-lg">{{client.clientCommentOpinion}}</p>
+              </div>
+              <div class="icon-container">
+                <fa-icon class="font-icon" [icon]="faLink"></fa-icon>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</section>

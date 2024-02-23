@@ -1,1 +1,70 @@
-<p>pricing-card works!</p>
+<div class="pricing-Card box">
+  <table class="table table-borderless">
+    <thead>
+      <tr>
+        <th>
+          <span class="icon-md">
+            <img alt="{{proxyList?.proxyServiceName}}" [src]="proxyList?.proxyServiceImgUrl" />
+          </span>
+        </th>
+        <th>
+          <h5>{{ proxyList?.proxyServiceName }}</h5>
+          <p>{{ proxyList?.proxyServiceDesc }}</p>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="pt-4">
+          <fa-icon [icon]="faCheck"></fa-icon>
+        </td>
+        <td class="pt-4">
+          <span>{{ proxyList?.proxyServiceOffers1 }}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <fa-icon [icon]="faCheck"></fa-icon>
+        </td>
+        <td>
+          <span>{{ proxyList?.proxyServiceOffers2 }}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <fa-icon [icon]="faCheck"></fa-icon>
+        </td>
+        <td>
+          <span style="color: #0a58ca">{{
+            proxyList?.proxyServiceOffers3
+            }}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <fa-icon [icon]="faCheck"></fa-icon>
+        </td>
+        <td>
+          <span style="color: #0a58ca">{{
+            proxyList?.proxyServiceOffers4
+            }}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <fa-icon [icon]="faCheck"></fa-icon>
+        </td>
+        <td>
+          <span>{{ proxyList?.proxyServiceOffers5 }}</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="pb-4"></td>
+        <td class="pb-4">
+          <a href="#" class="btn btn-primary me-2 text-dark text-capitalize fw-bold">Choose your pack</a>
+          or <a href="#">Try it for free</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

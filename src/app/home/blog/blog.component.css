@@ -1,0 +1,36 @@
+.Blog {
+  background-color: var(--secondary);
+}
+
+.Blog * {
+  color: var(--hard-light);
+}
+
+.Blog .container {
+  position: relative;
+}
+
+.Blog h4 {
+  color: var(--hard-light) !important;
+  margin: 2rem 0rem;
+}
+
+
+.Blog h3 {
+  font-size: 2.2rem;
+  font-weight: 300;
+}
+
+.Blog h3+span {
+  text-align: start;
+  color: var(--light) !important;
+}
+
+.Blog h6 {
+  color: var(--hov-primary) !important;
+}
+
+.Blog span.icon-sm,
+.Blog span.icon-sm+span {
+  font-size: 0.75rem;
+}
