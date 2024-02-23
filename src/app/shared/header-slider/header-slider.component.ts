@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
-import { NgwWowService } from 'ngx-wow';
+import { Component } from '@angular/core';
+import { fadeInDown } from 'ng-animate';
+import { TextAnimation } from 'ngx-teximate';
 
 @Component({
   selector: 'xvpn-header-slider',
   templateUrl: './header-slider.component.html',
   styleUrl: './header-slider.component.css',
 })
-export class HeaderSliderComponent implements OnInit {
-  constructor(private wowService: NgwWowService) {}
+export class HeaderSliderComponent {
+  text = 'Lorem ipsum dolor sit amet.';
 
-  ngOnInit() {
-    this.wowService.init();
-  }
+  enterAnimation: TextAnimation = {
+    animation: fadeInDown,
+    delay: 50,
+    type: 'letter',
+  };
 }

@@ -18,12 +18,15 @@ export class TestimonialsComponent implements OnInit {
     this.clientsData = this.clientService.getClientData();
   }
   customOptions: OwlOptions = {
-    loop: true,
     mouseDrag: false,
     touchDrag: false,
     pullDrag: false,
+    nav: false,
+    loop: true,
+    autoplay: true,
     dots: true,
-    navSpeed: 700,
+    navSpeed: 900,
+    autoplayTimeout: 4000,
     navText: ['', ''],
     responsive: {
       0: {
@@ -39,6 +42,5 @@ export class TestimonialsComponent implements OnInit {
         items: 1,
       },
     },
-    nav: false,
   };
 }

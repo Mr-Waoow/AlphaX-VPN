@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgwWowService } from 'ngx-wow';
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -19,7 +18,10 @@ import { HeaderSliderComponent } from './shared/header-slider/header-slider.comp
 import { PricingCardComponent } from './home/proxy-services/pricing-card/pricing-card.component';
 import { StatisticsComponent } from './home/statistics/statistics.component';
 import { TestimonialsComponent } from './home/testimonials/testimonials.component';
-import { SliderImgComponent } from './shared/header-slider/slider-img/slider-img.component';;
+import { SliderImgComponent } from './shared/header-slider/slider-img/slider-img.component';
+import { ScrollTopComponent } from './shared/scroll-top/scroll-top.component';
+import { CompaniesComponent } from './home/companies/companies.component';import { TeximateModule } from 'ngx-teximate';
+;
 
 @NgModule({
   declarations: [
@@ -36,6 +38,8 @@ import { SliderImgComponent } from './shared/header-slider/slider-img/slider-img
     StatisticsComponent,
     TestimonialsComponent,
     SliderImgComponent,
+    ScrollTopComponent,
+    CompaniesComponent,
   ],
   imports: [
     BrowserModule,
@@ -46,7 +50,7 @@ import { SliderImgComponent } from './shared/header-slider/slider-img/slider-img
     NoopAnimationsModule,
     CarouselModule,
   ],
-  providers: [NgwWowService],
+  providers: [],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

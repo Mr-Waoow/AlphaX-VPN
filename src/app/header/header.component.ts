@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, HostListener, ViewChild } from '@angular/core';
 import { faFacebook, faLinkedinIn, faTelegram, faTiktok, faXTwitter, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faCaretDown, faMailBulk, faPhone } from '@fortawesome/free-solid-svg-icons';
 
@@ -17,25 +17,38 @@ export class HeaderComponent {
   faTiktok = faTiktok;
   faTelegram = faTelegram;
   faCaretDown = faCaretDown;
-  //Navbar menu
-  sticky: boolean = false;
-  displayScrollTop: boolean = false;
+  @ViewChild('headerNavbar') headerNavbar: ElementRef | undefined;
 
-  // @HostListener('window:scroll', [])
-  // onWindowScroll() {
-  //   const headerNavbar = document.querySelector('.navbar-area') as HTMLElement;
-  //   const backToTop = document.querySelector('.scroll-top') as HTMLElement;
+  isSticky = false;
+  stickyPosition = 0; // Stores the sticky position
 
-  //   const sticky = headerNavbar.offsetTop;
+  ngAfterViewInit() {
+    if (this.headerNavbar) {
+      this.stickyPosition = this.headerNavbar.nativeElement.offsetTop;
+      // You can also call your onWindowScroll function here if necessary
+    } else {
+      console.warn('headerNavbar element not found.');
+    }
+  }
 
-  //   this.sticky = window.pageYOffset > sticky;
-  //   this.displayScrollTop =
-  //     document.body.scrollTop > 50 || document.documentElement.scrollTop > 50;
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    if (this.headerNavbar) {
+      const scrollY = window.pageYOffset;
 
-  //   if (this.displayScrollTop) {
-  //     backToTop.style.display = 'flex';
-  //   } else {
-  //     backToTop.style.display = 'none';
-  //   }
-  // }
+      // Calculate and store sticky position once for efficiency
+      if (!this.stickyPosition) {
+        this.stickyPosition = this.headerNavbar.nativeElement.offsetTop;
+      }
+
+      this.isSticky = scrollY > this.stickyPosition;
+
+      if (this.headerNavbar.nativeElement) {
+        this.headerNavbar.nativeElement.classList.toggle(
+          'sticky',
+          this.isSticky
+        );
+      }
+    }
+  }
 }
