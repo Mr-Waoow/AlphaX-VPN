@@ -20,8 +20,7 @@ import { StatisticsComponent } from './home/statistics/statistics.component';
 import { TestimonialsComponent } from './home/testimonials/testimonials.component';
 import { SliderImgComponent } from './shared/header-slider/slider-img/slider-img.component';
 import { ScrollTopComponent } from './shared/scroll-top/scroll-top.component';
-import { CompaniesComponent } from './home/companies/companies.component';import { TeximateModule } from 'ngx-teximate';
-;
+import { CompaniesComponent } from './home/companies/companies.component';
 
 @NgModule({
   declarations: [

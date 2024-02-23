@@ -6,6 +6,7 @@
   justify-content: center;
   text-align: center;
   cursor: pointer;
+  gap: 1rem;
 }
 
 p {

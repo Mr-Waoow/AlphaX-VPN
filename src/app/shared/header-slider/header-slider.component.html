@@ -1,22 +1,22 @@
-<section class="hero-area">
+<section class="header-slider">
   <div class="container">
     <div class="row mt-4 mb-5">
       <div class="col-lg-5">
         <div class="hero-content">
           <h5>
-            <span class="text-primary wow slideInLeft" data-wow-delay="0.4s">RSocks Project</span>
+            <span *ngIf="showText" class="text-primary slideInLeft fade-in">RSocks Project</span>
           </h5>
           <h3>
-            <span>Professional Solutions</span>
-            <span>for providing</span>
-            <span>&nbsp;a personal</span>
-            <span>&nbsp;Privacy</span>
+            <span *ngIf="showText1" class="fade-in">Professional Solutions</span>
+            <span *ngIf="showText2" class="fade-in">for providing</span>
+            <span *ngIf="showText3" class="fade-in">&nbsp;a personal</span>
+            <span *ngIf="showText4" class="fade-in">&nbsp;Privacy</span>
           </h3>
-          <div class="mt-5 button d-flex flex-sm-row flex-column gap-3 align-items-center">
-            <a href="#"
-              class="btn btn-primary fs-16 fw-500 border bg-transparent hov-bg-primary hov-text-dark rounded-0 text-capitalize">Register
+          <div *ngIf="showText5" class="fade-in mt-5 button d-flex flex-sm-row flex-column gap-3 align-items-center">
+            <a *ngIf="showText5"  href="#"
+              class="fade-in btn btn-primary fs-16 fw-500 border bg-transparent hov-bg-primary hov-text-dark rounded-0 text-capitalize">Register
               now</a>
-            <span> and try for free</span>
+            <span *ngIf="showText6" class="fade-in"> and try for free</span>
           </div>
         </div>
       </div>
