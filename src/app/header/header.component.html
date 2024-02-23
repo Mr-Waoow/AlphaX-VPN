@@ -1,1 +1,52 @@
-<p>header works!</p>
+<header class="header d-flex flex-column">
+  <div class="header-bar">
+    <div class="container">
+      <div class="row align-items-center fs-sm-15 fs-14">
+        <div class="col-md-8 col-8">
+          <ul class="d-flex gap-md-5 gap-0 flex-md-row flex-column">
+            <li>
+              <a class="d-flex gap-1 text-dark opacity-70 hov-opacity-100" href="#">
+                <fa-icon [icon]="faPhone"></fa-icon><span>+9966 56 567 69 07</span>
+              </a>
+            </li>
+            <li>
+              <a class="d-flex gap-1 text-dark opacity-70 hov-opacity-100" href="#">
+                <fa-icon [icon]="faMailBulk"></fa-icon><span>marketing&#64;d-touches.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-4">
+          <ul class="d-flex gap-sm-3 gap-1 justify-content-end">
+            <li>
+              <a href="#">
+                <fa-icon class="text-blue opacity-70 hov-opacity-100" [icon]="faFacebook"></fa-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <fa-icon class="text-dark opacity-70 hov-opacity-100" [icon]="faXTwitter"></fa-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <fa-icon class="text-red opacity-70 hov-opacity-100" [icon]="faYoutube"></fa-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <fa-icon class="text-dark-blue opacity-70 hov-opacity-100" [icon]="faLinkedinIn"></fa-icon>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <fa-icon class="text-light-blue opacity-70 hov-opacity-100" [icon]="faTelegram"></fa-icon>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <xvpn-nav></xvpn-nav>
+</header>

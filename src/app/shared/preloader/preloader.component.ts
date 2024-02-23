@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, OnInit } from '@angular/core';
 
 @Component({
   selector: 'xvpn-preloader',
   templateUrl: './preloader.component.html',
-  styleUrl: './preloader.component.css'
+  styleUrl: './preloader.component.css',
 })
-export class PreloaderComponent {
+export class PreloaderComponent implements OnInit {
+  constructor(private el: ElementRef) {}
 
+  ngOnInit() {
+    window.setTimeout(() => this.fadeout(), 500);
+  }
+
+  fadeout() {
+    const preloader = this.el.nativeElement.querySelector('.preloader');
+    preloader.style.opacity = '0';
+    preloader.style.display = 'none';
+  }
 }

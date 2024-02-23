@@ -10,7 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { PreloaderComponent } from './shared/preloader/preloader.component';
 import { NavComponent } from './header/nav/nav.component';
 import { BlogComponent } from './home/blog/blog.component';
-import { OfferdServicesComponent } from './home/offerd-services/offerd-services.component';
+import { OfferedServicesComponent } from './home/offered-services/offered-services.component';
 import { ProxyServicesComponent } from './home/proxy-services/proxy-services.component';
 import { HeaderSiderComponent } from './shared/header-sider/header-sider.component';
 import { PricingCardComponent } from './home/proxy-services/pricing-card/pricing-card.component';
@@ -27,7 +27,7 @@ import { SiderImgComponent } from './shared/header-sider/sider-img/sider-img.com
     PreloaderComponent,
     NavComponent,
     BlogComponent,
-    OfferdServicesComponent,
+    OfferedServicesComponent,
     ProxyServicesComponent,
     HeaderSiderComponent,
     PricingCardComponent,
