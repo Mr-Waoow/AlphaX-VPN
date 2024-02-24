@@ -57,7 +57,7 @@
           <div class="nav-inner">
             <!-- Start Navbar -->
             <nav class="navbar navbar-expand-lg position-relative">
-              <a class="navbar-brand" href="index.html">
+              <a class="navbar-brand" href="" [routerLink]="['/home']" routerLinkActive="router-link-active" >
                 <img src="../../assets/images/logo/logo.png" alt="Logo">
               </a>
               <button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse"
@@ -70,7 +70,7 @@
               <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
                 <ul id="lang" class="navbar-nav me-auto">
                   <li class="nav-item">
-                    <a class="dd-menu collapsed" href="index.html" data-bs-toggle="collapse"
+                    <a class="dd-menu collapsed" href=""  data-bs-toggle="collapse"
                       data-bs-target="#submenu-1-1" aria-controls="navbarSupportedContent" aria-expanded="false"
                       aria-label="Toggle navigation"><span class="icon-img">
                         <img alt="Language" src="../../assets/images/navbar/usa.png" /></span><span
@@ -84,7 +84,10 @@
                 </ul>
                 <ul id="nav" class="navbar-nav ms-auto">
                   <li class="nav-item">
-                    <a class="dd-menu collapsed" href="index.html" data-bs-toggle="collapse"
+                  <a href="" [routerLink]="['/home']" routerLinkActive="router-link-active"  aria-label="Toggle navigation">Home</a>
+                </li>
+                  <li class="nav-item">
+                    <a class="dd-menu collapsed" href="" data-bs-toggle="collapse"
                       data-bs-target="#submenu-1-2" aria-controls="navbarSupportedContent" aria-expanded="false"
                       aria-label="Toggle navigation">Services<span class="font-icon lf">
                         <fa-icon class="ms-1" [icon]="faCaretDown"></fa-icon></span></a>
@@ -101,9 +104,12 @@
                     </ul>
                   </li>
                   <li class="nav-item">
-                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"
-                      data-bs-target="#submenu-1-3" aria-controls="navbarSupportedContent" aria-expanded="false"
-                      aria-label="Toggle navigation">Apps<span class="font-icon lf">
+                    <a [routerLink]="['/FAQ']" routerLinkActive="router-link-active"  aria-label="Toggle navigation" style="text-transform: uppercase">FAQ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse" data-bs-target="#submenu-1-3"
+                      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">News<span
+                        class="font-icon lf">
                         <fa-icon class="ms-1" [icon]="faCaretDown"></fa-icon>
                       </span></a>
                     <ul class="sub-menu collapse" id="submenu-1-3">
@@ -111,12 +117,6 @@
                       <li class="nav-item"><a href="#"></a></li>
                       <li class="nav-item"><a href="#"></a></li>
                     </ul>
-                  </li>
-                  <li class="nav-item">
-                    <a href="faq.html" aria-label="Toggle navigation" style="text-transform: uppercase">FAQ</a>
-                  </li>
-                  <li class="nav-item">
-                    <a href="#" aria-label="Toggle navigation">News</a>
                   </li>
                   <li class="nav-item">
                     <a class="dd-menu collapsed" href="javascript:void(0)" data-bs-toggle="collapse"

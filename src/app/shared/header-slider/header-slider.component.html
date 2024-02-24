@@ -1,8 +1,8 @@
 <section class="header-slider">
   <div class="container">
-    <div class="row mt-4 mb-5">
+    <div *ngIf="routerLinkActive === 'home'" class="row mt-4 mb-5">
       <div class="col-lg-5">
-        <div class="hero-content">
+        <div class="slider-content">
           <h5>
             <span *ngIf="showText" class="text-primary slideInLeft fade-in">RSocks Project</span>
           </h5>
@@ -12,16 +12,28 @@
             <span *ngIf="showText3" class="fade-in">&nbsp;a personal</span>
             <span *ngIf="showText4" class="fade-in">&nbsp;Privacy</span>
           </h3>
-          <div *ngIf="showText5" class="fade-in mt-5 button d-flex flex-sm-row flex-column gap-3 align-items-center">
-            <a *ngIf="showText5"  href="#"
+          <div class="fade-in button d-flex flex-sm-row flex-column gap-3 align-items-center">
+            <a href="#"
               class="fade-in btn btn-primary fs-16 fw-500 border bg-transparent hov-bg-primary hov-text-dark rounded-0 text-capitalize">Register
               now</a>
-            <span *ngIf="showText6" class="fade-in"> and try for free</span>
+            <span> and try for free</span>
           </div>
         </div>
       </div>
       <div class="col-lg-7 d-sm-block d-none">
         <xvpn-slider-img></xvpn-slider-img>
+      </div>
+    </div>
+    <div *ngIf="routerLinkActive === 'FAQ'" class="row pt-5">
+      <div class="col-lg-12">
+        <div class="slider-content text-center h-140px">
+          <h1>
+            <span *ngIf="showText1" class="fade-in">FAQ</span>
+          </h1>
+          <p  *ngIf="showText3" class="fade-in">
+            For your convenience we’ve collected here answers to the most popular questions from our customers.
+          </p>
+        </div>
       </div>
     </div>
   </div>

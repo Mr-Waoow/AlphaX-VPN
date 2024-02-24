@@ -8,14 +8,21 @@ import { faArrowUp } from '@fortawesome/free-solid-svg-icons';
 })
 export class ScrollTopComponent {
   faArrowUp = faArrowUp;
-  @ViewChild('backToTop') backToTop: ElementRef | undefined;
+  @ViewChild('backToTop')
+  backToTop!: ElementRef;
 
   @HostListener('window:scroll', ['$event'])
   onWindowScroll() {
     if (this.backToTop) {
       const scrollY = window.pageYOffset;
+
+      // Show or hide the button based on scroll position (optional)
       this.backToTop.nativeElement.style.display =
         scrollY > 50 ? 'flex' : 'none';
     }
+  }
+
+  scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }

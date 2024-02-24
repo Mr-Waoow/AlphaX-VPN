@@ -7,20 +7,19 @@
   top: 0;
 }
 
-.header-bar{
+.header-bar {
   z-index: 1;
-	padding-top: 5px;
+  padding-top: 5px;
   padding-bottom: 5px;
-	background-color: var(--light);
-  font-family: 'Poppins', sans-serif;
-
+  background-color: var(--light);
+  font-family: "Poppins", sans-serif;
 }
-.header-bar ul li a{
-  -o-transition:all 0.4s ease;
+.header-bar ul li a {
+  -o-transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
-	-ms-transition:all 0.4s ease;
-	transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 /*======================================
@@ -28,7 +27,8 @@
 ========================================*/
 
 .nav-title {
-  background: url(../../assets/images/white_label/header/maps_beta2.svg) 100% 50% no-repeat;
+  background: url(../../../assets/images/white_label/header/maps_beta2.svg) 100%
+    50% no-repeat;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -49,7 +49,7 @@
     top: 61px !important;
     left: 0;
     width: 100%;
-    background-color: #1F2B3Af5;
+    background-color: #1f2b3af5;
     z-index: 9;
     -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
@@ -110,7 +110,7 @@
     top: 60px !important;
     left: 0;
     width: 100%;
-    background-color: #1F2B3Af5;
+    background-color: #1f2b3af5;
     z-index: 9;
     -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
@@ -200,17 +200,18 @@
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   padding: 0;
+  background-color: var(--secondary);
 }
 
 .navbar-area.sticky {
   position: fixed;
   z-index: 101;
-  -webkit-box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
-  box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
+  -webkit-box-shadow: 0px 20px 50px 0px #0000000d;
+  box-shadow: 0px 20px 50px 0px #0000000d;
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   padding: 0px 0;
-  background-color: #1F2B3A;
+  background-color: var(--secondary);
 }
 
 .navbar {
@@ -297,31 +298,39 @@
 
 .navbar-nav .nav-item a:hover,
 .navbar-nav .nav-item a:focus-visible,
-.navbar-nav .nav-item a:focus{
+.navbar-nav .nav-item a:focus {
   color: var(--primary) !important;
 }
-
+.navbar-nav .nav-item a fa-icon {
+  -o-transition: all 0.4s ease !important;
+  -webkit-transition: all 0.4s ease !important;
+  -moz-transition: all 0.4s ease !important;
+  -ms-transition: all 0.4s ease !important;
+  transition: all 0.4s ease !important;
+}
+.navbar-nav .nav-item a:hover fa-icon,
+.navbar-nav .nav-item a:focus-visible fa-icon,
+.navbar-nav .nav-item a:focus fa-icon {
+  transform: rotate(180deg);
+}
 
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
-
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
-
+  (max-width: 767px) {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
-
+  (max-width: 767px) {
 }
 
-.navbar-nav .nav-item:hover>.sub-menu {
+.navbar-nav .nav-item:hover > .sub-menu {
   opacity: 1;
   visibility: visible;
 }
 
-.navbar-nav .nav-item:hover>.sub-menu .sub-menu {
+.navbar-nav .nav-item:hover > .sub-menu .sub-menu {
   left: 100%;
   top: 0;
 }
@@ -373,7 +382,7 @@
 
 .navbar-nav .nav-item .sub-menu .nav-item a:hover,
 .navbar-nav .nav-item .sub-menu .nav-item a:focus-visible,
-.navbar-nav .nav-item .sub-menu .nav-item a:focus{
+.navbar-nav .nav-item .sub-menu .nav-item a:focus {
   color: var(--hov-primary) !important;
 }
 
@@ -386,30 +395,30 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px),
-(max-width: 767px) {
+  (max-width: 767px) {
   .navbar-nav .nav-item .sub-menu.collapse:not(.show) {
     display: none;
   }
 }
 
-.navbar-nav .nav-item .sub-menu>li {
+.navbar-nav .nav-item .sub-menu > li {
   display: block;
   margin-left: 0;
 }
 
-.navbar-nav .nav-item .sub-menu>li:last-child {
+.navbar-nav .nav-item .sub-menu > li:last-child {
   border: none;
 }
 
-.navbar-nav .nav-item .sub-menu>li>a {
+.navbar-nav .nav-item .sub-menu > li > a {
   font-weight: 400;
   display: block;
   padding: 12px 15px;
   font-size: 14px;
-  color: #F4F7FA;
+  color: #f4f7fa;
   font-weight: 400;
 }
 
-.navbar-nav .nav-item .sub-menu>li:first-child a {
+.navbar-nav .nav-item .sub-menu > li:first-child a {
   border: none;
 }

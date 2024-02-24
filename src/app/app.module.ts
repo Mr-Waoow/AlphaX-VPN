@@ -7,8 +7,8 @@ import { CommonModule } from '@angular/common';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { PreloaderComponent } from './shared/preloader/preloader.component';
 import { BlogComponent } from './home/blog/blog.component';
@@ -21,6 +21,7 @@ import { TestimonialsComponent } from './home/testimonials/testimonials.componen
 import { SliderImgComponent } from './shared/header-slider/slider-img/slider-img.component';
 import { ScrollTopComponent } from './shared/scroll-top/scroll-top.component';
 import { CompaniesComponent } from './home/companies/companies.component';
+import { FaqComponent } from './faq/faq.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { CompaniesComponent } from './home/companies/companies.component';
     SliderImgComponent,
     ScrollTopComponent,
     CompaniesComponent,
+    FaqComponent,
   ],
   imports: [
     BrowserModule,

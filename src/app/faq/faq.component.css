@@ -1,0 +1,35 @@
+.faq .openable .icon-md {
+  position: relative;
+}
+
+.faq .openable .icon-md .toggler-icon {
+  position: absolute;
+  width: 2rem;
+  height: 0.5rem;
+  background-color: var(--primary);
+  display: block;
+  bottom: -0.3rem;
+  transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -webkit-transition: all 0.3s ease-out 0s;
+}
+
+.faq .openable h6 {
+  width: fit-content;
+}
+
+.faq .notification .btn {
+  background-color: var(--hard-light);
+}
+
+.faq .openable p {
+  margin-left: 3rem;
+}
+
+.faq .openable table {
+  width: 40%;
+  margin-left: 3rem;
+  font-size: 0.8rem;
+}

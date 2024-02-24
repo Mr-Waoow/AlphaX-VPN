@@ -1,4 +1,5 @@
 import { AfterViewInit, Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'xvpn-header-slider',
@@ -11,8 +12,6 @@ export class HeaderSliderComponent implements AfterViewInit {
   showText2 = false; // Initially hide the text
   showText3 = false; // Initially hide the text
   showText4 = false; // Initially hide the text
-  showText5 = false; // Initially hide the text
-  showText6 = false; // Initially hide the text
 
   ngAfterViewInit() {
     // Ensure element and styles are loaded before displaying
@@ -31,11 +30,10 @@ export class HeaderSliderComponent implements AfterViewInit {
     setTimeout(() => {
       this.showText4 = true;
     }, 4400); // Short delay to allow loading (adjust as needed)
-    setTimeout(() => {
-      this.showText5 = true;
-    }, 5200); // Short delay to allow loading (adjust as needed)
-    setTimeout(() => {
-      this.showText6 = true;
-    }, 6000); // Short delay to allow loading (adjust as needed)
+  }
+  constructor(private router: Router) {}
+
+  get routerLinkActive() {
+    return this.router.url.split('/')[1]; // Assuming the path is at position 2
   }
 }
