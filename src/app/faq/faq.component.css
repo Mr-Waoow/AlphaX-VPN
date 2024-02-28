@@ -1,3 +1,55 @@
+.questions {
+  color: #414141;
+  background-color: #f5f5f5;
+}
+
+.questions h4 {
+  text-align: center;
+  color: #414141;
+  margin: 0;
+  margin-bottom: 0.9rem;
+}
+
+.openable {
+  background-color: #fff;
+  height: 3.5rem;
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 0.4rem;
+  border: 0.1rem solid #ededed;
+  margin-bottom: 1rem;
+  -webkit-transition: height 0.5s;
+  -o-transition: height 0.5s;
+  -moz-transition: height 0.5s;
+  transition: height 0.5s;
+}
+
+.openable h6 {
+  color: #414141;
+  cursor: pointer;
+}
+
+.openable h6 .icon-sm {
+  -webkit-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
+}
+
+.openable p {
+  font-size: 0.85rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0rem;
+  -moz-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+.faq .openable a {
+    margin-left: 3rem;
+}
+
 .faq .openable .icon-md {
   position: relative;
 }
@@ -20,16 +72,33 @@
   width: fit-content;
 }
 
-.faq .notification .btn {
-  background-color: var(--hard-light);
-}
-
 .faq .openable p {
   margin-left: 3rem;
+}
+
+.faq .openable .btn {
+  border-radius: 3px;
 }
 
 .faq .openable table {
   width: 40%;
   margin-left: 3rem;
   font-size: 0.8rem;
+  margin-bottom: 0rem;
+}
+
+.faq .openable table tr td{
+  padding: 0.7rem;
+}
+
+.notification .btn {
+  background-color: var(--soft-dark);
+  color: var(--light);
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 3px;
+}
+.notification .btn:hover {
+  background-color: var(--hov-primary);
 }

@@ -22,6 +22,9 @@ import { SliderImgComponent } from './shared/header-slider/slider-img/slider-img
 import { ScrollTopComponent } from './shared/scroll-top/scroll-top.component';
 import { CompaniesComponent } from './home/companies/companies.component';
 import { FaqComponent } from './faq/faq.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { WhiteLabelComponent } from './white-label/white-label.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +44,9 @@ import { FaqComponent } from './faq/faq.component';
     ScrollTopComponent,
     CompaniesComponent,
     FaqComponent,
+    AboutUsComponent,
+    WhiteLabelComponent,
+    ContactUsComponent,
   ],
   imports: [
     BrowserModule,

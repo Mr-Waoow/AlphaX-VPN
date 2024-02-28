@@ -1,0 +1,60 @@
+.white-label {
+  color: var(--dark);
+}
+
+.you-get .content-box {
+  display: flex;
+  text-align: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.you-get .content-box .features {
+  margin-top: 1.5rem;
+}
+
+.you-get .content-box .features img {
+  width: 48px;
+  height: 48px;
+}
+
+.you-get .content-box .features hr {
+  border-color: var(--dark);
+  opacity: 1;
+  width: 25%;
+  margin: 0.5rem auto;
+  -moz-transition: all 0.2s ease;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+
+.you-get .content-box .features p {
+  padding: 0rem 0.5rem;
+}
+
+.you-get .content-box .features:hover hr {
+  border-color: var(--primary);
+  width: 80%;
+}
+
+.must-provide ul {
+  list-style: disc;
+  color: var(--dark);
+  margin-left: 1rem;
+}
+
+.scheme {
+  background-color: #1f2b3a;
+}
+
+.scheme .container {
+  background: url(../../assets/images/white_label/header/maps_beta2.svg) no-repeat 50% 50%;
+}
+
+.whitelabel-contacts p {
+  margin-bottom: 1rem;
+}
+
+.whitelabel-contacts textarea.form-control {
+  height: 6rem;
+}

@@ -1,0 +1,88 @@
+.contact-us {
+  background-color: var(--light);
+}
+
+.contact-us .container {
+  position: relative;
+  min-height: 35rem;
+}
+
+.contacts-list {
+  padding: 6rem;
+  padding-bottom: 0;
+}
+
+.contacts-list {
+  background: var(--primary) url(../../assets/images/contact_us/envelope_bg.png)
+    no-repeat 100% 100%;
+}
+
+.contacts-feedback {
+  background-color: var(--white);
+  padding: 5rem;
+  padding-bottom: 0;
+}
+.contacts {
+    position: absolute;
+    border: none;
+    top: -12.4%;
+    width: 100%;
+    z-index: 1;
+}
+.content {
+  margin-bottom: 1rem;
+}
+
+.content .content-box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: var(--dark);
+}
+
+.content.highlight {
+  position: relative;
+}
+
+.content.highlight::before {
+  background-color: var(--light-primary);
+  border-radius: 0.7rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: calc(100% + 36px);
+  height: calc(100% + 18px);
+  margin-top: -9px;
+  margin-left: -18px;
+  content: "";
+  border: 0.06rem solid var(--primary);
+}
+
+.content .font-icon {
+  position: relative;
+  color: var(--dark);
+  margin-right: 1rem;
+}
+
+label.control-label {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 0;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+table tr td {
+  padding-bottom: 2rem;
+}
+
+table textarea.form-control {
+  min-height: 10rem;
+}
+
+table a.btn {
+  padding: 0.6rem 1rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+}

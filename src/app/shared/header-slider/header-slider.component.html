@@ -1,6 +1,6 @@
 <section class="header-slider">
   <div class="container">
-    <div *ngIf="routerLinkActive === 'home'" class="row mt-4 mb-5">
+    <div *ngIf="routerLinkActive === 'Home'" class="row mt-4 mb-5">
       <div class="col-lg-5">
         <div class="slider-content">
           <h5>
@@ -30,9 +30,52 @@
           <h1>
             <span *ngIf="showText1" class="fade-in">FAQ</span>
           </h1>
-          <p  *ngIf="showText3" class="fade-in">
+          <p *ngIf="showText2" class="fade-in">
             For your convenience we’ve collected here answers to the most popular questions from our customers.
           </p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="routerLinkActive === 'About-Us'" class="row pt-5">
+      <div class="col-lg-12">
+        <div class="slider-content text-center h-140px">
+          <h1>
+            <span *ngIf="showText1" class="fade-in">About Us</span>
+          </h1>
+          <p *ngIf="showText2" class="fade-in">
+            Our team created project that became the top level Proxy Service in just 1 year.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="routerLinkActive === 'Contact-Us'" class="row pt-5">
+      <div class="col-lg-12">
+        <div class="slider-content text-center h-140px">
+          <h1>
+            <span *ngIf="showText1" class="fade-in">Contacts</span>
+          </h1>
+          <p *ngIf="showText2" class="fade-in">
+            We’re always in touch!
+          </p>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="routerLinkActive === 'White-Label'" class="row pt-5">
+      <div class="col-xl-7">
+        <div class="slider-content h-140px">
+          <h1 class="text-start">
+            <span *ngIf="showText1" class="text-primary fade-in">white label</span>
+          </h1>
+          <p *ngIf="showText2" class="text-start fade-in">We offer you the opportunity to quickly
+            start a business selling our proxy services under your own brand using the White Label
+            model.</p>
+        </div>
+      </div>
+      <div class="col-xl-5 d-sm-block d-none">
+        <div class="slider-content slider-map">
+          <div class="img-box">
+            <img src="assets/images/white_label/header/head_whitelabel.png" alt="head_whitelabel">
+          </div>
         </div>
       </div>
     </div>

@@ -1,0 +1,146 @@
+<section class="white-label py-5">
+  <div class="container">
+    <div class="row pb-5">
+      <div class="col-md-12 my-2">
+        <h5 class="mb-1">
+          RSocks
+        </h5>
+        <p class="c-dk" style="font-size: 1rem;">
+          is one of the leaders in the global proxy market, providing a full range of services in the
+          field of anonymity and security on the network. RSocks offers you the opportunity to quickly
+          start your own business selling proxy services (socks, http/s proxies, personal proxies, VPNs)
+          under your own brand using the White Label model.
+        </p>
+        <p class="small"><span class="c-dk">You can read more about White Label on Wikipedia: </span><a
+            href="https://wikipedia.org/wiki/White-label_product">https://wikipedia.org/wiki/White-label_product</a>
+          .</p>
+      </div>
+    </div>
+    <div class="row pb-5">
+      <div class="col-md-12 my-2 you-get">
+        <h4 class="line-after m-0">
+          <span> You'll get </span>
+        </h4>
+        <div class="content-box flex-md-row flex-column d-flex">
+          <div class="features flex-basis-md-25" *ngFor="let feature of features">
+            <span class="icon-md mb-2 mx-auto">
+              <img [src]="feature.icon" alt="{{feature.name}}">
+            </span>
+            <h5 class="fw-light">
+              {{feature.name}}
+            </h5>
+            <hr />
+            <p>
+              {{feature.description}}
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6 must-provide py-4">
+        <h4 class="line-after mb-4">
+          <span> Your company must provide </span>
+        </h4>
+        <ul>
+          <li>
+            Marketing.
+          </li>
+          <li>
+            Customer support.
+          </li>
+          <li>
+            Acceptance of payments.
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-6 must-provide py-4">
+        <h4 class="line-after mb-4">
+          <span> Upon request, we can provide </span>
+        </h4>
+        <p>
+          <span class="fw-bold">Technical support</span>
+          . If you cannot cope with the flow of customers, you can connect our specialists to resolve
+          issues with customers;
+        </p>
+        <p>
+          <span class="fw-bold">Acceptance of payments</span>
+          . We can also connect our payment systems, and we will send the funds to you, and not you to us.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="scheme py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 py-5">
+          <img src="assets/images/white_label/scheme/scheme.png" alt="scheme">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="whitelabel-contacts py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <p>
+            Send a request today and you will be able to launch your proxy service in no time!
+          </p>
+          <p class="fw-bold">
+            Or maybe you have your own proxies and you don't want to bother with finding clients?
+          </p>
+          <p>
+            Then also write to us and we can connect your proxies to our service, thereby creating a
+            large flow of customers for you and income!
+          </p>
+        </div>
+        <div class="col-md-6">
+          <h4 class="line-after mb-4">
+            <span> Write to us </span>
+          </h4>
+          <form class="row">
+            <div class="col-sm-5">
+              <div class="form-group field-contact-name required">
+
+                <input type="text" id="contact-name" class="form-control" name="Contact[name]" placeholder="Name"
+                  aria-required="true" aria-invalid="true">
+
+                <p class="help-block help-block-error">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">You must fill in "Name".</font>
+                  </font>
+                </p>
+              </div>
+              <div class="form-group field-contact-email required">
+
+                <input type="text" id="contact-email" class="form-control" name="Contact[email]" placeholder="Email"
+                  aria-required="true" aria-invalid="true">
+
+                <p class="help-block help-block-error">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">You must fill in "Email".</font>
+                  </font>
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-7">
+              <div class="form-group field-contact-text required">
+
+                <textarea id="contact-text" class="form-control" name="Contact[text]" placeholder="Message"
+                  aria-required="true" aria-invalid="true"></textarea>
+
+                <p class="help-block help-block-error">
+                  <font style="vertical-align: inherit;">
+                    <font style="vertical-align: inherit;">It is necessary to fill in the
+                      "Message".</font>
+                  </font>
+                </p>
+              </div>
+            </div>
+            <div class="col-sm-12 text-end">
+              <a type="submit" class="btn btn-primary">Send</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

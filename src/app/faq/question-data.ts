@@ -7,7 +7,7 @@ export interface QuestionData {
   isTable: boolean;
   isAnswer1: boolean;
   answer1: string;
-  linkUrl: string;
+  link: string;
   buttonName: string;
   host: string;
   port: number;

@@ -1,3 +1,10 @@
+.slider-map {
+  background: url(../../../assets/images/white_label/header/maps_beta2.svg) 50%
+    50% no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 .header-slider {
   position: relative;
   background-color: var(--secondary);

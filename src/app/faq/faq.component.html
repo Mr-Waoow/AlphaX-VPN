@@ -2,217 +2,48 @@
   <div class="container">
     <div class="row my-4">
       <div class="col-md-8">
-        <div class="openable">
-          <h6 onclick="Smooth.expandCollapsePlus(event)" class="d-flex align-items-center">
+        <div class="openable" *ngFor="let question of questions">
+          <h6 (click)="openDivPlus($event)" class="d-flex align-items-center">
             <div class="icon-md">
               <span class="toggler-icon r-90 plus"></span>
               <span class="toggler-icon minus"></span>
             </div>
-            <span>How can I get test?</span>
+            <span>{{question.question}}</span>
           </h6>
           <p>
-            You should register on our site. Then you need to make request for test period in section
-            «Standard proxy - request test». To get confirmation you have to text to support.
+            {{question.answer}}
           </p>
-        </div>
-        <div class="openable">
-          <h6 onclick="Smooth.expandCollapsePlus(event)" class="d-flex align-items-center">
-            <div class="icon-md">
-              <span class="toggler-icon r-90 plus"></span>
-              <span class="toggler-icon minus"></span>
-            </div>
-            <span>How can I buy proxies?</span>
-          </h6>
-          <p>
-            You need to add credits to your balance and buy package(s) automatically in control panel in
-            section Standard proxy - my packages. </p>
-        </div>
-        <div class="openable">
-          <h6 onclick="Smooth.expandCollapsePlus(event)" class="d-flex align-items-center">
-            <div class="icon-md">
-              <span class="toggler-icon r-90 plus"></span>
-              <span class="toggler-icon minus"></span>
-            </div>
-            <span>What payment methods do you accept?</span>
-          </h6>
-          <p>
-            We accept WMZ, BTC, ETH, Qiwi, Alipay, bank card and bank transfer. </p>
-        </div>
-        <div class="openable">
-          <h6 onclick="Smooth.expandCollapsePlus(event)" class="d-flex align-items-center">
-            <div class="icon-md">
-              <span class="toggler-icon r-90 plus"></span>
-              <span class="toggler-icon minus"></span>
-            </div>
-            <span>Can I pay by QIWI?</span>
-          </h6>
-          <p>
-            No, but you can send momeny from your QIWI wallet to WMZ.
+          <p *ngIf="question.isAnswer1">
+            {{question.answer1}}
           </p>
-        </div>
-        <div class="openable">
-          <h6 onclick="Smooth.expandCollapsePlus(event)" class="d-flex align-items-center">
-            <div class="icon-md">
-              <span class="toggler-icon r-90 plus"></span>
-              <span class="toggler-icon minus"></span>
-            </div>
-            <span>How to request a refund?</span>
-          </h6>
-          <p>
-            A customer can request a refund via contacting RSocks customer support. Refunds for
-            Exclusive Mix line proxies are not possible. The minimum amount of a refund is 50 USD
-            Refunds are issued with payment system's fees deducted.<br>
-            Hourly/daily packages and personal proxies are not refundable.<br>
-            Rotating, Twitch, YouTube weekly packages are not refundable.<br>
-            Data center proxy packages are refundable within the first hour after activation.
-            Mobile proxy servers are refundable within the first 24 hours and if less than 20MB of data
-            has been spent.<br>
-            Other packages are refundable within the first 24 hours after activation via contacting our
-            customer support and providing reasonable excuse for the refund.
-          </p>
-        </div>
-        <div class="openable">
-          <h6 onclick="Smooth.expandCollapsePlus(event)" class="d-flex align-items-center">
-            <div class="icon-md">
-              <span class="toggler-icon r-90 plus"></span>
-              <span class="toggler-icon minus"></span>
-            </div>
-            <span>How many threads can I use?</span>
-          </h6>
-          <p>
-            We recommend 500 threads but you can use more than 500 (in this case we can’t guarantee hiqh
-            quality).
-          </p>
-        </div>
-        <div class="openable">
-          <h6 onclick="Smooth.expandCollapsePlus(event)" class="d-flex align-items-center">
-            <div class="icon-md">
-              <span class="toggler-icon r-90 plus"></span>
-              <span class="toggler-icon minus"></span>
-            </div>
-            <span>Are there any restrictions of access to packages by IPs?</span>
-          </h6>
-          <p>
-            Each package is available to be used only with one IP address. You can expand the
-            authorization IP list, but this is payable service. Additional IP for work costs half from
-            price of package.
-          </p>
-        </div>
-        <div class="openable">
-          <h6 onclick="Smooth.expandCollapsePlus(event)" class="d-flex align-items-center">
-            <div class="icon-md">
-              <span class="toggler-icon r-90 plus"></span>
-              <span class="toggler-icon minus"></span>
-            </div>
-            <span>How often are your proxies updated?</span>
-          </h6>
-          <p>
-            Proxies are updated automatically every 2 hours, after every update you get up to 30% of
-            fresh proxies. IP and all ports are changed
-          </p>
-        </div>
-        <div class="openable">
-          <h6 onclick="Smooth.expandCollapsePlus(event)" class="d-flex align-items-center">
-            <div class="icon-md">
-              <span class="toggler-icon r-90 plus"></span>
-              <span class="toggler-icon minus"></span>
-            </div>
-            <span>Is there any way to disable proxy updates?</span>
-          </h6>
-          <p>
-            Unfortunately, there is no way to do it.
-          </p>
-        </div>
-        <div class="openable">
-          <h6 onclick="Smooth.expandCollapsePlus(event)" class="d-flex align-items-center">
-            <div class="icon-md">
-              <span class="toggler-icon r-90 plus"></span>
-              <span class="toggler-icon minus"></span>
-            </div>
-            <span>Can I buy GEO-selected proxy?</span>
-          </h6>
-          <p>
-            Unfortunately this service is not available now. But you can purchase package and then use
-            our free Proxy Checker app to filter addresses by desired country. Link for proxy checker
-            page:<a href="https://rsocks.net/proxy-checker">https://rsocks.net/proxy-checker .</a>
-          </p>
-        </div>
-        <div class="openable tables">
-          <h6 onclick="Smooth.expandCollapsePlus(event)" class="d-flex align-items-center">
-            <div class="icon-md">
-              <span class="toggler-icon r-90 plus"></span>
-              <span class="toggler-icon minus"></span>
-            </div>
-            <span>How to configure Proxy Checker app?</span>
-          </h6>
-          <p>
-            An example of Proxy Checker config is below:
-          </p>
-          <table class="table table-borderless">
+          <a *ngIf="question.isLink" href="https://rsocks.net/proxy-checker">
+            {{question.link}}
+          </a>
+          <table *ngIf="question.isTable" class="table table-borderless">
             <tr>
               <td>HOST:</td>
-              <td>yahoo.com</td>
+              <td>{{question.host}}</td>
             </tr>
             <tr>
               <td>PORT:</td>
-              <td>443</td>
+              <td>{{question.port}}</td>
             </tr>
             <tr>
               <td>Threads:</td>
-              <td>50</td>
+              <td>{{question.threads}}</td>
             </tr>
             <tr>
               <td>Timeout:</td>
-              <td>10000</td>
+              <td>{{question.timeout}}</td>
             </tr>
             <tr>
               <td>ReConnect:</td>
-              <td>0</td>
+              <td>{{question.reConnect}}</td>
             </tr>
           </table>
-        </div>
-        <div class="openable">
-          <h6 onclick="Smooth.expandCollapsePlus(event)" class="d-flex align-items-center">
-            <div class="icon-md">
-              <span class="toggler-icon r-90 plus"></span>
-              <span class="toggler-icon minus"></span>
-            </div>
-            <span>How fast is IP changed in control panel if I have dynamic IP?</span>
-          </h6>
-          <p>
-            For our customers we have created program that checks your IP every 10 minutes and change
-            it. It's located in system tray and doesn't disturb you.
-          </p>
-          <a href="#" class="btn ms-5 c-dk">Download «RSocks IP Changer»</a>
-        </div>
-        <div class="openable">
-          <h6 onclick="Smooth.expandCollapsePlus(event)" class="d-flex align-items-center">
-            <div class="icon-md">
-              <span class="toggler-icon r-90 plus"></span>
-              <span class="toggler-icon minus"></span>
-            </div>
-            <span>Do you have referral system?</span>
-          </h6>
-          <p>
-            Yes. Our referral system conditions:<br>
-            <br>
-            Less than 10 referrals - 10% of their purchases;
-            Up to 15 referrals - 15% of their purchases;
-            More than 15 referrals - 20% of their purchases;
-            The withdrawal of funds is from $ 50.
-          </p>
-        </div>
-        <div class="openable">
-          <h6 onclick="Smooth.expandCollapsePlus(event)" class="d-flex align-items-center">
-            <div class="icon-md">
-              <span class="toggler-icon r-90 plus"></span>
-              <span class="toggler-icon minus"></span>
-            </div>
-            <span>Can I pause my proxies?</span>
-          </h6>
-          <p>
-            Yes, you can purchase pauses for your subscriptions in the proxy control interface.
-          </p>
+          <a *ngIf="question.isButton" href="#" class="btn btn-primary text-black  mt-1">
+            {{question.buttonName}}
+          </a>
         </div>
       </div>
       <div class="col-md-4">
@@ -220,7 +51,7 @@
           <p>
             Did not find an answer?
           </p>
-          <a href="#" class="btn mt-2">Ask a question</a>
+          <a href="#" class="btn">Ask a question</a>
         </div>
       </div>
     </div>
