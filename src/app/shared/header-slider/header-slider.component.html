@@ -4,7 +4,7 @@
       <div class="col-lg-5">
         <div class="slider-content">
           <h5>
-            <span *ngIf="showText" class="text-primary slideInLeft fade-in">RSocks Project</span>
+            <span *ngIf="showText" class="fade-in">RSocks Project</span>
           </h5>
           <h3>
             <span *ngIf="showText1" class="fade-in">Professional Solutions</span>
@@ -76,6 +76,27 @@
           <div class="img-box">
             <img src="assets/images/white_label/header/head_whitelabel.png" alt="head_whitelabel">
           </div>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="routerLinkActive === 'VPN-Service'" class="row mt-4 mb-5">
+      <div class="col-lg-6">
+        <div class="slider-content">
+          <h5>
+            <span *ngIf="showText" class="fade-in">RSocks Project</span>
+          </h5>
+          <h2 class="mb-3"><span *ngIf="showText1" class="fade-in">Reliable VPN Service by RSocks</span></h2>
+          <ul class="list-disc list">
+            <li *ngIf="showText2" class="fade-in">Total security of the data</li>
+            <li *ngIf="showText3" class="fade-in">Unlimited bandwidth</li>
+            <li *ngIf="showText4" class="fade-in">Support service 24/7</li>
+            <li *ngIf="showText5" class="fade-in">Apps for every major platform</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex align-items-center header-img">
+        <div class="img-container">
+          <img src="assets/images/vpn/Map picks.png" alt="shared">
         </div>
       </div>
     </div>

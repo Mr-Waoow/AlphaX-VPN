@@ -5,6 +5,7 @@ import { FaqComponent } from './faq/faq.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { WhiteLabelComponent } from './white-label/white-label.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { VpnServiceComponent } from './vpn-service/vpn-service.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'Home' },
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: 'About-Us', component: AboutUsComponent },
   { path: 'White-Label', component: WhiteLabelComponent },
   { path: 'Contact-Us', component: ContactUsComponent },
+  { path: 'VPN-Service', component: VpnServiceComponent },
 ];
 
 @NgModule({

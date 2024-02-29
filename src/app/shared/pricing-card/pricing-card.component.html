@@ -1,5 +1,5 @@
 <div class="pricing-Card box">
-  <table class="table table-borderless">
+  <table *ngIf="isPricingCard" class="table table-borderless">
     <thead>
       <tr>
         <th>
@@ -63,6 +63,32 @@
         <td class="pb-4">
           <a href="#" class="btn btn-primary me-2 text-dark text-capitalize fw-bold">Choose your pack</a>
           or <a href="#">Try it for free</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <table *ngIf="!isPricingCard" class="table table-borderless rounded">
+    <thead>
+      <tr>
+        <th>
+          <h5>{{ vpnPeriod?.name }}</h5>
+          <p>{{ vpnPeriod?.description }}</p>
+        </th>
+        <th class="text-end">
+          <a href="" class="btn btn-primary text-dark">{{ vpnPeriod?.button }}</a>
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="vpn-period">
+          <span>{{ countryList[0] }}</span>
+        </td>
+        <td class="vpn-period">
+          <span>{{ countryList[1] }}</span>
+        </td>
+        <td class="vpn-period">
+          <span>{{ countryList[2] }}</span>
         </td>
       </tr>
     </tbody>

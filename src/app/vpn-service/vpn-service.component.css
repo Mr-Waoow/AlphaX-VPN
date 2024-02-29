@@ -1,0 +1,115 @@
+.vpn-service {
+  background-color: var(--light);
+}
+
+.vpn-service p {
+  font-weight: normal;
+  font-size: medium;
+}
+
+.vpn-service .pricing-Card.box {
+  border-radius: 0.3rem;
+}
+
+.vpn-service .pricing-Card .pricing-header {
+  border-radius: 0.3rem 0.3rem 0rem 0rem;
+  font-weight: normal;
+}
+
+.vpn-service .pricing-Card .rounded-lg {
+  border-radius: 0rem 0rem 0.3rem 0.3rem !important;
+
+}
+
+.vpn-service .pricing-Card .rounded-lg {
+  background: url(../../assets/images/vpn/vpn_service/Test_period.png) no-repeat;
+}
+
+.vpn-service .pricing-Card table.table tbody tr td {
+  width: max-content;
+  text-align: start;
+  padding-top: 2rem;
+  padding-bottom: 0rem;
+  vertical-align: bottom;
+  color: var(--light);
+}
+
+.vpn-service .pricing-Card table.table thead tr th:first-of-type {
+  width: 50%;
+  text-align: start;
+}
+
+.vpn-service .pricing-Card table.table thead tr th:last-of-type {
+  width: 50%;
+  text-align: end;
+  padding-left: 2rem;
+}
+
+.vpn-service .pricing-Card table.table thead tr th:last-of-type .btn {
+  border-radius: 0.2rem;
+  padding: 0.5rem 0.7rem;
+  font-size: medium;
+  color: var(--soft-dark);
+}
+
+/* Price of VPN */
+
+.label-header {
+  display: grid;
+  margin-bottom: 1rem;
+  padding: 0rem 1.25rem;
+  grid-template-columns: 13.75rem 1fr 1fr 1fr;
+  -webkit-column-gap: 1.25rem;
+  column-gap: 1.25rem;
+}
+
+.tariffs {
+  display: grid;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  grid-template-columns: 13.75rem 1fr 1fr 1fr;
+  -webkit-column-gap: 1.25rem;
+  column-gap: 1.25rem;
+  border-radius: 0.3rem;
+  background-color: var(--secondary);
+}
+
+.tariffs h4 {
+  color: var(--white);
+}
+
+.tariffs p {
+  color: var(--soft-secondary);
+}
+
+.tariffs .content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.8rem;
+  background-color: var(--light);
+  gap: 0.5rem;
+  border-radius: 0.3rem;
+  align-items: center;
+}
+
+.tariffs .content-box h1 {
+  color: var(--secondary);
+  position: relative;
+}
+
+.tariffs .content-box h1::before {
+  font-family: OpenSans, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  content: '$';
+  opacity: .5;
+}
+
+.tariffs .content-box .btn {
+  width: 90%;
+  color: var(--soft-dark);
+}

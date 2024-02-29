@@ -12,10 +12,10 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { PreloaderComponent } from './shared/preloader/preloader.component';
 import { BlogComponent } from './home/blog/blog.component';
-import { OfferedServicesComponent } from './home/offered-services/offered-services.component';
+import { OfferedServicesComponent } from './shared/offered-services/offered-services.component';
 import { ProxyServicesComponent } from './home/proxy-services/proxy-services.component';
 import { HeaderSliderComponent } from './shared/header-slider/header-slider.component';
-import { PricingCardComponent } from './home/proxy-services/pricing-card/pricing-card.component';
+import { PricingCardComponent } from './shared/pricing-card/pricing-card.component';
 import { StatisticsComponent } from './home/statistics/statistics.component';
 import { TestimonialsComponent } from './home/testimonials/testimonials.component';
 import { SliderImgComponent } from './shared/header-slider/slider-img/slider-img.component';
@@ -25,6 +25,7 @@ import { FaqComponent } from './faq/faq.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { WhiteLabelComponent } from './white-label/white-label.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { VpnServiceComponent } from './vpn-service/vpn-service.component';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
     AboutUsComponent,
     WhiteLabelComponent,
     ContactUsComponent,
+    VpnServiceComponent,
   ],
   imports: [
     BrowserModule,

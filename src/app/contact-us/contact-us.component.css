@@ -1,5 +1,6 @@
 .contact-us {
   background-color: var(--light);
+  position: relative;
 }
 
 .contact-us .container {
@@ -8,19 +9,18 @@
 }
 
 .contacts-list {
-  padding: 6rem;
   padding-bottom: 0;
 }
 
 .contacts-list {
   background: var(--primary) url(../../assets/images/contact_us/envelope_bg.png)
     no-repeat 100% 100%;
+    padding-top: 6rem;
 }
 
 .contacts-feedback {
   background-color: var(--white);
-  padding: 5rem;
-  padding-bottom: 0;
+  padding-top: 6rem;
 }
 .contacts {
     position: absolute;

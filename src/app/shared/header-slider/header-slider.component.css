@@ -1,3 +1,14 @@
+h1,
+h2,
+h3,
+h4,
+h6 {
+  color: var(--light);
+}
+h5 {
+  color: var(--primary);
+}
+
 .slider-map {
   background: url(../../../assets/images/white_label/header/maps_beta2.svg) 50%
     50% no-repeat;
@@ -8,7 +19,7 @@
 .header-slider {
   position: relative;
   background-color: var(--secondary);
-  padding: 7rem 0 4rem 0;
+  padding: 9rem 0 4rem 0;
   overflow: hidden;
   color: var(--light);
 }
@@ -30,10 +41,15 @@
   right: calc(50% - 1180px);
   width: 1000px;
   height: 1000px;
-  background: var(--praimary);
+  background: var(--primary);
   position: absolute;
   border-radius: 50%;
   z-index: 1;
+}
+
+.header-slider .slider-content .list {
+    font-size: 0.9rem;
+    margin-left: 3rem;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px),
@@ -66,7 +82,7 @@
   left: -180px;
   width: 350px;
   height: 350px;
-  background: var(--praimary);
+  background: var(--primary);
   position: absolute;
   border-radius: 50%;
 }
@@ -220,7 +236,7 @@
 }
 
 .header-slider .slider-content h5 span.color2 {
-  color: var(--praimary);
+  color: var(--primary);
 }
 
 .header-slider .slider-content p {
@@ -336,7 +352,7 @@
   right: calc(50% - 1145px);
   width: 1000px;
   height: 1000px;
-  background: var(--praimary);
+  background: var(--primary);
   position: absolute;
   border-radius: 50%;
   z-index: 1;
@@ -371,7 +387,7 @@
 }
 
 .header-slider.style2 .slider-content h1 .secondary-color {
-  color: var(--praimary);
+  color: var(--primary);
 }
 
 .header-slider.style2 .slider-content p {
