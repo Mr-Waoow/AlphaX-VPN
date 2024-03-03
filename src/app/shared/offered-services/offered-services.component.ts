@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { OfferedServicesService } from './offered-services.service';
-import { OfferedService } from './offered-service';
+import { OfferedServicesService } from './services/offered-services.service';
+import { OfferedService } from './interfaces/offered-service';
 
 @Component({
   selector: 'xvpn-offered-services',

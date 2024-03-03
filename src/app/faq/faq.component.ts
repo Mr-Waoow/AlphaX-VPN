@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { QuestionData } from './question-data';
-import { QuestionsDataService } from './questions-data.service';
-import { Openable } from '../shared/openable';
+import { QuestionData } from './interfaces/question-data';
+import { QuestionsDataService } from './services/questions-data.service';
+import { Openable } from '../shared/classes/openable';
 
 @Component({
   selector: 'xvpn-faq',

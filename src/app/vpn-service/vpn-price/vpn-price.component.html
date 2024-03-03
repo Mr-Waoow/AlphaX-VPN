@@ -1,0 +1,42 @@
+<div class="label-header">
+  <span></span>
+  <span class="text-center c-dk">Month</span>
+  <span class="text-center c-dk">Halfyear</span>
+  <span class="text-center c-dk">Year</span>
+</div>
+<div>
+  <div class="tariffs">
+    <div class="content d-grid gap-2">
+      <div class="d-flex gap-2 align-items-center">
+        <span class="icon-xd">
+          <img [src]="inputList.icon" alt="{{inputList.name}}">
+        </span>
+        <div class="d-flex flex-column">
+          <h4 class="text-uppercase">
+            {{inputList.name}}
+          </h4>
+        </div>
+      </div>
+      <span>
+        {{inputList.description}}
+      </span>
+    </div>
+    <div class="content-box">
+      <h1>
+        {{inputList.priceMonth}}
+      </h1>
+      <a href="#" class="btn btn-primary text-dark">Buy</a>
+    </div>
+    <div class="content-box">
+      <h1>
+        {{inputList.priceHalfYear}}
+      </h1>
+      <a href="#" class="btn btn-primary text-dark">Buy</a>
+    </div>
+    <div class="content-box">
+      <h1>
+        {{inputList.priceYear}}
+      </h1>
+      <a href="#" class="btn btn-primary text-dark">Buy</a>
+    </div>
+  </div>

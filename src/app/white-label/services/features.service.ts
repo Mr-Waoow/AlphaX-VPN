@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Feature } from './feature';
+import { Feature } from '../interfaces/feature';
 
 @Injectable({
   providedIn: 'root'

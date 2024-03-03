@@ -18,8 +18,33 @@
           important for our demanding audience.
         </p>
       </div>
-      <div class="col-lg-5" >
-        <xvpn-pricing-card ></xvpn-pricing-card>
+      <div class="col-lg-5">
+        <div class="vpn-period rounded box p-0" *ngFor="let vpnPeriod of vpnPeriods">
+          <div class="vpn-period-header">
+            <div class="d-flex flex-column">
+              <h5 class="text-light">{{vpnPeriod.name}}</h5>
+              <span class="text-soft-dark fs-16">{{vpnPeriod.description}}</span>
+            </div>
+            <a class="btn btn-primary text-dark rounded-1 fs-16">{{vpnPeriod.button}}</a>
+          </div>
+          <div class="period-counteis">
+            <span>{{vpnPeriod.counteis[0]}}</span>
+            <span>{{vpnPeriod.counteis[1]}}</span>
+            <span>{{vpnPeriod.counteis[2]}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="price-vpn py-5">
+  <div class="container">
+    <div class="row">
+      <h4 class="line-after">
+        <span>Price of VPN</span>
+      </h4>
+      <div  *ngFor="let vpnPrice of vpnPrices" class="col-md-12 py-2">
+        <xvpn-vpn-price [inputList]="vpnPrice"></xvpn-vpn-price>
       </div>
     </div>
   </div>

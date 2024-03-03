@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { GeneralStatisticsService } from './general-statistics.service';
-import { PopularRatesService } from './popular-rates.service';
-import { BlogsService } from '../../shared/blogs.service';
-import { PopularRate } from './popular-rate';
-import { Blog } from '../../shared/blog';
-import { GeneralStatistic } from './general-statistic';
+import { GeneralStatisticsService } from './services/general-statistics.service';
+import { PopularRatesService } from './services/popular-rates.service';
+import { BlogsService } from '../../shared/services/blogs.service';
+import { PopularRate } from './interfaces/popular-rate';
+import { Blog } from '../../shared/interfaces/blog';
+import { GeneralStatistic } from './interfaces/general-statistic';
 
 @Component({
   selector: 'xvpn-statistics',

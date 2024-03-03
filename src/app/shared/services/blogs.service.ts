@@ -1,4 +1,4 @@
-import { Blog } from "./blog";
+import { Blog } from "../interfaces/blog";
 
 export class BlogsService {
   getBlogs(): Blog[] {

@@ -1,4 +1,4 @@
-import { ProxyList } from "./proxy-list";
+import { ProxyList } from "../interfaces/proxy-list";
 
 export class ProxyDataService {
   getProxyList(): ProxyList[] {

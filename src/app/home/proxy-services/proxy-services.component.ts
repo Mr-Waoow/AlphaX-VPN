@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProxyDataService } from './proxy-data.service';
-import { ProxyList } from './proxy-list';
+import { ProxyDataService } from './services/proxy-data.service';
+import { ProxyList } from './interfaces/proxy-list';
 
 @Component({
   selector: 'xvpn-proxy-services',

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { faShare, faEye, faComment } from '@fortawesome/free-solid-svg-icons';
-import { Blog } from '../../shared/blog';
-import { BlogsService } from '../../shared/blogs.service';
+import { Blog } from '../../shared/interfaces/blog';
+import { BlogsService } from '../../shared/services/blogs.service';
 
 @Component({
   selector: 'xvpn-blog',

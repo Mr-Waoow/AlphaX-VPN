@@ -1,4 +1,4 @@
-import { GeneralStatistic } from "./general-statistic";
+import { GeneralStatistic } from "../interfaces/general-statistic";
 
 export class GeneralStatisticsService {
   getGeneralStatistics(): GeneralStatistic[] {

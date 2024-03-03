@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { VpnPeriod } from './vpn-period';
-import { VpnPeriodsService } from './vpn-periods.service';
+import { VpnPeriod } from './interfaces/vpn-period';
+import { VpnPeriodsService } from './services/vpn-periods.service';
+import { VpnPrice } from './interfaces/vpn-price';
+import { VpnPricesService } from './services/vpn-prices.service';
 
 @Component({
   selector: 'xvpn-vpn-service',
@@ -9,9 +11,14 @@ import { VpnPeriodsService } from './vpn-periods.service';
 })
 export class VpnServiceComponent implements OnInit {
   vpnPeriods: VpnPeriod[] = [];
-  constructor(private vpnPeriodService: VpnPeriodsService) {}
+  vpnPrices: VpnPrice[] = [];
+  constructor(
+    private vpnPeriodService: VpnPeriodsService,
+    private vpnPricesService: VpnPricesService
+  ) {}
 
   ngOnInit(): void {
     this.vpnPeriods = this.vpnPeriodService.getVpnPeriods();
+    this.vpnPrices = this.vpnPricesService.getVpnPrices();
   }
 }

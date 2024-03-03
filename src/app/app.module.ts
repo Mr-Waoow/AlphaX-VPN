@@ -15,7 +15,7 @@ import { BlogComponent } from './home/blog/blog.component';
 import { OfferedServicesComponent } from './shared/offered-services/offered-services.component';
 import { ProxyServicesComponent } from './home/proxy-services/proxy-services.component';
 import { HeaderSliderComponent } from './shared/header-slider/header-slider.component';
-import { PricingCardComponent } from './shared/pricing-card/pricing-card.component';
+import { PricingCardComponent } from './home/proxy-services/pricing-card/pricing-card.component';
 import { StatisticsComponent } from './home/statistics/statistics.component';
 import { TestimonialsComponent } from './home/testimonials/testimonials.component';
 import { SliderImgComponent } from './shared/header-slider/slider-img/slider-img.component';
@@ -26,6 +26,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { WhiteLabelComponent } from './white-label/white-label.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { VpnServiceComponent } from './vpn-service/vpn-service.component';
+import { VpnPriceComponent } from './vpn-service/vpn-price/vpn-price.component';
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { VpnServiceComponent } from './vpn-service/vpn-service.component';
     WhiteLabelComponent,
     ContactUsComponent,
     VpnServiceComponent,
+    VpnPriceComponent,
   ],
   imports: [
     BrowserModule,

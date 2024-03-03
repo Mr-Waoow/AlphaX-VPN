@@ -1,4 +1,4 @@
-import { PopularRate } from "./popular-rate";
+import { PopularRate } from "../interfaces/popular-rate";
 
 export class PopularRatesService {
   getPopularRates(): PopularRate[] {

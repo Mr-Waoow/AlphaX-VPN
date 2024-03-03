@@ -1,0 +1,59 @@
+.label-header {
+  display: grid;
+  margin-bottom: 1rem;
+  padding: 0rem 1.25rem;
+  grid-template-columns: 13.75rem 1fr 1fr 1fr;
+  -webkit-column-gap: 1.25rem;
+  column-gap: 1.25rem;
+}
+
+.tariffs {
+  display: grid;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  grid-template-columns: 13.75rem 1fr 1fr 1fr;
+  -webkit-column-gap: 1.25rem;
+  column-gap: 1.25rem;
+  border-radius: 0.3rem;
+  background-color: var(--secondary);
+}
+
+.tariffs h4 {
+  color: var(--white);
+}
+
+.tariffs span {
+  color: var(--hov-secondary);
+}
+
+.tariffs .content-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1.8rem;
+  background-color: var(--light);
+  gap: 0.5rem;
+  border-radius: 0.3rem;
+  align-items: center;
+}
+
+.tariffs .content-box h1 {
+  color: var(--secondary);
+  position: relative;
+}
+
+.tariffs .content-box h1::before {
+  font-family: OpenSans, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  position: absolute;
+  top: -6px;
+  left: 0;
+  content: '$';
+  opacity: .5;
+}
+
+.tariffs .content-box .btn {
+  width: 90%;
+  color: var(--soft-dark);
+}

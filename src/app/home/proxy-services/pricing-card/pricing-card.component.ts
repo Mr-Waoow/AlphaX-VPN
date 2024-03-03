@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import { ProxyList } from '../../home/proxy-services/proxy-list';
-import { VpnPeriod } from '../../vpn-service/vpn-period';
+import { ProxyList } from '../interfaces/proxy-list';
+import { VpnPeriod } from '../../../vpn-service/interfaces/vpn-period';
 
 @Component({
   selector: 'xvpn-pricing-card',
@@ -10,7 +10,6 @@ import { VpnPeriod } from '../../vpn-service/vpn-period';
 })
 export class PricingCardComponent implements OnInit {
   faCheck = faCheck;
-  countryList: string[] = ['United States', 'Netherlands', 'Russia'];
   proxyList: ProxyList | undefined;
   vpnPeriod: VpnPeriod | undefined;
   @Input() isPricingCard: boolean = true;
@@ -20,9 +19,6 @@ export class PricingCardComponent implements OnInit {
       this.proxyList = this.inputList;
     }else {
       this.vpnPeriod = this.inputList;
-      if (this.vpnPeriod) {
-        this.countryList = this.vpnPeriod.counteis;
-      }
     }
   }
 }

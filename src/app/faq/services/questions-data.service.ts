@@ -1,4 +1,4 @@
-import { QuestionData } from './question-data';
+import { QuestionData } from '../interfaces/question-data';
 
 export class QuestionsDataService {
   getQuestionsData(): QuestionData[] {

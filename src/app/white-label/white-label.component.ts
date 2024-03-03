@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Feature } from './feature';
-import { FeaturesService } from './features.service';
+import { Feature } from './interfaces/feature';
+import { FeaturesService } from './services/features.service';
 
 @Component({
   selector: 'xvpn-white-label',

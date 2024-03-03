@@ -1,4 +1,4 @@
-import { ClientData } from "./client-data";
+import { ClientData } from "../interfaces/client-data";
 
 export class ClientsService {
   getClientData(): ClientData[] {

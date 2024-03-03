@@ -1,4 +1,4 @@
-import { OfferedService } from "./offered-service";
+import { OfferedService } from "../interfaces/offered-service";
 
 export class OfferedServicesService {
   getOfferedService(): OfferedService[] {

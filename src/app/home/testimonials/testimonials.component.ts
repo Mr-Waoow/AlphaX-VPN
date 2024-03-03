@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { OwlOptions } from 'ngx-owl-carousel-o';
-import { ClientData } from './client-data';
-import { ClientsService } from './clients.service';
+import { ClientData } from './interfaces/client-data';
+import { ClientsService } from './services/clients.service';
 
 @Component({
   selector: 'xvpn-testimonials',
