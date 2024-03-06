@@ -24,13 +24,13 @@
   --hov-black: #4b4b4b;
   --soft-black: #00000026;
   --gray: #6c757d;
-  --gray-dark: #343a40;
+  --dark-gray: #343a40;
   --primary: #61db81;
   --light-primary: #9ef8b4;
   --hov-primary: #4eaf68;
   --soft-primary: #61db8126;
   --secondary: #1f2b3a;
-  --hov-secondary: #74859F;
+  --hov-secondary: #74859f;
   --soft-secondary: #1f2b3a26;
   --third: #4077f3;
   --hov-third: #345fc4;
@@ -38,14 +38,15 @@
   --success: #0abb75;
   --soft-success: #0abb7526;
   --info: #25bcf1;
-  --notification: #e2e6eb;
   --soft-info: #25bcf126;
+  --notification: #ebf0f5;
   --warning: #ffc107;
   --soft-warning: #ffc10726;
   --danger: #dc3535;
   --soft-danger: #dc353526;
   --light: #f5f5f5;
   --hard-light: #ccc;
+  --hov-hard-light: #aaa;
   --dark: #222;
   --hov-dark: #2222223b;
   --soft-dark: #7a7a7a;
@@ -179,7 +180,7 @@ h1 {
 }
 
 h2 {
-  font-size: 40px ;
+  font-size: 40px;
   font-family: Consolas, Tahoma, Geneva, Verdana, sans-serif;
   margin-right: 5px;
 }
@@ -261,31 +262,47 @@ ol {
 }
 
 .icon-sm {
-  width: 1.5rem;
+  width: 1.4rem;
 }
 
 .icon-md {
-  width: 3rem;
+  width: 2.9rem;
 }
 
 .icon-xd {
-  width: 4rem;
+  width: 3.9rem;
 }
 
 .icon-lg {
-  width: 5rem;
+  width: 4.9rem;
 }
 
-.icon-xlg {
-  width: 6rem;
+.icon-xl {
+  width: 5.9rem;
 }
 
 .icon-xxl {
-  width: 7.5rem;
+  width: 7.4rem;
 }
 
-.img-box {
+.img-box-sm {
+  width: 10rem;
+}
+
+.img-box-md {
+  width: 15rem;
+}
+
+.img-box-lg {
   width: 20rem;
+}
+
+.img-box-xl {
+  width: 25rem;
+}
+
+.img-box-xxl {
+  width: 30rem;
 }
 
 .icon,
@@ -295,9 +312,13 @@ ol {
 .icon-md,
 .icon-xd,
 .icon-lg,
-.icon-xlg,
+.icon-xl,
 .icon-xxl,
-.img-box {
+.img-box-sm,
+.img-box-md,
+.img-box-lg,
+.img-box-xl,
+.img-box-xxl {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -417,104 +438,108 @@ ol {
   background: var(--hard-light);
 }
 
-.cursor-pointer {
+.c-pointer {
   cursor: pointer !important;
 }
 
-.cursor-alias {
+.c-alias {
   cursor: alias !important;
 }
 
-.cursor-all-scroll {
+.c-all-scroll {
   cursor: all-scroll !important;
 }
 
-.cursor-auto {
+.c-auto {
   cursor: auto !important;
 }
 
-.cursor-cell {
+.c-cell {
   cursor: cell !important;
 }
 
-.cursor-col-resize {
+.c-col-resize {
   cursor: col-resize !important;
 }
 
-.cursor-context-menu {
+.c-context-menu {
   cursor: context-menu !important;
 }
 
-.cursor-copy {
+.c-copy {
   cursor: copy !important;
 }
 
-.cursor-crosshair {
+.c-crosshair {
   cursor: crosshair !important;
 }
 
-.cursor-default {
+.c-default {
   cursor: default !important;
 }
 
-.cursor-e-resize {
+.c-e-resize {
   cursor: e-resize !important;
 }
 
-.cursor-ew-resize {
+.c-ew-resize {
   cursor: ew-resize !important;
 }
 
-.cursor-grab {
+.c-grab {
   cursor: grab !important;
 }
 
+.c-not-allowed {
+  cursor: not-allowed !important;
+}
+
 .transition-1 {
-  -o-transition: all 0.1s ease !important;
-  -webkit-transition: all 0.1s ease !important;
-  -moz-transition: all 0.1s ease !important;
-  -ms-transition: all 0.1s ease !important;
-  transition: all 0.1s ease !important;
+  -o-transition: all 0.1s ease-out !important;
+  -webkit-transition: all 0.1s ease-out !important;
+  -moz-transition: all 0.1s ease-out !important;
+  -ms-transition: all 0.1s ease-out !important;
+  transition: all 0.1s ease-out !important;
 }
 
 .transition-2 {
-  -o-transition: all 0.2s ease !important;
-  -webkit-transition: all 0.2s ease !important;
-  -moz-transition: all 0.2s ease !important;
-  -ms-transition: all 0.2s ease !important;
-  transition: all 0.2s ease !important;
+  -o-transition: all 0.2s ease-out !important;
+  -webkit-transition: all 0.2s ease-out !important;
+  -moz-transition: all 0.2s ease-out !important;
+  -ms-transition: all 0.2s ease-out !important;
+  transition: all 0.2s ease-out !important;
 }
 
 .transition-3 {
-  -o-transition: all 0.3s ease !important;
-  -webkit-transition: all 0.3s ease !important;
-  -moz-transition: all 0.3s ease !important;
-  -ms-transition: all 0.3s ease !important;
-  transition: all 0.3s ease !important;
+  -o-transition: all 0.3s ease-out !important;
+  -webkit-transition: all 0.3s ease-out !important;
+  -moz-transition: all 0.3s ease-out !important;
+  -ms-transition: all 0.3s ease-out !important;
+  transition: all 0.3s ease-out !important;
 }
 
 .transition-4 {
-  -o-transition: all 0.4s ease !important;
-  -webkit-transition: all 0.4s ease !important;
-  -moz-transition: all 0.4s ease !important;
-  -ms-transition: all 0.4s ease !important;
-  transition: all 0.4s ease !important;
+  -o-transition: all 0.4s ease-out !important;
+  -webkit-transition: all 0.4s ease-out !important;
+  -moz-transition: all 0.4s ease-out !important;
+  -ms-transition: all 0.4s ease-out !important;
+  transition: all 0.4s ease-out !important;
 }
 
 .transition-5 {
-  -o-transition: all 0.5s ease !important;
-  -webkit-transition: all 0.5s ease !important;
-  -moz-transition: all 0.5s ease !important;
-  -ms-transition: all 0.5s ease !important;
-  transition: all 0.5s ease !important;
+  -o-transition: all 0.5s ease-out !important;
+  -webkit-transition: all 0.5s ease-out !important;
+  -moz-transition: all 0.5s ease-out !important;
+  -ms-transition: all 0.5s ease-out !important;
+  transition: all 0.5s ease-out !important;
 }
 
 .transition-6 {
-  -o-transition: all 0.6s ease !important;
-  -webkit-transition: all 0.6s ease !important;
-  -moz-transition: all 0.6s ease !important;
-  -ms-transition: all 0.6s ease !important;
-  transition: all 0.6s ease !important;
+  -o-transition: all 0.6s ease-out !important;
+  -webkit-transition: all 0.6s ease-out !important;
+  -moz-transition: all 0.6s ease-out !important;
+  -ms-transition: all 0.6s ease-out !important;
+  transition: all 0.6s ease-out !important;
 }
 
 .list-none {
@@ -619,18 +644,6 @@ ol {
 
 .minw-0 {
   min-width: 0;
-}
-
-.c-pointer {
-  cursor: pointer !important;
-}
-
-.c-not-allowed {
-  cursor: not-allowed !important;
-}
-
-.c-default {
-  cursor: default !important;
 }
 
 .top--100 {
@@ -1784,8 +1797,16 @@ ol {
   background-color: #fff !important;
 }
 
+.hov-bg-light-primary:hover {
+  background-color: var(--light-primary) !important;
+}
+
 .hov-bg-primary:hover {
   background-color: var(--primary) !important;
+}
+
+.hov-bg-dark-primary:hover {
+  background-color: var(--hov-primary) !important;
 }
 
 .hov-bg-soft-primary:hover {
@@ -1992,8 +2013,16 @@ ol {
   color: var(--indigo) !important;
 }
 
+.hov-text-light-primary:hover {
+  color: var(--light-primary) !important;
+}
+
 .hov-text-primary:hover {
   color: var(--primary) !important;
+}
+
+.hov-text-dark-primary:hover {
+  color: var(--hov-primary) !important;
 }
 
 .hov-text-soft-primary:hover {
@@ -2054,6 +2083,366 @@ ol {
 
 .hov-text-white:hover {
   color: #fff !important;
+}
+
+.border-blue {
+  border-color: var(--blue) !important;
+}
+
+.border-light-blue {
+  border-color: var(--light-blue) !important;
+}
+
+.border-dark-blue {
+  border-color: var(--dark-blue) !important;
+}
+
+.border-indigo {
+  border-color: var(--indigo) !important;
+}
+
+.border-purple {
+  border-color: var(--purple) !important;
+}
+
+.border-pink {
+  border-color: var(--pink) !important;
+}
+
+.border-red {
+  border-color: var(--red) !important;
+}
+
+.border-orange {
+  border-color: var(--orange) !important;
+}
+
+.border-yellow {
+  border-color: var(--yellow) !important;
+}
+
+.border-green {
+  border-color: var(--green) !important;
+}
+
+.border-soft-green {
+  border-color: var(--soft-green) !important;
+}
+
+.border-teal {
+  border-color: var(--teal) !important;
+}
+
+.border-cyan {
+  border-color: var(--cyan) !important;
+}
+
+.border-white {
+  border-color: var(--white) !important;
+}
+
+.border-black {
+  border-color: var(--black) !important;
+}
+
+.border-light-black {
+  border-color: var(--hov-black) !important;
+}
+
+.border-soft-black {
+  border-color: var(--soft-black) !important;
+}
+
+.border-gray {
+  border-color: var(--gray) !important;
+}
+
+.border-dark-gray {
+  border-color: var(--dark-gray) !important;
+}
+
+.border-primary {
+  border-color: var(--primary) !important;
+}
+
+.border-light-primary {
+  border-color: var(--light-primary) !important;
+}
+
+.border-dark-primary {
+  border-color: var(--hov-primary) !important;
+}
+
+.border-soft-primary {
+  border-color: var(--soft-primary) !important;
+}
+
+.border-secondary {
+  border-color: var(--secondary) !important;
+}
+
+.border-light-secondary {
+  border-color: var(--hov-secondary) !important;
+}
+
+.border-soft-secondary {
+  border-color: var(--soft-secondary) !important;
+}
+
+.border-third {
+  border-color: var(--third) !important;
+}
+
+.border-dark-third {
+  border-color: var(--hov-third) !important;
+}
+
+.border-soft-third {
+  border-color: var(--soft-third) !important;
+}
+
+.border-success {
+  border-color: var(--success) !important;
+}
+
+.border-soft-success {
+  border-color: var(--soft-success) !important;
+}
+
+.border-info {
+  border-color: var(--info) !important;
+}
+
+.border-soft-info {
+  border-color: var(--soft-info) !important;
+}
+
+.border-notification {
+  border-color: var(--notification) !important;
+}
+
+.border-warning {
+  border-color: var(--warning) !important;
+}
+
+.border-soft-warning {
+  border-color: var(--soft-warning) !important;
+}
+
+.border-danger {
+  border-color: var(--danger) !important;
+}
+
+.border-soft-danger {
+  border-color: var(--soft-danger) !important;
+}
+
+.border-light {
+  border-color: var(--light) !important;
+}
+
+.border-hard-light {
+  border-color: var(--hard-light) !important;
+}
+
+.border-dark-hard-light {
+  border-color: var(--hov-hard-light) !important;
+}
+
+.border-dark {
+  border-color: var(--dark) !important;
+}
+
+.border-light-dark {
+  border-color: var(--hov-dark) !important;
+}
+
+.border-soft-dark {
+  border-color: var(--soft-dark) !important;
+}
+
+.border-light-soft-dark {
+  border-color: var(--hov-soft-dark) !important;
+}
+
+.hov-border-blue:hover {
+  border-color: var(--blue) !important;
+}
+
+.hov-border-light-blue:hover {
+  border-color: var(--light-blue) !important;
+}
+
+.hov-border-dark-blue:hover {
+  border-color: var(--dark-blue) !important;
+}
+
+.hov-border-indigo:hover {
+  border-color: var(--indigo) !important;
+}
+
+.hov-border-purple:hover {
+  border-color: var(--purple) !important;
+}
+
+.hov-border-pink:hover {
+  border-color: var(--pink) !important;
+}
+
+.hov-border-red:hover {
+  border-color: var(--red) !important;
+}
+
+.hov-border-orange:hover {
+  border-color: var(--orange) !important;
+}
+
+.hov-border-yellow:hover {
+  border-color: var(--yellow) !important;
+}
+
+.hov-border-green:hover {
+  border-color: var(--green) !important;
+}
+
+.hov-border-soft-green:hover {
+  border-color: var(--soft-green) !important;
+}
+
+.hov-border-teal:hover {
+  border-color: var(--teal) !important;
+}
+
+.hov-border-cyan:hover {
+  border-color: var(--cyan) !important;
+}
+
+.hov-border-white:hover {
+  border-color: var(--white) !important;
+}
+
+.hov-border-black:hover {
+  border-color: var(--black) !important;
+}
+
+.hov-border-light-black:hover {
+  border-color: var(--hov-black) !important;
+}
+
+.hov-border-soft-black:hover {
+  border-color: var(--soft-black) !important;
+}
+
+.hov-border-gray:hover {
+  border-color: var(--gray) !important;
+}
+
+.hov-border-dark-gray:hover {
+  border-color: var(--dark-gray) !important;
+}
+
+.hov-border-primary:hover {
+  border-color: var(--primary) !important;
+}
+
+.hov-border-light-primary:hover {
+  border-color: var(--light-primary) !important;
+}
+
+.hov-border-dark-primary:hover {
+  border-color: var(--hov-primary) !important;
+}
+
+.hov-border-soft-primary:hover {
+  border-color: var(--soft-primary) !important;
+}
+
+.hov-border-secondary:hover {
+  border-color: var(--secondary) !important;
+}
+
+.hov-border-light-secondary:hover {
+  border-color: var(--hov-secondary) !important;
+}
+
+.hov-border-soft-secondary:hover {
+  border-color: var(--soft-secondary) !important;
+}
+
+.hov-border-third:hover {
+  border-color: var(--third) !important;
+}
+
+.hov-border-dark-third:hover {
+  border-color: var(--hov-third) !important;
+}
+
+.hov-border-soft-third:hover {
+  border-color: var(--soft-third) !important;
+}
+
+.hov-border-success:hover {
+  border-color: var(--success) !important;
+}
+
+.hov-border-soft-success:hover {
+  border-color: var(--soft-success) !important;
+}
+
+.hov-border-info:hover {
+  border-color: var(--info) !important;
+}
+
+.hov-border-soft-info:hover {
+  border-color: var(--soft-info) !important;
+}
+
+.hov-border-notification:hover {
+  border-color: var(--notification) !important;
+}
+
+.hov-border-warning:hover {
+  border-color: var(--warning) !important;
+}
+
+.hov-border-soft-warning:hover {
+  border-color: var(--soft-warning) !important;
+}
+
+.hov-border-danger:hover {
+  border-color: var(--danger) !important;
+}
+
+.hov-border-soft-danger:hover {
+  border-color: var(--soft-danger) !important;
+}
+
+.hov-border-light:hover {
+  border-color: var(--light) !important;
+}
+
+.hov-border-hard-light:hover {
+  border-color: var(--hard-light) !important;
+}
+
+.hov-border-dark-hard-light:hover {
+  border-color: var(--hov-hard-light) !important;
+}
+
+.hov-border-dark:hover {
+  border-color: var(--dark) !important;
+}
+
+.hov-border-light-dark:hover {
+  border-color: var(--hov-dark) !important;
+}
+
+.hov-border-soft-dark:hover {
+  border-color: var(--soft-dark) !important;
+}
+
+.hov-border-light-soft-dark:hover {
+  border-color: var(--hov-soft-dark) !important;
 }
 
 .flex-basis-5 {
@@ -2157,7 +2546,7 @@ ol {
 }
 
 .gap-5 {
-  gap: 1.55rem !important;
+  gap: 1.5rem !important;
 }
 
 .gap-6 {
@@ -2165,19 +2554,19 @@ ol {
 }
 
 .gap-7 {
-  gap: 1.7rem !important;
+  gap: 2.2rem !important;
 }
 
 .gap-8 {
-  gap: 1.8rem !important;
+  gap: 2.5rem !important;
 }
 
 .gap-9 {
-  gap: 1.9rem !important;
+  gap: 2.8rem !important;
 }
 
 .gap-10 {
-  gap: 2rem !important;
+  gap: 3.1rem !important;
 }
 
 .w-2-5 {
@@ -3813,51 +4202,51 @@ ol {
 /* sm */
 @media (min-width: 576px) {
   .transition-sm-1 {
-    -o-transition: all 0.1s ease !important;
-    -webkit-transition: all 0.1s ease !important;
-    -moz-transition: all 0.1s ease !important;
-    -ms-transition: all 0.1s ease !important;
-    transition: all 0.1s ease !important;
+    -o-transition: all 0.1s ease-out !important;
+    -webkit-transition: all 0.1s ease-out !important;
+    -moz-transition: all 0.1s ease-out !important;
+    -ms-transition: all 0.1s ease-out !important;
+    transition: all 0.1s ease-out !important;
   }
 
   .transition-sm-2 {
-    -o-transition: all 0.2s ease !important;
-    -webkit-transition: all 0.2s ease !important;
-    -moz-transition: all 0.2s ease !important;
-    -ms-transition: all 0.2s ease !important;
-    transition: all 0.2s ease !important;
+    -o-transition: all 0.2s ease-out !important;
+    -webkit-transition: all 0.2s ease-out !important;
+    -moz-transition: all 0.2s ease-out !important;
+    -ms-transition: all 0.2s ease-out !important;
+    transition: all 0.2s ease-out !important;
   }
 
   .transition-sm-3 {
-    -o-transition: all 0.3s ease !important;
-    -webkit-transition: all 0.3s ease !important;
-    -moz-transition: all 0.3s ease !important;
-    -ms-transition: all 0.3s ease !important;
-    transition: all 0.3s ease !important;
+    -o-transition: all 0.3s ease-out !important;
+    -webkit-transition: all 0.3s ease-out !important;
+    -moz-transition: all 0.3s ease-out !important;
+    -ms-transition: all 0.3s ease-out !important;
+    transition: all 0.3s ease-out !important;
   }
 
   .transition-sm-4 {
-    -o-transition: all 0.4s ease !important;
-    -webkit-transition: all 0.4s ease !important;
-    -moz-transition: all 0.4s ease !important;
-    -ms-transition: all 0.4s ease !important;
-    transition: all 0.4s ease !important;
+    -o-transition: all 0.4s ease-out !important;
+    -webkit-transition: all 0.4s ease-out !important;
+    -moz-transition: all 0.4s ease-out !important;
+    -ms-transition: all 0.4s ease-out !important;
+    transition: all 0.4s ease-out !important;
   }
 
   .transition-sm-5 {
-    -o-transition: all 0.5s ease !important;
-    -webkit-transition: all 0.5s ease !important;
-    -moz-transition: all 0.5s ease !important;
-    -ms-transition: all 0.5s ease !important;
-    transition: all 0.5s ease !important;
+    -o-transition: all 0.5s ease-out !important;
+    -webkit-transition: all 0.5s ease-out !important;
+    -moz-transition: all 0.5s ease-out !important;
+    -ms-transition: all 0.5s ease-out !important;
+    transition: all 0.5s ease-out !important;
   }
 
   .transition-sm-6 {
-    -o-transition: all 0.6s ease !important;
-    -webkit-transition: all 0.6s ease !important;
-    -moz-transition: all 0.6s ease !important;
-    -ms-transition: all 0.6s ease !important;
-    transition: all 0.6s ease !important;
+    -o-transition: all 0.6s ease-out !important;
+    -webkit-transition: all 0.6s ease-out !important;
+    -moz-transition: all 0.6s ease-out !important;
+    -ms-transition: all 0.6s ease-out !important;
+    transition: all 0.6s ease-out !important;
   }
 
   .list-sm-none {
@@ -3928,56 +4317,60 @@ ol {
     list-style-position: outside;
   }
 
-  .cursor-sm-pointer {
+  .c-sm-pointer {
     cursor: pointer !important;
   }
 
-  .cursor-sm-alias {
+  .c-sm-alias {
     cursor: alias !important;
   }
 
-  .cursor-sm-all-scroll {
+  .c-sm-all-scroll {
     cursor: all-scroll !important;
   }
 
-  .cursor-sm-auto {
+  .c-sm-auto {
     cursor: auto !important;
   }
 
-  .cursor-sm-cell {
+  .c-sm-cell {
     cursor: cell !important;
   }
 
-  .cursor-sm-col-resize {
+  .c-sm-col-resize {
     cursor: col-resize !important;
   }
 
-  .cursor-sm-context-menu {
+  .c-sm-context-menu {
     cursor: context-menu !important;
   }
 
-  .cursor-sm-copy {
+  .c-sm-copy {
     cursor: copy !important;
   }
 
-  .cursor-sm-crosshair {
+  .c-sm-crosshair {
     cursor: crosshair !important;
   }
 
-  .cursor-sm-default {
+  .c-sm-default {
     cursor: default !important;
   }
 
-  .cursor-sm-e-resize {
+  .c-sm-e-resize {
     cursor: e-resize !important;
   }
 
-  .cursor-sm-ew-resize {
+  .c-sm-ew-resize {
     cursor: ew-resize !important;
   }
 
-  .cursor-sm-grab {
+  .c-sm-grab {
     cursor: grab !important;
+  }
+
+  .c-sm-not-allowed {
+    cursor: not-allowed !important;
   }
 
   .fw-sm-100 {
@@ -4337,7 +4730,7 @@ ol {
   }
 
   .gap-sm-5 {
-    gap: 1.55rem !important;
+    gap: 1.5rem !important;
   }
 
   .gap-sm-6 {
@@ -4345,19 +4738,19 @@ ol {
   }
 
   .gap-sm-7 {
-    gap: 1.7rem !important;
+    gap: 2.2rem !important;
   }
 
   .gap-sm-8 {
-    gap: 1.8rem !important;
+    gap: 2.5rem !important;
   }
 
   .gap-sm-9 {
-    gap: 1.9rem !important;
+    gap: 2.8rem !important;
   }
 
   .gap-sm-10 {
-    gap: 2rem !important;
+    gap: 3.1rem !important;
   }
 
   .top-sm--100 {
@@ -6650,51 +7043,51 @@ ol {
 /* md */
 @media (min-width: 768px) {
   .transition-md-1 {
-    -o-transition: all 0.1s ease !important;
-    -webkit-transition: all 0.1s ease !important;
-    -moz-transition: all 0.1s ease !important;
-    -ms-transition: all 0.1s ease !important;
-    transition: all 0.1s ease !important;
+    -o-transition: all 0.1s ease-out !important;
+    -webkit-transition: all 0.1s ease-out !important;
+    -moz-transition: all 0.1s ease-out !important;
+    -ms-transition: all 0.1s ease-out !important;
+    transition: all 0.1s ease-out !important;
   }
 
   .transition-md-2 {
-    -o-transition: all 0.2s ease !important;
-    -webkit-transition: all 0.2s ease !important;
-    -moz-transition: all 0.2s ease !important;
-    -ms-transition: all 0.2s ease !important;
-    transition: all 0.2s ease !important;
+    -o-transition: all 0.2s ease-out !important;
+    -webkit-transition: all 0.2s ease-out !important;
+    -moz-transition: all 0.2s ease-out !important;
+    -ms-transition: all 0.2s ease-out !important;
+    transition: all 0.2s ease-out !important;
   }
 
   .transition-md-3 {
-    -o-transition: all 0.3s ease !important;
-    -webkit-transition: all 0.3s ease !important;
-    -moz-transition: all 0.3s ease !important;
-    -ms-transition: all 0.3s ease !important;
-    transition: all 0.3s ease !important;
+    -o-transition: all 0.3s ease-out !important;
+    -webkit-transition: all 0.3s ease-out !important;
+    -moz-transition: all 0.3s ease-out !important;
+    -ms-transition: all 0.3s ease-out !important;
+    transition: all 0.3s ease-out !important;
   }
 
   .transition-md-4 {
-    -o-transition: all 0.4s ease !important;
-    -webkit-transition: all 0.4s ease !important;
-    -moz-transition: all 0.4s ease !important;
-    -ms-transition: all 0.4s ease !important;
-    transition: all 0.4s ease !important;
+    -o-transition: all 0.4s ease-out !important;
+    -webkit-transition: all 0.4s ease-out !important;
+    -moz-transition: all 0.4s ease-out !important;
+    -ms-transition: all 0.4s ease-out !important;
+    transition: all 0.4s ease-out !important;
   }
 
   .transition-md-5 {
-    -o-transition: all 0.5s ease !important;
-    -webkit-transition: all 0.5s ease !important;
-    -moz-transition: all 0.5s ease !important;
-    -ms-transition: all 0.5s ease !important;
-    transition: all 0.5s ease !important;
+    -o-transition: all 0.5s ease-out !important;
+    -webkit-transition: all 0.5s ease-out !important;
+    -moz-transition: all 0.5s ease-out !important;
+    -ms-transition: all 0.5s ease-out !important;
+    transition: all 0.5s ease-out !important;
   }
 
   .transition-md-6 {
-    -o-transition: all 0.6s ease !important;
-    -webkit-transition: all 0.6s ease !important;
-    -moz-transition: all 0.6s ease !important;
-    -ms-transition: all 0.6s ease !important;
-    transition: all 0.6s ease !important;
+    -o-transition: all 0.6s ease-out !important;
+    -webkit-transition: all 0.6s ease-out !important;
+    -moz-transition: all 0.6s ease-out !important;
+    -ms-transition: all 0.6s ease-out !important;
+    transition: all 0.6s ease-out !important;
   }
 
   .list-md-none {
@@ -6765,56 +7158,60 @@ ol {
     list-style-position: outside;
   }
 
-  .cursor-md-pointer {
+  .c-md-pointer {
     cursor: pointer !important;
   }
 
-  .cursor-md-alias {
+  .c-md-alias {
     cursor: alias !important;
   }
 
-  .cursor-md-all-scroll {
+  .c-md-all-scroll {
     cursor: all-scroll !important;
   }
 
-  .cursor-md-auto {
+  .c-md-auto {
     cursor: auto !important;
   }
 
-  .cursor-md-cell {
+  .c-md-cell {
     cursor: cell !important;
   }
 
-  .cursor-md-col-resize {
+  .c-md-col-resize {
     cursor: col-resize !important;
   }
 
-  .cursor-md-context-menu {
+  .c-md-context-menu {
     cursor: context-menu !important;
   }
 
-  .cursor-md-copy {
+  .c-md-copy {
     cursor: copy !important;
   }
 
-  .cursor-md-crosshair {
+  .c-md-crosshair {
     cursor: crosshair !important;
   }
 
-  .cursor-md-default {
+  .c-md-default {
     cursor: default !important;
   }
 
-  .cursor-md-e-resize {
+  .c-md-e-resize {
     cursor: e-resize !important;
   }
 
-  .cursor-md-ew-resize {
+  .c-md-ew-resize {
     cursor: ew-resize !important;
   }
 
-  .cursor-md-grab {
+  .c-md-grab {
     cursor: grab !important;
+  }
+
+  .c-md-not-allowed {
+    cursor: not-allowed !important;
   }
 
   .fw-md-100 {
@@ -7174,7 +7571,7 @@ ol {
   }
 
   .gap-md-5 {
-    gap: 1.55rem !important;
+    gap: 1.5rem !important;
   }
 
   .gap-md-6 {
@@ -7182,19 +7579,19 @@ ol {
   }
 
   .gap-md-7 {
-    gap: 1.7rem !important;
+    gap: 2.2rem !important;
   }
 
   .gap-md-8 {
-    gap: 1.8rem !important;
+    gap: 2.5rem !important;
   }
 
   .gap-md-9 {
-    gap: 1.9rem !important;
+    gap: 2.8rem !important;
   }
 
   .gap-md-10 {
-    gap: 2rem !important;
+    gap: 3.1rem !important;
   }
 
   .top-md--100 {
@@ -9489,51 +9886,51 @@ ol {
 /* lg */
 @media (min-width: 992px) {
   .transition-lg-1 {
-    -o-transition: all 0.1s ease !important;
-    -webkit-transition: all 0.1s ease !important;
-    -moz-transition: all 0.1s ease !important;
-    -ms-transition: all 0.1s ease !important;
-    transition: all 0.1s ease !important;
+    -o-transition: all 0.1s ease-out !important;
+    -webkit-transition: all 0.1s ease-out !important;
+    -moz-transition: all 0.1s ease-out !important;
+    -ms-transition: all 0.1s ease-out !important;
+    transition: all 0.1s ease-out !important;
   }
 
   .transition-lg-2 {
     -o-transition: all 0.2s ease;
-    -webkit-transition: all 0.2s ease !important;
-    -moz-transition: all 0.2s ease !important;
-    -ms-transition: all 0.2s ease !important;
-    transition: all 0.2s ease !important;
+    -webkit-transition: all 0.2s ease-out !important;
+    -moz-transition: all 0.2s ease-out !important;
+    -ms-transition: all 0.2s ease-out !important;
+    transition: all 0.2s ease-out !important;
   }
 
   .transition-lg-3 {
-    -o-transition: all 0.3s ease !important;
-    -webkit-transition: all 0.3s ease !important;
-    -moz-transition: all 0.3s ease !important;
-    -ms-transition: all 0.3s ease !important;
-    transition: all 0.3s ease !important;
+    -o-transition: all 0.3s ease-out !important;
+    -webkit-transition: all 0.3s ease-out !important;
+    -moz-transition: all 0.3s ease-out !important;
+    -ms-transition: all 0.3s ease-out !important;
+    transition: all 0.3s ease-out !important;
   }
 
   .transition-lg-4 {
-    -o-transition: all 0.4s ease !important;
-    -webkit-transition: all 0.4s ease !important;
-    -moz-transition: all 0.4s ease !important;
-    -ms-transition: all 0.4s ease !important;
-    transition: all 0.4s ease !important;
+    -o-transition: all 0.4s ease-out !important;
+    -webkit-transition: all 0.4s ease-out !important;
+    -moz-transition: all 0.4s ease-out !important;
+    -ms-transition: all 0.4s ease-out !important;
+    transition: all 0.4s ease-out !important;
   }
 
   .transition-lg-5 {
-    -o-transition: all 0.5s ease !important;
-    -webkit-transition: all 0.5s ease !important;
-    -moz-transition: all 0.5s ease !important;
-    -ms-transition: all 0.5s ease !important;
-    transition: all 0.5s ease !important;
+    -o-transition: all 0.5s ease-out !important;
+    -webkit-transition: all 0.5s ease-out !important;
+    -moz-transition: all 0.5s ease-out !important;
+    -ms-transition: all 0.5s ease-out !important;
+    transition: all 0.5s ease-out !important;
   }
 
   .transition-lg-6 {
-    -o-transition: all 0.6s ease !important;
-    -webkit-transition: all 0.6s ease !important;
-    -moz-transition: all 0.6s ease !important;
-    -ms-transition: all 0.6s ease !important;
-    transition: all 0.6s ease !important;
+    -o-transition: all 0.6s ease-out !important;
+    -webkit-transition: all 0.6s ease-out !important;
+    -moz-transition: all 0.6s ease-out !important;
+    -ms-transition: all 0.6s ease-out !important;
+    transition: all 0.6s ease-out !important;
   }
 
   .list-lg-none {
@@ -9604,56 +10001,60 @@ ol {
     list-style-position: outside;
   }
 
-  .cursor-lg-pointer {
+  .c-lg-pointer {
     cursor: pointer !important;
   }
 
-  .cursor-lg-alias {
+  .c-lg-alias {
     cursor: alias !important;
   }
 
-  .cursor-lg-all-scroll {
+  .c-lg-all-scroll {
     cursor: all-scroll !important;
   }
 
-  .cursor-lg-auto {
+  .c-lg-auto {
     cursor: auto !important;
   }
 
-  .cursor-lg-cell {
+  .c-lg-cell {
     cursor: cell !important;
   }
 
-  .cursor-lg-col-resize {
+  .c-lg-col-resize {
     cursor: col-resize !important;
   }
 
-  .cursor-lg-context-menu {
+  .c-lg-context-menu {
     cursor: context-menu !important;
   }
 
-  .cursor-lg-copy {
+  .c-lg-copy {
     cursor: copy !important;
   }
 
-  .cursor-lg-crosshair {
+  .c-lg-crosshair {
     cursor: crosshair !important;
   }
 
-  .cursor-lg-default {
+  .c-lg-default {
     cursor: default !important;
   }
 
-  .cursor-lg-e-resize {
+  .c-lg-e-resize {
     cursor: e-resize !important;
   }
 
-  .cursor-lg-ew-resize {
+  .c-lg-ew-resize {
     cursor: ew-resize !important;
   }
 
-  .cursor-lg-grab {
+  .c-lg-grab {
     cursor: grab !important;
+  }
+
+  .c-lg-not-allowed {
+    cursor: not-allowed !important;
   }
 
   .fw-lg-100 {
@@ -10013,7 +10414,7 @@ ol {
   }
 
   .gap-lg-5 {
-    gap: 1.55rem !important;
+    gap: 1.5rem !important;
   }
 
   .gap-lg-6 {
@@ -10021,19 +10422,19 @@ ol {
   }
 
   .gap-lg-7 {
-    gap: 1.7rem !important;
+    gap: 2.2rem !important;
   }
 
   .gap-lg-8 {
-    gap: 1.8rem !important;
+    gap: 2.5rem !important;
   }
 
   .gap-lg-9 {
-    gap: 1.9rem !important;
+    gap: 2.8rem !important;
   }
 
   .gap-lg-10 {
-    gap: 2rem !important;
+    gap: 3.1rem !important;
   }
 
   .top-lg--100 {
@@ -12328,51 +12729,51 @@ ol {
 /* xl */
 @media (min-width: 1200px) {
   .transition-xl-1 {
-    -o-transition: all 0.1s ease !important;
-    -webkit-transition: all 0.1s ease !important;
-    -moz-transition: all 0.1s ease !important;
-    -ms-transition: all 0.1s ease !important;
-    transition: all 0.1s ease !important;
+    -o-transition: all 0.1s ease-out !important;
+    -webkit-transition: all 0.1s ease-out !important;
+    -moz-transition: all 0.1s ease-out !important;
+    -ms-transition: all 0.1s ease-out !important;
+    transition: all 0.1s ease-out !important;
   }
 
   .transition-xl-2 {
-    -o-transition: all 0.2s ease !important;
-    -webkit-transition: all 0.2s ease !important;
-    -moz-transition: all 0.2s ease !important;
-    -ms-transition: all 0.2s ease !important;
-    transition: all 0.2s ease !important;
+    -o-transition: all 0.2s ease-out !important;
+    -webkit-transition: all 0.2s ease-out !important;
+    -moz-transition: all 0.2s ease-out !important;
+    -ms-transition: all 0.2s ease-out !important;
+    transition: all 0.2s ease-out !important;
   }
 
   .transition-xl-3 {
-    -o-transition: all 0.3s ease !important;
-    -webkit-transition: all 0.3s ease !important;
-    -moz-transition: all 0.3s ease !important;
-    -ms-transition: all 0.3s ease !important;
-    transition: all 0.3s ease !important;
+    -o-transition: all 0.3s ease-out !important;
+    -webkit-transition: all 0.3s ease-out !important;
+    -moz-transition: all 0.3s ease-out !important;
+    -ms-transition: all 0.3s ease-out !important;
+    transition: all 0.3s ease-out !important;
   }
 
   .transition-xl-4 {
-    -o-transition: all 0.4s ease !important;
-    -webkit-transition: all 0.4s ease !important;
-    -moz-transition: all 0.4s ease !important;
-    -ms-transition: all 0.4s ease !important;
-    transition: all 0.4s ease !important;
+    -o-transition: all 0.4s ease-out !important;
+    -webkit-transition: all 0.4s ease-out !important;
+    -moz-transition: all 0.4s ease-out !important;
+    -ms-transition: all 0.4s ease-out !important;
+    transition: all 0.4s ease-out !important;
   }
 
   .transition-xl-5 {
-    -o-transition: all 0.5s ease !important;
-    -webkit-transition: all 0.5s ease !important;
-    -moz-transition: all 0.5s ease !important;
-    -ms-transition: all 0.5s ease !important;
-    transition: all 0.5s ease !important;
+    -o-transition: all 0.5s ease-out !important;
+    -webkit-transition: all 0.5s ease-out !important;
+    -moz-transition: all 0.5s ease-out !important;
+    -ms-transition: all 0.5s ease-out !important;
+    transition: all 0.5s ease-out !important;
   }
 
   .transition-xl-6 {
-    -o-transition: all 0.6s ease !important;
-    -webkit-transition: all 0.6s ease !important;
-    -moz-transition: all 0.6s ease !important;
-    -ms-transition: all 0.6s ease !important;
-    transition: all 0.6s ease !important;
+    -o-transition: all 0.6s ease-out !important;
+    -webkit-transition: all 0.6s ease-out !important;
+    -moz-transition: all 0.6s ease-out !important;
+    -ms-transition: all 0.6s ease-out !important;
+    transition: all 0.6s ease-out !important;
   }
 
   .list-xl-none {
@@ -12443,56 +12844,60 @@ ol {
     list-style-position: outside;
   }
 
-  .cursor-xl-pointer {
+  .c-xl-pointer {
     cursor: pointer !important;
   }
 
-  .cursor-xl-alias {
+  .c-xl-alias {
     cursor: alias !important;
   }
 
-  .cursor-xl-all-scroll {
+  .c-xl-all-scroll {
     cursor: all-scroll !important;
   }
 
-  .cursor-xl-auto {
+  .c-xl-auto {
     cursor: auto !important;
   }
 
-  .cursor-xl-cell {
+  .c-xl-cell {
     cursor: cell !important;
   }
 
-  .cursor-xl-col-resize {
+  .c-xl-col-resize {
     cursor: col-resize !important;
   }
 
-  .cursor-xl-context-menu {
+  .c-xl-context-menu {
     cursor: context-menu !important;
   }
 
-  .cursor-xl-copy {
+  .c-xl-copy {
     cursor: copy !important;
   }
 
-  .cursor-xl-crosshair {
+  .c-xl-crosshair {
     cursor: crosshair !important;
   }
 
-  .cursor-xl-default {
+  .c-xl-default {
     cursor: default !important;
   }
 
-  .cursor-xl-e-resize {
+  .c-xl-e-resize {
     cursor: e-resize !important;
   }
 
-  .cursor-xl-ew-resize {
+  .c-xl-ew-resize {
     cursor: ew-resize !important;
   }
 
-  .cursor-xl-grab {
+  .c-xl-grab {
     cursor: grab !important;
+  }
+
+  .c-xl-not-allowed {
+    cursor: not-allowed !important;
   }
 
   .fw-xl-100 {
@@ -12852,7 +13257,7 @@ ol {
   }
 
   .gap-xl-5 {
-    gap: 1.55rem !important;
+    gap: 1.5rem !important;
   }
 
   .gap-xl-6 {
@@ -12860,19 +13265,19 @@ ol {
   }
 
   .gap-xl-7 {
-    gap: 1.7rem !important;
+    gap: 2.2rem !important;
   }
 
   .gap-xl-8 {
-    gap: 1.8rem !important;
+    gap: 2.5rem !important;
   }
 
   .gap-xl-9 {
-    gap: 1.9rem !important;
+    gap: 2.8rem !important;
   }
 
   .gap-xl-10 {
-    gap: 2rem !important;
+    gap: 3.1rem !important;
   }
 
   .border-xl {
@@ -15206,51 +15611,51 @@ ol {
 /* xxl */
 @media (min-width: 1500px) {
   .transition-xxl-1 {
-    -o-transition: all 0.1s ease !important;
-    -webkit-transition: all 0.1s ease !important;
-    -moz-transition: all 0.1s ease !important;
-    -ms-transition: all 0.1s ease !important;
-    transition: all 0.1s ease !important;
+    -o-transition: all 0.1s ease-out !important;
+    -webkit-transition: all 0.1s ease-out !important;
+    -moz-transition: all 0.1s ease-out !important;
+    -ms-transition: all 0.1s ease-out !important;
+    transition: all 0.1s ease-out !important;
   }
 
   .transition-xxl-2 {
-    -o-transition: all 0.2s ease !important;
-    -webkit-transition: all 0.2s ease !important;
-    -moz-transition: all 0.2s ease !important;
-    -ms-transition: all 0.2s ease !important;
-    transition: all 0.2s ease !important;
+    -o-transition: all 0.2s ease-out !important;
+    -webkit-transition: all 0.2s ease-out !important;
+    -moz-transition: all 0.2s ease-out !important;
+    -ms-transition: all 0.2s ease-out !important;
+    transition: all 0.2s ease-out !important;
   }
 
   .transition-xxl-3 {
-    -o-transition: all 0.3s ease !important;
-    -webkit-transition: all 0.3s ease !important;
-    -moz-transition: all 0.3s ease !important;
-    -ms-transition: all 0.3s ease !important;
-    transition: all 0.3s ease !important;
+    -o-transition: all 0.3s ease-out !important;
+    -webkit-transition: all 0.3s ease-out !important;
+    -moz-transition: all 0.3s ease-out !important;
+    -ms-transition: all 0.3s ease-out !important;
+    transition: all 0.3s ease-out !important;
   }
 
   .transition-xxl-4 {
-    -o-transition: all 0.4s ease !important;
-    -webkit-transition: all 0.4s ease !important;
-    -moz-transition: all 0.4s ease !important;
-    -ms-transition: all 0.4s ease !important;
-    transition: all 0.4s ease !important;
+    -o-transition: all 0.4s ease-out !important;
+    -webkit-transition: all 0.4s ease-out !important;
+    -moz-transition: all 0.4s ease-out !important;
+    -ms-transition: all 0.4s ease-out !important;
+    transition: all 0.4s ease-out !important;
   }
 
   .transition-xxl-5 {
-    -o-transition: all 0.5s ease !important;
-    -webkit-transition: all 0.5s ease !important;
-    -moz-transition: all 0.5s ease !important;
-    -ms-transition: all 0.5s ease !important;
-    transition: all 0.5s ease !important;
+    -o-transition: all 0.5s ease-out !important;
+    -webkit-transition: all 0.5s ease-out !important;
+    -moz-transition: all 0.5s ease-out !important;
+    -ms-transition: all 0.5s ease-out !important;
+    transition: all 0.5s ease-out !important;
   }
 
   .transition-xxl-6 {
-    -o-transition: all 0.6s ease !important;
-    -webkit-transition: all 0.6s ease !important;
-    -moz-transition: all 0.6s ease !important;
-    -ms-transition: all 0.6s ease !important;
-    transition: all 0.6s ease !important;
+    -o-transition: all 0.6s ease-out !important;
+    -webkit-transition: all 0.6s ease-out !important;
+    -moz-transition: all 0.6s ease-out !important;
+    -ms-transition: all 0.6s ease-out !important;
+    transition: all 0.6s ease-out !important;
   }
 
   .list-xxl-none {
@@ -15321,56 +15726,60 @@ ol {
     list-style-position: outside;
   }
 
-  .cursor-xxl-pointer {
+  .c-xxl-pointer {
     cursor: pointer !important;
   }
 
-  .cursor-xxl-alias {
+  .c-xxl-alias {
     cursor: alias !important;
   }
 
-  .cursor-xxl-all-scroll {
+  .c-xxl-all-scroll {
     cursor: all-scroll !important;
   }
 
-  .cursor-xxl-auto {
+  .c-xxl-auto {
     cursor: auto !important;
   }
 
-  .cursor-xxl-cell {
+  .c-xxl-cell {
     cursor: cell !important;
   }
 
-  .cursor-xxl-col-resize {
+  .c-xxl-col-resize {
     cursor: col-resize !important;
   }
 
-  .cursor-xxl-context-menu {
+  .c-xxl-context-menu {
     cursor: context-menu !important;
   }
 
-  .cursor-xxl-copy {
+  .c-xxl-copy {
     cursor: copy !important;
   }
 
-  .cursor-xxl-crosshair {
+  .c-xxl-crosshair {
     cursor: crosshair !important;
   }
 
-  .cursor-xxl-default {
+  .c-xxl-default {
     cursor: default !important;
   }
 
-  .cursor-xxl-e-resize {
+  .c-xxl-e-resize {
     cursor: e-resize !important;
   }
 
-  .cursor-xxl-ew-resize {
+  .c-xxl-ew-resize {
     cursor: ew-resize !important;
   }
 
-  .cursor-xxl-grab {
+  .c-xxl-grab {
     cursor: grab !important;
+  }
+
+  .c-xxl-not-allowed {
+    cursor: not-allowed !important;
   }
 
   .fw-xxl-100 {
@@ -15730,7 +16139,7 @@ ol {
   }
 
   .gap-xxl-5 {
-    gap: 1.55rem !important;
+    gap: 1.5rem !important;
   }
 
   .gap-xxl-6 {
@@ -15738,19 +16147,19 @@ ol {
   }
 
   .gap-xxl-7 {
-    gap: 1.7rem !important;
+    gap: 2.2rem !important;
   }
 
   .gap-xxl-8 {
-    gap: 1.8rem !important;
+    gap: 2.5rem !important;
   }
 
   .gap-xxl-9 {
-    gap: 1.9rem !important;
+    gap: 2.8rem !important;
   }
 
   .gap-xxl-10 {
-    gap: 2rem !important;
+    gap: 3.1rem !important;
   }
 
   .border-xxl {
@@ -18432,6 +18841,19 @@ ol {
   border-color: var(--light);
 }
 
+/*hard buttons*/
+.btn-hard-light,
+.btn-light:hover,
+.btn-outline-hard-light:hover {
+  background-color: var(--hard-light);
+  border-color: var(--hard-light);
+  color: var(--dark);
+}
+
+.btn-hard-light:hover {
+  background-color: var(--hov-hard-light);
+}
+
 /*soft buttons*/
 .btn-soft-primary {
   background-color: var(--soft-primary);
@@ -18502,6 +18924,11 @@ ol {
 .btn-outline-light {
   border-color: var(--light);
   color: var(--dark);
+}
+
+.btn-outline-hard-light {
+  border-color: var(--hard-light);
+  color: var(--soft-dark);
 }
 
 .btn-outline-dark {

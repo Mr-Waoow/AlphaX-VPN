@@ -30,3 +30,29 @@
   padding-bottom: 1rem;
   color: var(--white);
 }
+
+.proxy-checker .btn {
+  padding: 0.5rem 4rem;
+}
+
+.proxy-checker .os-list {
+  display: flex;
+  width: 100%;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.proxy-checker .os-list a:hover,
+.proxy-checker .os-list a:hover .font-icon {
+  color: var(--primary);
+  border-color: var(--primary);
+}
+
+.proxy-checker .os-list .font-icon {
+  font-size: 1.2rem;
+  width: 3rem;
+  height: 3rem;
+  border: 2px solid var(--dark);
+  border-radius: 50%;
+}

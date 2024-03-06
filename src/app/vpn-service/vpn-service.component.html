@@ -43,8 +43,137 @@
       <h4 class="line-after">
         <span>Price of VPN</span>
       </h4>
-      <div  *ngFor="let vpnPrice of vpnPrices" class="col-md-12 py-2">
+      <div *ngFor="let vpnPrice of vpnPrices" class="col-md-12 py-2">
         <xvpn-vpn-price [inputList]="vpnPrice"></xvpn-vpn-price>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="proxy-checker py-5">
+  <div class="container">
+    <div class="row mb-4 pb-2">
+      <h4 class="line-after fw-light">
+        <span>
+          Proxy Checker is a free handy tool helping to work with the Shared proxies
+        </span>
+      </h4>
+      <p class="mt-4">
+        Proxy Checker is a great assistant. It can be used to configure proxy to the most efficient
+        performance: selecting IP addresses of necessary locations, checking the actual speed of a
+        specific IP address and many more options.
+      </p>
+    </div>
+    <div class="row  mb-5 ">
+      <div class="col-lg-3 d-flex flex-column justify-content-between">
+        <div *ngFor="let proxyChecker of proxyCheckers | filterByProperty: 'position': 'left'"
+          class="d-flex gap-5 align-items-center">
+          <span class="icon-md">
+            <img [src]="proxyChecker.icon" alt="{{proxyChecker.name}}">
+          </span>
+          <span>
+            {{proxyChecker.name}}
+          </span>
+        </div>
+      </div>
+      <div class="col-lg-6 gap-10 d-flex flex-column align-items-center justify-content-center">
+        <div class="img-box-lg w-100">
+          <img src="assets/images/shared_proxy/shared_checker/center-img.svg" alt="center-img">
+        </div>
+        <a href="#" class="btn btn-hard-light fs-16 fw-400 rounded-1">Learn more</a>
+      </div>
+      <div class="col-lg-3 d-flex flex-column justify-content-between">
+        <div *ngFor="let proxyChecker of proxyCheckers | filterByProperty: 'position': 'right'"
+          class="d-flex gap-5 align-items-center">
+          <span class="icon-md">
+            <img [src]="proxyChecker.icon" alt="{{proxyChecker.name}}">
+          </span>
+          <span>
+            {{proxyChecker.name}}
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="col-lg-12">
+        <ul class="os-list">
+          <li class=" flex-basis-10">
+            <span>
+              Download ProxyChecker
+            </span>
+          </li>
+          <li *ngFor="let operatingSystem of operatingSystems">
+            <a href="#" class="d-flex gap-2 text-dark hov-text-primary hov-border-primary">
+              <span class="font-icon transition-3">
+                <fa-icon *ngIf="operatingSystem.icon === 'faWindows'" [icon]="faWindows" size="lg"></fa-icon>
+                <fa-icon *ngIf="operatingSystem.icon === 'faApple'" [icon]="faApple" size="lg"></fa-icon>
+                <fa-icon *ngIf="operatingSystem.icon === 'faLinux'" [icon]="faLinux" size="lg"></fa-icon>
+              </span>
+              <div class="d-flex flex-column">
+                <span class="transition-3">
+                  {{operatingSystem.name}}
+                </span>
+                <label class="c-default text-soft-dark hov-text-soft-dark transition-3">
+                  {{operatingSystem.worksOn}}
+                </label>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="free-proxy py-5">
+  <div class="container">
+    <div class="row">
+      <h4 class="line-after mb-3">
+        <span>
+          Almost free proxy lists by RSocks
+        </span>
+      </h4>
+      <div *ngFor="let freeProxy of freeProxies"
+        class="col-lg-3 px-5 text-center d-flex flex-column align-items-center justify-content-between mt-4">
+        <span class="icon-md">
+          <img [src]="freeProxy.icon" alt="{{freeProxy.name}}">
+        </span>
+        <h6 class="text-uppercase my-3">
+          {{freeProxy.name}}
+        </h6>
+        <p>
+          {{freeProxy.description}}
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="info py-5">
+  <div class="container">
+    <div class="row">
+      <h4 class="line-after mb-4">
+        <span>
+          Info
+        </span>
+      </h4>
+      <div class="col-lg-9">
+        <p>
+          Price is the main advantage of Shared proxy by RSocks. These proxies are a great solution for
+          those who don’t need high-quality IP. This package is assembled from all available on the Web
+          opened ports. Therefore, the RSocks team is not committed to maintaining the availability and
+          quality of the Shared packs.
+        </p>
+        <p>
+          We are also ready to provide proxy packs with <a href="#">better-quality exclusive IPs</a> or in
+          a particular location. You can discuss with support team about personal conditions after the
+          registration.
+        </p>
+      </div>
+      <div class="col-lg-3">
+        <div class="notification d-flex flex-column align-items-center justify-content-between p-4 py-5">
+          <span class="img-box-sm mb-4">
+            <img src="assets/images/shared_proxy/info/diamond.svg" alt="diamond">
+          </span>
+          <a href="#" class="btn btn-primary text-dark fs-16 px-5 py-3 rounded-1">Register</a>
+        </div>
       </div>
     </div>
   </div>
