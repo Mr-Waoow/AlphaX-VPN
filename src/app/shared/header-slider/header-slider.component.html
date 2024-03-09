@@ -100,5 +100,31 @@
         </div>
       </div>
     </div>
+    <div *ngIf="routerLinkActive === 'Residential-Proxy'" class="row personal-silder align-items-center">
+      <div class="col-lg-6 mt-5">
+        <div class="slider-content text-start h-240px justify-content-center">
+          <h1>
+            <span *ngIf="showText" class="fade-in">Buy personal proxy</span>
+          </h1>
+          <ul>
+            <li *ngIf="showText1" class="fade-in"><span class="icon-sm"><img
+                  src="assets/images/personal_proxy/header/icon/ip.png" title="Static IP"></span>Static IP for personal
+              use
+            </li>
+            <li *ngIf="showText2" class="fade-in"><span class="icon-sm"><img
+                  src="assets/images/personal_proxy/header/icon/clock.png" title="100% uptime"></span>100% uptime and
+              channel reliability</li>
+            <li *ngIf="showText3" class="fade-in"><span class="icon-sm"><img
+                  src="assets/images/personal_proxy/header/icon/checklist.png" title="Protocol support"></span>Protocol
+              support: SOCKS4 / 4a, SOCKS5, HTTP (S)
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="btn btn-outline-light-primary py-3 px-5 fw-bold rounded-1 mt-5">Try it now</a>
+      </div>
+      <div class="col-lg-6 position-relative d-lg-block d-none mt-5">
+        <xvpn-slider-img-flags></xvpn-slider-img-flags>
+      </div>
+    </div>
   </div>
 </section>

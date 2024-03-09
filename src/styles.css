@@ -18891,6 +18891,15 @@ ol {
 }
 
 /*outline buttons*/
+.btn-outline-light-primary {
+  border-color: var(--light);
+  color: var(--light);
+}
+.btn-outline-light-primary:hover {
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--secondary);
+}
 .btn-outline-primary {
   border-color: var(--primary);
   color: var(--primary);

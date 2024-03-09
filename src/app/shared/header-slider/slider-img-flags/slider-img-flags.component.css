@@ -1,0 +1,203 @@
+.flags-list-item {
+  position: relative;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.personal-header-flags {
+  position: relative;
+  height: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
+}
+
+.flags-list {
+  display: grid;
+  grid-template-columns: repeat(7, 70px);
+  grid-template-rows: repeat(7, 46px);
+  grid-column-gap: 10px;
+  grid-row-gap: 6px;
+}
+
+.flags-list-item.both-span {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.flags-list-flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 2s;
+  -o-transition: transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+  -webkit-animation: flipFlag 6s infinite;
+  animation: flipFlag 6s infinite;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.flags-list-item.--huge {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+
+.flags-list-card.back {
+  -webkit-transform: rotateY(180deg);
+  transform: rotateY(180deg);
+}
+
+.flags-list-item:hover {
+  z-index: 99;
+  -webkit-transform: scale(1.2) translateZ(0);
+  transform: scale(1.2) translateZ(0);
+}
+
+.flags-list-item.--huge:hover {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+/*.personal-header-flags-list {
+  position: absolute;
+  top: -3rem;
+  left: -4rem;
+}*/
+
+.flags-list-card {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 0 2px 0 rgb(0 0 0 / 5%);
+  box-shadow: 0 0 2px 0 rgb(0 0 0 / 5%);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.flags-list-item.both-span .flags-list-card {
+  border-radius: 10px;
+}
+
+.flags-list-info {
+  font-size: 37px;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.flags-list-card img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+personal-header-flags img {
+  vertical-align: middle;
+}
+
+.personal-header-earth {
+  position: absolute;
+  z-index: 90;
+  top: -30%;
+  right: -95%;
+  pointer-events: none;
+}
+
+@media (min-width: 768px){
+.personal-header-earth {
+    right: -45%;
+}
+}
+@media (min-width: 992px) {
+  .personal-header-earth {
+    right: -120%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .personal-header-earth {
+    right: -89%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .personal-header-earth {
+    right: -53%;
+  }
+}
+
+.personal-new__buy-countries-list-item.disabled {
+  opacity: 0.4;
+}
+
+.flags-list-flipper.delayed-15 {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.flags-list-flipper.delayed-5 {
+  -webkit-animation-delay: 0.5s;
+  animation-delay: 0.5s;
+}
+
+:after,
+:before {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+@keyframes flipFlag {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+
+  10% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+
+  40%,
+  60% {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+
+  100%,
+  90% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+}

@@ -1,0 +1,27 @@
+<div class="personal-header-flags">
+  <div class="personal-header-flags-list flags-list">
+    <div
+      *ngFor="let i = index;let flag of flags | getPropertyAndAssign: 'classBoth': 'assignedBoth': 'classHuge': 'assignedHuge': this"
+      class="flags-list-item{{this.assignedBoth[i]}}{{this.assignedHuge[i]}}">
+      <div *ngIf="!flag.isBack && !flag.isInfo" class="flags-list-card">
+        <img src="assets/images/personal_proxy/header/countries/{{flag.name}}.svg" title="{{flag.title}}">
+      </div>
+      <div *ngIf="flag.isBack;" class="flags-list-flipper{{flag.delatedClass}}">
+        <div class="flags-list-card">
+          <img
+            src="assets/images/personal_proxy/header/countries/{{substringBetweenLetter.getSubstringUntilLetter(flag.name, '-')}}.svg"
+            title="{{substringBetweenLetter.getSubstringUntilLetter(flag.title, '-')}}">
+        </div>
+        <div class="flags-list-card back">
+          <img
+            src="assets/images/personal_proxy/header/countries/{{substringBetweenLetter.getSubstringFromLetterToEnd(flag.name, '-')}}.svg"
+            title="{{substringBetweenLetter.getSubstringFromLetterToEnd(flag.title, '-')}}">
+        </div>
+      </div>
+      <div *ngIf="flag.isInfo" class="flags-list-info">51 country</div>
+    </div>
+  </div>
+</div>
+<div class="personal-header-earth">
+  <img src="assets/images/personal_proxy/earth.svg" title="earth">
+</div>

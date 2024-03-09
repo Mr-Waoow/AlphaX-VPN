@@ -6,6 +6,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { WhiteLabelComponent } from './white-label/white-label.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { VpnServiceComponent } from './vpn-service/vpn-service.component';
+import { PersonalProxyComponent } from './personal-proxy/personal-proxy.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'Home' },
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'White-Label', component: WhiteLabelComponent },
   { path: 'Contact-Us', component: ContactUsComponent },
   { path: 'VPN-Service', component: VpnServiceComponent },
+  { path: 'Residential-Proxy', component: PersonalProxyComponent },
 ];
 
 @NgModule({

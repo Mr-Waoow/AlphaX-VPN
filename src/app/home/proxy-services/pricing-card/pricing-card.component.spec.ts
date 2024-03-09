@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { PricingCardComponent } from './pricing-card.component';
+import { PricingCardComponent } from './pricing-table.component';
 
 describe('PricingCardComponent', () => {
   let component: PricingCardComponent;
@@ -11,7 +11,7 @@ describe('PricingCardComponent', () => {
       declarations: [PricingCardComponent]
     })
     .compileComponents();
-    
+
     fixture = TestBed.createComponent(PricingCardComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();

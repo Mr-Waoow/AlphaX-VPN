@@ -14,11 +14,11 @@ import { PreloaderComponent } from './shared/preloader/preloader.component';
 import { BlogComponent } from './home/blog/blog.component';
 import { OfferedServicesComponent } from './shared/offered-services/offered-services.component';
 import { ProxyServicesComponent } from './home/proxy-services/proxy-services.component';
-import { HeaderSliderComponent } from './header-slider/header-slider.component';
+import { HeaderSliderComponent } from './shared/header-slider/header-slider.component';
 import { PricingCardComponent } from './home/proxy-services/pricing-card/pricing-card.component';
 import { StatisticsComponent } from './home/statistics/statistics.component';
 import { TestimonialsComponent } from './home/testimonials/testimonials.component';
-import { SliderImgComponent } from './header-slider/slider-img/slider-img.component';
+import { SliderImgComponent } from './shared/header-slider/slider-img/slider-img.component';
 import { ScrollTopComponent } from './shared/scroll-top/scroll-top.component';
 import { CompaniesComponent } from './home/companies/companies.component';
 import { FaqComponent } from './faq/faq.component';
@@ -29,7 +29,8 @@ import { VpnServiceComponent } from './vpn-service/vpn-service.component';
 import { VpnPriceComponent } from './vpn-service/vpn-price/vpn-price.component';
 import { FilterByPropertyPipe } from './shared/pipes/filter-by-property.pipe';
 import { PersonalProxyComponent } from './personal-proxy/personal-proxy.component';
-import { SliderImgFlagsComponent } from './header-slider/slider-img-flags/slider-img-flags.component';
+import { SliderImgFlagsComponent } from './shared/header-slider/slider-img-flags/slider-img-flags.component';
+import { GetPropertyAndAssignPipe } from './shared/pipes/get-property-and-assign.pipe';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import { SliderImgFlagsComponent } from './header-slider/slider-img-flags/slider
     FilterByPropertyPipe,
     PersonalProxyComponent,
     SliderImgFlagsComponent,
+    GetPropertyAndAssignPipe,
   ],
   imports: [
     BrowserModule,

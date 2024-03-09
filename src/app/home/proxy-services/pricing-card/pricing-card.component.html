@@ -1,5 +1,5 @@
-<div class="pricing-Card box">
-  <table *ngIf="isPricingCard" class="table table-borderless">
+<div *ngIf="!isPricingCard" class="pricing-card box">
+  <table class="table table-borderless">
     <thead>
       <tr>
         <th>
@@ -9,7 +9,7 @@
         </th>
         <th>
           <h5>{{ proxyList?.proxyServiceName }}</h5>
-          <p>{{ proxyList?.proxyServiceDesc }}</p>
+          <span>{{ proxyList?.proxyServiceDesc }}</span>
         </th>
       </tr>
     </thead>
@@ -63,6 +63,122 @@
         <td class="pb-4">
           <a href="#" class="btn btn-primary me-2 text-dark text-capitalize fw-bold">Choose your pack</a>
           or <a href="#">Try it for free</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="isPricingCard" class="pricing-card box">
+  <div class="pricing-card-header">
+    <div>
+      <h5>{{personalPrice?.name}}</h5>
+      <span>{{personalPrice?.serviceName}}</span>
+    </div>
+    <div class="text-end">
+      <h5 class="text-primary">{{personalPrice?.price | currency: 'USD'}}</h5>
+      <span>{{personalPrice?.period}}</span>
+    </div>
+  </div>
+  <table *ngIf="personalPrice" class="table table-borderless pricing-table">
+    <tbody>
+      <tr>
+        <td>
+          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[0]"
+              title="{{personalPrice.features[0]}}"></span>
+        </td>
+        <td>
+          <span>{{personalPrice.features[0]}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[1]"
+              title="{{personalPrice.features[1]}}"></span>
+        </td>
+        <td>
+          <span>{{personalPrice.features[1]}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[2]"
+              title="{{personalPrice.features[2]}}"></span>
+        </td>
+        <td>
+          <span>{{personalPrice.features[2]}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[3]"
+              title="{{personalPrice.features[3]}}"></span>
+        </td>
+        <td>
+          <span>{{personalPrice.features[3]}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="px-4" colspan="2">
+          <hr />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[4]"
+              title="{{personalPrice.features[4]}}"></span>
+        </td>
+        <td>
+          <span>{{personalPrice.features[4]}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[5]"
+              title="{{personalPrice.features[5]}}"></span>
+        </td>
+        <td>
+          <span>{{personalPrice.features[5]}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[6]"
+              title="{{personalPrice.features[6]}}"></span>
+        </td>
+        <td>
+          <span>{{personalPrice.features[6]}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[7]"
+              title="{{personalPrice.features[7]}}"></span>
+        </td>
+        <td>
+          <span>{{personalPrice.features[7]}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[8]"
+              title="{{personalPrice.features[8]}}"></span>
+        </td>
+        <td>
+          <span>{{personalPrice.features[8]}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[9]"
+              title="{{personalPrice.features[9]}}"></span>
+        </td>
+        <td>
+          <span>{{personalPrice.features[9]}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="button" colspan="2">
+            <a class="btn btn-primary text-dark text-capitalize fw-500 fs-15 w-100">Try it now</a>
         </td>
       </tr>
     </tbody>
