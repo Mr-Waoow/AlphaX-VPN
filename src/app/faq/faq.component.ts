@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Renderer2 } from '@angular/core';
 import { QuestionData } from './interfaces/question-data';
 import { QuestionsDataService } from './services/questions-data.service';
-import { Openable } from '../shared/classes/openable';
+import { Methods } from '../shared/classes/methods';
 
 @Component({
   selector: 'xvpn-faq',
@@ -11,12 +11,12 @@ import { Openable } from '../shared/classes/openable';
 })
 export class FaqComponent implements OnInit {
   questions: QuestionData[] = [];
-  openable = new Openable();
+  methods = new Methods();
   constructor(private questionsDataService: QuestionsDataService) {}
   ngOnInit(): void {
     this.questions = this.questionsDataService.getQuestionsData();
   }
   openDivPlus(evt: Event): void {
-    this.openable.openDivPlus(evt);
+    this.methods.openable.openDivPlus(evt);
   }
 }

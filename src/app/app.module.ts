@@ -31,6 +31,7 @@ import { FilterByPropertyPipe } from './shared/pipes/filter-by-property.pipe';
 import { PersonalProxyComponent } from './personal-proxy/personal-proxy.component';
 import { SliderImgFlagsComponent } from './shared/header-slider/slider-img-flags/slider-img-flags.component';
 import { GetPropertyAndAssignPipe } from './shared/pipes/get-property-and-assign.pipe';
+import { BuyServiceComponent } from './personal-proxy/buy-service/buy-service.component';
 
 @NgModule({
   declarations: [
@@ -59,6 +60,7 @@ import { GetPropertyAndAssignPipe } from './shared/pipes/get-property-and-assign
     PersonalProxyComponent,
     SliderImgFlagsComponent,
     GetPropertyAndAssignPipe,
+    BuyServiceComponent,
   ],
   imports: [
     BrowserModule,
