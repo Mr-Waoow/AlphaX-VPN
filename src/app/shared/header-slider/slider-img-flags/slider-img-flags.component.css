@@ -158,7 +158,7 @@ personal-header-flags img {
   }
 }
 
-.personal-new__buy-countries-list-item.disabled {
+.buy-countries-list-item.disabled {
   opacity: 0.4;
 }
 

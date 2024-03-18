@@ -1,7 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import { ProxyList } from '../interfaces/proxy-list';
-import { PersonalPrice } from '../../../personal-proxy/interfaces/personal-price';
+import { ProxyList } from '../../home/proxy-services/interfaces/proxy-list';
+import { PersonalPrice } from '../../personal-proxy/interfaces/personal-price';
 
 @Component({
   selector: 'xvpn-pricing-card',

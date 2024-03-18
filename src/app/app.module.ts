@@ -15,7 +15,7 @@ import { BlogComponent } from './home/blog/blog.component';
 import { OfferedServicesComponent } from './shared/offered-services/offered-services.component';
 import { ProxyServicesComponent } from './home/proxy-services/proxy-services.component';
 import { HeaderSliderComponent } from './shared/header-slider/header-slider.component';
-import { PricingCardComponent } from './home/proxy-services/pricing-card/pricing-card.component';
+import { PricingCardComponent } from './shared/pricing-card/pricing-card.component';
 import { StatisticsComponent } from './home/statistics/statistics.component';
 import { TestimonialsComponent } from './home/testimonials/testimonials.component';
 import { SliderImgComponent } from './shared/header-slider/slider-img/slider-img.component';
@@ -32,6 +32,7 @@ import { PersonalProxyComponent } from './personal-proxy/personal-proxy.componen
 import { SliderImgFlagsComponent } from './shared/header-slider/slider-img-flags/slider-img-flags.component';
 import { GetPropertyAndAssignPipe } from './shared/pipes/get-property-and-assign.pipe';
 import { BuyServiceComponent } from './personal-proxy/buy-service/buy-service.component';
+import { DataCountryProxyDirective } from './personal-proxy/buy-service/directives/data-country-proxy.directive';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,7 @@ import { BuyServiceComponent } from './personal-proxy/buy-service/buy-service.co
     SliderImgFlagsComponent,
     GetPropertyAndAssignPipe,
     BuyServiceComponent,
+    DataCountryProxyDirective,
   ],
   imports: [
     BrowserModule,

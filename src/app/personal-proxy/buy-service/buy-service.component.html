@@ -6,18 +6,21 @@
           <h4 class="line-after my-4"><span>Buy Personal Proxy</span></h4>
           <div>
             <span class="me-2">Available</span>
-            <span class="p-2"
-              style="font-weight: bold; color: #fafafa; background-color: #54BB70; border-radius: 0.1rem;">51
-              country</span>
+            <span *ngIf="isPrivate" class="p-2 text-light bg-primary rounded-1">{{privateCountriesNumber}}
+              countries</span>
+            <span *ngIf="!isPrivate" class="p-2 text-light bg-primary rounded-1">{{sharedCountriesNumber}}
+              countries</span>
           </div>
         </div>
         <div class="tab">
-          <button #btnPrivate (click)="this.showPrivate($event)" class="tablinks d-flex flex-column align-items-center active"><span class="icon-sm me-2"><img
-                src="assets/images/personal_proxy/buy personal proxy/buttons/user.png"
-                title="private"></span>Private</button>
-          <button #btnShared (click)="this.showShared($event)" class="tablinks d-flex flex-column align-items-center"><span class="icon-sm me-2"><img
-                src="assets/images/personal_proxy/buy personal proxy/buttons/group.png"
-                title="shared"></span>Shared</button>
+          <button #btnPrivate (click)="this.showPrivate($event)" class="tablinks active">
+            <fa-icon class="ms-1" [icon]="faUser"></fa-icon>
+            <span>Private</span>
+          </button>
+          <button #btnShared (click)="this.showShared($event)" class="tablinks">
+            <fa-icon class="ms-1" [icon]="faUserGroup"></fa-icon>
+            <span>Shared</span>
+          </button>
         </div>
       </div>
     </div>
@@ -31,623 +34,151 @@
       </div>
       <div class="content-box">
         <div #title class="row title box">
-          <div class="col-md-12 d-flex align-items-center">
-            <span class="icon-sm me-2"><img src="assets/images/personal_proxy/buy personal proxy/private/us.svg"
-                title="USA"></span>
-            <h4 class="me-3">United States</h4>
-            <span>from $5</span>
+          <div class="col-md-12 pb-2 d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-3">
+              <span class="icon-sm">
+                <img src="assets/images/personal_proxy/buy personal proxy/private/{{this.countryProxy?.code}}.svg"
+                  title="{{this.countryProxy?.name}}">
+              </span>
+              <h4>
+                {{this.countryProxy?.name}}
+              </h4>
+              <span *ngIf="countryProxy && countryProxy.pricePrivate">
+                from {{this.countryProxy.pricePrivate[0] | currency:'USD'}}
+              </span>
+            </div>
+            <div class="d-flex align-items-center gap-1">
+              <div>
+                <span>
+                  Available IPs&nbsp;
+                </span>
+                <span *ngIf="this.cityNo != -1">
+                  in&nbsp;{{countryProxy?.cities?.at(this.cityNo)}}
+                </span>
+                :&nbsp;
+              </div>
+              <div class="px-2 py-1 text-light bg-primary rounded-1">
+                <span *ngIf="this.cityNo == -1">
+                  {{countryProxy?.ipAvailiblePrivate}}
+                </span>
+                <span *ngIf="this.cityNo != -1">
+                  {{countryProxy?.ipAvailiblePrivateCities?.at(this.cityNo)}}
+                </span>
+              </div>
+            </div>
           </div>
           <hr />
           <div class="col-md-12">
-            <div class="personal-new__buy-countries-usa-cities">
-              <button onclick="changeBtn(event)" class="personal-new__buy-countries-usa-city selected" data-avail="277"
-                data-region="" data-city="">United States Mix</button>
-              <button onclick="changeBtn(event)" class="personal-new__buy-countries-usa-city" data-avail="27"
-                data-region="Texas" data-city="Dallas">Texas</button>
-              <button onclick="changeBtn(event)" class="personal-new__buy-countries-usa-city" data-avail="47"
-                data-region="Nevada" data-city="Las Vegas">Nevada</button>
-              <button onclick="changeBtn(event)" class="personal-new__buy-countries-usa-city" data-avail="97"
-                data-region="New Jersey" data-city="Piscataway">New Jersey</button>
-              <button onclick="changeBtn(event)" class="personal-new__buy-countries-usa-city" data-avail="47"
-                data-region="Illinois" data-city="West Chicago">Illinois</button>
+            <div class="buy-countries-cities">
+              <button #citiesBtn (click)="this.selectedCity($event, -1)"
+                class="buy-country-city">{{this.countryProxy?.name}} Mix</button>
+              <button #citiesBtn *ngFor="let city of this.countryProxy?.cities;let i = index"
+                (click)="this.selectedCity($event,i)" class="buy-country-city">{{city}}</button>
             </div>
           </div>
           <div class="col-lg-12">
-            <div class="personal-new__buy-bill-usa flex-lg-row">
-              <div class="personal-new__buy-bill-item-period">
-                <div class="personal-new__buy-bill-item-label">
+            <div class="buy-bill-private flex-lg-row">
+              <div class="buy-bill-item-period">
+                <div class="buy-bill-item-label">
                   Period:
                 </div>
-                <label data-value="month" class="personal-new__buy-bill-item-period-button js-period-usa">
-                  <input type="radio" name="period-usa" value="month"><span>Month</span>
+                <label data-value="month" class="buy-bill-item-period-button js-period-private">
+                  <input #radioMonth (change)="this.selectedPeriod($event)" data-index="0" type="radio" name="period"
+                    value="month"><span>Month</span>
                 </label>
-                <label data-value="halfyear" class="personal-new__buy-bill-item-period-button js-period-usa">
-                  <input type="radio" name="period-usa" value="halfyear"><span>Halfyear</span>
+                <label data-value="halfyear" class="buy-bill-item-period-button js-period-private">
+                  <input #radioHalfyear (change)="this.selectedPeriod($event)" data-index="1" type="radio" name="period"
+                    value="halfyear"><span>Halfyear</span>
                 </label>
-                <label data-value="year" class="personal-new__buy-bill-item-period-button js-period-usa">
-                  <input type="radio" name="period-usa" value="year"><span>Year</span>
+                <label data-value="year" class="buy-bill-item-period-button js-period-private">
+                  <input #radioYear (change)="this.selectedPeriod($event)" data-index="2" type="radio" name="period"
+                    value="year"><span>Year</span>
                 </label>
               </div>
-              <div class="personal-new__buy-bill-item-count">
-                <div class="personal-new__buy-bill-item-label">
-                  Кол-во IP:
+              <div class="buy-bill-item-count">
+                <div class="buy-bill-item-label">
+                  Number of IPs:
                 </div>
-                <div class="personal-new__buy-bill-item-count-container">
-                  <input type="number" name="count" min="1" value="1"
-                    class="personal-new__buy-bill-item-count-input js-usa-count-input" max="27">
-                  <button class="personal-new__buy-bill-item-count-btn --minus js-count-change">-</button>
-                  <button class="personal-new__buy-bill-item-count-btn --plus js-count-change">+</button>
+                <div class="buy-bill-item-count-container">
+                  <input #countInput disabled type="number" name="count" min="1" value="1"
+                    class="buy-bill-item-count-input js-private-count-input" max="27">
+                  <button (click)="this.minusCount()" class="buy-bill-item-count-btn --minus js-count-change">-</button>
+                  <button (click)="this.plusCount()" class="buy-bill-item-count-btn --plus js-count-change">+</button>
                 </div>
               </div>
-              <div class="personal-new__buy-bill-total">
-                <div class="personal-new__buy-bill-total-day personal-new__buy-bill-item-label">
-                  $<span class="personal-new__buy-bill-total-day-num">0.17</span> per day </div>
-                <button class="personal-new__buy-bill-total-btn">
-                  Add for $<span class="personal-new__buy-bill-total-price-num">5</span> </button>
+              <div class="buy-bill-total">
+                <div class="buy-bill-total-day buy-bill-item-label">
+                  <span class="buy-bill-total-day-num">{{this.costPerDay.toFixed(2)}}</span> per day </div>
+                <button class="buy-bill-total-btn">
+                  Add for
+                  <span #price class="buy-bill-total-price-num">
+                    {{this.totalCost | currency: 'USD'}}
+                  </span>
+                </button>
               </div>
             </div>
           </div>
         </div>
         <div class="row my-4">
-          <div id="buy-list-personal" class="personal-new__buy-countries-list p-0">
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="al" data-ip-availible="18"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="Albania"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/al.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Albania</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="au" data-ip-availible="35"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="Australia"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/au.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Australia</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="at" data-ip-availible="25"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="Austria"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/at.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Austria</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="by" data-ip-availible="35"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="Belarus"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/by.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Belarus</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="ba" data-ip-availible="17"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="Bosnia and Herzegovina"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/ba.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Bosnia and Herzegovina</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="br" data-ip-availible="39"
-              data-price-month="8" data-price-halfyear="50" data-price-year="100" data-name="Brazil"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/br.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Brazil</div>
-              <div class="personal-new__buy-countries-list-item-price">from $8</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="bg" data-ip-availible="13"
-              data-price-month="5" data-price-halfyear="25" data-price-year="50" data-name="Bulgaria"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/bg.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Bulgaria</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="ca" data-ip-availible="85"
-              data-price-month="5" data-price-halfyear="25" data-price-year="50" data-name="Canada"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/ca.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Canada</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="cy" data-ip-availible="6"
-              data-price-month="6" data-price-halfyear="30" data-price-year="60" data-name="Cyprus"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/cy.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Cyprus</div>
-              <div class="personal-new__buy-countries-list-item-price">from $6</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="cz" data-ip-availible="5"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="Czech Republic"
-              onclick="changeCountry(event)" data-filter="private" style="">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/cz.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Czech Republic</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="eg" data-ip-availible="10"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="Egypt"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/eg.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Egypt</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="ee" data-ip-availible="34"
-              data-price-month="6" data-price-halfyear="30" data-price-year="60" data-name="Estonia"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/ee.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Estonia</div>
-              <div class="personal-new__buy-countries-list-item-price">from $6</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="fi" data-ip-availible="26"
-              data-price-month="6" data-price-halfyear="30" data-price-year="60" data-name="Finland"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/fi.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Finland</div>
-              <div class="personal-new__buy-countries-list-item-price">from $6</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="fr" data-ip-availible="46"
-              data-price-month="5" data-price-halfyear="30" data-price-year="50" data-name="France"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/fr.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">France</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="de" data-ip-availible="86"
-              data-price-month="5" data-price-halfyear="25" data-price-year="50" data-name="Germany"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/de.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Germany</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="gr" data-ip-availible="4"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="Greece"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/gr.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Greece</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="hk" data-ip-availible="8"
-              data-price-month="6" data-price-halfyear="30" data-price-year="60" data-name="Hong Kong"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/hk.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Hong Kong</div>
-              <div class="personal-new__buy-countries-list-item-price">from $6</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="hu" data-ip-availible="11"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="Hungary"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/hu.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Hungary</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="in" data-ip-availible="38"
-              data-price-month="5" data-price-halfyear="25" data-price-year="50" data-name="India"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/in.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">India</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="ie" data-ip-availible="9"
-              data-price-month="5" data-price-halfyear="25" data-price-year="50" data-name="Ireland"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/ie.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Ireland</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="ps" data-ip-availible="5"
-              data-price-month="3" data-price-halfyear="15" data-price-year="30" data-name="Palestine "
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/pal.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Palestine</div>
-              <div class="personal-new__buy-countries-list-item-price">from $3</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="it" data-ip-availible="67"
-              data-price-month="5" data-price-halfyear="25" data-price-year="50" data-name="Italy"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/it.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Italy</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="jp" data-ip-availible="48"
-              data-price-month="8" data-price-halfyear="40" data-price-year="80" data-name="Japan"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/jp.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Japan</div>
-              <div class="personal-new__buy-countries-list-item-price">from $8</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="kz" data-ip-availible="26"
-              data-price-month="6" data-price-halfyear="30" data-price-year="60" data-name="Kazakhstan"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/kz.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Kazakhstan</div>
-              <div class="personal-new__buy-countries-list-item-price">from $6</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="ke" data-ip-availible="20"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="Kenya"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/ke.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Kenya</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="lv" data-ip-availible="25"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="Latvia"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/lv.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Latvia</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="lu" data-ip-availible="36"
-              data-price-month="5" data-price-halfyear="25" data-price-year="49" data-name="Luxembourg"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/lu.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Luxembourg</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="my" data-ip-availible="3"
-              data-price-month="8" data-price-halfyear="40" data-price-year="80" data-name="Malaysia"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/my.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Malaysia</div>
-              <div class="personal-new__buy-countries-list-item-price">from $8</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="mx" data-ip-availible="15"
-              data-price-month="5" data-price-halfyear="25" data-price-year="50" data-name="Mexico"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/mx.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Mexico</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="nl" data-ip-availible="42"
-              data-price-month="5" data-price-halfyear="25" data-price-year="50" data-name="Netherlands"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/nl.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Netherlands</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="nz" data-ip-availible="9"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="New Zealand"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/nz.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">New Zealand</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="no" data-ip-availible="62"
-              data-price-month="5" data-price-halfyear="25" data-price-year="50" data-name="Norway"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/no.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Norway</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="pl" data-ip-availible="17"
-              data-price-month="5" data-price-halfyear="25" data-price-year="50" data-name="Poland"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/pl.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Poland</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private disabled" data-iso="pt" data-ip-availible="0"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="Portugal"
-              data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/pt.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Portugal</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="kr" data-ip-availible="16"
-              data-price-month="7" data-price-halfyear="29" data-price-year="49" data-name="Republic of Korea"
-              onclick="changeCountry(event)" data-filter="private" style="">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/kr.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Republic of Korea</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="lt" data-ip-availible="5"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="Republic of Lithuania"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/lt.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Republic of Lithuania</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="md" data-ip-availible="55"
-              data-price-month="5" data-price-halfyear="25" data-price-year="50" data-name="Republic of Moldova"
-              onclick="changeCountry(event)" data-filter="private" style="">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/md.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Republic of Moldova</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="ro" data-ip-availible="27"
-              data-price-month="5" data-price-halfyear="25" data-price-year="50" data-name="Romania"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/ro.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Romania</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="ru" data-ip-availible="4"
-              data-price-month="5" data-price-halfyear="25" data-price-year="50" data-name="Russia"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/ru.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Russia</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="sg" data-ip-availible="81"
-              data-price-month="8" data-price-halfyear="40" data-price-year="80" data-name="Singapore"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/sg.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Singapore</div>
-              <div class="personal-new__buy-countries-list-item-price">from $8</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="sk" data-ip-availible="18"
-              data-price-month="8" data-price-halfyear="40" data-price-year="80" data-name="Slovakia"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/sk.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Slovakia</div>
-              <div class="personal-new__buy-countries-list-item-price">from $8</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="za" data-ip-availible="12"
-              data-price-month="7" data-price-halfyear="29" data-price-year="49" data-name="South Africa"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/za.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">South Africa</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="es" data-ip-availible="12"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="Spain"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/es.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Spain</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="se" data-ip-availible="38"
-              data-price-month="6" data-price-halfyear="30" data-price-year="60" data-name="Sweden"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/se.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Sweden</div>
-              <div class="personal-new__buy-countries-list-item-price">from $6</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="ch" data-ip-availible="16"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="Switzerland"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/ch.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Switzerland</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="th" data-ip-availible="28"
-              data-price-month="9" data-price-halfyear="45" data-price-year="90" data-name="Thailand"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/th.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Thailand</div>
-              <div class="personal-new__buy-countries-list-item-price">from $9</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="tr" data-ip-availible="8"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="Turkey"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/tr.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Turkey</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="ua" data-ip-availible="67"
-              data-price-month="5" data-price-halfyear="25" data-price-year="50" data-name="Ukraine"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/ua.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Ukraine</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="ae" data-ip-availible="8"
-              data-price-month="7" data-price-halfyear="35" data-price-year="70" data-name="United Arab Emirates"
-              onclick="changeCountry(event)" data-filter="private">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/ae.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">United Arab Emirates</div>
-              <div class="personal-new__buy-countries-list-item-price">from $7</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item private" data-iso="gb" data-ip-availible="70"
-              data-price-month="5" data-price-halfyear="25" data-price-year="50" data-name="United Kingdom"
-              onclick="changeCountry(event)" data-filter="private" style="">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/gb.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">United Kingdom</div>
-              <div class="personal-new__buy-countries-list-item-price">from $5</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item d-none shared" data-iso="at" data-ip-availible="1011"
-              data-price-week="0.2" data-price-month="0.4" data-price-halfyear="2" data-name="Austria"
-              onclick="changeCountry(event)" data-filter="shared">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/at.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Austria</div>
-              <div class="personal-new__buy-countries-list-item-price">from $0.2</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item d-none shared" data-iso="be" data-ip-availible="1010"
-              data-price-week="0.2" data-price-month="0.4" data-price-halfyear="2" data-name="Belgium"
-              onclick="changeCountry(event)" data-filter="shared">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/be.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Belgium</div>
-              <div class="personal-new__buy-countries-list-item-price">from $0.2</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item d-none shared" data-iso="ca" data-ip-availible="1020"
-              data-price-week="0.2" data-price-month="0.4" data-price-halfyear="2" data-name="Canada"
-              onclick="changeCountry(event)" data-filter="shared">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/ca.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Canada</div>
-              <div class="personal-new__buy-countries-list-item-price">from $0.2</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item d-none shared" data-iso="fr" data-ip-availible="1020"
-              data-price-week="0.2" data-price-month="0.4" data-price-halfyear="2" data-name="France"
-              onclick="changeCountry(event)" data-filter="shared">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/fr.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">France</div>
-              <div class="personal-new__buy-countries-list-item-price">from $0.2</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item d-none shared" data-iso="de" data-ip-availible="2022"
-              data-price-week="0.2" data-price-month="0.4" data-price-halfyear="2" data-name="Germany"
-              onclick="changeCountry(event)" data-filter="shared">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/de.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Germany</div>
-              <div class="personal-new__buy-countries-list-item-price">from $0.2</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item d-none shared" data-iso="it" data-ip-availible="1003"
-              data-price-week="0.2" data-price-month="0.4" data-price-halfyear="2" data-name="Italy"
-              onclick="changeCountry(event)" data-filter="shared">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/it.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Italy</div>
-              <div class="personal-new__buy-countries-list-item-price">from $0.2</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item d-none shared" data-iso="nl" data-ip-availible="1018"
-              data-price-week="0.2" data-price-month="0.4" data-price-halfyear="2" data-name="Netherlands"
-              onclick="changeCountry(event)" data-filter="shared">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/nl.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Netherlands</div>
-              <div class="personal-new__buy-countries-list-item-price">from $0.2</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item d-none shared" data-iso="pl" data-ip-availible="1011"
-              data-price-week="0.2" data-price-month="0.4" data-price-halfyear="2" data-name="Poland"
-              onclick="changeCountry(event)" data-filter="shared">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/pl.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Poland</div>
-              <div class="personal-new__buy-countries-list-item-price">from $0.2</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item d-none shared" data-iso="ru" data-ip-availible="2120"
-              data-price-week="0.2" data-price-month="0.4" data-price-halfyear="2" data-name="Russia"
-              onclick="changeCountry(event)" data-filter="shared">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/ru.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Russia</div>
-              <div class="personal-new__buy-countries-list-item-price">from $0.2</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item d-none shared" data-iso="es" data-ip-availible="1010"
-              data-price-week="0.2" data-price-month="0.4" data-price-halfyear="2" data-name="Spain"
-              onclick="changeCountry(event)" data-filter="shared">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/es.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Spain</div>
-              <div class="personal-new__buy-countries-list-item-price">from $0.2</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item d-none shared" data-iso="se" data-ip-availible="1011"
-              data-price-week="0.2" data-price-month="0.4" data-price-halfyear="2" data-name="Sweden"
-              onclick="changeCountry(event)" data-filter="shared">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/se.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Sweden</div>
-              <div class="personal-new__buy-countries-list-item-price">from $0.2</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item d-none shared" data-iso="ua" data-ip-availible="1021"
-              data-price-week="0.2" data-price-month="0.4" data-price-halfyear="2" data-name="Ukraine"
-              onclick="changeCountry(event)" data-filter="shared">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/ua.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">Ukraine</div>
-              <div class="personal-new__buy-countries-list-item-price">from $0.2</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item d-none shared" data-iso="gb" data-ip-availible="1010"
-              data-price-week="0.2" data-price-month="0.4" data-price-halfyear="2" data-name="United Kingdom"
-              onclick="changeCountry(event)" data-filter="shared">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/gb.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">United Kingdom</div>
-              <div class="personal-new__buy-countries-list-item-price">from $0.2</div>
-            </div>
-            <div #targetElements class="personal-new__buy-countries-list-item d-none shared" data-iso="us" data-ip-availible="20496"
-              data-price-week="0.2" data-price-month="0.4" data-price-halfyear="2" data-name="United States"
-              onclick="changeCountry(event)" data-filter="shared">
-              <img class="personal-new__buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/us.svg" alt="">
-              <div class="personal-new__buy-countries-list-item-name">United States</div>
-              <div class="personal-new__buy-countries-list-item-price">from $0.2</div>
+          <div id="buy-list-personal" class="buy-countries-list p-0">
+            <div #countriesBtn *ngFor="let countryProxy of countriesProxy; let i = index"
+              class="buy-countries-list-item {{countryProxy.privateClass}}{{countryProxy.sharedClass}}{{countryProxy.disabledClass}}"
+              (click)="this.selectedCountry($event, i)">
+              <img class="buy-countries-list-item-flag"
+                src="assets/images/personal_proxy/buy personal proxy/private/{{countryProxy.flag}}.svg"
+                alt="{{countryProxy.name}}">
+              <div class="buy-countries-list-item-name">{{countryProxy.name}}</div>
+              <div *ngIf="isPrivate" class="buy-countries-list-item-price">from
+                {{countryProxy.pricePrivate[0] | currency: 'USD'}}</div>
+              <div *ngIf="!isPrivate" class="buy-countries-list-item-price">from
+                {{countryProxy.priceShared[0] | currency: 'USD'}}</div>
             </div>
           </div>
         </div>
-        <div id="BuyBill" class="row title box d-none">
-          <div class="personal-new__buy-bill flex-lg-row">
-            <div class="personal-new__buy-bill-body">
-              <div class="personal-new__buy-bill-item flex-lg-row" data-iso="sk" data-filter="private">
-                <div class="personal-new__buy-bill-item-name">
-                  <img id="CurrentCountryImage" class="personal-new__buy-bill-item-name-flag"
+        <div class="row title box d-none">
+          <div class="buy-bill flex-lg-row">
+            <div class="buy-bill-body">
+              <div class="buy-bill-item flex-lg-row" data-iso="sk" data-filter="private">
+                <div class="buy-bill-item-name">
+                  <img id="CurrentCountryImage" class="buy-bill-item-name-flag"
                     src="assets/images/personal_proxy/buy personal proxy/private/jp.svg" alt=""
                     style="width: 2rem;height: 1.5rem;">
-                  <span id="CurrentCountryName" class="personal-new__buy-bill-item-name-text">Slovakia</span>
+                  <span id="CurrentCountryName" class="buy-bill-item-name-text">Slovakia</span>
                 </div>
-                <div class="personal-new__buy-bill-item-period">
-                  <div class="personal-new__buy-bill-item-label">
+                <div class="buy-bill-item-period">
+                  <div class="buy-bill-item-label">
                     Period:
                   </div>
 
-                  <label data-value="month" class="personal-new__buy-bill-item-period-button js-change-bill-period">
+                  <label data-value="month" class="buy-bill-item-period-button js-change-bill-period">
                     <input type="radio" name="period" value="month" checked="checked"><span>Month</span>
                   </label>
-                  <label data-value="halfyear" class="personal-new__buy-bill-item-period-button js-change-bill-period">
+                  <label data-value="halfyear" class="buy-bill-item-period-button js-change-bill-period">
                     <input type="radio" name="period" value="halfyear"><span>Halfyear</span>
                   </label>
-                  <label data-value="year" class="personal-new__buy-bill-item-period-button js-change-bill-period">
+                  <label data-value="year" class="buy-bill-item-period-button js-change-bill-period">
                     <input type="radio" name="period" value="year"><span>Year</span>
                   </label>
                 </div>
-                <div class="personal-new__buy-bill-item-count">
-                  <div class="personal-new__buy-bill-item-label">
+                <div class="buy-bill-item-count">
+                  <div class="buy-bill-item-label">
                     Кол-во IP:
                   </div>
-                  <div class="personal-new__buy-bill-item-count-container">
+                  <div class="buy-bill-item-count-container">
                     <input type="number" name="count" min="1" value="1"
-                      class="personal-new__buy-bill-item-count-input js-count-input" max="18">
-                    <button class="personal-new__buy-bill-item-count-btn --minus js-count-change">-</button>
-                    <button class="personal-new__buy-bill-item-count-btn --plus js-count-change">+</button>
+                      class="buy-bill-item-count-input js-count-input" max="18">
+                    <button class="buy-bill-item-count-btn --minus js-count-change">-</button>
+                    <button class="buy-bill-item-count-btn --plus js-count-change">+</button>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="personal-new__buy-bill-total">
-              <div class="personal-new__buy-bill-total-day personal-new__buy-bill-item-label">
-                $<span class="personal-new__buy-bill-total-day-num js-bill-day-price">0.27</span>
+            <div class="buy-bill-total">
+              <div class="buy-bill-total-day buy-bill-item-label">
+                $<span class="buy-bill-total-day-num js-bill-day-price">0.27</span>
                 per day </div>
-              <button class="personal-new__buy-bill-total-btn">
-                Add for $<span class="personal-new__buy-bill-total-price-num js-bill-total-price">8</span>
+              <button class="buy-bill-total-btn">
+                Add for $<span class="buy-bill-total-price-num js-bill-total-price">8</span>
               </button>
             </div>
           </div>

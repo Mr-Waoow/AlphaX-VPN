@@ -2,6 +2,7 @@ import { ElementRef, QueryList, Renderer2 } from '@angular/core';
 
 export class Methods {
   private renderer2!: Renderer2;
+  other = {};
   openable = {
     r180: 'r-180',
     r90: 'r-90',
@@ -125,7 +126,10 @@ export class Methods {
 
       if (i < currentElementsList.length) {
         const currentElement = currentElementsList[i].nativeElement;
-        if (currentElement.classList.contains('shared')) {
+        if (
+          currentElement.classList.contains('shared') &&
+          !currentElement.classList.contains('private')
+        ) {
           currentElement.classList.add('d-none');
           i++;
           this.showPrivate(
@@ -169,7 +173,10 @@ export class Methods {
 
       if (i < currentElementsList.length) {
         const currentElement = currentElementsList[i].nativeElement;
-        if (currentElement.classList.contains('private')) {
+        if (
+          currentElement.classList.contains('private') &&
+          !currentElement.classList.contains('shared')
+        ) {
           currentElement.classList.add('d-none');
           i++;
           this.showShared(
@@ -198,6 +205,30 @@ export class Methods {
       }
 
       return 0;
+    },
+  };
+  selected = {
+    removeClass(
+      targetElements: QueryList<ElementRef>,
+      i: number = 0,
+      className: string
+    ): number {
+      const currentElementsList = targetElements.toArray();
+      const n = currentElementsList.length;
+      if (i < n) {
+        const currentElement = currentElementsList[i].nativeElement;
+        currentElement.classList.remove(className);
+        i++;
+        this.removeClass(targetElements, i, className);
+      } else {
+        return 0;
+      }
+      return 0;
+    },
+    selectedBtn(evt: Event, targetsBtnElementRef: QueryList<ElementRef>): void {
+      this.removeClass(targetsBtnElementRef, 0, 'selected');
+      const element = evt.currentTarget as HTMLElement;
+      element.classList.add('selected');
     },
   };
 }

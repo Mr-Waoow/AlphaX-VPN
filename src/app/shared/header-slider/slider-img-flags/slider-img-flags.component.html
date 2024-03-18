@@ -1,7 +1,7 @@
 <div class="personal-header-flags">
   <div class="personal-header-flags-list flags-list">
     <div
-      *ngFor="let i = index;let flag of flags | getPropertyAndAssign: 'classBoth': 'assignedBoth': 'classHuge': 'assignedHuge': this"
+      *ngFor="let i = index;let flag of flags | getPropertyAndAssign: this: 'classBoth': 'assignedBoth': 'classHuge': 'assignedHuge'"
       class="flags-list-item{{this.assignedBoth[i]}}{{this.assignedHuge[i]}}">
       <div *ngIf="!flag.isBack && !flag.isInfo" class="flags-list-card">
         <img src="assets/images/personal_proxy/header/countries/{{flag.name}}.svg" title="{{flag.title}}">

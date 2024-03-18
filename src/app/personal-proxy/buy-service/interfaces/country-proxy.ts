@@ -4,8 +4,11 @@ export interface CountryProxy {
   code: string;
   flag: string;
   cities: string[];
-  shared: string;
-  private: string;
+  isPrivate: boolean;
+  isShared: boolean;
+  sharedClass: string;
+  privateClass: string;
+  disabledClass: string;
   ipAvailibleShared: number;
   ipAvailiblePrivate: number;
   ipAvailiblePrivateCities: number[];

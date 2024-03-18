@@ -1,34 +1,48 @@
-import { Pipe, PipeTransform } from '@angular/core';
-import { ChangeDetectorRef } from '@angular/core'; // Inject ChangeDetectorRef
+import { Pipe, PipeTransform, ChangeDetectorRef } from '@angular/core';
 
 @Pipe({ name: 'getPropertyAndAssign' })
 export class GetPropertyAndAssignPipe implements PipeTransform {
-  constructor(private cdRef: ChangeDetectorRef) {} // Inject ChangeDetectorRef
+  constructor(private cdRef: ChangeDetectorRef) {}
 
   transform(
     objectList: any[],
-    propertyName1: string, // Property name for assignedBoth
-    variableName1: string, // Variable name for assignedBoth
-    propertyName2: string, // Property name for assignedHuge
-    variableName2: string, // Variable name for assignedHuge
-    component: any
+    component: any,
+    ...propertyAndVariablePairs: (string | undefined)[] // Rest parameter for property/variable pairs
   ): any[] {
-    let propertyValue1: string[] = [];
-    let propertyValue2: string[] = [];
-    if (!objectList || !propertyName1 || !variableName1 || !component) {
-      // Handle potential errors
-      return objectList;
+    if (!objectList || propertyAndVariablePairs.length % 2 !== 0) {
+      return objectList; // Handle potential errors: empty list or uneven pairs
     }
 
-    // Iterate through each object in the list
+    if (propertyAndVariablePairs.length % 2 === 1) {
+      // Check for odd number of arguments
+      const variableNameForObject = propertyAndVariablePairs.pop(); // Extract last argument as variable name for object
+      if (variableNameForObject) {
+        component[variableNameForObject] = objectList; // Assign entire objectList to the variable
+      }
+    }
+
+    const extractedValues: { [key: string]: any[] } = {}; // Object to store extracted values
+
     for (let i = 0; i < objectList.length; i++) {
-      propertyValue1.push(objectList[i][propertyName1]);
-      propertyValue2.push(objectList[i][propertyName2]);
-      this.cdRef.markForCheck(); // Manually trigger change detection for each iteration
+      for (let j = 0; j < propertyAndVariablePairs.length; j += 2) {
+        const propertyName = propertyAndVariablePairs[j];
+        const variableName = propertyAndVariablePairs[j + 1];
+
+        if (propertyName && variableName) {
+          // Check if property name is provided
+          extractedValues[variableName] = extractedValues[variableName] || []; // Initialize array if needed
+          extractedValues[variableName].push(objectList[i][propertyName]);
+        }
+      }
     }
 
-    component[variableName1] = propertyValue1; // Assign value to assignedBoth
-    component[variableName2] = propertyValue2; // Assign value to assignedHuge
-    return objectList; // Return unchanged array (optional)
+    // Assign extracted values to component variables
+    for (const variableName in extractedValues) {
+      component[variableName] = extractedValues[variableName];
+    }
+
+    this.cdRef.markForCheck(); // Trigger change detection once after all assignments
+
+    return objectList; // Optional: Return unchanged array
   }
 }
