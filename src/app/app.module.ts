@@ -33,6 +33,7 @@ import { SliderImgFlagsComponent } from './shared/header-slider/slider-img-flags
 import { GetPropertyAndAssignPipe } from './shared/pipes/get-property-and-assign.pipe';
 import { BuyServiceComponent } from './personal-proxy/buy-service/buy-service.component';
 import { DataCountryProxyDirective } from './personal-proxy/buy-service/directives/data-country-proxy.directive';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -72,6 +73,7 @@ import { DataCountryProxyDirective } from './personal-proxy/buy-service/directiv
     BrowserAnimationsModule,
     NoopAnimationsModule,
     CarouselModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

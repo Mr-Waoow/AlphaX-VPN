@@ -42,18 +42,26 @@ export class BuyServiceComponent implements OnInit {
   faUser = faUser;
   faUserGroup = faUserGroup;
   //Variables
-  countriesProxy: CountryProxy[] = [];
-  countryProxy: CountryProxy | undefined;
+  //Booleans
+  isCitySelected = false;
+  isPeriodSelected = false;
+  isCountButtonClicked = false;
+  isPrivate = true;
+  //Numbers
   cityNo = -1;
   totalCost = 0;
   costPerDay = 0;
-  methods: Methods = new Methods();
-  isPrivate = true;
   privateCountriesNumber = 0;
   sharedCountriesNumber = 0;
+  countInputValue = 1;
+  //Objects
+  countriesProxy: CountryProxy[] = [];
+  countryProxy: CountryProxy | undefined;
+  methods: Methods = new Methods();
 
   constructor(private countriesProxyService: CountriesProxyService) {}
 
+  //Lifecycle Hooks
   ngOnInit(): void {
     this.countriesProxy = this.countriesProxyService.getCountriesProxy();
     this.countryProxy = this.countriesProxy[0];
@@ -64,6 +72,7 @@ export class BuyServiceComponent implements OnInit {
       (country) => country.isShared
     ).length;
   }
+  ngOnChanges(): void {}
 
   //Methods
   //ShowHide
@@ -89,51 +98,111 @@ export class BuyServiceComponent implements OnInit {
   }
   //Selected
   selectedCountry(evt: Event, i: number): void {
+    this.isCitySelected = false;
+    this.isCountButtonClicked = false;
+    this.methods.selected.removeClass(this.citiesBtnElementRef, 0, 'selected');
+    this.countInputValue = 1;
     this.countryProxy = this.countriesProxy[i];
     this.costPerDay = this.totalCost / 30;
     if (this.radioMonthInputElement.nativeElement.checked) {
-      this.totalCost = this.countryProxy?.pricePrivate[0] ?? 0;
+      this.totalCost =
+        (this.countryProxy?.pricePrivate[0] ?? 0) * this.countInputValue;
     } else if (this.radioHalfyearInputElement.nativeElement.checked) {
-      this.totalCost = this.countryProxy?.pricePrivate[1] ?? 0;
+      this.totalCost =
+        (this.countryProxy?.pricePrivate[1] ?? 0) * this.countInputValue;
     } else if (this.radioYearInputElement.nativeElement.checked) {
-      this.totalCost = this.countryProxy?.pricePrivate[2] ?? 0;
+      this.totalCost =
+        (this.countryProxy?.pricePrivate[2] ?? 0) * this.countInputValue;
     }
     this.methods.selected.selectedBtn(evt, this.countriesBtnElementRef);
   }
   selectedCity(evt: Event, i: number): void {
+    this.isCitySelected = true;
+    this.countInputValue = 1;
     this.cityNo = i;
     this.methods.selected.selectedBtn(evt, this.citiesBtnElementRef);
+    if (this.cityNo === -1) {
+      this.countInputElement.nativeElement.max =
+        this.countryProxy?.ipAvailiblePrivate.toString() ?? '0';
+    } else {
+      this.countInputElement.nativeElement.max =
+        this.countryProxy?.ipAvailiblePrivateCities[this.cityNo].toString() ??
+        '0';
+    }
   }
   selectedPeriod(evt: Event): void {
+    this.isPeriodSelected = true;
     const element = evt.currentTarget as HTMLInputElement;
     const value = element.value;
     switch (value) {
       case 'month':
-        this.totalCost = this.countryProxy?.pricePrivate[0] ?? 0;
+        this.totalCost =
+          (this.countryProxy?.pricePrivate[0] ?? 0) * this.countInputValue;
         this.costPerDay = this.totalCost / 30;
         break;
       case 'halfyear':
-        this.totalCost = this.countryProxy?.pricePrivate[1] ?? 0;
+        this.totalCost =
+          (this.countryProxy?.pricePrivate[1] ?? 0) * this.countInputValue;
         this.costPerDay = this.totalCost / 180;
         break;
       case 'year':
-        this.totalCost = this.countryProxy?.pricePrivate[2] ?? 0;
+        this.totalCost =
+          (this.countryProxy?.pricePrivate[2] ?? 0) * this.countInputValue;
         this.costPerDay = this.totalCost / 365;
         break;
       default:
-        this.totalCost = this.countryProxy?.pricePrivate[0] ?? 0;
+        this.totalCost =
+          (this.countryProxy?.pricePrivate[0] ?? 0) * this.countInputValue;
         this.costPerDay = this.totalCost / 30;
     }
   }
   //count
   plusCount(): void {
-    this.countInputElement.nativeElement.value = (
-      parseInt(this.countInputElement.nativeElement.value) + 1
-    ).toString();
+    this.isCountButtonClicked = true;
+    if (
+      parseInt(this.countInputElement.nativeElement.max) >
+        this.countInputValue &&
+      this.isCitySelected &&
+      this.isPeriodSelected
+    ) {
+      this.countInputValue = this.countInputValue + 1;
+    }
+    if (this.radioMonthInputElement.nativeElement.checked) {
+      this.totalCost =
+        (this.countryProxy?.pricePrivate[0] ?? 0) * this.countInputValue;
+        this.costPerDay = this.totalCost / 30;
+    } else if (this.radioHalfyearInputElement.nativeElement.checked) {
+      this.totalCost =
+        (this.countryProxy?.pricePrivate[1] ?? 0) * this.countInputValue;
+        this.costPerDay = this.totalCost / 180;
+    } else if (this.radioYearInputElement.nativeElement.checked) {
+      this.totalCost =
+        (this.countryProxy?.pricePrivate[2] ?? 0) * this.countInputValue;
+        this.costPerDay = this.totalCost / 365;
+    }
   }
   minusCount(): void {
-    this.countInputElement.nativeElement.value = (
-      parseInt(this.countInputElement.nativeElement.value) - 1
-    ).toString();
+    this.isCountButtonClicked = true;
+    if (
+      parseInt(this.countInputElement.nativeElement.min) <
+        this.countInputValue &&
+      this.isCitySelected &&
+      this.isPeriodSelected
+    ) {
+      this.countInputValue = this.countInputValue - 1;
+    }
+    if (this.radioMonthInputElement.nativeElement.checked) {
+      this.totalCost =
+        (this.countryProxy?.pricePrivate[0] ?? 0) * this.countInputValue;
+        this.costPerDay = this.totalCost / 30;
+    } else if (this.radioHalfyearInputElement.nativeElement.checked) {
+      this.totalCost =
+        (this.countryProxy?.pricePrivate[1] ?? 0) * this.countInputValue;
+        this.costPerDay = this.totalCost / 180;
+    } else if (this.radioYearInputElement.nativeElement.checked) {
+      this.totalCost =
+        (this.countryProxy?.pricePrivate[2] ?? 0) * this.countInputValue;
+        this.costPerDay = this.totalCost / 365;
+    }
   }
 }
