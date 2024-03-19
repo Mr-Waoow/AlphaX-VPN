@@ -33,7 +33,7 @@
         </div>
       </div>
       <div class="content-box">
-        <div #title class="row title box">
+        <div *ngIf="this.isPrivate" class="row title box">
           <div class="col-md-12 pb-2 d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center gap-3">
               <span class="icon-sm">
@@ -43,8 +43,8 @@
               <h4>
                 {{this.countryProxy?.name}}
               </h4>
-              <span *ngIf="countryProxy && countryProxy.pricePrivate">
-                from {{this.countryProxy.pricePrivate[0] | currency:'USD'}}
+              <span>
+                from {{this.countryProxy?.pricePrivate?.at(0)| currency:'USD'}}
               </span>
             </div>
             <div class="d-flex align-items-center gap-1">
@@ -82,16 +82,20 @@
                 <div class="buy-bill-item-label">
                   Period:
                 </div>
+                <label data-value="week" class="buy-bill-item-period-button js-period-private d-none">
+                  <input #radioWeek (change)="this.selectedPeriod($event)" data-index="0" type="radio" name="period"
+                    value="week"><span>Week</span>
+                </label>
                 <label data-value="month" class="buy-bill-item-period-button js-period-private">
-                  <input #radioMonth (change)="this.selectedPeriod($event)" data-index="0" type="radio" name="period"
+                  <input #radioMonth (change)="this.selectedPeriod($event)" data-index="1" type="radio" name="period"
                     value="month"><span>Month</span>
                 </label>
                 <label data-value="halfyear" class="buy-bill-item-period-button js-period-private">
-                  <input #radioHalfyear (change)="this.selectedPeriod($event)" data-index="1" type="radio" name="period"
+                  <input #radioHalfyear (change)="this.selectedPeriod($event)" data-index="2" type="radio" name="period"
                     value="halfyear"><span>Halfyear</span>
                 </label>
                 <label data-value="year" class="buy-bill-item-period-button js-period-private">
-                  <input #radioYear (change)="this.selectedPeriod($event)" data-index="2" type="radio" name="period"
+                  <input #radioYear (change)="this.selectedPeriod($event)" data-index="3" type="radio" name="period"
                     value="year"><span>Year</span>
                 </label>
               </div>
@@ -100,8 +104,8 @@
                   Number of IPs:
                 </div>
                 <div class="buy-bill-item-count-container">
-                  <input #countInput  type="number" name="count" min="1" [(ngModel)]="this.countInputValue"
-                    class="buy-bill-item-count-input js-private-count-input" max="">
+                  <input #countInputPrivate disabled type="number" name="count" min="1"
+                    [(ngModel)]="this.countInputValue" class="buy-bill-item-count-input js-private-count-input" max="">
                   <button (click)="this.minusCount()" class="buy-bill-item-count-btn --minus js-count-change">-</button>
                   <button (click)="this.plusCount()" class="buy-bill-item-count-btn --plus js-count-change">+</button>
                 </div>
@@ -119,7 +123,8 @@
               </div>
             </div>
           </div>
-          <div *ngIf="this.isCountButtonClicked && (!this.isCitySelected || !this.isPeriodSelected)" class="col-lg-12 d-flex align-items-center justify-content-center">
+          <div *ngIf="this.isCountButtonClicked && (!this.isCitySelected || !this.isPeriodSelected)"
+            class="col-lg-12 d-flex align-items-center justify-content-center">
             <div class="my-1 bg-danger rounded-1 py-1 px-2 transition-4">
               <span class="text-light fs-14 fw-bold">
                 Make Sure that you Select a City and Wanted Period
@@ -143,51 +148,85 @@
             </div>
           </div>
         </div>
-        <div class="row title box d-none">
+        <div *ngIf="!this.isPrivate" class="row title box">
+          <div class="col-md-12 pb-2 d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center gap-3">
+              <span class="icon-sm">
+                <img src="assets/images/personal_proxy/buy personal proxy/private/{{this.countryProxy?.code}}.svg"
+                  title="{{this.countryProxy?.name}}">
+              </span>
+              <h4>
+                {{this.countryProxy?.name}}
+              </h4>
+              <span>
+                from {{this.countryProxy?.priceShared?.at(0)| currency:'USD'}}
+              </span>
+            </div>
+            <div class="d-flex align-items-center gap-1">
+              <div>
+                <span>
+                  Available IPs:
+                </span>
+              </div>
+              <div class="px-2 py-1 text-light bg-primary rounded-1">
+                <span>
+                  {{countryProxy?.ipAvailibleShared}}
+                </span>
+              </div>
+            </div>
+          </div>
           <div class="buy-bill flex-lg-row">
-            <div class="buy-bill-body">
-              <div class="buy-bill-item flex-lg-row" data-iso="sk" data-filter="private">
-                <div class="buy-bill-item-name">
-                  <img id="CurrentCountryImage" class="buy-bill-item-name-flag"
-                    src="assets/images/personal_proxy/buy personal proxy/private/jp.svg" alt=""
-                    style="width: 2rem;height: 1.5rem;">
-                  <span id="CurrentCountryName" class="buy-bill-item-name-text">Slovakia</span>
-                </div>
-                <div class="buy-bill-item-period">
-                  <div class="buy-bill-item-label">
-                    Period:
-                  </div>
-
-                  <label data-value="month" class="buy-bill-item-period-button js-change-bill-period">
-                    <input type="radio" name="period" value="month" checked="checked"><span>Month</span>
-                  </label>
-                  <label data-value="halfyear" class="buy-bill-item-period-button js-change-bill-period">
-                    <input type="radio" name="period" value="halfyear"><span>Halfyear</span>
-                  </label>
-                  <label data-value="year" class="buy-bill-item-period-button js-change-bill-period">
-                    <input type="radio" name="period" value="year"><span>Year</span>
-                  </label>
-                </div>
-                <div class="buy-bill-item-count">
-                  <div class="buy-bill-item-label">
-                    Кол-во IP:
-                  </div>
-                  <div class="buy-bill-item-count-container">
-                    <input type="number" name="count" min="1" value="1" class="buy-bill-item-count-input js-count-input"
-                      max="18">
-                    <button class="buy-bill-item-count-btn --minus js-count-change">-</button>
-                    <button class="buy-bill-item-count-btn --plus js-count-change">+</button>
-                  </div>
-                </div>
+            <div class="buy-bill-item-period">
+              <div class="buy-bill-item-label">
+                Period:
+              </div>
+              <label data-value="week" class="buy-bill-item-period-button js-period-private">
+                <input #radioWeek (change)="this.selectedPeriod($event)" data-index="0" type="radio" name="period"
+                  value="week"><span>Week</span>
+              </label>
+              <label data-value="month" class="buy-bill-item-period-button js-period-private">
+                <input #radioMonth (change)="this.selectedPeriod($event)" data-index="1" type="radio" name="period"
+                  value="month"><span>Month</span>
+              </label>
+              <label data-value="halfyear" class="buy-bill-item-period-button js-period-private">
+                <input #radioHalfyear (change)="this.selectedPeriod($event)" data-index="2" type="radio" name="period"
+                  value="halfyear"><span>Halfyear</span>
+              </label>
+              <label data-value="year" class="buy-bill-item-period-button js-period-private d-none">
+                <input #radioYear (change)="this.selectedPeriod($event)" data-index="3" type="radio" name="period"
+                  value="year"><span>Year</span>
+              </label>
+            </div>
+            <div class="buy-bill-item-count">
+              <div class="buy-bill-item-label">
+                Number of IPs:
+              </div>
+              <div class="buy-bill-item-count-container">
+                <input #countInputShared disabled type="number" name="count" min="1" [(ngModel)]="this.countInputValue"
+                  class="buy-bill-item-count-input js-private-count-input"
+                  max="{{this.countryProxy?.ipAvailibleShared?.toString()}}">
+                <button (click)="this.minusCount()" class="buy-bill-item-count-btn --minus js-count-change">-</button>
+                <button (click)="this.plusCount()" class="buy-bill-item-count-btn --plus js-count-change">+</button>
               </div>
             </div>
             <div class="buy-bill-total">
               <div class="buy-bill-total-day buy-bill-item-label">
-                $<span class="buy-bill-total-day-num js-bill-day-price">0.27</span>
-                per day </div>
+                <span class="buy-bill-total-day-num">{{this.costPerDay.toFixed(2)}}</span> per day
+              </div>
               <button class="buy-bill-total-btn">
-                Add for $<span class="buy-bill-total-price-num js-bill-total-price">8</span>
+                Add for
+                <span #price class="buy-bill-total-price-num">
+                  {{this.totalCost | currency: 'USD'}}
+                </span>
               </button>
+            </div>
+          </div>
+          <div *ngIf="this.isCountButtonClicked && !this.isPeriodSelected"
+            class="col-lg-12 d-flex align-items-center justify-content-center">
+            <div class="my-1 bg-danger rounded-1 py-1 px-2 transition-4">
+              <span class="text-light fs-14 fw-bold">
+                Make Sure that you Select a Wanted Period
+              </span>
             </div>
           </div>
         </div>

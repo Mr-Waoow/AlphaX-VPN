@@ -115,12 +115,10 @@ export class Methods {
     showPrivate(
       evt: any,
       n = 0,
-      titleElementRef: ElementRef,
       otherBtnElementRef: ElementRef,
       targetElements: QueryList<ElementRef>
     ): number {
       let i = n;
-      const title = titleElementRef.nativeElement;
       const otherBtn = otherBtnElementRef.nativeElement;
       const currentElementsList = targetElements.toArray();
 
@@ -135,7 +133,6 @@ export class Methods {
           this.showPrivate(
             evt,
             i,
-            titleElementRef,
             otherBtnElementRef,
             targetElements
           );
@@ -145,13 +142,11 @@ export class Methods {
           this.showPrivate(
             evt,
             i,
-            titleElementRef,
             otherBtnElementRef,
             targetElements
           );
         }
       } else {
-        title.classList.remove('d-none');
         otherBtn.classList.remove('active');
         evt.currentTarget.classList.add('active');
         return 0;
@@ -162,12 +157,10 @@ export class Methods {
     showShared(
       evt: any,
       n = 0,
-      titleElementRef: ElementRef,
       otherBtnElementRef: ElementRef,
       targetElements: QueryList<ElementRef>
     ): number {
       let i = n;
-      const title = titleElementRef.nativeElement;
       const otherBtn = otherBtnElementRef.nativeElement;
       const currentElementsList = targetElements.toArray();
 
@@ -182,7 +175,6 @@ export class Methods {
           this.showShared(
             evt,
             i,
-            titleElementRef,
             otherBtnElementRef,
             targetElements
           );
@@ -192,13 +184,11 @@ export class Methods {
           this.showShared(
             evt,
             i,
-            titleElementRef,
             otherBtnElementRef,
             targetElements
           );
         }
       } else {
-        title.classList.add('d-none');
         otherBtn.classList.remove('active');
         evt.currentTarget.classList.add('active');
         return 0;

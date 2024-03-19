@@ -83,20 +83,18 @@
   box-shadow: 0 4px 8px var(--shadow-third);
 }
 
+.buy-bill,
 .buy-bill-private {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   flex-direction: column;
   width: 100%;
+  justify-content: space-between;
 }
 
 .buy-countries-list-item.--private > div {
   position: relative;
-}
-
-.buy-bill-private .buy-bill-item-period {
-  margin-right: 20px;
 }
 
 .buy-bill-item-label {
@@ -236,15 +234,6 @@ input[type="radio"] {
 
 .buy-bill-item-count-btn.--plus {
   right: 3px;
-}
-
-.buy-bill-private .buy-bill-total {
-  -webkit-box-flex: 1;
-  -ms-flex: 1 auto;
-  flex: 1 auto;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
 }
 
 .buy-bill-total {
