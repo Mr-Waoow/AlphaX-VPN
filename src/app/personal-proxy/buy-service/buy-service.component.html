@@ -29,7 +29,7 @@
     <div class="container">
       <div class="row">
         <div class="search my-4 p-0">
-          <input class="textfield" type="text" placeholder="Find a country" value="" />
+          <input class="textfield" type="text" placeholder="Find a country" [(ngModel)]="this.filteredCountriesValue" />
         </div>
       </div>
       <div class="content-box">
@@ -104,10 +104,13 @@
                   Number of IPs:
                 </div>
                 <div class="buy-bill-item-count-container">
-                  <input #countInputPrivate disabled type="number" name="count" min="1"
-                    [(ngModel)]="this.countInputValue" class="buy-bill-item-count-input js-private-count-input" max="">
-                  <button (click)="this.minusCount()" class="buy-bill-item-count-btn --minus js-count-change">-</button>
-                  <button (click)="this.plusCount()" class="buy-bill-item-count-btn --plus js-count-change">+</button>
+                  <input #countInput type="number" name="count" min="1" [(ngModel)]="this.countInputValue"
+                    class="buy-bill-item-count-input js-private-count-input"
+                    max="{{ this.cityNo === -1? this.countryProxy?.ipAvailiblePrivate: this.countryProxy?.ipAvailiblePrivateCities?.at(this.cityNo)}}">
+                  <button (click)="this.countInputValue = this.countInputValue - 1;"
+                    class="buy-bill-item-count-btn --minus js-count-change">-</button>
+                  <button (click)="this.countInputValue = this.countInputValue + 1;"
+                    class="buy-bill-item-count-btn --plus js-count-change">+</button>
                 </div>
               </div>
               <div class="buy-bill-total">
@@ -123,7 +126,7 @@
               </div>
             </div>
           </div>
-          <div *ngIf="this.isCountButtonClicked && (!this.isCitySelected || !this.isPeriodSelected)"
+          <div *ngIf="this.isCountButtonChanged && (!this.isCitySelected || !this.isPeriodSelected)"
             class="col-lg-12 d-flex align-items-center justify-content-center">
             <div class="my-1 bg-danger rounded-1 py-1 px-2 transition-4">
               <span class="text-light fs-14 fw-bold">
@@ -134,7 +137,7 @@
         </div>
         <div class="row my-4">
           <div id="buy-list-personal" class="buy-countries-list p-0">
-            <div #countriesBtn *ngFor="let countryProxy of countriesProxy; let i = index"
+            <div #countriesBtn *ngFor="let countryProxy of filteredCountriesProxy; let i = index"
               class="buy-countries-list-item {{countryProxy.privateClass}}{{countryProxy.sharedClass}}{{countryProxy.disabledClass}}"
               (click)="this.selectedCountry($event, i)">
               <img class="buy-countries-list-item-flag"
@@ -202,11 +205,14 @@
                 Number of IPs:
               </div>
               <div class="buy-bill-item-count-container">
-                <input #countInputShared disabled type="number" name="count" min="1" [(ngModel)]="this.countInputValue"
+                <input #countInput type="number" name="count" min="1" [(ngModel)]="this.countInputValue"
+                  max="{{this.countryProxy?.ipAvailibleShared}}"
                   class="buy-bill-item-count-input js-private-count-input"
                   max="{{this.countryProxy?.ipAvailibleShared?.toString()}}">
-                <button (click)="this.minusCount()" class="buy-bill-item-count-btn --minus js-count-change">-</button>
-                <button (click)="this.plusCount()" class="buy-bill-item-count-btn --plus js-count-change">+</button>
+                <button (click)="this.countInputValue = this.countInputValue - 1;"
+                  class="buy-bill-item-count-btn --minus js-count-change">-</button>
+                <button (click)="this.countInputValue = this.countInputValue + 1;"
+                  class="buy-bill-item-count-btn --plus js-count-change">+</button>
               </div>
             </div>
             <div class="buy-bill-total">
@@ -221,7 +227,7 @@
               </button>
             </div>
           </div>
-          <div *ngIf="this.isCountButtonClicked && !this.isPeriodSelected"
+          <div *ngIf="this.isCountButtonChanged && !this.isPeriodSelected"
             class="col-lg-12 d-flex align-items-center justify-content-center">
             <div class="my-1 bg-danger rounded-1 py-1 px-2 transition-4">
               <span class="text-light fs-14 fw-bold">

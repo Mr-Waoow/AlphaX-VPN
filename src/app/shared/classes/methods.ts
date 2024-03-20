@@ -1,4 +1,5 @@
 import { ElementRef, QueryList, Renderer2 } from '@angular/core';
+import { CountryProxy } from '../../personal-proxy/buy-service/interfaces/country-proxy';
 
 export class Methods {
   private renderer2!: Renderer2;
@@ -130,21 +131,11 @@ export class Methods {
         ) {
           currentElement.classList.add('d-none');
           i++;
-          this.showPrivate(
-            evt,
-            i,
-            otherBtnElementRef,
-            targetElements
-          );
+          this.showPrivate(evt, i, otherBtnElementRef, targetElements);
         } else {
           currentElement.classList.remove('d-none');
           i++;
-          this.showPrivate(
-            evt,
-            i,
-            otherBtnElementRef,
-            targetElements
-          );
+          this.showPrivate(evt, i, otherBtnElementRef, targetElements);
         }
       } else {
         otherBtn.classList.remove('active');
@@ -172,21 +163,11 @@ export class Methods {
         ) {
           currentElement.classList.add('d-none');
           i++;
-          this.showShared(
-            evt,
-            i,
-            otherBtnElementRef,
-            targetElements
-          );
+          this.showShared(evt, i, otherBtnElementRef, targetElements);
         } else {
           currentElement.classList.remove('d-none');
           i++;
-          this.showShared(
-            evt,
-            i,
-            otherBtnElementRef,
-            targetElements
-          );
+          this.showShared(evt, i, otherBtnElementRef, targetElements);
         }
       } else {
         otherBtn.classList.remove('active');
@@ -219,6 +200,27 @@ export class Methods {
       this.removeClass(targetsBtnElementRef, 0, 'selected');
       const element = evt.currentTarget as HTMLElement;
       element.classList.add('selected');
+    },
+  };
+  filter = {
+    filterCountriesProxy(
+      countriesProxy: CountryProxy[],
+      value: string,
+      isPrivate: boolean
+    ): CountryProxy[] {
+      return countriesProxy.filter((countryProxy) => {
+        if (isPrivate) {
+          return (
+            countryProxy.name.toLowerCase().includes(value.toLowerCase()) &&
+            countryProxy.isPrivate
+          );
+        } else {
+          return (
+            countryProxy.name.toLowerCase().includes(value.toLowerCase()) &&
+            countryProxy.isShared
+          );
+        }
+      });
     },
   };
 }

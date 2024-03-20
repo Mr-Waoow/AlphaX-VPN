@@ -36,10 +36,8 @@ export class BuyServiceComponent implements OnInit {
   @ViewChild('radioHalfyear')
   radioHalfyearInputElement!: ElementRef<HTMLInputElement>;
   @ViewChild('radioYear') radioYearInputElement!: ElementRef<HTMLInputElement>;
-  @ViewChild('countInputPrivate')
-  countInputPrivateInputElement!: ElementRef<HTMLInputElement>;
-  @ViewChild('countInputShared')
-  countInputSharedInputElement!: ElementRef<HTMLInputElement>;
+  @ViewChild('countInput')
+  countInputElement!: ElementRef<HTMLInputElement>;
 
   //Icons
   faUser = faUser;
@@ -48,7 +46,7 @@ export class BuyServiceComponent implements OnInit {
   //Booleans
   isCitySelected = false;
   isPeriodSelected = false;
-  isCountButtonClicked = false;
+  isCountButtonChanged = false;
   isPrivate = true;
   //Numbers
   cityNo = -1;
@@ -56,19 +54,81 @@ export class BuyServiceComponent implements OnInit {
   costPerDay = 0;
   privateCountriesNumber = 0;
   sharedCountriesNumber = 0;
-  countInputValue = 1;
   periodValue = 'month';
   //Objects
-  countriesProxy: CountryProxy[] = [];
-  countryProxy: CountryProxy | undefined;
+  private countriesProxy: CountryProxy[] = [];
+  private _filteredCountriesProxy: CountryProxy[] = [];
+  get filteredCountriesProxy(): CountryProxy[] {
+    return this._filteredCountriesProxy;
+  }
+  set filteredCountriesProxy(value: CountryProxy[]) {
+    this._filteredCountriesProxy = value;
+  }
+  private _countryProxy: CountryProxy | undefined;
+  get countryProxy(): CountryProxy | undefined {
+    return this._countryProxy;
+  }
+  set countryProxy(value: CountryProxy | undefined) {
+    this._countryProxy = value;
+  }
   methods: Methods = new Methods();
 
+  //Inputs
+  //Count Input
+  private _countInputValue = 1;
+  get countInputValue(): number {
+    return this._countInputValue;
+  }
+  set countInputValue(value: number) {
+    this.isCountButtonChanged = true;
+    if (
+      parseInt(this.countInputElement.nativeElement.min) <= value &&
+      parseInt(this.countInputElement.nativeElement.max) >= value
+    ) {
+      if (this.isPrivate) {
+        if (this.isCitySelected && this.isPeriodSelected) {
+          this._countInputValue = value;
+          this.calculateTotalCost(this.periodValue, this.isPrivate);
+        } else {
+          this._countInputValue = parseInt(
+            this.countInputElement.nativeElement.min
+          );
+        }
+      } else {
+        if (this.isPeriodSelected) {
+          this._countInputValue = value;
+          this.calculateTotalCost(this.periodValue, this.isPrivate);
+        } else {
+          this._countInputValue = parseInt(
+            this.countInputElement.nativeElement.min
+          );
+        }
+      }
+    }
+  }
+  //Filtered Countries
+  private _filteredCountriesValue = '';
+  get filteredCountriesValue(): string {
+    return this._filteredCountriesValue;
+  }
+  set filteredCountriesValue(value: string) {
+    this._filteredCountriesValue = value;
+    this.filteredCountriesProxy = this.methods.filter.filterCountriesProxy(
+      this.countriesProxy,
+      value,
+      this.isPrivate
+    );
+    this.countryProxy = this.filteredCountriesProxy[0];
+  }
+
+  //Constructor
   constructor(private countriesProxyService: CountriesProxyService) {}
 
   //Lifecycle Hooks
   ngOnInit(): void {
     this.countriesProxy = this.countriesProxyService.getCountriesProxy();
-    this.countryProxy = this.countriesProxy[0];
+    this.filteredCountriesProxy = this.countriesProxy;
+    this.countryProxy = this.filteredCountriesProxy[0];
     this.privateCountriesNumber = this.countriesProxy.filter(
       (country) => country.isPrivate
     ).length;
@@ -115,21 +175,12 @@ export class BuyServiceComponent implements OnInit {
     this.methods.selected.selectedBtn(evt, this.countriesBtnElementRef);
     this.methods.selected.removeClass(this.citiesBtnElementRef, 0, 'selected');
     this.resetValues(this.isPrivate);
-    this.countryProxy = this.countriesProxy[i];
+    this.countryProxy = this.filteredCountriesProxy[i];
   }
   selectedCity(evt: Event, i: number): void {
     this.isCitySelected = true;
-    this.countInputValue = 1;
     this.cityNo = i;
     this.methods.selected.selectedBtn(evt, this.citiesBtnElementRef);
-    if (this.cityNo === -1) {
-      this.countInputPrivateInputElement.nativeElement.max =
-        this.countryProxy?.ipAvailiblePrivate.toString() ?? '0';
-    } else {
-      this.countInputPrivateInputElement.nativeElement.max =
-        this.countryProxy?.ipAvailiblePrivateCities[this.cityNo].toString() ??
-        '0';
-    }
   }
   selectedPeriod(evt: Event): void {
     this.isPeriodSelected = true;
@@ -137,54 +188,7 @@ export class BuyServiceComponent implements OnInit {
     this.periodValue = element.value;
     this.calculateTotalCost(this.periodValue, this.isPrivate);
   }
-  //count
-  plusCount(): void {
-    this.isCountButtonClicked = true;
-    if (this.isPrivate) {
-      if (
-        parseInt(this.countInputPrivateInputElement.nativeElement.max) >
-          this.countInputValue &&
-        this.isCitySelected &&
-        this.isPeriodSelected
-      ) {
-        this.countInputValue = this.countInputValue + 1;
-        this.calculateTotalCost(this.periodValue, this.isPrivate);
-      }
-    } else {
-      if (
-        parseInt(this.countInputSharedInputElement.nativeElement.max) >
-          this.countInputValue &&
-        this.isPeriodSelected
-      ) {
-        this.countInputValue = this.countInputValue + 1;
-        this.calculateTotalCost(this.periodValue, this.isPrivate);
-      }
-    }
-  }
-  minusCount(): void {
-    this.isCountButtonClicked = true;
-    if (this.isPrivate) {
-      if (
-        parseInt(this.countInputPrivateInputElement.nativeElement.min) <
-          this.countInputValue &&
-        this.isCitySelected &&
-        this.isPeriodSelected
-      ) {
-        this.countInputValue = this.countInputValue - 1;
-        this.calculateTotalCost(this.periodValue, this.isPrivate);
-      }
-    } else {
-      if (
-        parseInt(this.countInputSharedInputElement.nativeElement.min) <
-          this.countInputValue &&
-        this.isPeriodSelected
-      ) {
-        this.countInputValue = this.countInputValue - 1;
-        this.calculateTotalCost(this.periodValue, this.isPrivate);
-      }
-    }
-  }
-  //Calculate
+  //Calculate Total Cost
   calculateTotalCost(periodValue: string, isPrivate: boolean): void {
     if (isPrivate) {
       switch (periodValue) {
@@ -232,17 +236,22 @@ export class BuyServiceComponent implements OnInit {
       }
     }
   }
-  //reset
-  resetValues(isPrivate: boolean): void {
-    this.countryProxy = this.countriesProxy[0];
+  //Reset Values
+  private resetValues(isPrivate: boolean): void {
+    this.filteredCountriesProxy = this.methods.filter.filterCountriesProxy(
+      this.countriesProxy,
+      this.filteredCountriesValue,
+      this.isPrivate
+    );
+    this.countryProxy = this.filteredCountriesProxy[0];
     this.radioWeekInputElement.nativeElement.checked = false;
     this.radioMonthInputElement.nativeElement.checked = false;
     this.radioHalfyearInputElement.nativeElement.checked = false;
     this.radioYearInputElement.nativeElement.checked = false;
     this.isPeriodSelected = false;
-    this.isCountButtonClicked = false;
+    this.isCountButtonChanged = false;
     this.isCitySelected = false;
-    this.countInputValue = 1;
+    this._countInputValue = 1;
     this.totalCost = 0;
     this.cityNo = -1;
     if (isPrivate) {
