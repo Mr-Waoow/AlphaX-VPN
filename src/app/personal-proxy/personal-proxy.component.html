@@ -10,3 +10,54 @@
   </div>
 </section>
 <xvpn-buy-service></xvpn-buy-service>
+<section class="individual_request  p-3">
+  <div class="container">
+    <div class="row  my-4">
+      <div class="col-lg-12">
+        <h4>Individual request</h4>
+        <p>
+          Haven't found the country you need or the number of addresses is not enough? Order a personal
+          consignment of private proxies for your needs!
+        </p>
+        <ul class="d-md-flex gap-4">
+          <li *ngFor="let individualRequest of individualRequests" class="d-flex gap-2">
+            <span class="icon-md">
+              <img src="assets/images/personal_proxy/individual_request/{{individualRequest.icon}}.svg"
+                alt="{{individualRequest.name}}">
+            </span>
+            <span>{{individualRequest.name}}</span>
+          </li>
+        </ul>
+      </div>
+      <div class="col-lg-12 my-4">
+        <h5>Try it now!</h5>
+        <div class="content-box">
+          <select-option></select-option>
+          <div class="personal-location-form__group">
+            <input type="number" name="number" value="1" min="1" class="personal-location-form__control --qty">
+            <span class="personal-location-form__qty-placeholder">
+              Qnty: </span>
+          </div>
+        </div>
+        <div class="content-box">
+          <div class="select">
+            <span class="icon-sm">
+              <fa-icon class="ms-1" [icon]="faCaretDown"></fa-icon>
+            </span>
+            <select title="Messenger-Select" id="messengerSelect" name="Messenger_Select" class="select-dark demo-default form-control" required
+              placeholder="Messenger Select">
+              <option value="telegram" data-icon="telegram">Telegram</option>
+              <option value="skype" data-icon="skype">Skype</option>
+              <option value="email" data-icon="email">Email</option>
+            </select>
+          </div>
+          <div class="personal-location-form__group">
+            <input type="text" name="nickname" class="personal-location-form__control messenger-value"
+              placeholder="@Example">
+          </div>
+        </div>
+        <a href="#" class="btn mt-3 px-5">Send request</a>
+      </div>
+    </div>
+  </div>
+</section>

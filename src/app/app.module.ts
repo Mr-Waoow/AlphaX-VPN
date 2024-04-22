@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {
+  BrowserAnimationsModule,
+  NoopAnimationsModule,
+} from '@angular/platform-browser/animations';
 import { CommonModule } from '@angular/common';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
@@ -34,6 +37,14 @@ import { GetPropertyAndAssignPipe } from './shared/pipes/get-property-and-assign
 import { BuyServiceComponent } from './personal-proxy/buy-service/buy-service.component';
 import { DataCountryProxyDirective } from './personal-proxy/buy-service/directives/data-country-proxy.directive';
 import { FormsModule } from '@angular/forms';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatSelectCountryModule } from '@angular-material-extensions/select-country';
+import { HttpClientModule } from '@angular/common/http';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatSelectModule } from '@angular/material/select';
+import { SelectOptionComponent } from './shared/select-option/select-option.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +75,7 @@ import { FormsModule } from '@angular/forms';
     GetPropertyAndAssignPipe,
     BuyServiceComponent,
     DataCountryProxyDirective,
+    SelectOptionComponent,
   ],
   imports: [
     BrowserModule,
@@ -74,8 +86,15 @@ import { FormsModule } from '@angular/forms';
     NoopAnimationsModule,
     CarouselModule,
     FormsModule,
+    MatSlideToggleModule,
+    MatSelectCountryModule,
+    HttpClientModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule,
+    FormsModule,
   ],
-  providers: [],
+  providers: [provideAnimationsAsync()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

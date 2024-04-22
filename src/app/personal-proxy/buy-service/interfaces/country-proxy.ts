@@ -1,7 +1,10 @@
 export interface CountryProxy {
   id: string;
   name: string;
-  code: string;
+  alpha2Code: string;
+  alpha3Code: string;
+  numericCode: string;
+  callingCode: string;
   flag: string;
   cities: string[];
   isPrivate: boolean;
