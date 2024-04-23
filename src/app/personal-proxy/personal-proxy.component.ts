@@ -20,6 +20,8 @@ export class PersonalProxyComponent implements OnInit {
   individualRequests: IndividualRequest[] = [];
   countries: CountryProxy[] = [];
 
+
+
   constructor(
     private personalPricesServices: PersonalPricesService,
     private countriesProxyService: CountriesProxyService,

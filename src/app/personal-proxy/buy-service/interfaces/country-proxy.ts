@@ -5,7 +5,7 @@ export interface CountryProxy {
   alpha3Code: string;
   numericCode: string;
   callingCode: string;
-  flag: string;
+  icon: string;
   cities: string[];
   isPrivate: boolean;
   isShared: boolean;

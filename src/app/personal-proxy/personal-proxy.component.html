@@ -32,10 +32,13 @@
       <div class="col-lg-12 my-4">
         <h5>Try it now!</h5>
         <div class="content-box">
-          <select-option></select-option>
-          <div class="personal-location-form__group">
-            <input type="number" name="number" value="1" min="1" class="personal-location-form__control --qty">
-            <span class="personal-location-form__qty-placeholder">
+          <div class="form_group">
+            <select-option [isCountries]="true" [inputList]="countries"
+              imgPath="assets/images/personal_proxy/buy personal proxy/private/"></select-option>
+          </div>
+          <div class="form_group">
+            <input type="number" name="number" value="1" min="1" class="form_control --qty">
+            <span class="form__qty-placeholder">
               Qnty: </span>
           </div>
         </div>
@@ -44,15 +47,15 @@
             <span class="icon-sm">
               <fa-icon class="ms-1" [icon]="faCaretDown"></fa-icon>
             </span>
-            <select title="Messenger-Select" id="messengerSelect" name="Messenger_Select" class="select-dark demo-default form-control" required
-              placeholder="Messenger Select">
+            <select title="Messenger-Select" id="messengerSelect" name="Messenger_Select"
+              class="select-dark demo-default form-control" required placeholder="Messenger Select">
               <option value="telegram" data-icon="telegram">Telegram</option>
               <option value="skype" data-icon="skype">Skype</option>
               <option value="email" data-icon="email">Email</option>
             </select>
           </div>
-          <div class="personal-location-form__group">
-            <input type="text" name="nickname" class="personal-location-form__control messenger-value"
+          <div class="form_group">
+            <input type="text" name="nickname" class="form_control messenger-value"
               placeholder="@Example">
           </div>
         </div>

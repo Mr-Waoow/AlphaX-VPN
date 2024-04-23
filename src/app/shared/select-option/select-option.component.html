@@ -1,24 +1,27 @@
 <div class="select">
-  <div (click)="this.openSelect()" class="select-display">
-    <div class="select-icon">
-      <img src="assets/images/personal_proxy/buy personal proxy/private/eg.svg" alt="Egypt" title="Egypt">
+  <div (click)="this.toggleSelect()" class="selected-option">
+    <div #selectDisplay class="select-display">
+    <div class="img-box">
+      <img src="{{this.imgPath}}{{this.filteredList[0].icon}}.{{this.imgType}}" alt="{{this.filteredList[0].name}}"
+        title="{{this.filteredList[0].name}}">
     </div>
-    <div class="select-text">
-      <span>Egypt</span>
-      <span><fa-icon [icon]="faCaretDown"></fa-icon></span>
+    <div class="text">
+      <span>{{this.filteredList[0].name}}</span>
     </div>
   </div>
-  <div #btnSelectList class="select-list">
-    <div class="form-group">
-      <input type="text">
+    <span #icon class='icon'><fa-icon [icon]='faCaretDown'></fa-icon></span>
+  </div>
+  <div #selectList class="select-list">
+    <div *ngIf="this.isCountries" class="form-group">
+      <input [(ngModel)]="this.filteredCountriesValue" type="text">
     </div>
     <ul class="options">
-      <li class="option">
-        <div class="option-icon">
-          <img src="assets/images/personal_proxy/buy personal proxy/private/eg.svg" alt="Egypt" title="Egypt">
+      <li *ngFor="let item of this.filteredList" (click)="selectedOption($event)" class="option">
+        <div class="img-box">
+          <img src="{{this.imgPath}}{{this.item.icon}}.{{this.imgType}}" alt="{{item.name}}" title="{{item.name}}">
         </div>
-        <div class="option-text">
-          <span>Egypt</span>
+        <div class="text">
+          <span>{{item.name}}</span>
         </div>
       </li>
     </ul>
