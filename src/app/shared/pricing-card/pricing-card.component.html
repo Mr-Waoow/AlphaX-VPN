@@ -68,17 +68,18 @@
     </tbody>
   </table>
 </div>
-<div *ngIf="isPricingCard" class="pricing-card box">
+<div *ngIf="isPricingCard" class="pricing-card --style box">
   <div class="pricing-card-header">
     <div>
-      <h5>{{personalPrice?.name}}</h5>
+      <h3>{{personalPrice?.name}}</h3>
       <span>{{personalPrice?.serviceName}}</span>
     </div>
     <div class="text-end">
-      <h5 class="text-primary">{{personalPrice?.price | currency: 'USD'}}</h5>
+      <h3 class="text-primary">{{personalPrice?.price | currency: 'USD'}}</h3>
       <span>{{personalPrice?.period}}</span>
     </div>
   </div>
+  <hr class="mx-4">
   <table *ngIf="personalPrice" class="table table-borderless pricing-table">
     <tbody>
       <tr>
@@ -178,7 +179,7 @@
       </tr>
       <tr>
         <td class="button" colspan="2">
-            <a class="btn btn-primary text-dark text-capitalize fw-500 fs-15 w-100">Try it now</a>
+            <a class="btn btn-primary text-capitalize fs-15 w-100">Try it now</a>
         </td>
       </tr>
     </tbody>

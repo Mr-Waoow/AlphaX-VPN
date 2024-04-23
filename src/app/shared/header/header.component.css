@@ -44,7 +44,7 @@
     top: 61px !important;
     left: 0;
     width: 100%;
-    background-color: #1f2b3af5;
+    background-color: var(--secondary);
     z-index: 9;
     -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
@@ -105,7 +105,7 @@
     top: 60px !important;
     left: 0;
     width: 100%;
-    background-color: #1f2b3af5;
+    background-color: var(--secondary);
     z-index: 9;
     -webkit-box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 15px 20px 0px rgba(0, 0, 0, 0.1);
@@ -195,22 +195,18 @@
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   padding: 0;
-  background-color: var(--secondary);
 }
 
 .navbar-area.sticky {
   position: fixed;
-  z-index: 101;
+  z-index: 1000;
   -webkit-box-shadow: 0px 20px 50px 0px #0000000d;
   box-shadow: 0px 20px 50px 0px #0000000d;
-  -webkit-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-  padding: 0px 0;
   background-color: var(--secondary);
 }
 
 .navbar {
-  border-bottom: solid #777 1px;
+  border-bottom: solid var(--hov-soft-dark) 1px;
   padding: 0;
   position: relative;
   -webkit-transition: all 0.3s ease-out 0s;

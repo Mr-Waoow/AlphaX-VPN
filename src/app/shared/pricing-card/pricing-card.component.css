@@ -1,3 +1,6 @@
+.pricing-card {
+  background-color: var(--white);
+}
 .pricing-card.box {
   padding: 0;
   box-shadow: 0px 0px 10px 2px #0000000f;
@@ -12,15 +15,18 @@
   padding-bottom: 1rem;
   background-color: var(--secondary) !important;
 }
-
-.pricing-card h5 {
-  color: var(--light);
+.pricing-card h3 {
+  color: var(--dark);
+  font-weight: 700;
 }
 .pricing-card .pricing-card-header span,
 .pricing-card table.table thead tr th:last-of-type span {
   color: var(--light);
-  font-weight: 300;
+  font-weight: 400;
   opacity: 0.6;
+}
+.pricing-card.--style .text-end span {
+  font-size: 15px;
 }
 
 .pricing-card table.table tbody tr td:first-of-type,
@@ -37,7 +43,11 @@
   padding-left: 1rem;
 }
 /* pricing Card */
-
+.pricing-card.--style {
+  background-color: var(--Light-secondary);
+  border-radius: 10px;
+  overflow: hidden;
+}
 .pricing-card .pricing-card-header {
   display: flex;
   justify-content: space-between;
@@ -45,6 +55,23 @@
   background-color: var(--secondary);
   padding: 0.9rem 1.5rem;
   color: var(--light);
+}
+.pricing-card.--style .pricing-card-header {
+  background-color: transparent;
+  color: var(--dark);
+}
+.pricing-card .pricing-card-header h5 {
+  color: var(--light);
+}
+.pricing-card.--style .pricing-card-header span,
+.pricing-card.--style table.table thead tr th:last-of-type span {
+  font-size: 20px;
+  color: var(--dark);
+  opacity: 0.9;
+}
+.pricing-card.--style table.table.pricing-table tbody tr td,
+.pricing-card.--style table.table.pricing-table thead tr th {
+  background-color: var(--Light-secondary);
 }
 
 .pricing-card table.table.pricing-table tbody tr td,

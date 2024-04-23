@@ -1,8 +1,7 @@
 <xvpn-offered-services></xvpn-offered-services>
 <section class="pricing-sec">
   <div class="container">
-    <div class="row">
-      <h4 class="line-after"><span>proxy services for professionals</span></h4>
+    <div class="row py-5">
       <div *ngFor="let personalPrice of personalPrices" class="col-lg-6 my-3">
         <xvpn-pricing-card [inputList]="personalPrice" [isPricingCard]="true"></xvpn-pricing-card>
       </div>
@@ -12,7 +11,7 @@
 <xvpn-buy-service></xvpn-buy-service>
 <section class="individual_request  p-3">
   <div class="container">
-    <div class="row  my-4">
+    <div class="row my-4">
       <div class="col-lg-12">
         <h4>Individual request</h4>
         <p>
@@ -38,21 +37,14 @@
           </div>
           <div class="form_group">
             <input type="number" name="number" value="1" min="1" class="form_control --qty">
-            <span class="form__qty-placeholder">
+            <span class="form-placeholder">
               Qnty: </span>
           </div>
         </div>
         <div class="content-box">
-          <div class="select">
-            <span class="icon-sm">
-              <fa-icon class="ms-1" [icon]="faCaretDown"></fa-icon>
-            </span>
-            <select title="Messenger-Select" id="messengerSelect" name="Messenger_Select"
-              class="select-dark demo-default form-control" required placeholder="Messenger Select">
-              <option value="telegram" data-icon="telegram">Telegram</option>
-              <option value="skype" data-icon="skype">Skype</option>
-              <option value="email" data-icon="email">Email</option>
-            </select>
+          <div class="form_group">
+            <select-option [inputList]="messengerApps"
+              imgPath="assets/images/icons/social/" imgType="png"></select-option>
           </div>
           <div class="form_group">
             <input type="text" name="nickname" class="form_control messenger-value"

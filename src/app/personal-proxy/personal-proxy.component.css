@@ -85,9 +85,13 @@
   box-shadow: 0 0 1px 0.1em #3c4c640f;
 }
 
+.content-box {
+gap: 1rem;
+}
+
 .form_group {
   position: relative;
-  flex-basis: 15rem;
+  flex-basis: 18rem;
 }
 
 .form_control {
@@ -98,14 +102,14 @@
   color: #fff;
   border: 0.1em solid #3c4c6461;
   border-radius: 3px;
-  background: #171d28;
+  background-color: var(--hard-secondary);
 }
 
 .form_control.--qty {
   padding-left: 70px;
 }
 
-.form__qty-placeholder {
+.form-placeholder {
   font-size: 13px;
   position: absolute;
   top: 9px;

@@ -1,6 +1,6 @@
 /** Buy Personal Proxy **/
 .buy-service {
-  background-color: var(--soft-secondary);
+  background-color: var(--Light-secondary);
 }
 
 .buy-service .head {
@@ -19,7 +19,7 @@
   display: inline-flex;
   align-items: center;
   gap: 1rem;
-  background-color: var(--soft-secondary);
+  background-color: var(--Light-secondary);
   border: none;
   outline: none;
   cursor: pointer;
@@ -35,7 +35,7 @@
 }
 
 .buy-service .head .tab .tablinks.active {
-  background-color: var(--soft-secondary);
+  background-color: var(--Light-secondary);
   opacity: 1;
 }
 

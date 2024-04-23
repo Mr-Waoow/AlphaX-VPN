@@ -19,8 +19,14 @@ export class PersonalProxyComponent implements OnInit {
   personalPrices: PersonalPrice[] = [];
   individualRequests: IndividualRequest[] = [];
   countries: CountryProxy[] = [];
-
-
+  messengerApps: { name: string; icon: string }[] = [
+    { name: 'Massenger', icon: 'messenger' },
+    { name: 'Telegram', icon: 'telegram' },
+    { name: 'WhatsApp', icon: 'whatsapp' },
+    { name: 'Viber', icon: 'viber' },
+    { name: 'Skype', icon: 'skype' },
+    {name: 'mail', icon: 'mail'}
+  ];
 
   constructor(
     private personalPricesServices: PersonalPricesService,
