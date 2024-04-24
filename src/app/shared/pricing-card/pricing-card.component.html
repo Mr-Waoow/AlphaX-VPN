@@ -1,15 +1,15 @@
-<div *ngIf="!isPricingCard" class="pricing-card box">
+<div *ngIf="!this.isPricingCard && !this.isShared" class="pricing-card box">
   <table class="table table-borderless">
     <thead>
       <tr>
         <th>
           <span class="icon-md">
-            <img alt="{{proxyList?.proxyServiceName}}" [src]="proxyList?.proxyServiceImgUrl" />
+            <img alt="{{inputList?.proxyServiceName}}" [src]="inputList?.proxyServiceImgUrl" />
           </span>
         </th>
         <th>
-          <h5>{{ proxyList?.proxyServiceName }}</h5>
-          <span>{{ proxyList?.proxyServiceDesc }}</span>
+          <h5>{{ inputList?.proxyServiceName }}</h5>
+          <span>{{ inputList?.proxyServiceDesc }}</span>
         </th>
       </tr>
     </thead>
@@ -19,7 +19,7 @@
           <fa-icon [icon]="faCheck"></fa-icon>
         </td>
         <td class="pt-4">
-          <span>{{ proxyList?.proxyServiceOffers1 }}</span>
+          <span>{{ inputList?.proxyServiceOffers1 }}</span>
         </td>
       </tr>
       <tr>
@@ -27,7 +27,7 @@
           <fa-icon [icon]="faCheck"></fa-icon>
         </td>
         <td>
-          <span>{{ proxyList?.proxyServiceOffers2 }}</span>
+          <span>{{ inputList?.proxyServiceOffers2 }}</span>
         </td>
       </tr>
       <tr>
@@ -36,7 +36,7 @@
         </td>
         <td>
           <span style="color: #0a58ca">{{
-            proxyList?.proxyServiceOffers3
+            inputList?.proxyServiceOffers3
             }}</span>
         </td>
       </tr>
@@ -46,7 +46,7 @@
         </td>
         <td>
           <span style="color: #0a58ca">{{
-            proxyList?.proxyServiceOffers4
+            inputList?.proxyServiceOffers4
             }}</span>
         </td>
       </tr>
@@ -55,7 +55,7 @@
           <fa-icon [icon]="faCheck"></fa-icon>
         </td>
         <td>
-          <span>{{ proxyList?.proxyServiceOffers5 }}</span>
+          <span>{{ inputList?.proxyServiceOffers5 }}</span>
         </td>
       </tr>
       <tr>
@@ -68,54 +68,50 @@
     </tbody>
   </table>
 </div>
-<div *ngIf="isPricingCard" class="pricing-card --style box">
+<div *ngIf="this.isPricingCard && !this.isShared" class="pricing-card --style box">
   <div class="pricing-card-header">
     <div>
-      <h3>{{personalPrice?.name}}</h3>
-      <span>{{personalPrice?.serviceName}}</span>
+      <h3>{{inputList?.name}}</h3>
+      <span>{{inputList?.serviceName}}</span>
     </div>
     <div class="text-end">
-      <h3 class="text-primary">{{personalPrice?.price | currency: 'USD'}}</h3>
-      <span>{{personalPrice?.period}}</span>
+      <h3 class="text-primary">{{inputList?.price | currency: 'USD'}}</h3>
+      <span>{{inputList?.period}}</span>
     </div>
   </div>
   <hr class="mx-4">
-  <table *ngIf="personalPrice" class="table table-borderless pricing-table">
+  <table *ngIf="inputList" class="table table-borderless pricing-table">
     <tbody>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[0]"
-              title="{{personalPrice.features[0]}}"></span>
+          <span class="icon-sm"><img [src]="inputList.featuresIcon[0]" title="{{inputList.features[0]}}"></span>
         </td>
         <td>
-          <span>{{personalPrice.features[0]}}</span>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[1]"
-              title="{{personalPrice.features[1]}}"></span>
-        </td>
-        <td>
-          <span>{{personalPrice.features[1]}}</span>
+          <span>{{inputList.features[0]}}</span>
         </td>
       </tr>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[2]"
-              title="{{personalPrice.features[2]}}"></span>
+          <span class="icon-sm"><img [src]="inputList.featuresIcon[1]" title="{{inputList.features[1]}}"></span>
         </td>
         <td>
-          <span>{{personalPrice.features[2]}}</span>
+          <span>{{inputList.features[1]}}</span>
         </td>
       </tr>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[3]"
-              title="{{personalPrice.features[3]}}"></span>
+          <span class="icon-sm"><img [src]="inputList.featuresIcon[2]" title="{{inputList.features[2]}}"></span>
         </td>
         <td>
-          <span>{{personalPrice.features[3]}}</span>
+          <span>{{inputList.features[2]}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon-sm"><img [src]="inputList.featuresIcon[3]" title="{{inputList.features[3]}}"></span>
+        </td>
+        <td>
+          <span>{{inputList.features[3]}}</span>
         </td>
       </tr>
       <tr>
@@ -125,61 +121,75 @@
       </tr>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[4]"
-              title="{{personalPrice.features[4]}}"></span>
+          <span class="icon-sm"><img [src]="inputList.featuresIcon[4]" title="{{inputList.features[4]}}"></span>
         </td>
         <td>
-          <span>{{personalPrice.features[4]}}</span>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[5]"
-              title="{{personalPrice.features[5]}}"></span>
-        </td>
-        <td>
-          <span>{{personalPrice.features[5]}}</span>
+          <span>{{inputList.features[4]}}</span>
         </td>
       </tr>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[6]"
-              title="{{personalPrice.features[6]}}"></span>
+          <span class="icon-sm"><img [src]="inputList.featuresIcon[5]" title="{{inputList.features[5]}}"></span>
         </td>
         <td>
-          <span>{{personalPrice.features[6]}}</span>
-        </td>
-      </tr>
-      <tr>
-        <td>
-          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[7]"
-              title="{{personalPrice.features[7]}}"></span>
-        </td>
-        <td>
-          <span>{{personalPrice.features[7]}}</span>
+          <span>{{inputList.features[5]}}</span>
         </td>
       </tr>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[8]"
-              title="{{personalPrice.features[8]}}"></span>
+          <span class="icon-sm"><img [src]="inputList.featuresIcon[6]" title="{{inputList.features[6]}}"></span>
         </td>
         <td>
-          <span>{{personalPrice.features[8]}}</span>
+          <span>{{inputList.features[6]}}</span>
         </td>
       </tr>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="personalPrice.featuresIcon[9]"
-              title="{{personalPrice.features[9]}}"></span>
+          <span class="icon-sm"><img [src]="inputList.featuresIcon[7]" title="{{inputList.features[7]}}"></span>
         </td>
         <td>
-          <span>{{personalPrice.features[9]}}</span>
+          <span>{{inputList.features[7]}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon-sm"><img [src]="inputList.featuresIcon[8]" title="{{inputList.features[8]}}"></span>
+        </td>
+        <td>
+          <span>{{inputList.features[8]}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <span class="icon-sm"><img [src]="inputList.featuresIcon[9]" title="{{inputList.features[9]}}"></span>
+        </td>
+        <td>
+          <span>{{inputList.features[9]}}</span>
         </td>
       </tr>
       <tr>
         <td class="button" colspan="2">
-            <a class="btn btn-primary text-capitalize fs-15 w-100">Try it now</a>
+          <a class="btn btn-primary text-capitalize fs-15 w-100">Try it now</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="this.isShared" class="pricing-card shared shadow-2xl">
+  <div class="pricing-card-header">
+    <span>{{inputList?.title}}</span>
+  </div>
+  <table *ngIf="inputList" class="table table-borderless pricing-table">
+    <tbody>
+      <tr *ngFor="let feature of inputList.featuresName; let i=index">
+        <td class="feature">
+          <span class="feature-name">{{inputList.featuresName[i]}}</span>
+          <span>{{inputList.features[i]}}</span>
+        </td>
+      </tr>
+      <tr>
+        <td class="feature">
+          <a href="" class="btn btn-primary text-dark py-3 mt-3 mb-2"> Buy </a>
         </td>
       </tr>
     </tbody>

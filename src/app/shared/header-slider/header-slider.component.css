@@ -1,12 +1,12 @@
-h1,
-h2,
-h3,
-h4,
-h6 {
-  color: var(--light);
+* {
+  font-family: var(--font-family-Waoow);
 }
-h5 {
-  color: var(--primary);
+h2 {
+  color: var(--light);
+  font-size: 38px;
+  font-weight: 400;
+  line-height: 3.5rem;
+  margin-bottom: 1.5rem;
 }
 .header-bg {
   position: absolute;
@@ -252,12 +252,10 @@ h5 {
 }
 
 .header-slider .slider-content h5 {
-  font-size: 18px;
-  margin: 0px 0 15px;
-}
-
-.header-slider .slider-content h5 span.color2 {
+  font-size: 24px;
+  font-weight: 400;
   color: var(--primary);
+  margin: 0px 0 15px;
 }
 
 .header-slider .slider-content p {

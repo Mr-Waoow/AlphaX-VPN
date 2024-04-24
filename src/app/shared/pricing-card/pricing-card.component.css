@@ -15,10 +15,16 @@
   padding-bottom: 1rem;
   background-color: var(--secondary) !important;
 }
+
 .pricing-card h3 {
   color: var(--dark);
   font-weight: 700;
 }
+
+.pricing-card h5 {
+  color: var(--light);
+}
+
 .pricing-card .pricing-card-header span,
 .pricing-card table.table thead tr th:last-of-type span {
   color: var(--light);
@@ -44,7 +50,7 @@
 }
 /* pricing Card */
 .pricing-card.--style {
-  background-color: var(--Light-secondary);
+  background-color: var(--light-secondary);
   border-radius: 10px;
   overflow: hidden;
 }
@@ -60,9 +66,6 @@
   background-color: transparent;
   color: var(--dark);
 }
-.pricing-card .pricing-card-header h5 {
-  color: var(--light);
-}
 .pricing-card.--style .pricing-card-header span,
 .pricing-card.--style table.table thead tr th:last-of-type span {
   font-size: 20px;
@@ -71,7 +74,7 @@
 }
 .pricing-card.--style table.table.pricing-table tbody tr td,
 .pricing-card.--style table.table.pricing-table thead tr th {
-  background-color: var(--Light-secondary);
+  background-color: var(--light-secondary);
 }
 
 .pricing-card table.table.pricing-table tbody tr td,
@@ -94,3 +97,56 @@
 .pricing-card table.table.pricing-table tbody tr td.button {
   padding: 1.3rem 1.5rem 2.5rem 1.5rem;
 }
+/*shared*/
+
+.pricing-card.shared .pricing-card-header {
+  justify-content: start;
+  align-items: center;
+  padding: 0.2rem 1rem;
+  gap: 1rem;
+}
+
+.pricing-card.shared .pricing-card-header::before {
+  width: 46px;
+  height: 46px;
+  content: "";
+  background: url("../../../assets/images/shared_proxy/proxy_lists/shared_network.png")
+    no-repeat 50% 50% / 26px;
+}
+
+.pricing-card.shared .pricing-card-header span {
+  color: var(--white);
+  font-size: 17px;
+  font-weight: 300;
+  opacity: 1;
+}
+
+.pricing-card.shared table.table.pricing-table tbody tr td.feature {
+  padding: 0.5rem 1.5rem;
+}
+
+.pricing-card.shared table.table.pricing-table tbody tr:first-child td.feature {
+  padding: 1.5rem;
+  padding-bottom: 0;
+}
+
+.pricing-card.shared table.table.pricing-table tbody tr:last-child td.feature {
+  padding: 1.5rem;
+  padding-top: 0;
+}
+
+.pricing-card.shared .feature * {
+  display: block;
+}
+
+.pricing-card.shared .feature span {
+  font-size: 16px;
+}
+
+.pricing-card.shared .feature span.feature-name {
+  color: var(--dark);
+  font-size: 12px;
+  font-weight: 400;
+  opacity: 0.6;
+}
+

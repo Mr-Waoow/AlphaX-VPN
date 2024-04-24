@@ -13,13 +13,13 @@
   <div class="container">
     <div class="row my-4">
       <div class="col-lg-12">
-        <h4>Individual request</h4>
-        <p>
+        <h1>Individual request</h1>
+        <p class="w-md-55">
           Haven't found the country you need or the number of addresses is not enough? Order a personal
           consignment of private proxies for your needs!
         </p>
         <ul class="d-md-flex gap-4">
-          <li *ngFor="let individualRequest of individualRequests" class="d-flex gap-2">
+          <li *ngFor="let individualRequest of individualRequests">
             <span class="icon-md">
               <img src="assets/images/personal_proxy/individual_request/{{individualRequest.icon}}.svg"
                 alt="{{individualRequest.name}}">
@@ -30,29 +30,104 @@
       </div>
       <div class="col-lg-12 my-4">
         <h5>Try it now!</h5>
-        <div class="content-box">
-          <div class="form_group">
+        <div class="content-box flex-column flex-md-row align-items-start align-items-md-center">
+          <div class="form_group w-100 w-md-auto flex-basis-auto flex-basis-md-18rem">
             <select-option [isCountries]="true" [inputList]="countries"
               imgPath="assets/images/personal_proxy/buy personal proxy/private/"></select-option>
           </div>
-          <div class="form_group">
+          <div class="form_group w-100 w-md-auto flex-basis-auto flex-basis-md-18rem">
             <input type="number" name="number" value="1" min="1" class="form_control --qty">
             <span class="form-placeholder">
               Qnty: </span>
           </div>
         </div>
-        <div class="content-box">
-          <div class="form_group">
-            <select-option [inputList]="messengerApps"
-              imgPath="assets/images/icons/social/" imgType="png"></select-option>
+        <div class="content-box flex-column flex-md-row align-items-start align-items-md-center">
+          <div class="form_group w-100 w-md-auto flex-basis-auto flex-basis-md-18rem">
+            <select-option [inputList]="messengerApps" imgPath="assets/images/icons/social/"
+              imgType="png"></select-option>
           </div>
-          <div class="form_group">
-            <input type="text" name="nickname" class="form_control messenger-value"
-              placeholder="@Example">
+          <div class="form_group w-100 w-md-auto flex-basis-auto flex-basis-md-18rem">
+            <input type="text" name="nickname" class="form_control messenger-value" placeholder="@Example">
           </div>
         </div>
-        <a href="#" class="btn mt-3 px-5">Send request</a>
+        <a href="#" class="btn btn-primary mt-3 w-290px fs-15 fw-600 py-2">Send request</a>
       </div>
     </div>
   </div>
 </section>
+<!-- Start About Area -->
+<section class="About p-3">
+  <div class="container">
+    <div class="row my-4">
+      <div class="col-lg-12">
+        <h4 class="line-after">
+          <span>
+            RSocks Personal Proxy are:
+          </span>
+        </h4>
+        <ul class="row">
+          <li *ngFor="let proxiyProps of proxiesProps" class="col-md-6">
+            <span class="icon me-4">
+              <img src="assets/images/personal_proxy/About/{{proxiyProps.icon}}.svg" title="{{proxiyProps.name}}"
+                alt="{{proxiyProps.name}}">
+            </span>
+            <div class="content-box">
+              <span class="fw-bold mb-1 text-uppercase">
+                {{proxiyProps.name}}
+              </span>
+              <br>
+              <p>
+                {{proxiyProps.describtion}}
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End About Area -->
+<!-- Start Questions Area -->
+<section class="questions p-3">
+  <div class="container">
+    <div class="row my-4">
+      <div>
+        <h4>Still have questions?</h4>
+      </div>
+      <div class="col-lg-12">
+        <div *ngFor="let personalQuestion of personalQuestions" class="openable">
+          <h6 (click)="this.openDiv($event)" class="d-flex justify-content-between">
+            <span>{{personalQuestion.question}}</span>
+            <span class="icon-sm"><fa-icon [icon]='faCaretDown'></fa-icon></span>
+          </h6>
+          <p>
+            {{personalQuestion.answers}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Questions Area -->
+<!-- Start Prefooter Area -->
+<section class="prefooter p-3">
+  <div class="container">
+    <div class="row my-4">
+      <div>
+        <h4>Personal proxy by RSocks</h4>
+      </div>
+      <div class="col-lg-12">
+        <h5 class="w-sm-55">
+          Ideal for working in social networks, SEO parsing, online games, registrations, blocking
+          bypass.
+        </h5>
+      </div>
+      <div class="col-lg-12">
+        <a href="#" class="btn btn-primary mt-3 mb-1">Get proxy</a>
+        <br>
+        <span class="text-primary fs-12">Price from $0.2</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Prefooter Area -->

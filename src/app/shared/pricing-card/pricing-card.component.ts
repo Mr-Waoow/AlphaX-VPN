@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
 import { ProxyList } from '../../home/proxy-services/interfaces/proxy-list';
 import { PersonalPrice } from '../../personal-proxy/interfaces/personal-price';
+import { SharedPrice } from '../../shared-proxy/Interfaces/shared-price';
 
 @Component({
   selector: 'xvpn-pricing-card',
@@ -10,15 +11,8 @@ import { PersonalPrice } from '../../personal-proxy/interfaces/personal-price';
 })
 export class PricingCardComponent implements OnInit {
   faCheck = faCheck;
-  proxyList: ProxyList | undefined;
-  personalPrice: PersonalPrice | undefined;
-  @Input() isPricingCard: boolean | undefined;
-  @Input() inputList: any | undefined;
-  ngOnInit(): void {
-    if (!this.isPricingCard) {
-      this.proxyList = this.inputList;
-    } else {
-      this.personalPrice = this.inputList;
-    }
-  }
+  @Input() isPricingCard: boolean = false;
+  @Input() isShared: boolean = false;
+  @Input() inputList: any = [];
+  ngOnInit(): void {  }
 }

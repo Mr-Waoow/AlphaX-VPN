@@ -2,8 +2,8 @@
   <div class="head">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 d-flex align-items-center justify-content-between">
-          <h4 class="line-after my-4"><span>Buy Personal Proxy</span></h4>
+        <div class="col-md-12 my-4 d-flex gap-3 gap-md-0 flex-md-row flex-column align-items-start align-items-md-center justify-content-between">
+          <h1 class="line-after"><span>{{this.compName}}</span></h1>
           <div>
             <span class="me-2">Available</span>
             <span *ngIf="isPrivate" class="p-2 text-light bg-primary rounded-1">{{privateCountriesNumber}}
@@ -34,8 +34,8 @@
       </div>
       <div class="content-box">
         <div *ngIf="this.isPrivate" class="row title box">
-          <div class="col-md-12 pb-2 d-flex align-items-center justify-content-between">
-            <div class="d-flex align-items-center gap-3">
+          <div class="col-md-12 pb-2 d-flex gap-3 gap-md-0 flex-md-row flex-column align-items-start align-items-md-center justify-content-between">
+            <div class="d-flex align-items-center gap-1 gap-md-3">
               <span class="icon-sm">
                 <img src="assets/images/personal_proxy/buy personal proxy/private/{{this.countryProxy?.icon}}.svg"
                   title="{{this.countryProxy?.name}}">
@@ -77,7 +77,7 @@
             </div>
           </div>
           <div class="col-lg-12">
-            <div class="buy-bill-private flex-lg-row">
+            <div class="buy-bill-private flex-lg-row gap-3 gap-lg-0">
               <div class="buy-bill-item-period">
                 <div class="buy-bill-item-label">
                   Period:

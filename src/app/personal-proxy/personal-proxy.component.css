@@ -2,7 +2,7 @@
 
 .pricing-sec {
   background-color: #f5f5f5;
-  color: #111;
+  color: var(--dark);
 }
 
 .pricing-sec .container {
@@ -16,33 +16,35 @@
 
 /** individual request **/
 .individual_request {
-  background-color: #1F2B3A;
+  background-color: var(--secondary);
   text-align: center;
-  color: #f5f5f5;
+  color: var(--light);
 }
 
-.individual_request h4,
+.individual_request h1,
 .individual_request h5 {
-  color: #f5f5f5;
   margin: 0;
   margin-bottom: 0.9rem;
+  color: var(--light);
 }
 
 .individual_request p {
-  width: 55%;
+  font-size: 14px;
   margin: 0 auto;
   margin-bottom: 1.5rem;
-  color: #F4F7FA;
+  color: var(--light-secondary);
 }
 
 .individual_request ul {
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 }
 
 .individual_request ul li {
   display: flex;
   align-items: center;
+  font-size: 14px;
+  gap: 1rem;
   flex-basis: 16rem;
   text-align: start;
   margin-bottom: 2rem;
@@ -50,7 +52,6 @@
 
 .individual_request .content-box {
   display: flex;
-  align-items: center;
   justify-content: center;
   margin-bottom: 1rem;
 }
@@ -70,28 +71,12 @@
   right: 1%;
 }
 
-.individual_request .select-dark {
-  border-radius: 0rem 0.2rem 0.2rem 0rem;
-  cursor: pointer;
-  height: 100%;
-  width: 100%;
-  border: 0.1em solid #3c4c6461;
-  background-color: #171d28;
-  color: #fff;
-}
-
-.individual_request .select-dark:focus-visible {
-  outline: none;
-  box-shadow: 0 0 1px 0.1em #3c4c640f;
-}
-
 .content-box {
 gap: 1rem;
 }
 
 .form_group {
   position: relative;
-  flex-basis: 18rem;
 }
 
 .form_control {
@@ -99,8 +84,8 @@ gap: 1rem;
   width: 100%;
   height: 2.4rem;
   padding: 0 15px;
-  color: #fff;
-  border: 0.1em solid #3c4c6461;
+  color: var(--light);
+  border: 0.1em solid var(--soft-secondary);
   border-radius: 3px;
   background-color: var(--hard-secondary);
 }
@@ -120,9 +105,9 @@ gap: 1rem;
 /**About**/
 
 .About {
-  background-color: #222c3a;
+  background-color: var(--hov-secondary);
   text-align: start;
-  color: #f5f5f5;
+  color: var(--light);
 }
 
 .About h4,
@@ -133,8 +118,8 @@ gap: 1rem;
 }
 
 .About p {
-  padding: 0px 15rem;
-  margin-bottom: 1.5rem;
+  color: var(--light);
+  margin: 0;
 }
 
 .About ul {
@@ -147,83 +132,58 @@ gap: 1rem;
   margin-bottom: 4rem;
 }
 
-.About ul li .icon-lg {
+.About ul li .icon {
+  flex-basis: 17%;
   border: 0.1rem solid #3c4c648c;
   border-radius: 50%;
-  padding: 0.8rem;
+  padding: 1rem;
   background-color: #1F2B3A;
 }
 
 /**Prefooter**/
 
 .questions {
-  color: #414141;
-  background-color: #f5f5f5;
+  color: var(--dark);
+  background-color: var(--light-secondary);
 }
 
 .questions h4 {
   text-align: center;
-  color: #414141;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--dark);
   margin: 0;
-  margin-bottom: 0.9rem;
-}
-
-.openable {
-  background-color: #fff;
-  height: 3.5rem;
-  max-height: fit-content;
-  overflow: hidden;
-  padding: 1rem;
-  border-radius: 0.4rem;
-  border: 0.1rem solid #ededed;
-  margin-bottom: 1rem;
-  -webkit-transition: height 0.5s;
-  -o-transition: height 0.5s;
-  -moz-transition: height 0.5s;
-  transition: height 0.5s;
+  margin-bottom: 2rem;
 }
 
 .openable h6 {
-  color: #414141;
-  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
 }
-
-.openable h6 .icon-sm {
-  -webkit-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-}
-
 .openable p {
-  font-size: 0.85rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0rem;
-  -moz-transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  font-size: 15px;
+  font-weight: 400;
 }
 
 /**Prefooter**/
 
 .prefooter {
   text-align: center;
-  color: #f5f5f5;
+  color: var(--light);
   background: center -33%/78.1% 153% no-repeat url(../../assets/images/personal_proxy/Prefooter/Prefooter.svg), #283446;
 }
 
 .prefooter h4 {
-  color: #f5f5f5;
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--light);
   margin: 0;
-  margin-bottom: 0.9rem;
+  margin-bottom: 10px;
 }
 
-.prefooter p {
+.prefooter h5 {
   margin: 0 auto;
-  margin-bottom: 2rem;
-  width: 55%;
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: #F4F7FA;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--light);
 }

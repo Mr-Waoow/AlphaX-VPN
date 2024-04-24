@@ -1,6 +1,7 @@
 import {
   Component,
   ElementRef,
+  Input,
   OnInit,
   QueryList,
   ViewChild,
@@ -39,6 +40,7 @@ export class BuyServiceComponent implements OnInit {
   @ViewChild('countInput')
   countInputElement!: ElementRef<HTMLInputElement>;
 
+  @Input() compName: string = 'Buy Personal Proxy';
   //Icons
   faUser = faUser;
   faUserGroup = faUserGroup;

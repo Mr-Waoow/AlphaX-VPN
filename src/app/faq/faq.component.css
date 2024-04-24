@@ -10,42 +10,6 @@
   margin-bottom: 0.9rem;
 }
 
-.openable {
-  background-color: #fff;
-  height: 3.5rem;
-  overflow: hidden;
-  padding: 1rem;
-  border-radius: 0.4rem;
-  border: 0.1rem solid #ededed;
-  margin-bottom: 1rem;
-  -webkit-transition: height 0.5s;
-  -o-transition: height 0.5s;
-  -moz-transition: height 0.5s;
-  transition: height 0.5s;
-}
-
-.openable h6 {
-  color: #414141;
-  cursor: pointer;
-}
-
-.openable h6 .icon-sm {
-  -webkit-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
-  -moz-transition: all 0.3s ease-out 0s;
-  -ms-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
-}
-
-.openable p {
-  font-size: 0.85rem;
-  margin-top: 1.5rem;
-  margin-bottom: 0rem;
-  -moz-transition: all 0.4s ease;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
-}
-
 .faq .openable a {
     margin-left: 3rem;
 }

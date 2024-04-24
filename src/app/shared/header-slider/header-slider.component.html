@@ -101,7 +101,7 @@
         </div>
       </div>
     </div>
-    <div *ngIf="routerLinkActive === 'Residential-Proxy'" class="row personal-silder align-items-center">
+    <div *ngIf="routerLinkActive === 'Personal-Proxy'" class="row personal-silder align-items-center">
       <div class="col-lg-6 mt-5">
         <div class="slider-content text-start h-240px justify-content-center">
           <h1>
@@ -125,6 +125,29 @@
       </div>
       <div class="col-lg-6 position-relative d-lg-block d-none mt-5">
         <xvpn-slider-img-flags></xvpn-slider-img-flags>
+      </div>
+    </div>
+    <div *ngIf="routerLinkActive === 'Shared-Proxy'" class="row mt-4 mb-5">
+      <div class="col-lg-6">
+        <div class="slider-content">
+          <h5 *ngIf="showText" class="fade-in">
+            RSocks Project
+          </h5>
+          <h2 *ngIf="showText1" class="fade-in mb-3">
+            Buy Shared proxy
+          </h2>
+          <ul class="list-disc list">
+            <li *ngIf="showText2" class="fade-in">5 000 - 20 000 IP for only $10 per month</li>
+            <li *ngIf="showText3" class="fade-in">More than 50 countries available from all around the world</li>
+            <li *ngIf="showText4" class="fade-in">Unlimited traffic</li>
+            <li *ngIf="showText5" class="fade-in">Support SOCKS4/4A, SOCKS5, HTTP(S) protocols</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 d-flex align-items-center header-img">
+        <div class="img-container">
+          <img src="assets/images/shared_proxy/shared.svg" alt="shared">
+        </div>
       </div>
     </div>
   </div>

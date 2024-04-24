@@ -5,7 +5,7 @@ export class OfferedServicesService {
     return [
       {
         offerdServiceId: 1,
-        offerdServiceLink: 'residential.proxy',
+        offerdServiceLink: '/Residential-Proxy',
         offerdServiceImgUrl:
           'assets/images/Offered-Services/residential_proxy.png',
         offerdServiceName: 'residential proxy',
@@ -13,7 +13,7 @@ export class OfferedServicesService {
       },
       {
         offerdServiceId: 2,
-        offerdServiceLink: 'exclusive.plus',
+        offerdServiceLink: '/Exclusive-Plus',
         offerdServiceImgUrl:
           'assets/images/Offered-Services/exclusive_plus.png',
         offerdServiceName: 'exclusive plus',
@@ -21,7 +21,7 @@ export class OfferedServicesService {
       },
       {
         offerdServiceId: 3,
-        offerdServiceLink: 'personal.proxy',
+        offerdServiceLink: '/Personal-Proxy',
         offerdServiceImgUrl:
           'assets/images/Offered-Services/personal_proxy.png',
         offerdServiceName: 'personal proxy',
@@ -29,7 +29,7 @@ export class OfferedServicesService {
       },
       {
         offerdServiceId: 4,
-        offerdServiceLink: 'server.proxies',
+        offerdServiceLink: '/Server-Proxies',
         offerdServiceImgUrl:
           'assets/images/Offered-Services/server_proxies.png',
         offerdServiceName: 'server proxies',
@@ -37,21 +37,21 @@ export class OfferedServicesService {
       },
       {
         offerdServiceId: 5,
-        offerdServiceLink: 'shared.proxy',
+        offerdServiceLink: '/Shared-Proxy',
         offerdServiceImgUrl: 'assets/images/Offered-Services/shared.png',
         offerdServiceName: 'shared proxy',
         offerdServiceIsNew: false,
       },
       {
         offerdServiceId: 6,
-        offerdServiceLink: 'mobile.proxy',
+        offerdServiceLink: '/Mobile-Proxy',
         offerdServiceImgUrl: 'assets/images/Offered-Services/mobile_proxy.png',
         offerdServiceName: 'mobile proxy',
         offerdServiceIsNew: true,
       },
       {
         offerdServiceId: 7,
-        offerdServiceLink: 'vpn.service',
+        offerdServiceLink: '/VPN-Service',
         offerdServiceImgUrl: 'assets/images/Offered-Services/vpn_service.png',
         offerdServiceName: 'VPN service',
         offerdServiceIsNew: false,

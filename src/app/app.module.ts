@@ -45,6 +45,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { SelectOptionComponent } from './shared/select-option/select-option.component';
+import { SharedProxyComponent } from './shared-proxy/shared-proxy.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { SelectOptionComponent } from './shared/select-option/select-option.comp
     BuyServiceComponent,
     DataCountryProxyDirective,
     SelectOptionComponent,
+    SharedProxyComponent,
   ],
   imports: [
     BrowserModule,

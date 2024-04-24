@@ -1,0 +1,204 @@
+.Proxy-lists {
+  background-color: var(--light);
+}
+
+.Proxy-lists p {
+  margin-bottom: 2rem;
+}
+
+/* Shared locations */
+.shared-locations {
+  background-color: #e4e4e4;
+}
+
+.shared-proxy__countries-search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px 0 4px 0;
+}
+
+.shared-proxy__countries-search_input {
+  font-size: 16px;
+  margin-right: 0.5%;
+  padding: 1rem 1rem;
+  border: none;
+  border-radius: 3px 0 0 3px;
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 80%;
+}
+
+.shared-proxy__countries-search_button {
+  font-size: 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  transition: all .3s;
+  color: #F4F7FA;
+  border-radius: 0 3px 3px 0;
+  background-color: #61DB81;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 19.5%;
+  flex: 0 0 19.5%;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.shared-proxy__countries-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 -10px;
+  margin-bottom: 20px;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 40.5rem;
+  overflow: hidden;
+  transition: height 0.3s;
+  -o-transition: height 0.3s;
+  -moz-transition: height 0.3s;
+  -webkit-transition: height 0.3s;
+}
+
+.shared-proxy__countries-list_item-wrapper {
+  padding: 0 10px;
+}
+
+.shared-proxy__countries-list_item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 50px;
+  margin-bottom: 4px;
+  padding: 10px;
+  border-radius: 4px;
+  background: #fff;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.shared-proxy__countries-list_item-flagname {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.shared-proxy__countries-list_item-flag {
+  width: 32px;
+  height: 24px;
+  margin-right: 10px;
+  border-radius: 3px;
+}
+
+.shared-proxy__countries-list_item-name {
+  font-size: 0.9rem;
+  color: #3b3b3b;
+}
+
+.shared-proxy__countries-list_item-ips {
+  font-size: 16px;
+  padding: 2px 7px;
+  color: #a9a9aa;
+  border-radius: 2px;
+  background: #e7e9eb;
+}
+
+.shared-proxy__countries-show-all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.shared-proxy__countries-show-all .icon-sm {
+  transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
+  -moz-transition: all 0.3s ease-out 0s;
+  -ms-transition: all 0.3s ease-out 0s;
+  -webkit-transition: all 0.3s ease-out 0s;
+
+}
+
+/* Shared Checker */
+
+.shared-checker span {
+  color: #414141;
+}
+
+.shared-checker .btn {
+  background-color: #cecece;
+  color: #414141;
+  padding: 0.5rem 4rem;
+}
+
+.shared-checker .btn:hover,
+.shared-checker .btn:active,
+.shared-checker .btn:focus,
+.shared-checker .btn:focus-visible {
+  background-color: #bbb !important;
+}
+
+.shared-checker ul.d-flex {
+  flex-direction: column;
+}
+
+.shared-checker ul li:first-of-type {
+  flex-basis: 15%;
+}
+
+.shared-checker ul li a {
+  color: #414141;
+  margin-left: 1.5rem;
+}
+
+.shared-checker ul li a span.font-icon {
+  border: 0.15rem solid #414141;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+
+}
+
+.shared-checker ul li a:hover span.font-icon,
+.shared-checker ul li a:active span.font-icon,
+.shared-checker ul li a:focus span.font-icon,
+.shared-checker ul li a:focus-visible span.font-icon {
+  color: #61DB81;
+  border-color: #61DB81;
+}
+
+.shared-checker ul li a:hover div span,
+.shared-checker ul li a:active div span,
+.shared-checker ul li a:focus div span,
+.shared-checker ul li a:focus-visible div span {
+  color: #61DB81;
+}
+
+.shared-checker ul li a div span {
+  font-weight: bolder;
+}
+
+.shared-checker ul li a div span+label {
+  color: #414141 !important;
+  font-weight: 100;
+}
