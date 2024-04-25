@@ -6,7 +6,7 @@ import {
   ViewChild,
 } from '@angular/core';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import { CountryProxy } from '../../personal-proxy/buy-service/interfaces/country-proxy';
+import { CountryProxy } from '../interfaces/country-proxy';
 import { Methods } from '../classes/methods';
 
 @Component({

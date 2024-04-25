@@ -1,5 +1,5 @@
 import { ElementRef, QueryList, Renderer2 } from '@angular/core';
-import { CountryProxy } from '../../personal-proxy/buy-service/interfaces/country-proxy';
+import { CountryProxy } from '../interfaces/country-proxy';
 
 export class Methods {
   private renderer2!: Renderer2;

@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { faCheck } from '@fortawesome/free-solid-svg-icons';
-import { ProxyList } from '../../home/proxy-services/interfaces/proxy-list';
-import { PersonalPrice } from '../../personal-proxy/interfaces/personal-price';
-import { SharedPrice } from '../../shared-proxy/Interfaces/shared-price';
+import { ProxyList } from '../interfaces/proxy-list';
+import { PersonalPrice } from '../interfaces/personal-price';
+import { SharedPrice } from '../interfaces/shared-price';
 
 @Component({
   selector: 'xvpn-pricing-card',

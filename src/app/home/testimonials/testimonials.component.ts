@@ -2,20 +2,19 @@ import { Component, OnInit } from '@angular/core';
 import { faLink } from '@fortawesome/free-solid-svg-icons';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ClientData } from './interfaces/client-data';
-import { ClientsService } from './services/clients.service';
+import { DataService } from '../../shared/services/data.service';
 
 @Component({
   selector: 'xvpn-testimonials',
   templateUrl: './testimonials.component.html',
   styleUrl: './testimonials.component.css',
-  providers: [ClientsService],
 })
 export class TestimonialsComponent implements OnInit {
   faLink = faLink;
   clientsData: ClientData[] = [];
-  constructor(private clientService: ClientsService) {}
+  constructor(private dataService: DataService) {}
   ngOnInit(): void {
-    this.clientsData = this.clientService.getClientData();
+    this.clientsData = this.dataService.getClientData();
   }
   customOptions: OwlOptions = {
     mouseDrag: false,

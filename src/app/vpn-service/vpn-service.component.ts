@@ -1,15 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { VpnPeriod } from './interfaces/vpn-period';
-import { VpnPeriodsService } from './services/vpn-periods.service';
-import { VpnPrice } from './interfaces/vpn-price';
-import { VpnPricesService } from './services/vpn-prices.service';
+import { VpnPeriod } from '../shared/interfaces/vpn-period';
+import { VpnPrice } from '../shared/interfaces/vpn-price';
 import { faWindows, faLinux, faApple } from '@fortawesome/free-brands-svg-icons';
-import { OperatingSystemsService } from './services/operating-systems.service';
-import { OperatingSystem } from './interfaces/operating-system';
-import { ProxyChecker } from './interfaces/proxy-checker';
-import { ProxiesCheckersService } from './services/proxies-checkers.service';
-import { FreeProxy } from './interfaces/free-proxy';
-import { FreeProxiesService } from './services/free-proxies.service';
+import { OperatingSystem } from '../shared/interfaces/operating-system';
+import { ProxyChecker } from '../shared/interfaces/proxy-checker';
+import { FreeProxy } from '../shared/interfaces/free-proxy';
+import { DataService } from '../shared/services/data.service';
 
 @Component({
   selector: 'xvpn-vpn-service',
@@ -26,18 +22,14 @@ export class VpnServiceComponent implements OnInit {
   operatingSystems: OperatingSystem[] = [];
   freeProxies: FreeProxy[] = [];
   constructor(
-    private vpnPeriodService: VpnPeriodsService,
-    private vpnPricesService: VpnPricesService,
-    private operatingSystemsService: OperatingSystemsService,
-    private proxiesCheckersService: ProxiesCheckersService,
-    private freeProxiesService: FreeProxiesService
+    private dataService: DataService
   ) {}
 
   ngOnInit(): void {
-    this.vpnPeriods = this.vpnPeriodService.getVpnPeriods();
-    this.vpnPrices = this.vpnPricesService.getVpnPrices();
-    this.operatingSystems = this.operatingSystemsService.getOperatingSystems();
-    this.proxyCheckers = this.proxiesCheckersService.getProxiesCheckers();
-    this.freeProxies = this.freeProxiesService.getFreeProxies();
+    this.vpnPeriods = this.dataService.getVpnPeriods();
+    this.vpnPrices = this.dataService.getVpnPrices();
+    this.operatingSystems = this.dataService.getOperatingSystems();
+    this.proxyCheckers = this.dataService.getProxiesCheckers();
+    this.freeProxies = this.dataService.getFreeProxies();
   }
 }

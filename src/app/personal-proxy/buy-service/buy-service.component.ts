@@ -8,9 +8,9 @@ import {
   ViewChildren,
 } from '@angular/core';
 import { Methods } from '../../shared/classes/methods';
-import { CountryProxy } from './interfaces/country-proxy';
-import { CountriesProxyService } from './services/countries-proxy.service';
+import { CountryProxy } from '../../shared/interfaces/country-proxy';
 import { faUser, faUserGroup } from '@fortawesome/free-solid-svg-icons';
+import { DataService } from '../../shared/services/data.service';
 
 @Component({
   selector: 'xvpn-buy-service',
@@ -124,11 +124,11 @@ export class BuyServiceComponent implements OnInit {
   }
 
   //Constructor
-  constructor(private countriesProxyService: CountriesProxyService) {}
+  constructor(private dataService: DataService) {}
 
   //Lifecycle Hooks
   ngOnInit(): void {
-    this.countriesProxy = this.countriesProxyService.getCountriesProxy();
+    this.countriesProxy = this.dataService.getCountriesProxy();
     this.filteredCountriesProxy = this.countriesProxy;
     this.countryProxy = this.filteredCountriesProxy[0];
     this.privateCountriesNumber = this.countriesProxy.filter(

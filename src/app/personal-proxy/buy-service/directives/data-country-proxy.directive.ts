@@ -1,5 +1,5 @@
 import { Directive, ElementRef, Input } from '@angular/core';
-import { CountryProxy } from '../interfaces/country-proxy';
+import { CountryProxy } from '../../../shared/interfaces/country-proxy';
 
 @Directive({
   selector: '[xvpnDataCountryProxy]',

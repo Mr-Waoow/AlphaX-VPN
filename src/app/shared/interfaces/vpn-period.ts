@@ -3,5 +3,5 @@ export interface VpnPeriod {
   name: string;
   description: string;
   button: string;
-  counteis: string [];
+  counteis: string[];
 }

@@ -1,16 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { PersonalPrice } from './interfaces/personal-price';
-import { PersonalPricesService } from './services/personal-prices.service';
-import { IndividualRequest } from './interfaces/individual-request';
-import { CountryProxy } from './buy-service/interfaces/country-proxy';
-import { CountriesProxyService } from './buy-service/services/countries-proxy.service';
-import { IndividualRequestsService } from './services/individual-requests.service';
+import { PersonalPrice } from '../shared/interfaces/personal-price';
+import { IndividualRequest } from '../shared/interfaces/individual-request';
+import { CountryProxy } from '../shared/interfaces/country-proxy';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import { ProxyProps } from './interfaces/proxy-props';
-import { ProxiesPropsService } from './services/proxies-props.service';
-import { PersonalQuestion } from './interfaces/personal-question';
-import { PersonalQuestionsService } from './services/personal-questions.service';
+import { ProxyProps } from '../shared/interfaces/proxy-props';
+import { PersonalQuestion } from '../shared/interfaces/personal-question';
 import { Methods } from '../shared/classes/methods';
+import { DataService } from '../shared/services/data.service';
 
 @Component({
   selector: 'xvpn-personal-proxy',
@@ -38,20 +34,14 @@ export class PersonalProxyComponent implements OnInit {
   methods = new Methods();
 
   constructor(
-    private personalPricesServices: PersonalPricesService,
-    private countriesProxyService: CountriesProxyService,
-    private individualRequestsService: IndividualRequestsService,
-    private proxiesPropsService: ProxiesPropsService,
-    private personalQuestionsService: PersonalQuestionsService
+    private dataService: DataService
   ) {}
   ngOnInit(): void {
-    this.personalPrices = this.personalPricesServices.getPersonalPrices();
-    this.countries = this.countriesProxyService.getCountriesProxy();
-    this.individualRequests =
-      this.individualRequestsService.getIndividualRequests();
-    this.proxiesProps = this.proxiesPropsService.getProxiesProps();
-    this.personalQuestions =
-      this.personalQuestionsService.getPersonalQuestions();
+    this.personalPrices = this.dataService.getPersonalPrices();
+    this.countries = this.dataService.getCountriesProxy();
+    this.individualRequests = this.dataService.getIndividualRequests();
+    this.proxiesProps = this.dataService.getProxiesProps();
+    this.personalQuestions = this.dataService.getPersonalQuestions();
   }
   openDiv(evt: Event): void {
     this.methods.openable.openDiv(evt);

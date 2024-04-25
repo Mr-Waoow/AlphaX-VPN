@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Flag } from './interfaces/flag';
-import { FlagsService } from './services/flags.service';
+import { Flag } from '../../interfaces/flag';
 import { SubstringBetweenLetters } from '../../classes/substring-between-letters';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'xvpn-slider-img-flags',
@@ -16,8 +16,8 @@ export class SliderImgFlagsComponent implements OnInit {
   delayedClass: string = '';
   // assignedHuge: string = '';
 
-  constructor(private flagsService: FlagsService) {}
+  constructor(private dataService: DataService) {}
   ngOnInit(): void {
-    this.flags = this.flagsService.getFlags();
+    this.flags = this.dataService.getFlags();
   }
 }

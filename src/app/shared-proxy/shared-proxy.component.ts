@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { SharedPrice } from './Interfaces/shared-price';
-import { SharedPricesService } from './Services/shared-prices.service';
+import { SharedPrice } from '../shared/interfaces/shared-price';
 import { Methods } from '../shared/classes/methods';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
+import { DataService } from '../shared/services/data.service';
 
 @Component({
   selector: 'xvpn-shared-proxy',
@@ -15,9 +15,9 @@ export class SharedProxyComponent implements OnInit {
   sharedPrices: SharedPrice[] = [];
   //Icons
   faCaretDown = faCaretDown;
-  constructor(private sharedPricesService: SharedPricesService) {}
+  constructor(private dataService: DataService) {}
   ngOnInit(): void {
-    this.sharedPrices = this.sharedPricesService.getSharedPrices();
+    this.sharedPrices = this.dataService.getSharedPrices();
   }
   openDivTarget(evt: Event, id: string): void {
     this.methods.openable.openDivTarget(evt, id);

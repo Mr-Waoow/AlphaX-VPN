@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { VpnPrice } from '../interfaces/vpn-price';
+import { VpnPrice } from '../../shared/interfaces/vpn-price';
 
 @Component({
   selector: 'xvpn-vpn-price',
