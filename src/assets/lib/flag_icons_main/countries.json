@@ -1,7 +1,7 @@
 [
   {
     "capital": "Kabul",
-    "code": "af",
+    "icon": "af",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/af.svg",
     "flag_4x3": "flags/4x3/af.svg",
@@ -10,7 +10,7 @@
   },
   {
     "capital": "Mariehamn",
-    "code": "ax",
+    "icon": "ax",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/ax.svg",
     "flag_4x3": "flags/4x3/ax.svg",
@@ -19,7 +19,7 @@
   },
   {
     "capital": "Tirana",
-    "code": "al",
+    "icon": "al",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/al.svg",
     "flag_4x3": "flags/4x3/al.svg",
@@ -28,7 +28,7 @@
   },
   {
     "capital": "Algiers",
-    "code": "dz",
+    "icon": "dz",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/dz.svg",
     "flag_4x3": "flags/4x3/dz.svg",
@@ -37,7 +37,7 @@
   },
   {
     "capital": "Pago Pago",
-    "code": "as",
+    "icon": "as",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/as.svg",
     "flag_4x3": "flags/4x3/as.svg",
@@ -46,7 +46,7 @@
   },
   {
     "capital": "Andorra la Vella",
-    "code": "ad",
+    "icon": "ad",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/ad.svg",
     "flag_4x3": "flags/4x3/ad.svg",
@@ -55,7 +55,7 @@
   },
   {
     "capital": "Luanda",
-    "code": "ao",
+    "icon": "ao",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/ao.svg",
     "flag_4x3": "flags/4x3/ao.svg",
@@ -64,7 +64,7 @@
   },
   {
     "capital": "The Valley",
-    "code": "ai",
+    "icon": "ai",
     "continent": "North America",
     "flag_1x1": "flags/1x1/ai.svg",
     "flag_4x3": "flags/4x3/ai.svg",
@@ -72,7 +72,7 @@
     "name": "Anguilla"
   },
   {
-    "code": "aq",
+    "icon": "aq",
     "flag_1x1": "flags/1x1/aq.svg",
     "flag_4x3": "flags/4x3/aq.svg",
     "iso": true,
@@ -80,7 +80,7 @@
   },
   {
     "capital": "St. John's",
-    "code": "ag",
+    "icon": "ag",
     "continent": "North America",
     "flag_1x1": "flags/1x1/ag.svg",
     "flag_4x3": "flags/4x3/ag.svg",
@@ -89,7 +89,7 @@
   },
   {
     "capital": "Buenos Aires",
-    "code": "ar",
+    "icon": "ar",
     "continent": "South America",
     "flag_1x1": "flags/1x1/ar.svg",
     "flag_4x3": "flags/4x3/ar.svg",
@@ -98,7 +98,7 @@
   },
   {
     "capital": "Yerevan",
-    "code": "am",
+    "icon": "am",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/am.svg",
     "flag_4x3": "flags/4x3/am.svg",
@@ -107,7 +107,7 @@
   },
   {
     "capital": "Oranjestad",
-    "code": "aw",
+    "icon": "aw",
     "continent": "South America",
     "flag_1x1": "flags/1x1/aw.svg",
     "flag_4x3": "flags/4x3/aw.svg",
@@ -116,7 +116,7 @@
   },
   {
     "capital": "Georgetown",
-    "code": "ac",
+    "icon": "ac",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/ac.svg",
     "flag_4x3": "flags/4x3/ac.svg",
@@ -125,7 +125,7 @@
   },
   {
     "capital": "Canberra",
-    "code": "au",
+    "icon": "au",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/au.svg",
     "flag_4x3": "flags/4x3/au.svg",
@@ -134,7 +134,7 @@
   },
   {
     "capital": "Vienna",
-    "code": "at",
+    "icon": "at",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/at.svg",
     "flag_4x3": "flags/4x3/at.svg",
@@ -143,7 +143,7 @@
   },
   {
     "capital": "Baku",
-    "code": "az",
+    "icon": "az",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/az.svg",
     "flag_4x3": "flags/4x3/az.svg",
@@ -152,7 +152,7 @@
   },
   {
     "capital": "Nassau",
-    "code": "bs",
+    "icon": "bs",
     "continent": "North America",
     "flag_1x1": "flags/1x1/bs.svg",
     "flag_4x3": "flags/4x3/bs.svg",
@@ -161,7 +161,7 @@
   },
   {
     "capital": "Manama",
-    "code": "bh",
+    "icon": "bh",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/bh.svg",
     "flag_4x3": "flags/4x3/bh.svg",
@@ -170,7 +170,7 @@
   },
   {
     "capital": "Dhaka",
-    "code": "bd",
+    "icon": "bd",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/bd.svg",
     "flag_4x3": "flags/4x3/bd.svg",
@@ -179,7 +179,7 @@
   },
   {
     "capital": "Bridgetown",
-    "code": "bb",
+    "icon": "bb",
     "continent": "North America",
     "flag_1x1": "flags/1x1/bb.svg",
     "flag_4x3": "flags/4x3/bb.svg",
@@ -188,7 +188,7 @@
   },
   {
     "capital": "Minsk",
-    "code": "by",
+    "icon": "by",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/by.svg",
     "flag_4x3": "flags/4x3/by.svg",
@@ -197,7 +197,7 @@
   },
   {
     "capital": "Brussels",
-    "code": "be",
+    "icon": "be",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/be.svg",
     "flag_4x3": "flags/4x3/be.svg",
@@ -206,7 +206,7 @@
   },
   {
     "capital": "Belmopan",
-    "code": "bz",
+    "icon": "bz",
     "continent": "North America",
     "flag_1x1": "flags/1x1/bz.svg",
     "flag_4x3": "flags/4x3/bz.svg",
@@ -215,7 +215,7 @@
   },
   {
     "capital": "Porto-Novo",
-    "code": "bj",
+    "icon": "bj",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/bj.svg",
     "flag_4x3": "flags/4x3/bj.svg",
@@ -224,7 +224,7 @@
   },
   {
     "capital": "Hamilton",
-    "code": "bm",
+    "icon": "bm",
     "continent": "North America",
     "flag_1x1": "flags/1x1/bm.svg",
     "flag_4x3": "flags/4x3/bm.svg",
@@ -233,7 +233,7 @@
   },
   {
     "capital": "Thimphu",
-    "code": "bt",
+    "icon": "bt",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/bt.svg",
     "flag_4x3": "flags/4x3/bt.svg",
@@ -242,7 +242,7 @@
   },
   {
     "capital": "Sucre",
-    "code": "bo",
+    "icon": "bo",
     "continent": "South America",
     "flag_1x1": "flags/1x1/bo.svg",
     "flag_4x3": "flags/4x3/bo.svg",
@@ -251,7 +251,7 @@
   },
   {
     "capital": "Kralendijk",
-    "code": "bq",
+    "icon": "bq",
     "continent": "South America",
     "flag_1x1": "flags/1x1/bq.svg",
     "flag_4x3": "flags/4x3/bq.svg",
@@ -260,7 +260,7 @@
   },
   {
     "capital": "Sarajevo",
-    "code": "ba",
+    "icon": "ba",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/ba.svg",
     "flag_4x3": "flags/4x3/ba.svg",
@@ -269,7 +269,7 @@
   },
   {
     "capital": "Gaborone",
-    "code": "bw",
+    "icon": "bw",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/bw.svg",
     "flag_4x3": "flags/4x3/bw.svg",
@@ -277,7 +277,7 @@
     "name": "Botswana"
   },
   {
-    "code": "bv",
+    "icon": "bv",
     "flag_1x1": "flags/1x1/bv.svg",
     "flag_4x3": "flags/4x3/bv.svg",
     "iso": true,
@@ -285,7 +285,7 @@
   },
   {
     "capital": "Brasília",
-    "code": "br",
+    "icon": "br",
     "continent": "South America",
     "flag_1x1": "flags/1x1/br.svg",
     "flag_4x3": "flags/4x3/br.svg",
@@ -294,7 +294,7 @@
   },
   {
     "capital": "Diego Garcia",
-    "code": "io",
+    "icon": "io",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/io.svg",
     "flag_4x3": "flags/4x3/io.svg",
@@ -303,7 +303,7 @@
   },
   {
     "capital": "Bandar Seri Begawan",
-    "code": "bn",
+    "icon": "bn",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/bn.svg",
     "flag_4x3": "flags/4x3/bn.svg",
@@ -312,7 +312,7 @@
   },
   {
     "capital": "Sofia",
-    "code": "bg",
+    "icon": "bg",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/bg.svg",
     "flag_4x3": "flags/4x3/bg.svg",
@@ -321,7 +321,7 @@
   },
   {
     "capital": "Ouagadougou",
-    "code": "bf",
+    "icon": "bf",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/bf.svg",
     "flag_4x3": "flags/4x3/bf.svg",
@@ -330,7 +330,7 @@
   },
   {
     "capital": "Bujumbura",
-    "code": "bi",
+    "icon": "bi",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/bi.svg",
     "flag_4x3": "flags/4x3/bi.svg",
@@ -339,7 +339,7 @@
   },
   {
     "capital": "Praia",
-    "code": "cv",
+    "icon": "cv",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/cv.svg",
     "flag_4x3": "flags/4x3/cv.svg",
@@ -348,7 +348,7 @@
   },
   {
     "capital": "Phnom Penh",
-    "code": "kh",
+    "icon": "kh",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/kh.svg",
     "flag_4x3": "flags/4x3/kh.svg",
@@ -357,7 +357,7 @@
   },
   {
     "capital": "Yaoundé",
-    "code": "cm",
+    "icon": "cm",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/cm.svg",
     "flag_4x3": "flags/4x3/cm.svg",
@@ -366,7 +366,7 @@
   },
   {
     "capital": "Ottawa",
-    "code": "ca",
+    "icon": "ca",
     "continent": "North America",
     "flag_1x1": "flags/1x1/ca.svg",
     "flag_4x3": "flags/4x3/ca.svg",
@@ -374,14 +374,14 @@
     "name": "Canada"
   },
   {
-    "code": "ic",
+    "icon": "ic",
     "flag_1x1": "flags/1x1/ic.svg",
     "flag_4x3": "flags/4x3/ic.svg",
     "iso": false,
     "name": "Canary Islands"
   },
   {
-    "code": "es-ct",
+    "icon": "es-ct",
     "flag_1x1": "flags/1x1/es-ct.svg",
     "flag_4x3": "flags/4x3/es-ct.svg",
     "iso": false,
@@ -389,7 +389,7 @@
   },
   {
     "capital": "George Town",
-    "code": "ky",
+    "icon": "ky",
     "continent": "North America",
     "flag_1x1": "flags/1x1/ky.svg",
     "flag_4x3": "flags/4x3/ky.svg",
@@ -398,7 +398,7 @@
   },
   {
     "capital": "Bangui",
-    "code": "cf",
+    "icon": "cf",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/cf.svg",
     "flag_4x3": "flags/4x3/cf.svg",
@@ -406,14 +406,14 @@
     "name": "Central African Republic"
   },
   {
-    "code": "cefta",
+    "icon": "cefta",
     "flag_1x1": "flags/1x1/cefta.svg",
     "flag_4x3": "flags/4x3/cefta.svg",
     "iso": false,
     "name": "Central European Free Trade Agreement"
   },
   {
-    "code": "ea",
+    "icon": "ea",
     "flag_1x1": "flags/1x1/ea.svg",
     "flag_4x3": "flags/4x3/ea.svg",
     "iso": false,
@@ -421,7 +421,7 @@
   },
   {
     "capital": "N'Djamena",
-    "code": "td",
+    "icon": "td",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/td.svg",
     "flag_4x3": "flags/4x3/td.svg",
@@ -430,7 +430,7 @@
   },
   {
     "capital": "Santiago",
-    "code": "cl",
+    "icon": "cl",
     "continent": "South America",
     "flag_1x1": "flags/1x1/cl.svg",
     "flag_4x3": "flags/4x3/cl.svg",
@@ -439,7 +439,7 @@
   },
   {
     "capital": "Beijing",
-    "code": "cn",
+    "icon": "cn",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/cn.svg",
     "flag_4x3": "flags/4x3/cn.svg",
@@ -448,7 +448,7 @@
   },
   {
     "capital": "Flying Fish Cove",
-    "code": "cx",
+    "icon": "cx",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/cx.svg",
     "flag_4x3": "flags/4x3/cx.svg",
@@ -456,7 +456,7 @@
     "name": "Christmas Island"
   },
   {
-    "code": "cp",
+    "icon": "cp",
     "flag_1x1": "flags/1x1/cp.svg",
     "flag_4x3": "flags/4x3/cp.svg",
     "iso": false,
@@ -464,7 +464,7 @@
   },
   {
     "capital": "West Island",
-    "code": "cc",
+    "icon": "cc",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/cc.svg",
     "flag_4x3": "flags/4x3/cc.svg",
@@ -473,7 +473,7 @@
   },
   {
     "capital": "Bogotá",
-    "code": "co",
+    "icon": "co",
     "continent": "South America",
     "flag_1x1": "flags/1x1/co.svg",
     "flag_4x3": "flags/4x3/co.svg",
@@ -482,7 +482,7 @@
   },
   {
     "capital": "Moroni",
-    "code": "km",
+    "icon": "km",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/km.svg",
     "flag_4x3": "flags/4x3/km.svg",
@@ -491,7 +491,7 @@
   },
   {
     "capital": "Avarua",
-    "code": "ck",
+    "icon": "ck",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/ck.svg",
     "flag_4x3": "flags/4x3/ck.svg",
@@ -500,7 +500,7 @@
   },
   {
     "capital": "San José",
-    "code": "cr",
+    "icon": "cr",
     "continent": "North America",
     "flag_1x1": "flags/1x1/cr.svg",
     "flag_4x3": "flags/4x3/cr.svg",
@@ -509,7 +509,7 @@
   },
   {
     "capital": "Zagreb",
-    "code": "hr",
+    "icon": "hr",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/hr.svg",
     "flag_4x3": "flags/4x3/hr.svg",
@@ -518,7 +518,7 @@
   },
   {
     "capital": "Havana",
-    "code": "cu",
+    "icon": "cu",
     "continent": "North America",
     "flag_1x1": "flags/1x1/cu.svg",
     "flag_4x3": "flags/4x3/cu.svg",
@@ -527,7 +527,7 @@
   },
   {
     "capital": "Willemstad",
-    "code": "cw",
+    "icon": "cw",
     "continent": "South America",
     "flag_1x1": "flags/1x1/cw.svg",
     "flag_4x3": "flags/4x3/cw.svg",
@@ -536,7 +536,7 @@
   },
   {
     "capital": "Nicosia",
-    "code": "cy",
+    "icon": "cy",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/cy.svg",
     "flag_4x3": "flags/4x3/cy.svg",
@@ -545,7 +545,7 @@
   },
   {
     "capital": "Prague",
-    "code": "cz",
+    "icon": "cz",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/cz.svg",
     "flag_4x3": "flags/4x3/cz.svg",
@@ -554,7 +554,7 @@
   },
   {
     "capital": "Yamoussoukro",
-    "code": "ci",
+    "icon": "ci",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/ci.svg",
     "flag_4x3": "flags/4x3/ci.svg",
@@ -563,7 +563,7 @@
   },
   {
     "capital": "Kinshasa",
-    "code": "cd",
+    "icon": "cd",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/cd.svg",
     "flag_4x3": "flags/4x3/cd.svg",
@@ -572,7 +572,7 @@
   },
   {
     "capital": "Copenhagen",
-    "code": "dk",
+    "icon": "dk",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/dk.svg",
     "flag_4x3": "flags/4x3/dk.svg",
@@ -580,7 +580,7 @@
     "name": "Denmark"
   },
   {
-    "code": "dg",
+    "icon": "dg",
     "flag_1x1": "flags/1x1/dg.svg",
     "flag_4x3": "flags/4x3/dg.svg",
     "iso": false,
@@ -588,7 +588,7 @@
   },
   {
     "capital": "Djibouti",
-    "code": "dj",
+    "icon": "dj",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/dj.svg",
     "flag_4x3": "flags/4x3/dj.svg",
@@ -597,7 +597,7 @@
   },
   {
     "capital": "Roseau",
-    "code": "dm",
+    "icon": "dm",
     "continent": "North America",
     "flag_1x1": "flags/1x1/dm.svg",
     "flag_4x3": "flags/4x3/dm.svg",
@@ -606,7 +606,7 @@
   },
   {
     "capital": "Santo Domingo",
-    "code": "do",
+    "icon": "do",
     "continent": "North America",
     "flag_1x1": "flags/1x1/do.svg",
     "flag_4x3": "flags/4x3/do.svg",
@@ -615,7 +615,7 @@
   },
   {
     "capital": "Quito",
-    "code": "ec",
+    "icon": "ec",
     "continent": "South America",
     "flag_1x1": "flags/1x1/ec.svg",
     "flag_4x3": "flags/4x3/ec.svg",
@@ -624,7 +624,7 @@
   },
   {
     "capital": "Cairo",
-    "code": "eg",
+    "icon": "eg",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/eg.svg",
     "flag_4x3": "flags/4x3/eg.svg",
@@ -633,7 +633,7 @@
   },
   {
     "capital": "San Salvador",
-    "code": "sv",
+    "icon": "sv",
     "continent": "North America",
     "flag_1x1": "flags/1x1/sv.svg",
     "flag_4x3": "flags/4x3/sv.svg",
@@ -642,7 +642,7 @@
   },
   {
     "capital": "London",
-    "code": "gb-eng",
+    "icon": "gb-eng",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/gb-eng.svg",
     "flag_4x3": "flags/4x3/gb-eng.svg",
@@ -651,7 +651,7 @@
   },
   {
     "capital": "Malabo",
-    "code": "gq",
+    "icon": "gq",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/gq.svg",
     "flag_4x3": "flags/4x3/gq.svg",
@@ -660,7 +660,7 @@
   },
   {
     "capital": "Asmara",
-    "code": "er",
+    "icon": "er",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/er.svg",
     "flag_4x3": "flags/4x3/er.svg",
@@ -669,7 +669,7 @@
   },
   {
     "capital": "Tallinn",
-    "code": "ee",
+    "icon": "ee",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/ee.svg",
     "flag_4x3": "flags/4x3/ee.svg",
@@ -678,7 +678,7 @@
   },
   {
     "capital": "Lobamba, Mbabane",
-    "code": "sz",
+    "icon": "sz",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/sz.svg",
     "flag_4x3": "flags/4x3/sz.svg",
@@ -687,7 +687,7 @@
   },
   {
     "capital": "Addis Ababa",
-    "code": "et",
+    "icon": "et",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/et.svg",
     "flag_4x3": "flags/4x3/et.svg",
@@ -695,7 +695,7 @@
     "name": "Ethiopia"
   },
   {
-    "code": "eu",
+    "icon": "eu",
     "flag_1x1": "flags/1x1/eu.svg",
     "flag_4x3": "flags/4x3/eu.svg",
     "iso": false,
@@ -703,7 +703,7 @@
   },
   {
     "capital": "Stanley",
-    "code": "fk",
+    "icon": "fk",
     "continent": "South America",
     "flag_1x1": "flags/1x1/fk.svg",
     "flag_4x3": "flags/4x3/fk.svg",
@@ -712,7 +712,7 @@
   },
   {
     "capital": "Tórshavn",
-    "code": "fo",
+    "icon": "fo",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/fo.svg",
     "flag_4x3": "flags/4x3/fo.svg",
@@ -721,7 +721,7 @@
   },
   {
     "capital": "Palikir",
-    "code": "fm",
+    "icon": "fm",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/fm.svg",
     "flag_4x3": "flags/4x3/fm.svg",
@@ -730,7 +730,7 @@
   },
   {
     "capital": "Suva",
-    "code": "fj",
+    "icon": "fj",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/fj.svg",
     "flag_4x3": "flags/4x3/fj.svg",
@@ -739,7 +739,7 @@
   },
   {
     "capital": "Helsinki",
-    "code": "fi",
+    "icon": "fi",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/fi.svg",
     "flag_4x3": "flags/4x3/fi.svg",
@@ -748,7 +748,7 @@
   },
   {
     "capital": "Paris",
-    "code": "fr",
+    "icon": "fr",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/fr.svg",
     "flag_4x3": "flags/4x3/fr.svg",
@@ -757,7 +757,7 @@
   },
   {
     "capital": "Cayenne",
-    "code": "gf",
+    "icon": "gf",
     "continent": "South America",
     "flag_1x1": "flags/1x1/gf.svg",
     "flag_4x3": "flags/4x3/gf.svg",
@@ -766,7 +766,7 @@
   },
   {
     "capital": "Papeete",
-    "code": "pf",
+    "icon": "pf",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/pf.svg",
     "flag_4x3": "flags/4x3/pf.svg",
@@ -775,7 +775,7 @@
   },
   {
     "capital": "Saint-Pierre, Réunion",
-    "code": "tf",
+    "icon": "tf",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/tf.svg",
     "flag_4x3": "flags/4x3/tf.svg",
@@ -784,7 +784,7 @@
   },
   {
     "capital": "Libreville",
-    "code": "ga",
+    "icon": "ga",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/ga.svg",
     "flag_4x3": "flags/4x3/ga.svg",
@@ -792,7 +792,7 @@
     "name": "Gabon"
   },
   {
-    "code": "es-ga",
+    "icon": "es-ga",
     "flag_1x1": "flags/1x1/es-ga.svg",
     "flag_4x3": "flags/4x3/es-ga.svg",
     "iso": false,
@@ -800,7 +800,7 @@
   },
   {
     "capital": "Banjul",
-    "code": "gm",
+    "icon": "gm",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/gm.svg",
     "flag_4x3": "flags/4x3/gm.svg",
@@ -809,7 +809,7 @@
   },
   {
     "capital": "Tbilisi",
-    "code": "ge",
+    "icon": "ge",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/ge.svg",
     "flag_4x3": "flags/4x3/ge.svg",
@@ -818,7 +818,7 @@
   },
   {
     "capital": "Berlin",
-    "code": "de",
+    "icon": "de",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/de.svg",
     "flag_4x3": "flags/4x3/de.svg",
@@ -827,7 +827,7 @@
   },
   {
     "capital": "Accra",
-    "code": "gh",
+    "icon": "gh",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/gh.svg",
     "flag_4x3": "flags/4x3/gh.svg",
@@ -836,7 +836,7 @@
   },
   {
     "capital": "Gibraltar",
-    "code": "gi",
+    "icon": "gi",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/gi.svg",
     "flag_4x3": "flags/4x3/gi.svg",
@@ -845,7 +845,7 @@
   },
   {
     "capital": "Athens",
-    "code": "gr",
+    "icon": "gr",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/gr.svg",
     "flag_4x3": "flags/4x3/gr.svg",
@@ -854,7 +854,7 @@
   },
   {
     "capital": "Nuuk",
-    "code": "gl",
+    "icon": "gl",
     "continent": "North America",
     "flag_1x1": "flags/1x1/gl.svg",
     "flag_4x3": "flags/4x3/gl.svg",
@@ -863,7 +863,7 @@
   },
   {
     "capital": "St. George's",
-    "code": "gd",
+    "icon": "gd",
     "continent": "North America",
     "flag_1x1": "flags/1x1/gd.svg",
     "flag_4x3": "flags/4x3/gd.svg",
@@ -872,7 +872,7 @@
   },
   {
     "capital": "Basse-Terre",
-    "code": "gp",
+    "icon": "gp",
     "continent": "North America",
     "flag_1x1": "flags/1x1/gp.svg",
     "flag_4x3": "flags/4x3/gp.svg",
@@ -881,7 +881,7 @@
   },
   {
     "capital": "Hagåtña",
-    "code": "gu",
+    "icon": "gu",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/gu.svg",
     "flag_4x3": "flags/4x3/gu.svg",
@@ -890,7 +890,7 @@
   },
   {
     "capital": "Guatemala City",
-    "code": "gt",
+    "icon": "gt",
     "continent": "North America",
     "flag_1x1": "flags/1x1/gt.svg",
     "flag_4x3": "flags/4x3/gt.svg",
@@ -899,7 +899,7 @@
   },
   {
     "capital": "Saint Peter Port",
-    "code": "gg",
+    "icon": "gg",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/gg.svg",
     "flag_4x3": "flags/4x3/gg.svg",
@@ -908,7 +908,7 @@
   },
   {
     "capital": "Conakry",
-    "code": "gn",
+    "icon": "gn",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/gn.svg",
     "flag_4x3": "flags/4x3/gn.svg",
@@ -917,7 +917,7 @@
   },
   {
     "capital": "Bissau",
-    "code": "gw",
+    "icon": "gw",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/gw.svg",
     "flag_4x3": "flags/4x3/gw.svg",
@@ -926,7 +926,7 @@
   },
   {
     "capital": "Georgetown",
-    "code": "gy",
+    "icon": "gy",
     "continent": "South America",
     "flag_1x1": "flags/1x1/gy.svg",
     "flag_4x3": "flags/4x3/gy.svg",
@@ -935,7 +935,7 @@
   },
   {
     "capital": "Port-au-Prince",
-    "code": "ht",
+    "icon": "ht",
     "continent": "North America",
     "flag_1x1": "flags/1x1/ht.svg",
     "flag_4x3": "flags/4x3/ht.svg",
@@ -943,7 +943,7 @@
     "name": "Haiti"
   },
   {
-    "code": "hm",
+    "icon": "hm",
     "flag_1x1": "flags/1x1/hm.svg",
     "flag_4x3": "flags/4x3/hm.svg",
     "iso": true,
@@ -951,7 +951,7 @@
   },
   {
     "capital": "Vatican City",
-    "code": "va",
+    "icon": "va",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/va.svg",
     "flag_4x3": "flags/4x3/va.svg",
@@ -960,7 +960,7 @@
   },
   {
     "capital": "Tegucigalpa",
-    "code": "hn",
+    "icon": "hn",
     "continent": "North America",
     "flag_1x1": "flags/1x1/hn.svg",
     "flag_4x3": "flags/4x3/hn.svg",
@@ -969,7 +969,7 @@
   },
   {
     "capital": "Hong Kong",
-    "code": "hk",
+    "icon": "hk",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/hk.svg",
     "flag_4x3": "flags/4x3/hk.svg",
@@ -978,7 +978,7 @@
   },
   {
     "capital": "Budapest",
-    "code": "hu",
+    "icon": "hu",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/hu.svg",
     "flag_4x3": "flags/4x3/hu.svg",
@@ -987,7 +987,7 @@
   },
   {
     "capital": "Reykjavik",
-    "code": "is",
+    "icon": "is",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/is.svg",
     "flag_4x3": "flags/4x3/is.svg",
@@ -996,7 +996,7 @@
   },
   {
     "capital": "New Delhi",
-    "code": "in",
+    "icon": "in",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/in.svg",
     "flag_4x3": "flags/4x3/in.svg",
@@ -1005,7 +1005,7 @@
   },
   {
     "capital": "Jakarta",
-    "code": "id",
+    "icon": "id",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/id.svg",
     "flag_4x3": "flags/4x3/id.svg",
@@ -1014,7 +1014,7 @@
   },
   {
     "capital": "Tehran",
-    "code": "ir",
+    "icon": "ir",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/ir.svg",
     "flag_4x3": "flags/4x3/ir.svg",
@@ -1023,7 +1023,7 @@
   },
   {
     "capital": "Baghdad",
-    "code": "iq",
+    "icon": "iq",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/iq.svg",
     "flag_4x3": "flags/4x3/iq.svg",
@@ -1032,7 +1032,7 @@
   },
   {
     "capital": "Dublin",
-    "code": "ie",
+    "icon": "ie",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/ie.svg",
     "flag_4x3": "flags/4x3/ie.svg",
@@ -1041,7 +1041,7 @@
   },
   {
     "capital": "Douglas",
-    "code": "im",
+    "icon": "im",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/im.svg",
     "flag_4x3": "flags/4x3/im.svg",
@@ -1049,17 +1049,8 @@
     "name": "Isle of Man"
   },
   {
-    "capital": "Jerusalem",
-    "code": "il",
-    "continent": "Asia",
-    "flag_1x1": "flags/1x1/il.svg",
-    "flag_4x3": "flags/4x3/il.svg",
-    "iso": true,
-    "name": "Israel"
-  },
-  {
     "capital": "Rome",
-    "code": "it",
+    "icon": "it",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/it.svg",
     "flag_4x3": "flags/4x3/it.svg",
@@ -1068,7 +1059,7 @@
   },
   {
     "capital": "Kingston",
-    "code": "jm",
+    "icon": "jm",
     "continent": "North America",
     "flag_1x1": "flags/1x1/jm.svg",
     "flag_4x3": "flags/4x3/jm.svg",
@@ -1077,7 +1068,7 @@
   },
   {
     "capital": "Tokyo",
-    "code": "jp",
+    "icon": "jp",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/jp.svg",
     "flag_4x3": "flags/4x3/jp.svg",
@@ -1086,7 +1077,7 @@
   },
   {
     "capital": "Saint Helier",
-    "code": "je",
+    "icon": "je",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/je.svg",
     "flag_4x3": "flags/4x3/je.svg",
@@ -1095,7 +1086,7 @@
   },
   {
     "capital": "Amman",
-    "code": "jo",
+    "icon": "jo",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/jo.svg",
     "flag_4x3": "flags/4x3/jo.svg",
@@ -1104,7 +1095,7 @@
   },
   {
     "capital": "Astana",
-    "code": "kz",
+    "icon": "kz",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/kz.svg",
     "flag_4x3": "flags/4x3/kz.svg",
@@ -1113,7 +1104,7 @@
   },
   {
     "capital": "Nairobi",
-    "code": "ke",
+    "icon": "ke",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/ke.svg",
     "flag_4x3": "flags/4x3/ke.svg",
@@ -1122,7 +1113,7 @@
   },
   {
     "capital": "South Tarawa",
-    "code": "ki",
+    "icon": "ki",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/ki.svg",
     "flag_4x3": "flags/4x3/ki.svg",
@@ -1131,7 +1122,7 @@
   },
   {
     "capital": "Pristina",
-    "code": "xk",
+    "icon": "xk",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/xk.svg",
     "flag_4x3": "flags/4x3/xk.svg",
@@ -1140,7 +1131,7 @@
   },
   {
     "capital": "Kuwait City",
-    "code": "kw",
+    "icon": "kw",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/kw.svg",
     "flag_4x3": "flags/4x3/kw.svg",
@@ -1149,7 +1140,7 @@
   },
   {
     "capital": "Bishkek",
-    "code": "kg",
+    "icon": "kg",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/kg.svg",
     "flag_4x3": "flags/4x3/kg.svg",
@@ -1158,7 +1149,7 @@
   },
   {
     "capital": "Vientiane",
-    "code": "la",
+    "icon": "la",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/la.svg",
     "flag_4x3": "flags/4x3/la.svg",
@@ -1167,7 +1158,7 @@
   },
   {
     "capital": "Riga",
-    "code": "lv",
+    "icon": "lv",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/lv.svg",
     "flag_4x3": "flags/4x3/lv.svg",
@@ -1176,7 +1167,7 @@
   },
   {
     "capital": "Beirut",
-    "code": "lb",
+    "icon": "lb",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/lb.svg",
     "flag_4x3": "flags/4x3/lb.svg",
@@ -1185,7 +1176,7 @@
   },
   {
     "capital": "Maseru",
-    "code": "ls",
+    "icon": "ls",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/ls.svg",
     "flag_4x3": "flags/4x3/ls.svg",
@@ -1194,7 +1185,7 @@
   },
   {
     "capital": "Monrovia",
-    "code": "lr",
+    "icon": "lr",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/lr.svg",
     "flag_4x3": "flags/4x3/lr.svg",
@@ -1203,7 +1194,7 @@
   },
   {
     "capital": "Tripoli",
-    "code": "ly",
+    "icon": "ly",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/ly.svg",
     "flag_4x3": "flags/4x3/ly.svg",
@@ -1212,7 +1203,7 @@
   },
   {
     "capital": "Vaduz",
-    "code": "li",
+    "icon": "li",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/li.svg",
     "flag_4x3": "flags/4x3/li.svg",
@@ -1221,7 +1212,7 @@
   },
   {
     "capital": "Vilnius",
-    "code": "lt",
+    "icon": "lt",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/lt.svg",
     "flag_4x3": "flags/4x3/lt.svg",
@@ -1230,7 +1221,7 @@
   },
   {
     "capital": "Luxembourg City",
-    "code": "lu",
+    "icon": "lu",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/lu.svg",
     "flag_4x3": "flags/4x3/lu.svg",
@@ -1239,7 +1230,7 @@
   },
   {
     "capital": "Macau",
-    "code": "mo",
+    "icon": "mo",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/mo.svg",
     "flag_4x3": "flags/4x3/mo.svg",
@@ -1248,7 +1239,7 @@
   },
   {
     "capital": "Antananarivo",
-    "code": "mg",
+    "icon": "mg",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/mg.svg",
     "flag_4x3": "flags/4x3/mg.svg",
@@ -1257,7 +1248,7 @@
   },
   {
     "capital": "Lilongwe",
-    "code": "mw",
+    "icon": "mw",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/mw.svg",
     "flag_4x3": "flags/4x3/mw.svg",
@@ -1266,7 +1257,7 @@
   },
   {
     "capital": "Kuala Lumpur",
-    "code": "my",
+    "icon": "my",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/my.svg",
     "flag_4x3": "flags/4x3/my.svg",
@@ -1275,7 +1266,7 @@
   },
   {
     "capital": "Malé",
-    "code": "mv",
+    "icon": "mv",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/mv.svg",
     "flag_4x3": "flags/4x3/mv.svg",
@@ -1284,7 +1275,7 @@
   },
   {
     "capital": "Bamako",
-    "code": "ml",
+    "icon": "ml",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/ml.svg",
     "flag_4x3": "flags/4x3/ml.svg",
@@ -1293,7 +1284,7 @@
   },
   {
     "capital": "Valletta",
-    "code": "mt",
+    "icon": "mt",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/mt.svg",
     "flag_4x3": "flags/4x3/mt.svg",
@@ -1302,7 +1293,7 @@
   },
   {
     "capital": "Majuro",
-    "code": "mh",
+    "icon": "mh",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/mh.svg",
     "flag_4x3": "flags/4x3/mh.svg",
@@ -1311,7 +1302,7 @@
   },
   {
     "capital": "Fort-de-France",
-    "code": "mq",
+    "icon": "mq",
     "continent": "North America",
     "flag_1x1": "flags/1x1/mq.svg",
     "flag_4x3": "flags/4x3/mq.svg",
@@ -1320,7 +1311,7 @@
   },
   {
     "capital": "Nouakchott",
-    "code": "mr",
+    "icon": "mr",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/mr.svg",
     "flag_4x3": "flags/4x3/mr.svg",
@@ -1329,7 +1320,7 @@
   },
   {
     "capital": "Port Louis",
-    "code": "mu",
+    "icon": "mu",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/mu.svg",
     "flag_4x3": "flags/4x3/mu.svg",
@@ -1338,7 +1329,7 @@
   },
   {
     "capital": "Mamoudzou",
-    "code": "yt",
+    "icon": "yt",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/yt.svg",
     "flag_4x3": "flags/4x3/yt.svg",
@@ -1347,7 +1338,7 @@
   },
   {
     "capital": "Mexico City",
-    "code": "mx",
+    "icon": "mx",
     "continent": "North America",
     "flag_1x1": "flags/1x1/mx.svg",
     "flag_4x3": "flags/4x3/mx.svg",
@@ -1356,7 +1347,7 @@
   },
   {
     "capital": "Chișinău",
-    "code": "md",
+    "icon": "md",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/md.svg",
     "flag_4x3": "flags/4x3/md.svg",
@@ -1365,7 +1356,7 @@
   },
   {
     "capital": "Monaco",
-    "code": "mc",
+    "icon": "mc",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/mc.svg",
     "flag_4x3": "flags/4x3/mc.svg",
@@ -1374,7 +1365,7 @@
   },
   {
     "capital": "Ulaanbaatar",
-    "code": "mn",
+    "icon": "mn",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/mn.svg",
     "flag_4x3": "flags/4x3/mn.svg",
@@ -1383,7 +1374,7 @@
   },
   {
     "capital": "Podgorica",
-    "code": "me",
+    "icon": "me",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/me.svg",
     "flag_4x3": "flags/4x3/me.svg",
@@ -1392,7 +1383,7 @@
   },
   {
     "capital": "Little Bay, Brades, Plymouth",
-    "code": "ms",
+    "icon": "ms",
     "continent": "North America",
     "flag_1x1": "flags/1x1/ms.svg",
     "flag_4x3": "flags/4x3/ms.svg",
@@ -1401,7 +1392,7 @@
   },
   {
     "capital": "Rabat",
-    "code": "ma",
+    "icon": "ma",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/ma.svg",
     "flag_4x3": "flags/4x3/ma.svg",
@@ -1410,7 +1401,7 @@
   },
   {
     "capital": "Maputo",
-    "code": "mz",
+    "icon": "mz",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/mz.svg",
     "flag_4x3": "flags/4x3/mz.svg",
@@ -1419,7 +1410,7 @@
   },
   {
     "capital": "Naypyidaw",
-    "code": "mm",
+    "icon": "mm",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/mm.svg",
     "flag_4x3": "flags/4x3/mm.svg",
@@ -1428,7 +1419,7 @@
   },
   {
     "capital": "Windhoek",
-    "code": "na",
+    "icon": "na",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/na.svg",
     "flag_4x3": "flags/4x3/na.svg",
@@ -1437,7 +1428,7 @@
   },
   {
     "capital": "Yaren District",
-    "code": "nr",
+    "icon": "nr",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/nr.svg",
     "flag_4x3": "flags/4x3/nr.svg",
@@ -1446,7 +1437,7 @@
   },
   {
     "capital": "Kathmandu",
-    "code": "np",
+    "icon": "np",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/np.svg",
     "flag_4x3": "flags/4x3/np.svg",
@@ -1455,7 +1446,7 @@
   },
   {
     "capital": "Amsterdam",
-    "code": "nl",
+    "icon": "nl",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/nl.svg",
     "flag_4x3": "flags/4x3/nl.svg",
@@ -1464,7 +1455,7 @@
   },
   {
     "capital": "Nouméa",
-    "code": "nc",
+    "icon": "nc",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/nc.svg",
     "flag_4x3": "flags/4x3/nc.svg",
@@ -1473,7 +1464,7 @@
   },
   {
     "capital": "Wellington",
-    "code": "nz",
+    "icon": "nz",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/nz.svg",
     "flag_4x3": "flags/4x3/nz.svg",
@@ -1482,7 +1473,7 @@
   },
   {
     "capital": "Managua",
-    "code": "ni",
+    "icon": "ni",
     "continent": "North America",
     "flag_1x1": "flags/1x1/ni.svg",
     "flag_4x3": "flags/4x3/ni.svg",
@@ -1491,7 +1482,7 @@
   },
   {
     "capital": "Niamey",
-    "code": "ne",
+    "icon": "ne",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/ne.svg",
     "flag_4x3": "flags/4x3/ne.svg",
@@ -1500,7 +1491,7 @@
   },
   {
     "capital": "Abuja",
-    "code": "ng",
+    "icon": "ng",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/ng.svg",
     "flag_4x3": "flags/4x3/ng.svg",
@@ -1509,7 +1500,7 @@
   },
   {
     "capital": "Alofi",
-    "code": "nu",
+    "icon": "nu",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/nu.svg",
     "flag_4x3": "flags/4x3/nu.svg",
@@ -1518,7 +1509,7 @@
   },
   {
     "capital": "Kingston",
-    "code": "nf",
+    "icon": "nf",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/nf.svg",
     "flag_4x3": "flags/4x3/nf.svg",
@@ -1527,7 +1518,7 @@
   },
   {
     "capital": "Pyongyang",
-    "code": "kp",
+    "icon": "kp",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/kp.svg",
     "flag_4x3": "flags/4x3/kp.svg",
@@ -1536,7 +1527,7 @@
   },
   {
     "capital": "Skopje",
-    "code": "mk",
+    "icon": "mk",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/mk.svg",
     "flag_4x3": "flags/4x3/mk.svg",
@@ -1545,7 +1536,7 @@
   },
   {
     "capital": "Belfast",
-    "code": "gb-nir",
+    "icon": "gb-nir",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/gb-nir.svg",
     "flag_4x3": "flags/4x3/gb-nir.svg",
@@ -1554,7 +1545,7 @@
   },
   {
     "capital": "Saipan",
-    "code": "mp",
+    "icon": "mp",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/mp.svg",
     "flag_4x3": "flags/4x3/mp.svg",
@@ -1563,7 +1554,7 @@
   },
   {
     "capital": "Oslo",
-    "code": "no",
+    "icon": "no",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/no.svg",
     "flag_4x3": "flags/4x3/no.svg",
@@ -1572,7 +1563,7 @@
   },
   {
     "capital": "Muscat",
-    "code": "om",
+    "icon": "om",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/om.svg",
     "flag_4x3": "flags/4x3/om.svg",
@@ -1581,7 +1572,7 @@
   },
   {
     "capital": "Islamabad",
-    "code": "pk",
+    "icon": "pk",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/pk.svg",
     "flag_4x3": "flags/4x3/pk.svg",
@@ -1590,7 +1581,7 @@
   },
   {
     "capital": "Ngerulmud",
-    "code": "pw",
+    "icon": "pw",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/pw.svg",
     "flag_4x3": "flags/4x3/pw.svg",
@@ -1599,7 +1590,7 @@
   },
   {
     "capital": "Panama City",
-    "code": "pa",
+    "icon": "pa",
     "continent": "North America",
     "flag_1x1": "flags/1x1/pa.svg",
     "flag_4x3": "flags/4x3/pa.svg",
@@ -1608,7 +1599,7 @@
   },
   {
     "capital": "Port Moresby",
-    "code": "pg",
+    "icon": "pg",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/pg.svg",
     "flag_4x3": "flags/4x3/pg.svg",
@@ -1617,7 +1608,7 @@
   },
   {
     "capital": "Asunción",
-    "code": "py",
+    "icon": "py",
     "continent": "South America",
     "flag_1x1": "flags/1x1/py.svg",
     "flag_4x3": "flags/4x3/py.svg",
@@ -1626,7 +1617,7 @@
   },
   {
     "capital": "Lima",
-    "code": "pe",
+    "icon": "pe",
     "continent": "South America",
     "flag_1x1": "flags/1x1/pe.svg",
     "flag_4x3": "flags/4x3/pe.svg",
@@ -1635,7 +1626,7 @@
   },
   {
     "capital": "Manila",
-    "code": "ph",
+    "icon": "ph",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/ph.svg",
     "flag_4x3": "flags/4x3/ph.svg",
@@ -1644,7 +1635,7 @@
   },
   {
     "capital": "Adamstown",
-    "code": "pn",
+    "icon": "pn",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/pn.svg",
     "flag_4x3": "flags/4x3/pn.svg",
@@ -1653,7 +1644,7 @@
   },
   {
     "capital": "Warsaw",
-    "code": "pl",
+    "icon": "pl",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/pl.svg",
     "flag_4x3": "flags/4x3/pl.svg",
@@ -1662,7 +1653,7 @@
   },
   {
     "capital": "Lisbon",
-    "code": "pt",
+    "icon": "pt",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/pt.svg",
     "flag_4x3": "flags/4x3/pt.svg",
@@ -1671,7 +1662,7 @@
   },
   {
     "capital": "San Juan",
-    "code": "pr",
+    "icon": "pr",
     "continent": "North America",
     "flag_1x1": "flags/1x1/pr.svg",
     "flag_4x3": "flags/4x3/pr.svg",
@@ -1680,7 +1671,7 @@
   },
   {
     "capital": "Doha",
-    "code": "qa",
+    "icon": "qa",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/qa.svg",
     "flag_4x3": "flags/4x3/qa.svg",
@@ -1689,7 +1680,7 @@
   },
   {
     "capital": "Brazzaville",
-    "code": "cg",
+    "icon": "cg",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/cg.svg",
     "flag_4x3": "flags/4x3/cg.svg",
@@ -1698,7 +1689,7 @@
   },
   {
     "capital": "Bucharest",
-    "code": "ro",
+    "icon": "ro",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/ro.svg",
     "flag_4x3": "flags/4x3/ro.svg",
@@ -1707,7 +1698,7 @@
   },
   {
     "capital": "Moscow",
-    "code": "ru",
+    "icon": "ru",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/ru.svg",
     "flag_4x3": "flags/4x3/ru.svg",
@@ -1716,7 +1707,7 @@
   },
   {
     "capital": "Kigali",
-    "code": "rw",
+    "icon": "rw",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/rw.svg",
     "flag_4x3": "flags/4x3/rw.svg",
@@ -1725,7 +1716,7 @@
   },
   {
     "capital": "Saint-Denis",
-    "code": "re",
+    "icon": "re",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/re.svg",
     "flag_4x3": "flags/4x3/re.svg",
@@ -1734,7 +1725,7 @@
   },
   {
     "capital": "Gustavia",
-    "code": "bl",
+    "icon": "bl",
     "continent": "North America",
     "flag_1x1": "flags/1x1/bl.svg",
     "flag_4x3": "flags/4x3/bl.svg",
@@ -1743,7 +1734,7 @@
   },
   {
     "capital": "Jamestown",
-    "code": "sh",
+    "icon": "sh",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/sh.svg",
     "flag_4x3": "flags/4x3/sh.svg",
@@ -1752,7 +1743,7 @@
   },
   {
     "capital": "Basseterre",
-    "code": "kn",
+    "icon": "kn",
     "continent": "North America",
     "flag_1x1": "flags/1x1/kn.svg",
     "flag_4x3": "flags/4x3/kn.svg",
@@ -1761,7 +1752,7 @@
   },
   {
     "capital": "Castries",
-    "code": "lc",
+    "icon": "lc",
     "continent": "North America",
     "flag_1x1": "flags/1x1/lc.svg",
     "flag_4x3": "flags/4x3/lc.svg",
@@ -1770,7 +1761,7 @@
   },
   {
     "capital": "Marigot",
-    "code": "mf",
+    "icon": "mf",
     "continent": "North America",
     "flag_1x1": "flags/1x1/mf.svg",
     "flag_4x3": "flags/4x3/mf.svg",
@@ -1779,7 +1770,7 @@
   },
   {
     "capital": "Saint-Pierre",
-    "code": "pm",
+    "icon": "pm",
     "continent": "North America",
     "flag_1x1": "flags/1x1/pm.svg",
     "flag_4x3": "flags/4x3/pm.svg",
@@ -1788,7 +1779,7 @@
   },
   {
     "capital": "Kingstown",
-    "code": "vc",
+    "icon": "vc",
     "continent": "North America",
     "flag_1x1": "flags/1x1/vc.svg",
     "flag_4x3": "flags/4x3/vc.svg",
@@ -1797,7 +1788,7 @@
   },
   {
     "capital": "Apia",
-    "code": "ws",
+    "icon": "ws",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/ws.svg",
     "flag_4x3": "flags/4x3/ws.svg",
@@ -1806,7 +1797,7 @@
   },
   {
     "capital": "San Marino",
-    "code": "sm",
+    "icon": "sm",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/sm.svg",
     "flag_4x3": "flags/4x3/sm.svg",
@@ -1815,7 +1806,7 @@
   },
   {
     "capital": "São Tomé",
-    "code": "st",
+    "icon": "st",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/st.svg",
     "flag_4x3": "flags/4x3/st.svg",
@@ -1824,7 +1815,7 @@
   },
   {
     "capital": "Riyadh",
-    "code": "sa",
+    "icon": "sa",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/sa.svg",
     "flag_4x3": "flags/4x3/sa.svg",
@@ -1833,7 +1824,7 @@
   },
   {
     "capital": "Edinburgh",
-    "code": "gb-sct",
+    "icon": "gb-sct",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/gb-sct.svg",
     "flag_4x3": "flags/4x3/gb-sct.svg",
@@ -1842,7 +1833,7 @@
   },
   {
     "capital": "Dakar",
-    "code": "sn",
+    "icon": "sn",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/sn.svg",
     "flag_4x3": "flags/4x3/sn.svg",
@@ -1851,7 +1842,7 @@
   },
   {
     "capital": "Belgrade",
-    "code": "rs",
+    "icon": "rs",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/rs.svg",
     "flag_4x3": "flags/4x3/rs.svg",
@@ -1860,7 +1851,7 @@
   },
   {
     "capital": "Victoria",
-    "code": "sc",
+    "icon": "sc",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/sc.svg",
     "flag_4x3": "flags/4x3/sc.svg",
@@ -1869,7 +1860,7 @@
   },
   {
     "capital": "Freetown",
-    "code": "sl",
+    "icon": "sl",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/sl.svg",
     "flag_4x3": "flags/4x3/sl.svg",
@@ -1878,7 +1869,7 @@
   },
   {
     "capital": "Singapore",
-    "code": "sg",
+    "icon": "sg",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/sg.svg",
     "flag_4x3": "flags/4x3/sg.svg",
@@ -1887,7 +1878,7 @@
   },
   {
     "capital": "Philipsburg",
-    "code": "sx",
+    "icon": "sx",
     "continent": "North America",
     "flag_1x1": "flags/1x1/sx.svg",
     "flag_4x3": "flags/4x3/sx.svg",
@@ -1896,7 +1887,7 @@
   },
   {
     "capital": "Bratislava",
-    "code": "sk",
+    "icon": "sk",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/sk.svg",
     "flag_4x3": "flags/4x3/sk.svg",
@@ -1905,7 +1896,7 @@
   },
   {
     "capital": "Ljubljana",
-    "code": "si",
+    "icon": "si",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/si.svg",
     "flag_4x3": "flags/4x3/si.svg",
@@ -1914,7 +1905,7 @@
   },
   {
     "capital": "Honiara",
-    "code": "sb",
+    "icon": "sb",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/sb.svg",
     "flag_4x3": "flags/4x3/sb.svg",
@@ -1923,7 +1914,7 @@
   },
   {
     "capital": "Mogadishu",
-    "code": "so",
+    "icon": "so",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/so.svg",
     "flag_4x3": "flags/4x3/so.svg",
@@ -1932,7 +1923,7 @@
   },
   {
     "capital": "Pretoria",
-    "code": "za",
+    "icon": "za",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/za.svg",
     "flag_4x3": "flags/4x3/za.svg",
@@ -1941,7 +1932,7 @@
   },
   {
     "capital": "King Edward Point",
-    "code": "gs",
+    "icon": "gs",
     "continent": "Antarctica",
     "flag_1x1": "flags/1x1/gs.svg",
     "flag_4x3": "flags/4x3/gs.svg",
@@ -1950,7 +1941,7 @@
   },
   {
     "capital": "Seoul",
-    "code": "kr",
+    "icon": "kr",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/kr.svg",
     "flag_4x3": "flags/4x3/kr.svg",
@@ -1959,7 +1950,7 @@
   },
   {
     "capital": "Juba",
-    "code": "ss",
+    "icon": "ss",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/ss.svg",
     "flag_4x3": "flags/4x3/ss.svg",
@@ -1968,7 +1959,7 @@
   },
   {
     "capital": "Madrid",
-    "code": "es",
+    "icon": "es",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/es.svg",
     "flag_4x3": "flags/4x3/es.svg",
@@ -1977,7 +1968,7 @@
   },
   {
     "capital": "Sri Jayawardenepura Kotte, Colombo",
-    "code": "lk",
+    "icon": "lk",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/lk.svg",
     "flag_4x3": "flags/4x3/lk.svg",
@@ -1985,17 +1976,17 @@
     "name": "Sri Lanka"
   },
   {
-    "capital": "Ramallah",
-    "code": "ps",
+    "capital": "Jerusalem",
+    "icon": "ps",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/ps.svg",
     "flag_4x3": "flags/4x3/ps.svg",
     "iso": true,
-    "name": "State of Palestine"
+    "name": "Palestine"
   },
   {
     "capital": "Khartoum",
-    "code": "sd",
+    "icon": "sd",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/sd.svg",
     "flag_4x3": "flags/4x3/sd.svg",
@@ -2004,7 +1995,7 @@
   },
   {
     "capital": "Paramaribo",
-    "code": "sr",
+    "icon": "sr",
     "continent": "South America",
     "flag_1x1": "flags/1x1/sr.svg",
     "flag_4x3": "flags/4x3/sr.svg",
@@ -2013,7 +2004,7 @@
   },
   {
     "capital": "Longyearbyen",
-    "code": "sj",
+    "icon": "sj",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/sj.svg",
     "flag_4x3": "flags/4x3/sj.svg",
@@ -2022,7 +2013,7 @@
   },
   {
     "capital": "Stockholm",
-    "code": "se",
+    "icon": "se",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/se.svg",
     "flag_4x3": "flags/4x3/se.svg",
@@ -2031,7 +2022,7 @@
   },
   {
     "capital": "Bern",
-    "code": "ch",
+    "icon": "ch",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/ch.svg",
     "flag_4x3": "flags/4x3/ch.svg",
@@ -2040,7 +2031,7 @@
   },
   {
     "capital": "Damascus",
-    "code": "sy",
+    "icon": "sy",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/sy.svg",
     "flag_4x3": "flags/4x3/sy.svg",
@@ -2049,7 +2040,7 @@
   },
   {
     "capital": "Taipei",
-    "code": "tw",
+    "icon": "tw",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/tw.svg",
     "flag_4x3": "flags/4x3/tw.svg",
@@ -2058,7 +2049,7 @@
   },
   {
     "capital": "Dushanbe",
-    "code": "tj",
+    "icon": "tj",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/tj.svg",
     "flag_4x3": "flags/4x3/tj.svg",
@@ -2067,7 +2058,7 @@
   },
   {
     "capital": "Dodoma",
-    "code": "tz",
+    "icon": "tz",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/tz.svg",
     "flag_4x3": "flags/4x3/tz.svg",
@@ -2076,7 +2067,7 @@
   },
   {
     "capital": "Bangkok",
-    "code": "th",
+    "icon": "th",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/th.svg",
     "flag_4x3": "flags/4x3/th.svg",
@@ -2085,7 +2076,7 @@
   },
   {
     "capital": "Dili",
-    "code": "tl",
+    "icon": "tl",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/tl.svg",
     "flag_4x3": "flags/4x3/tl.svg",
@@ -2094,7 +2085,7 @@
   },
   {
     "capital": "Lomé",
-    "code": "tg",
+    "icon": "tg",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/tg.svg",
     "flag_4x3": "flags/4x3/tg.svg",
@@ -2103,7 +2094,7 @@
   },
   {
     "capital": "Nukunonu, Atafu,Tokelau",
-    "code": "tk",
+    "icon": "tk",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/tk.svg",
     "flag_4x3": "flags/4x3/tk.svg",
@@ -2112,7 +2103,7 @@
   },
   {
     "capital": "Nukuʻalofa",
-    "code": "to",
+    "icon": "to",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/to.svg",
     "flag_4x3": "flags/4x3/to.svg",
@@ -2121,7 +2112,7 @@
   },
   {
     "capital": "Port of Spain",
-    "code": "tt",
+    "icon": "tt",
     "continent": "South America",
     "flag_1x1": "flags/1x1/tt.svg",
     "flag_4x3": "flags/4x3/tt.svg",
@@ -2129,7 +2120,7 @@
     "name": "Trinidad and Tobago"
   },
   {
-    "code": "ta",
+    "icon": "ta",
     "flag_1x1": "flags/1x1/ta.svg",
     "flag_4x3": "flags/4x3/ta.svg",
     "iso": false,
@@ -2137,7 +2128,7 @@
   },
   {
     "capital": "Tunis",
-    "code": "tn",
+    "icon": "tn",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/tn.svg",
     "flag_4x3": "flags/4x3/tn.svg",
@@ -2146,7 +2137,7 @@
   },
   {
     "capital": "Ankara",
-    "code": "tr",
+    "icon": "tr",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/tr.svg",
     "flag_4x3": "flags/4x3/tr.svg",
@@ -2155,7 +2146,7 @@
   },
   {
     "capital": "Ashgabat",
-    "code": "tm",
+    "icon": "tm",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/tm.svg",
     "flag_4x3": "flags/4x3/tm.svg",
@@ -2164,7 +2155,7 @@
   },
   {
     "capital": "Cockburn Town",
-    "code": "tc",
+    "icon": "tc",
     "continent": "North America",
     "flag_1x1": "flags/1x1/tc.svg",
     "flag_4x3": "flags/4x3/tc.svg",
@@ -2173,7 +2164,7 @@
   },
   {
     "capital": "Funafuti",
-    "code": "tv",
+    "icon": "tv",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/tv.svg",
     "flag_4x3": "flags/4x3/tv.svg",
@@ -2182,7 +2173,7 @@
   },
   {
     "capital": "Kampala",
-    "code": "ug",
+    "icon": "ug",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/ug.svg",
     "flag_4x3": "flags/4x3/ug.svg",
@@ -2191,7 +2182,7 @@
   },
   {
     "capital": "Kiev",
-    "code": "ua",
+    "icon": "ua",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/ua.svg",
     "flag_4x3": "flags/4x3/ua.svg",
@@ -2200,7 +2191,7 @@
   },
   {
     "capital": "Abu Dhabi",
-    "code": "ae",
+    "icon": "ae",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/ae.svg",
     "flag_4x3": "flags/4x3/ae.svg",
@@ -2209,7 +2200,7 @@
   },
   {
     "capital": "London",
-    "code": "gb",
+    "icon": "gb",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/gb.svg",
     "flag_4x3": "flags/4x3/gb.svg",
@@ -2217,7 +2208,7 @@
     "name": "United Kingdom"
   },
   {
-    "code": "un",
+    "icon": "un",
     "flag_1x1": "flags/1x1/un.svg",
     "flag_4x3": "flags/4x3/un.svg",
     "iso": false,
@@ -2225,7 +2216,7 @@
   },
   {
     "capital": "Washington, D.C.",
-    "code": "um",
+    "icon": "um",
     "continent": "North America",
     "flag_1x1": "flags/1x1/um.svg",
     "flag_4x3": "flags/4x3/um.svg",
@@ -2234,7 +2225,7 @@
   },
   {
     "capital": "Washington, D.C.",
-    "code": "us",
+    "icon": "us",
     "continent": "North America",
     "flag_1x1": "flags/1x1/us.svg",
     "flag_4x3": "flags/4x3/us.svg",
@@ -2242,7 +2233,7 @@
     "name": "United States of America"
   },
   {
-    "code": "xx",
+    "icon": "xx",
     "flag_1x1": "flags/1x1/xx.svg",
     "flag_4x3": "flags/4x3/xx.svg",
     "iso": false,
@@ -2250,7 +2241,7 @@
   },
   {
     "capital": "Montevideo",
-    "code": "uy",
+    "icon": "uy",
     "continent": "South America",
     "flag_1x1": "flags/1x1/uy.svg",
     "flag_4x3": "flags/4x3/uy.svg",
@@ -2259,7 +2250,7 @@
   },
   {
     "capital": "Tashkent",
-    "code": "uz",
+    "icon": "uz",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/uz.svg",
     "flag_4x3": "flags/4x3/uz.svg",
@@ -2268,7 +2259,7 @@
   },
   {
     "capital": "Port Vila",
-    "code": "vu",
+    "icon": "vu",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/vu.svg",
     "flag_4x3": "flags/4x3/vu.svg",
@@ -2277,7 +2268,7 @@
   },
   {
     "capital": "Caracas",
-    "code": "ve",
+    "icon": "ve",
     "continent": "South America",
     "flag_1x1": "flags/1x1/ve.svg",
     "flag_4x3": "flags/4x3/ve.svg",
@@ -2286,7 +2277,7 @@
   },
   {
     "capital": "Hanoi",
-    "code": "vn",
+    "icon": "vn",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/vn.svg",
     "flag_4x3": "flags/4x3/vn.svg",
@@ -2295,7 +2286,7 @@
   },
   {
     "capital": "Road Town",
-    "code": "vg",
+    "icon": "vg",
     "continent": "North America",
     "flag_1x1": "flags/1x1/vg.svg",
     "flag_4x3": "flags/4x3/vg.svg",
@@ -2304,7 +2295,7 @@
   },
   {
     "capital": "Charlotte Amalie",
-    "code": "vi",
+    "icon": "vi",
     "continent": "North America",
     "flag_1x1": "flags/1x1/vi.svg",
     "flag_4x3": "flags/4x3/vi.svg",
@@ -2313,7 +2304,7 @@
   },
   {
     "capital": "Cardiff",
-    "code": "gb-wls",
+    "icon": "gb-wls",
     "continent": "Europe",
     "flag_1x1": "flags/1x1/gb-wls.svg",
     "flag_4x3": "flags/4x3/gb-wls.svg",
@@ -2322,7 +2313,7 @@
   },
   {
     "capital": "Mata-Utu",
-    "code": "wf",
+    "icon": "wf",
     "continent": "Oceania",
     "flag_1x1": "flags/1x1/wf.svg",
     "flag_4x3": "flags/4x3/wf.svg",
@@ -2331,7 +2322,7 @@
   },
   {
     "capital": "Laayoune",
-    "code": "eh",
+    "icon": "eh",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/eh.svg",
     "flag_4x3": "flags/4x3/eh.svg",
@@ -2340,7 +2331,7 @@
   },
   {
     "capital": "Sana'a",
-    "code": "ye",
+    "icon": "ye",
     "continent": "Asia",
     "flag_1x1": "flags/1x1/ye.svg",
     "flag_4x3": "flags/4x3/ye.svg",
@@ -2349,7 +2340,7 @@
   },
   {
     "capital": "Lusaka",
-    "code": "zm",
+    "icon": "zm",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/zm.svg",
     "flag_4x3": "flags/4x3/zm.svg",
@@ -2358,7 +2349,7 @@
   },
   {
     "capital": "Harare",
-    "code": "zw",
+    "icon": "zw",
     "continent": "Africa",
     "flag_1x1": "flags/1x1/zw.svg",
     "flag_4x3": "flags/4x3/zw.svg",
