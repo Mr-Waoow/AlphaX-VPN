@@ -11,6 +11,6 @@ export class WhiteLabelComponent implements OnInit {
   features: Feature[] = [];
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
-    this.features = this.dataService.getFeatures();
+    this.features = this.dataService.getWhiteLabelFeatures();
   }
 }

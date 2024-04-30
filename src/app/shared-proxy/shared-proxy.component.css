@@ -1,3 +1,8 @@
+input:active,
+input:focus,
+input:focus-visible {
+  outline: none;
+}
 .Proxy-lists {
   background-color: var(--light);
 }
@@ -11,115 +16,43 @@
   background-color: #e4e4e4;
 }
 
-.shared-proxy__countries-search {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.search{
+  position: relative;
   display: flex;
-  flex-wrap: wrap;
-  margin: 30px 0 4px 0;
+  overflow: hidden;
 }
 
-.shared-proxy__countries-search_input {
+.font-icon{
+  background-color: var(--primary);
+  color: var(--white);
+  flex-grow: 1;
+}
+
+.countries-search {
   font-size: 16px;
-  margin-right: 0.5%;
   padding: 1rem 1rem;
   border: none;
-  border-radius: 3px 0 0 3px;
   -ms-flex-preferred-size: 100%;
-  flex-basis: 80%;
+  flex-basis: 90%;
 }
 
-.shared-proxy__countries-search_button {
-  font-size: 15px;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  cursor: pointer;
-  -webkit-transition: all .3s;
-  -o-transition: all .3s;
-  transition: all .3s;
-  color: #F4F7FA;
-  border-radius: 0 3px 3px 0;
-  background-color: #61DB81;
-  -webkit-box-flex: 0;
-  -ms-flex: 0 0 19.5%;
-  flex: 0 0 19.5%;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-}
-
-.shared-proxy__countries-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin: 0 -10px;
-  margin-bottom: 20px;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+.countries-list {
   height: 40.5rem;
   overflow: hidden;
-  transition: height 0.3s;
+  -webkit-transition: height 0.3s;
   -o-transition: height 0.3s;
   -moz-transition: height 0.3s;
-  -webkit-transition: height 0.3s;
+  transition: height 0.3s;
 }
 
-.shared-proxy__countries-list_item-wrapper {
-  padding: 0 10px;
+.countries-list > div {
+min-height: 3.5rem;
+height: 3.5rem;
+max-height: 3.5rem;
+overflow: hidden;
 }
 
-.shared-proxy__countries-list_item {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 50px;
-  margin-bottom: 4px;
-  padding: 10px;
-  border-radius: 4px;
-  background: #fff;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-
-.shared-proxy__countries-list_item-flagname {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.shared-proxy__countries-list_item-flag {
-  width: 32px;
-  height: 24px;
-  margin-right: 10px;
-  border-radius: 3px;
-}
-
-.shared-proxy__countries-list_item-name {
-  font-size: 0.9rem;
-  color: #3b3b3b;
-}
-
-.shared-proxy__countries-list_item-ips {
-  font-size: 16px;
-  padding: 2px 7px;
-  color: #a9a9aa;
-  border-radius: 2px;
-  background: #e7e9eb;
-}
-
-.shared-proxy__countries-show-all {
+.countries-show-all {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,6 +60,7 @@
   -ms-flex-pack: center;
   justify-content: center;
   cursor: pointer;
+  padding: 1rem 0;
 }
 
 .shared-proxy__countries-show-all .icon-sm {
@@ -138,67 +72,31 @@
 
 }
 
-/* Shared Checker */
-
-.shared-checker span {
-  color: #414141;
-}
-
-.shared-checker .btn {
-  background-color: #cecece;
-  color: #414141;
+/* proxy-checker*/
+.proxy-checker .btn {
   padding: 0.5rem 4rem;
 }
 
-.shared-checker .btn:hover,
-.shared-checker .btn:active,
-.shared-checker .btn:focus,
-.shared-checker .btn:focus-visible {
-  background-color: #bbb !important;
+.proxy-checker .os-list {
+  display: flex;
+  width: 100%;
+  gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
 }
 
-.shared-checker ul.d-flex {
-  flex-direction: column;
+.proxy-checker .os-list a:hover,
+.proxy-checker .os-list a:hover .font-icons {
+  color: var(--primary);
+  border-color: var(--primary);
 }
 
-.shared-checker ul li:first-of-type {
-  flex-basis: 15%;
-}
-
-.shared-checker ul li a {
-  color: #414141;
-  margin-left: 1.5rem;
-}
-
-.shared-checker ul li a span.font-icon {
-  border: 0.15rem solid #414141;
-  border-radius: 50%;
+.proxy-checker .os-list .font-icons {
+  font-size: 1.2rem;
   width: 3rem;
   height: 3rem;
-  margin-right: 1rem;
-
+  border: 2px solid var(--dark);
+  border-radius: 50%;
 }
 
-.shared-checker ul li a:hover span.font-icon,
-.shared-checker ul li a:active span.font-icon,
-.shared-checker ul li a:focus span.font-icon,
-.shared-checker ul li a:focus-visible span.font-icon {
-  color: #61DB81;
-  border-color: #61DB81;
-}
-
-.shared-checker ul li a:hover div span,
-.shared-checker ul li a:active div span,
-.shared-checker ul li a:focus div span,
-.shared-checker ul li a:focus-visible div span {
-  color: #61DB81;
-}
-
-.shared-checker ul li a div span {
-  font-weight: bolder;
-}
-
-.shared-checker ul li a div span+label {
-  color: #414141 !important;
-  font-weight: 100;
-}

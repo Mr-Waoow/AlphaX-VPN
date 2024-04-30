@@ -1,59 +1,270 @@
+.price-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
 .label-header {
   display: grid;
+  grid-template-columns: 6rem 1fr 1fr 1fr;
+  -webkit-column-gap: 0.5rem;
+  column-gap: 0.5rem;
   margin-bottom: 1rem;
   padding: 0rem 1.25rem;
-  grid-template-columns: 13.75rem 1fr 1fr 1fr;
-  -webkit-column-gap: 1.25rem;
-  column-gap: 1.25rem;
+  align-items: center;
+}
+.label-header span {
+  font-size: 16px;
+  font-weight: 400;
 }
 
 .tariffs {
   display: grid;
+  flex-basis: 40%;
+  grid-template-columns: 6rem 1fr 1fr 1fr;
+  -webkit-column-gap: 0.5rem;
+  column-gap: 0.5rem;
   margin-bottom: 1rem;
   padding: 1rem;
-  grid-template-columns: 13.75rem 1fr 1fr 1fr;
-  -webkit-column-gap: 1.25rem;
-  column-gap: 1.25rem;
   border-radius: 0.3rem;
   background-color: var(--secondary);
 }
 
-.tariffs h4 {
-  color: var(--white);
+.tariffs .icon {
+  width: 1rem;
 }
 
-.tariffs span {
-  color: var(--hov-secondary);
+.tariffs h4 {
+  color: var(--white);
+  font-weight: 600;
+  font-size: 16px;
+}
+.tariffs h4 + span {
+  color: var(--light-third);
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.tariffs p {
+  color: var(--light-third);
+  font-size: 8px;
+  font-weight: 400;
+  height: 4rem;
+  overflow: scroll;
+  opacity: 0.6;
+  margin: 0;
 }
 
 .tariffs .content-box {
+  font-family: "Open Sans", sans-serif;
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 1.8rem;
-  background-color: var(--light);
+  padding: 0.5rem;
+  background-color: var(--light-secondary);
   gap: 0.5rem;
   border-radius: 0.3rem;
-  align-items: center;
+  justify-content: space-between;
 }
 
-.tariffs .content-box h1 {
+.tariffs .content-box .price {
+  font-size: 20px;
+  display: flex;
+  font-family: "Open Sans", sans-serif;
   color: var(--secondary);
   position: relative;
+  margin: 0;
+  margin-top: 5px;
 }
 
-.tariffs .content-box h1::before {
-  font-family: OpenSans, sans-serif;
-  font-size: 18px;
+.tariffs .content-box .price .old-price {
+  font-family: "Open Sans", sans-serif;
+  color: var(--secondary);
+  font-size: 16px;
   font-weight: 600;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.tariffs .content-box .price::before {
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--secondary);
   position: absolute;
-  top: -6px;
-  left: 0;
-  content: '$';
-  opacity: .5;
+  top: 10px;
+  left: -15px;
+  content: "$";
+  opacity: 0.5;
 }
 
 .tariffs .content-box .btn {
   width: 90%;
   color: var(--soft-dark);
+}
+
+.tariffs .content-box .discount-percentage {
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 18px;
+  position: absolute;
+  top: -9px;
+  left: 50%;
+  padding: 2px 10px 3px 10px;
+  -webkit-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  color: var(--white);
+  border-radius: 15px;
+  background-color: var(--red);
+}
+
+/* Price Column */
+/* sm */
+@media (min-width: 576px) {
+  .tariffs .icon {
+    width: 2rem;
+  }
+  .label-header {
+    grid-template-columns: 6rem 1fr 1fr 1fr;
+  }
+
+  .tariffs {
+    grid-template-columns: 6rem 1fr 1fr 1fr;
+  }
+  .tariffs .content-box {
+    padding: 0.8rem;
+  }
+  .tariffs .content-box .price {
+    align-items: center;
+    font-size: 25px;
+  }
+  .tariffs .content-box .price .old-price {
+    font-size: 15px;
+  }
+  .tariffs h4 {
+    font-size: 16px;
+  }
+  .tariffs h4 + span {
+    font-size: 12px;
+  }
+  .tariffs p {
+  font-size: 8px;
+  }
+}
+/*md*/
+@media (min-width: 768px) {
+  .tariffs .icon {
+    width: 3rem;
+  }
+  .label-header {
+    grid-template-columns: 10rem 1fr 1fr 1fr;
+  }
+
+  .tariffs {
+    grid-template-columns: 10rem 1fr 1fr 1fr;
+  }
+  .tariffs .content-box .price {
+    align-items: end;
+    font-size: 30px;
+  }
+  .tariffs .content-box .price .old-price {
+    font-size: 16px;
+  }
+  .tariffs h4 {
+    font-size: 18px;
+  }
+  .tariffs h4 + span {
+    font-size: 14px;
+  }
+  .tariffs p {
+    font-size: 12px;
+  }
+}
+/*lg*/
+@media (min-width: 992px) {
+  .tariffs .icon {
+    width: auto;
+  }
+  .label-header {
+    grid-template-columns: 13.75rem 1fr 1fr 1fr;
+  }
+
+  .tariffs {
+    grid-template-columns: 13.75rem 1fr 1fr 1fr;
+  }
+  .tariffs .content-box .price {
+    align-items: end;
+    font-size: 40px;
+  }
+  .tariffs .content-box .price .old-price {
+    font-size: 20px;
+  }
+  .tariffs h4 {
+    font-size: 25px;
+  }
+  .tariffs h4 + span {
+    font-size: 14px;
+  }
+  .tariffs p {
+    font-size: 13px;
+  }
+}
+/*xl*/
+@media (min-width: 1200px) {
+  .tariffs .icon {
+    width: auto;
+  }
+  .label-header {
+    grid-template-columns: 15rem 1fr 1fr 1fr;
+  }
+
+  .tariffs {
+    grid-template-columns: 15rem 1fr 1fr 1fr;
+  }
+  .tariffs .content-box .price {
+    align-items: end;
+    font-size: 45px;
+  }
+  .tariffs .content-box .price .old-price {
+    font-size: 20px;
+  }
+  .tariffs h4 {
+    font-size: 30px;
+  }
+  .tariffs h4 + span {
+    font-size: 16px;
+  }
+  .tariffs p {
+    font-size: 14px;
+  }
+}
+/*xxl*/
+@media (min-width: 1400px) {
+  .tariffs .icon {
+    width: auto;
+  }
+  .label-header {
+    grid-template-columns: 17rem 1fr 1fr 1fr;
+  }
+
+  .tariffs {
+    grid-template-columns: 17rem 1fr 1fr 1fr;
+  }
+  .tariffs .content-box .price {
+    align-items: end;
+    font-size: 50px;
+  }
+  .tariffs .content-box .price .old-price {
+    font-size: 20px;
+  }
+  .tariffs h4 {
+    font-size: 35px;
+  }
+  .tariffs h4 + span {
+    font-size: 18px;
+  }
+  .tariffs p {
+    font-size: 15px;
+  }
 }

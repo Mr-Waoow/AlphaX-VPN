@@ -7,7 +7,7 @@ import { VpnPrice } from '../../shared/interfaces/vpn-price';
   styleUrl: './vpn-price.component.css'
 })
 export class VpnPriceComponent implements OnInit{
-  @Input() inputList!: VpnPrice;
+  @Input() inputLists!: VpnPrice[];
   constructor() {}
   ngOnInit(): void {
   }

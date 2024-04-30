@@ -1,13 +1,27 @@
+h4,
+h5 {
+  font-family: "Open Sans", Tofu, sans-serif;
+  color: var(--dark);
+  font-weight: 600;
+}
+
+h5 {
+  font-size: 18px;
+}
+
+p {
+  font-family: "Open Sans", Tofu, sans-serif;
+  color: var(--dark);
+  font-weight: 400;
+  font-size: 15px;
+}
+
 .vpn-service {
   background-color: var(--light);
 }
 
-.vpn-service p {
-  font-weight: normal;
-  font-size: medium;
-}
-
 .vpn-service .vpn-period {
+  max-width: 29rem;
   overflow: hidden;
 }
 
@@ -22,37 +36,71 @@
 .vpn-service .vpn-period .period-counteis {
   background: url(../../assets/images/vpn/vpn_service/Test_period.png) no-repeat;
   display: flex;
-  gap: 2rem;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 1.5rem;
+  padding: 3.9rem 1.5rem;
   padding-right: 5rem;
   padding-bottom: 1rem;
   color: var(--white);
 }
-
-.proxy-checker .btn {
-  padding: 0.5rem 4rem;
+.price-vpn {
+  background-color: var(--light);
 }
-
-.proxy-checker .os-list {
-  display: flex;
-  width: 100%;
-  gap: 1.5rem;
-  align-items: center;
-  justify-content: center;
+.additional-encryption {
+  background-color: var(--light);
 }
-
-.proxy-checker .os-list a:hover,
-.proxy-checker .os-list a:hover .font-icon {
-  color: var(--primary);
-  border-color: var(--primary);
+.one-decision {
+  background-color: var(--secondary);
 }
-
-.proxy-checker .os-list .font-icon {
-  font-size: 1.2rem;
-  width: 3rem;
-  height: 3rem;
-  border: 2px solid var(--dark);
+.one-decision * {
+  color: var(--white);
+}
+.one-decision .icon {
+  width: 5rem;
+  height: 5rem;
+  background-color: var(--hov-secondary);
   border-radius: 50%;
+  -webkit-box-shadow: -5px -5px 20px var(--hov-secondary),
+    -2px -2px 10px var(--hov-secondary), 5px 5px 20px var(--hardest-secondary),
+    6px 6px 10px var(--hard-secondary), inset -5px -5px 4px var(--hov-secondary),
+    inset 5px 5px 5px var(--secondary);
+  box-shadow: -5px -5px 20px var(--hov-secondary),
+    -2px -2px 10px var(--hov-secondary), 5px 5px 20px var(--hardest-secondary),
+    6px 6px 10px var(--hard-secondary), inset -5px -5px 4px var(--hov-secondary),
+    inset 5px 5px 5px var(--secondary);
+}
+.one-decision a:hover .icon {
+  -webkit-box-shadow: 0 0px 11px 10px var(--soft-secondary),
+    -2px -2px 10px 10px var(--hov-secondary),
+    5px 5px 20px var(--hardest-secondary), 6px 6px 10px var(--hard-secondary),
+    inset -5px -5px 4px var(--hov-secondary), inset 5px 5px 5px var(--secondary);
+  box-shadow: 0 0px 11px 10px var(--soft-secondary),
+    -2px -2px 10px 10px var(--hov-secondary),
+    5px 5px 20px var(--hardest-secondary), 6px 6px 10px var(--hard-secondary),
+    inset -5px -5px 4px var(--hov-secondary), inset 5px 5px 5px var(--secondary);
+}
+.one-decision .platform-name {
+  font-size: 16px;
+  font-weight: 600;
+}
+.one-decision .platform-version {
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--light-third);
+}
+.one-decision .img-box {
+  position: absolute;
+  right: -50px;
+  bottom: -86px;
+  pointer-events: none;
+  z-index: 1;
+}
+.vpn-features {
+  background-color: var(--light);
+}
+.vpn-features h6 {
+  font-size: 14px;
+}
+.vpn-features p {
+  font-size: 14px;
 }

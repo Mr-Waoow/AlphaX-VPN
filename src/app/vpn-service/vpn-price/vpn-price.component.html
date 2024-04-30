@@ -1,42 +1,50 @@
-<div class="label-header">
-  <span></span>
-  <span class="text-center c-dk">Month</span>
-  <span class="text-center c-dk">Halfyear</span>
-  <span class="text-center c-dk">Year</span>
-</div>
-<div>
-  <div class="tariffs">
-    <div class="content d-grid gap-2">
-      <div class="d-flex gap-2 align-items-center">
-        <span class="icon-xd">
-          <img [src]="inputList.icon" alt="{{inputList.name}}">
+<div class="price-container gap-2">
+  <div class="label-header">
+    <span></span>
+    <span class="text-center c-dk">Month</span>
+    <span class="text-center c-dk">Halfyear</span>
+    <span class="text-center c-dk">Year</span>
+  </div>
+  <div *ngFor="let inputList of inputLists" class="tariffs">
+    <div class="justify-content-center justify-content-lg-start d-grid gap-2">
+      <div class="d-flex gap-2 flex-column flex-lg-row justify-content-center justify-content-lg-start align-items-md-start align-items-center">
+        <span class="icon d-flex align-items-center justify-content-center">
+          <img src="assets/images/vpn/Price_VPN/{{inputList.icon}}.svg" alt="{{inputList.name}}">
         </span>
         <div class="d-flex flex-column">
           <h4 class="text-uppercase">
             {{inputList.name}}
           </h4>
+          <span *ngIf="inputList.descName">{{inputList.descName}}</span>
         </div>
       </div>
-      <span>
-        {{inputList.description}}
-      </span>
+      <p class="text-md-start text-center">
+        {{inputList.priceDescription}}
+      </p>
     </div>
     <div class="content-box">
-      <h1>
-        {{inputList.priceMonth}}
-      </h1>
-      <a href="#" class="btn btn-primary text-dark">Buy</a>
+      <h2 class="price flex-md-row flex-column gap-1">
+        {{(inputList.priceMonth*(inputList.discountMonth/100)).toFixed(1)}}
+        <span *ngIf="inputList.isMonthDiscount" class="old-price">{{inputList.priceMonth}}</span>
+      </h2>
+      <a href="#" class="btn btn-primary text-dark py-2">Buy</a>
+      <span *ngIf="inputList.isMonthDiscount" class="discount-percentage">{{inputList.discountMonth}}%</span>
     </div>
     <div class="content-box">
-      <h1>
-        {{inputList.priceHalfYear}}
-      </h1>
-      <a href="#" class="btn btn-primary text-dark">Buy</a>
+      <h2 class="price flex-md-row flex-column gap-1">
+        {{(inputList.priceHalfYear*(inputList.discountHalfYear/100)).toFixed(1)}}
+        <span *ngIf="inputList.isHalfYearDiscount" class="old-price">{{inputList.priceHalfYear}}</span>
+      </h2>
+      <a href="#" class="btn btn-primary text-dark py-2">Buy</a>
+      <span *ngIf="inputList.isHalfYearDiscount" class="discount-percentage">{{inputList.discountHalfYear}}%</span>
     </div>
     <div class="content-box">
-      <h1>
-        {{inputList.priceYear}}
-      </h1>
-      <a href="#" class="btn btn-primary text-dark">Buy</a>
+      <h2 class="price flex-md-row flex-column gap-1">
+        {{(inputList.priceYear*(inputList.discountYear/100)).toFixed(1)}}
+        <span *ngIf="inputList.isYearDiscount" class="old-price">{{inputList.priceYear}}</span>
+      </h2>
+      <a href="#" class="btn btn-primary text-dark py-2">Buy</a>
+      <span *ngIf="inputList.isYearDiscount" class="discount-percentage">{{inputList.discountYear}}%</span>
     </div>
   </div>
+</div>

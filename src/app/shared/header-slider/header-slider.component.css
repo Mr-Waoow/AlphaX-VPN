@@ -293,10 +293,6 @@ h2 {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
-  .header-slider .slider-content {
-    text-align: center;
-  }
-
   .header-slider .slider-content h1 {
     font-size: 30px;
     font-weight: 700;
@@ -311,7 +307,6 @@ h2 {
 @media (max-width: 767px) {
   .header-slider .slider-content {
     padding: 0 10px;
-    text-align: center;
   }
 
   .header-slider .slider-content h1 {

@@ -1,5 +1,6 @@
 import { ElementRef, QueryList, Renderer2 } from '@angular/core';
 import { CountryProxy } from '../interfaces/country-proxy';
+import { Country } from '../interfaces/country';
 
 export class Methods {
   private renderer2!: Renderer2;
@@ -52,7 +53,7 @@ export class Methods {
           borderBottom +
           marginTop +
           marginBottom;
-        const fullHeightToRem = parseFloat(this.pxToRem(fullHeight)) - 2;
+        const fullHeightToRem = parseFloat(this.pxToRem(fullHeight));
         el.dataset['height'] = `${fullHeightToRem}rem`;
         el.dataset['baseHeight'] = `${baseHeightRem}rem`;
         this.renderer?.setStyle(el, 'height', `${baseHeightRem}rem`);
@@ -220,6 +221,11 @@ export class Methods {
             countryProxy.isShared
           );
         }
+      });
+    },
+    filterCountries(countries: Country[], value: string): any[] {
+      return countries.filter((country) => {
+        return country.name.toLowerCase().includes(value.toLowerCase());
       });
     },
   };

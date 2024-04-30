@@ -3,10 +3,10 @@ import { PersonalPrice } from '../shared/interfaces/personal-price';
 import { IndividualRequest } from '../shared/interfaces/individual-request';
 import { CountryProxy } from '../shared/interfaces/country-proxy';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
-import { ProxyProps } from '../shared/interfaces/proxy-props';
 import { PersonalQuestion } from '../shared/interfaces/personal-question';
 import { Methods } from '../shared/classes/methods';
 import { DataService } from '../shared/services/data.service';
+import { Feature } from '../shared/interfaces/feature';
 
 @Component({
   selector: 'xvpn-personal-proxy',
@@ -20,7 +20,7 @@ export class PersonalProxyComponent implements OnInit {
   personalPrices: PersonalPrice[] = [];
   individualRequests: IndividualRequest[] = [];
   countries: CountryProxy[] = [];
-  proxiesProps: ProxyProps[] = [];
+  proxiesProps: Feature[] = [];
   personalQuestions: PersonalQuestion[] = [];
   messengerApps: { name: string; icon: string }[] = [
     { name: 'Massenger', icon: 'messenger' },
