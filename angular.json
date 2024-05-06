@@ -23,7 +23,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "../AlphaX-VPN-Live",
+            "outputPath": "/dist/alpha-x-vpn",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
