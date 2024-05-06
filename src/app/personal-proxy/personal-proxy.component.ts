@@ -11,7 +11,7 @@ import { Feature } from '../shared/interfaces/feature';
 @Component({
   selector: 'xvpn-personal-proxy',
   templateUrl: './personal-proxy.component.html',
-  styleUrl: './personal-proxy.component.css',
+  styleUrl: './personal-proxy.component.min.css',
 })
 export class PersonalProxyComponent implements OnInit {
   //Icons

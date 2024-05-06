@@ -4,7 +4,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'xvpn-header-slider',
   templateUrl: './header-slider.component.html',
-  styleUrl: './header-slider.component.css',
+  styleUrl: './header-slider.component.min.css',
 })
 export class HeaderSliderComponent implements AfterViewInit {
   showText = false; // Initially hide the text

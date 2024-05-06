@@ -5,7 +5,7 @@ import { DataService } from '../../services/data.service';
 @Component({
   selector: 'xvpn-sider-img-providers',
   templateUrl: './sider-img-providers.component.html',
-  styleUrl: './sider-img-providers.component.css',
+  styleUrl: './sider-img-providers.component.min.css',
 })
 export class SiderImgProvidersComponent implements OnInit {
   providersTitle: ProviderTitle[] = [];

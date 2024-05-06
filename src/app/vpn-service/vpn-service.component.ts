@@ -9,7 +9,7 @@ import { Feature } from '../shared/interfaces/feature';
 @Component({
   selector: 'xvpn-vpn-service',
   templateUrl: './vpn-service.component.html',
-  styleUrl: './vpn-service.component.css',
+  styleUrl: './vpn-service.component.min.css',
 })
 export class VpnServiceComponent implements OnInit {
   // Properties
