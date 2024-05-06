@@ -8,18 +8,18 @@
       <div class="reviews">
         <owl-carousel-o [options]="customOptions">
           <ng-container *ngFor="let client of clientsData">
-            <ng-template class="review" carouselSlide [id]="client.clientId.toString()">
+            <ng-template class="review" carouselSlide [id]="client.id.toString()">
               <!-- client name & client picture  -->
               <div class="testimonials-picture">
-                <span class="client-name fw-bold">{{client.clientFirstName + ' ' + client.clientLastName}}</span>
+                <span class="client-name fw-bold">{{client.firstName + ' ' + client.lastName}}</span>
                 <span class="client-img">
-                  <img [src]="client.clientImg" [title]="client.clientFirstName + ' ' + client.clientLastName"
-                    alt="client-{{client.clientId}} picture" class="rounded-circle img-fluid"></span>
-                <span class="client-date">{{client.clientCommentDate}}</span>
+                  <img src="assets/images/testimonials/{{client.img}}.jpg" [title]="client.firstName + ' ' + client.lastName"
+                    alt="client-{{client.id}} picture" class="rounded-circle img-fluid"></span>
+                <span class="client-date">{{client.commentDate}}</span>
               </div>
               <!-- testimonials card  -->
               <div class="testimonials-card">
-                <p class="lh-lg">{{client.clientCommentOpinion}}</p>
+                <p class="lh-lg">{{client.comment}}</p>
               </div>
               <div class="icon-container">
                 <fa-icon class="font-icon" [icon]="faLink"></fa-icon>

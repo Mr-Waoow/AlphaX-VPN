@@ -51,7 +51,7 @@
             <div class="d-flex align-items-center justify-content-between rounded-3 bg-white my-1 px-2 py-2 ">
               <div class="d-flex align-items-center gap-1">
                 <div class="size-25px rounded-3">
-                  <img src="../../assets/lib/flag_icons_main/flags/4x3/{{country.icon}}.svg" title="{{country.name}}"
+                  <img src="assets/lib/flag_icons_main/flags/4x3/{{country.icon}}.svg" title="{{country.name}}"
                     alt="{{country.name}}">
                 </div>
                 <div *ngIf="!country.isWide" class="fs-14 text-dark">{{country.name}}</div>
@@ -90,7 +90,7 @@
         <div *ngFor="let proxyChecker of proxyCheckers | filterByProperty: 'position': 'left'"
           class="d-flex gap-5 align-items-center">
           <span class="icon-md">
-            <img [src]="proxyChecker.icon" alt="{{proxyChecker.name}}">
+            <img src="assets/images/shared_proxy/pack_individ/{{proxyChecker.icon}}.svg" alt="{{proxyChecker.name}}">
           </span>
           <span>
             {{proxyChecker.name}}
@@ -107,7 +107,7 @@
         <div *ngFor="let proxyChecker of proxyCheckers | filterByProperty: 'position': 'right'"
           class="d-flex gap-5 align-items-center">
           <span class="icon-md">
-            <img [src]="proxyChecker.icon" alt="{{proxyChecker.name}}">
+            <img src="assets/images/shared_proxy/shared_checker/{{proxyChecker.icon}}.svg" alt="{{proxyChecker.name}}">
           </span>
           <span>
             {{proxyChecker.name}}

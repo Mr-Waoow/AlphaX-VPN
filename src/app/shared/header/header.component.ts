@@ -21,7 +21,7 @@ import { DataService } from '../services/data.service';
 @Component({
   selector: 'xvpn-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.min.css',
+  styleUrl: './header.component.css',
 })
 export class HeaderComponent implements OnInit {
   faPhone = faPhone;

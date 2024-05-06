@@ -1,8 +1,8 @@
 export interface ClientData {
-  clientId: number;
-  clientFirstName: string;
-  clientLastName: string;
-  clientImg: string;
-  clientCommentDate: string;
-  clientCommentOpinion: string;
+  id: number;
+  firstName: string;
+  lastName: string;
+  img: string;
+  commentDate: string;
+  comment: string;
 }

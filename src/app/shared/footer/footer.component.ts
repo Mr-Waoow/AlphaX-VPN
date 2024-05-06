@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'xvpn-footer',
   templateUrl: './footer.component.html',
-  styleUrl: './footer.component.min.css'
+  styleUrl: './footer.component.css'
 })
 export class FooterComponent {
 

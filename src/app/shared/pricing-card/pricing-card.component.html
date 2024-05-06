@@ -4,12 +4,12 @@
       <tr>
         <th>
           <span class="icon-md">
-            <img alt="{{inputList?.proxyServiceName}}" [src]="inputList?.proxyServiceImgUrl" />
+            <img alt="{{inputList?.name}}" src="assets/images/pricing_table/{{inputList?.img}}.png" />
           </span>
         </th>
         <th>
-          <h5>{{ inputList?.proxyServiceName }}</h5>
-          <span>{{ inputList?.proxyServiceDesc }}</span>
+          <h5>{{ inputList?.name }}</h5>
+          <span>{{ inputList?.description }}</span>
         </th>
       </tr>
     </thead>
@@ -19,7 +19,7 @@
           <fa-icon [icon]="faCheck"></fa-icon>
         </td>
         <td class="pt-4">
-          <span>{{ inputList?.proxyServiceOffers1 }}</span>
+          <span>{{ inputList?.offer1 }}</span>
         </td>
       </tr>
       <tr>
@@ -27,7 +27,7 @@
           <fa-icon [icon]="faCheck"></fa-icon>
         </td>
         <td>
-          <span>{{ inputList?.proxyServiceOffers2 }}</span>
+          <span>{{ inputList?.offer2 }}</span>
         </td>
       </tr>
       <tr>
@@ -36,7 +36,7 @@
         </td>
         <td>
           <span style="color: #0a58ca">{{
-            inputList?.proxyServiceOffers3
+            inputList?.offer3
             }}</span>
         </td>
       </tr>
@@ -46,7 +46,7 @@
         </td>
         <td>
           <span style="color: #0a58ca">{{
-            inputList?.proxyServiceOffers4
+            inputList?.offer4
             }}</span>
         </td>
       </tr>
@@ -55,7 +55,7 @@
           <fa-icon [icon]="faCheck"></fa-icon>
         </td>
         <td>
-          <span>{{ inputList?.proxyServiceOffers5 }}</span>
+          <span>{{ inputList?.offer5 }}</span>
         </td>
       </tr>
       <tr>
@@ -84,7 +84,7 @@
     <tbody>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="inputList.featuresIcon[0]" title="{{inputList.features[0]}}"></span>
+          <span class="icon-sm"><img src="assets/images/personal_proxy/pricing_table/{{inputList.featuresIcon[0]}}.png" title="{{inputList.features[0]}}"></span>
         </td>
         <td>
           <span>{{inputList.features[0]}}</span>
@@ -92,7 +92,7 @@
       </tr>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="inputList.featuresIcon[1]" title="{{inputList.features[1]}}"></span>
+          <span class="icon-sm"><img src="assets/images/personal_proxy/pricing_table/{{inputList.featuresIcon[1]}}.png" title="{{inputList.features[1]}}"></span>
         </td>
         <td>
           <span>{{inputList.features[1]}}</span>
@@ -100,7 +100,7 @@
       </tr>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="inputList.featuresIcon[2]" title="{{inputList.features[2]}}"></span>
+          <span class="icon-sm"><img src="assets/images/personal_proxy/pricing_table/{{inputList.featuresIcon[2]}}.png" title="{{inputList.features[2]}}"></span>
         </td>
         <td>
           <span>{{inputList.features[2]}}</span>
@@ -108,7 +108,7 @@
       </tr>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="inputList.featuresIcon[3]" title="{{inputList.features[3]}}"></span>
+          <span class="icon-sm"><img src="assets/images/personal_proxy/pricing_table/{{inputList.featuresIcon[3]}}.png" title="{{inputList.features[3]}}"></span>
         </td>
         <td>
           <span>{{inputList.features[3]}}</span>
@@ -121,7 +121,7 @@
       </tr>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="inputList.featuresIcon[4]" title="{{inputList.features[4]}}"></span>
+          <span class="icon-sm"><img src="assets/images/personal_proxy/pricing_table/{{inputList.featuresIcon[4]}}.png" title="{{inputList.features[4]}}"></span>
         </td>
         <td>
           <span>{{inputList.features[4]}}</span>
@@ -129,7 +129,7 @@
       </tr>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="inputList.featuresIcon[5]" title="{{inputList.features[5]}}"></span>
+          <span class="icon-sm"><img src="assets/images/personal_proxy/pricing_table/{{inputList.featuresIcon[5]}}.png" title="{{inputList.features[5]}}"></span>
         </td>
         <td>
           <span>{{inputList.features[5]}}</span>
@@ -137,7 +137,7 @@
       </tr>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="inputList.featuresIcon[6]" title="{{inputList.features[6]}}"></span>
+          <span class="icon-sm"><img src="assets/images/personal_proxy/pricing_table/{{inputList.featuresIcon[6]}}.png" title="{{inputList.features[6]}}"></span>
         </td>
         <td>
           <span>{{inputList.features[6]}}</span>
@@ -145,7 +145,7 @@
       </tr>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="inputList.featuresIcon[7]" title="{{inputList.features[7]}}"></span>
+          <span class="icon-sm"><img src="assets/images/personal_proxy/pricing_table/{{inputList.featuresIcon[7]}}.png" title="{{inputList.features[7]}}"></span>
         </td>
         <td>
           <span>{{inputList.features[7]}}</span>
@@ -153,7 +153,7 @@
       </tr>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="inputList.featuresIcon[8]" title="{{inputList.features[8]}}"></span>
+          <span class="icon-sm"><img src="assets/images/personal_proxy/pricing_table/{{inputList.featuresIcon[8]}}.png" title="{{inputList.features[8]}}"></span>
         </td>
         <td>
           <span>{{inputList.features[8]}}</span>
@@ -161,7 +161,7 @@
       </tr>
       <tr>
         <td>
-          <span class="icon-sm"><img [src]="inputList.featuresIcon[9]" title="{{inputList.features[9]}}"></span>
+          <span class="icon-sm"><img src="assets/images/personal_proxy/pricing_table/{{inputList.featuresIcon[9]}}.png" title="{{inputList.features[9]}}"></span>
         </td>
         <td>
           <span>{{inputList.features[9]}}</span>

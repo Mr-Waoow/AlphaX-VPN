@@ -4,7 +4,7 @@ import { faCheck } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'xvpn-pricing-card',
   templateUrl: './pricing-card.component.html',
-  styleUrl: './pricing-card.component.min.css',
+  styleUrl: './pricing-card.component.css',
 })
 export class PricingCardComponent implements OnInit {
   faCheck = faCheck;

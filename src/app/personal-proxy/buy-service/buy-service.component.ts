@@ -15,7 +15,7 @@ import { DataService } from '../../shared/services/data.service';
 @Component({
   selector: 'xvpn-buy-service',
   templateUrl: './buy-service.component.html',
-  styleUrl: './buy-service.component.min.css',
+  styleUrl: './buy-service.component.css',
 })
 export class BuyServiceComponent implements OnInit {
   @ViewChild('price')

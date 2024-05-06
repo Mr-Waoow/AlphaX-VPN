@@ -128,7 +128,6 @@ button {
 
 .navbar-nav .nav-item {
   display: flex;
-  position: relative;
   margin-right: 40px;
   color: var(--light);
   z-index: 1;
@@ -165,7 +164,7 @@ button {
 .navbar-nav .nav-item .sub-menu {
   position: absolute;
   display: flex;
-  top: 45px;
+  top: 103%;
   width: max-content;
   height: 0;
   background-color: var(--hard-secondary);

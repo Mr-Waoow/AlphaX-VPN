@@ -1,6 +1,6 @@
 export interface PopularRate {
-  popularRateId: number;
-  popularRateImgUrl: String;
-  popularRateName: string;
-  popularRateIp: string;
+  id: number;
+  img: String;
+  name: string;
+  ip: string;
 }

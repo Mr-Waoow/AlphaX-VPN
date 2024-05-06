@@ -7,10 +7,10 @@
           <div class="d-flex align-items-center mt-4">
             <div class="content-box" *ngFor="let rate of popularRates">
               <div class="icon">
-                <img alt="{{rate.popularRateName}}" [src]="rate.popularRateImgUrl" />
+                <img alt="{{rate.name}}" src="assets/images/statistics/{{rate.img}}.png" />
               </div>
-              <h5>{{rate.popularRateName}}</h5>
-              <span class="text-primary text-uppercase fw-bold">{{rate.popularRateIp}}</span>
+              <h5>{{rate.name}}</h5>
+              <span class="text-primary text-uppercase fw-bold">{{rate.ip}}</span>
             </div>
           </div>
         </div>

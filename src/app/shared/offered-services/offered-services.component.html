@@ -4,7 +4,7 @@
       <div *ngFor="let offeredService of offeredServices">
         <a class="d-flex align-items-center"  [routerLink]="[offeredService.link]" routerLinkActive="router-link-active">
           <div class="icon">
-            <img [title]="offeredService.name" alt="{{offeredService.name}}" [src]="offeredService.imgUrl" />
+            <img [title]="offeredService.name" alt="{{offeredService.name}}" src="assets/images/Offered-Services/{{offeredService.img}}.png" />
           </div>
           <div>
             <span>{{offeredService.name}}</span>
