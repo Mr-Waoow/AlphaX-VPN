@@ -2,13 +2,13 @@
   <div class="container">
     <div class="d-lg-flex justify-content-between">
       <div *ngFor="let offeredService of offeredServices">
-        <a class="d-flex align-items-center"  [routerLink]="[offeredService.offerdServiceLink]" routerLinkActive="router-link-active">
+        <a class="d-flex align-items-center"  [routerLink]="[offeredService.link]" routerLinkActive="router-link-active">
           <div class="icon">
-            <img [title]="offeredService.offerdServiceName" alt="{{offeredService.offerdServiceName}}" [src]="offeredService.offerdServiceImgUrl" />
+            <img [title]="offeredService.name" alt="{{offeredService.name}}" [src]="offeredService.imgUrl" />
           </div>
           <div>
-            <span>{{offeredService.offerdServiceName}}</span>
-            <span class="new" *ngIf="offeredService.offerdServiceIsNew">New</span>
+            <span>{{offeredService.name}}</span>
+            <span class="new" *ngIf="offeredService.isNew">New</span>
           </div>
         </a>
       </div>

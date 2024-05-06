@@ -1,0 +1,15 @@
+<div class="providers-titles">
+  <div *ngFor="let i = index;let providerTitle of providersTitle | getPropertyAndAssign: this: 'providerClass': 'assignClass'" class="providers-title {{this.assignClass[i]}}">
+    <div *ngIf="!providerTitle.isFlipper" class="providers-tiles-card {{providerTitle.cardClasses[0]}}">
+      <img src="assets/images/mobile_proxy/header_slider/image_sider/{{providerTitle.icon[0]}}.{{providerTitle.iconExe[0]}}" alt="{{providerTitle.name[0]}}">
+    </div>
+    <div *ngIf="providerTitle.isFlipper" class="providers-title-flipper">
+      <div class="providers-tiles-card {{providerTitle.cardClasses[0]}}">
+        <img src="assets/images/mobile_proxy/header_slider/image_sider/{{providerTitle.icon[0]}}.{{providerTitle.iconExe[0]}}" alt="{{providerTitle.name[0]}}">
+      </div>
+      <div class="providers-tiles-card {{providerTitle.cardClasses[1]}}">
+        <img src="assets/images/mobile_proxy/header_slider/image_sider/{{providerTitle.icon[1]}}.{{providerTitle.iconExe[1]}}" alt="{{providerTitle.name[1]}}">
+      </div>
+    </div>
+  </div>
+</div>

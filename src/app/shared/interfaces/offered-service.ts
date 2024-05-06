@@ -1,7 +1,7 @@
 export interface OfferedService {
-  offerdServiceId: number;
-  offerdServiceLink: string;
-  offerdServiceImgUrl: string;
-  offerdServiceName: string;
-  offerdServiceIsNew: boolean;
+  id: number;
+  link: string;
+  imgUrl: string;
+  name: string;
+  isNew: boolean;
 }

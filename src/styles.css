@@ -56,7 +56,7 @@
   --danger: #dc3535;
   --soft-danger: #dc353526;
   --light: #fdfdfd;
-  --hard-light: #F7F8F9;
+  --hard-light: #f7f8f9;
   --hardest-light: #e6e6e6;
   --hov-hard-light: #ccc;
   --dark: #1e2533;
@@ -346,6 +346,11 @@ ol {
   justify-content: center;
   vertical-align: middle;
   text-align: center;
+  -o-transition: all 0.4s ease-out !important;
+  -webkit-transition: all 0.4s ease-out !important;
+  -moz-transition: all 0.4s ease-out !important;
+  -ms-transition: all 0.4s ease-out !important;
+  transition: all 0.4s ease-out !important;
 }
 .img-container {
   position: relative;

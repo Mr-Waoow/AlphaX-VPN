@@ -8,6 +8,7 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { VpnServiceComponent } from './vpn-service/vpn-service.component';
 import { PersonalProxyComponent } from './personal-proxy/personal-proxy.component';
 import { SharedProxyComponent } from './shared-proxy/shared-proxy.component';
+import { MobileProxyComponent } from './mobile-proxy/mobile-proxy.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'Home' },
@@ -17,9 +18,10 @@ const routes: Routes = [
   { path: 'About-Us', component: AboutUsComponent },
   { path: 'White-Label', component: WhiteLabelComponent },
   { path: 'Contact-Us', component: ContactUsComponent },
-  { path: 'VPN-Service', component: VpnServiceComponent },
   { path: 'Personal-Proxy', component: PersonalProxyComponent },
   { path: 'Shared-Proxy', component: SharedProxyComponent },
+  { path: 'Mobile-Proxy', component: MobileProxyComponent },
+  { path: 'VPN-Service', component: VpnServiceComponent },
 ];
 
 @NgModule({

@@ -13,12 +13,12 @@ export class Methods {
       const remNum = (px * 0.0625).toString();
       return remNum;
     },
-    getDivElement(evt: Event, elementId: string = ''): HTMLElement {
+    getDivElement(evt: Event | undefined, elementId: string = ''): HTMLElement {
       let el: HTMLElement;
       if (elementId) {
         el = document.getElementById(elementId) as HTMLElement;
       } else {
-        el = (evt.currentTarget as HTMLElement)?.parentNode as HTMLElement;
+        el = (evt?.currentTarget as HTMLElement)?.parentNode as HTMLElement;
       }
       if (!el.hasAttribute('data-height')) {
         const baseHeight = parseFloat(
@@ -111,6 +111,28 @@ export class Methods {
         let div2 = this.getDivElement(evt, elementId);
         div2.style.height = div2.dataset['baseHeight'] ?? '';
       }
+    },
+    openDropDown(elementId: string): void {
+      const list = document.getElementById(elementId) as HTMLElement;
+      const listParent = list?.parentNode as HTMLElement;
+      const listIcon = listParent.querySelector('.icon-sm') as HTMLElement;
+      list.style.display = 'flex';
+      listIcon.classList.add(this.r180);
+      let div = this.getDivElement(undefined, elementId);
+      setTimeout(() => {
+        div.style.height = div.dataset['height'] ?? '';
+      }, 3);
+    },
+    closeDropDown(elementId: string): void {
+      const list = document.getElementById(elementId) as HTMLElement;
+      const listParent = list?.parentNode as HTMLElement;
+      const listIcon = listParent.querySelector('.icon-sm') as HTMLElement;
+      let div = this.getDivElement(undefined, elementId);
+      div.style.height = div.dataset['baseHeight'] ?? '';
+      setTimeout(() => {
+        listIcon.classList.remove(this.r180);
+        list.style.display = 'none';
+      }, 500);
     },
   };
   showHide = {

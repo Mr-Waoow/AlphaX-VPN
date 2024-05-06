@@ -150,5 +150,38 @@
         </div>
       </div>
     </div>
+    <div *ngIf="routerLinkActive === 'Mobile-Proxy'" class="row personal-silder align-items-center">
+      <div class="col-lg-6 mt-5">
+        <div class="slider-content mt-3 mt-md-0 text-start h-240px justify-content-center">
+          <h1>
+            <span *ngIf="showText" class="fade-in">Private mobile proxies</span>
+          </h1>
+          <ul>
+            <li *ngIf="showText1" class="fade-in">
+              <span class="icon-sm">
+                <img src="assets/images/mobile_proxy/header_slider/banner_feature_1.svg" title="Static IP">
+              </span>
+              IP changes every 5/10/30 minutes
+            </li>
+            <li *ngIf="showText2" class="fade-in">
+              <span class="icon-sm">
+                <img src="assets/images/mobile_proxy/header_slider/banner_feature_2.svg" title="Unlimited traffic">
+              </span>
+              Unlimited traffic
+            </li>
+            <li *ngIf="showText3" class="fade-in">
+              <span class="icon-sm">
+                <img src="assets/images/mobile_proxy/header_slider/banner_feature_3.svg" title="support">
+              </span>
+              24/7 technical support
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="btn btn-outline-light-primary py-3 px-5 fw-bold rounded-1 mt-5">Try it now</a>
+      </div>
+      <div class="col-lg-6 position-relative d-lg-block d-none mt-5">
+        <xvpn-sider-img-providers></xvpn-sider-img-providers>
+      </div>
+    </div>
   </div>
 </section>

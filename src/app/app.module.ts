@@ -46,6 +46,8 @@ import { MatInputModule } from '@angular/material/input';
 import { MatSelectModule } from '@angular/material/select';
 import { SelectOptionComponent } from './shared/select-option/select-option.component';
 import { SharedProxyComponent } from './shared-proxy/shared-proxy.component';
+import { MobileProxyComponent } from './mobile-proxy/mobile-proxy.component';
+import { SiderImgProvidersComponent } from './shared/header-slider/sider-img-providers/sider-img-providers.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +80,8 @@ import { SharedProxyComponent } from './shared-proxy/shared-proxy.component';
     DataCountryProxyDirective,
     SelectOptionComponent,
     SharedProxyComponent,
+    MobileProxyComponent,
+    SiderImgProvidersComponent,
   ],
   imports: [
     BrowserModule,
