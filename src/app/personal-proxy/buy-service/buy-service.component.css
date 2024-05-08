@@ -1,5 +1,5 @@
 .buy-service,
-.buy-service .head .tab .tablinks {
+.buy-service .tablinks {
   background-color: var(--light-secondary);
 }
 .buy-bill-item-count input,
@@ -19,12 +19,12 @@
   background-color: #cfe3f1;
   color: var(--dark);
 }
-.buy-service .head .tab {
+.buy-service .tab {
   overflow: hidden;
   display: flex;
   gap: 0.5rem;
 }
-.buy-service .head .tab .tablinks {
+.buy-service .tablinks {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
@@ -39,7 +39,7 @@
   color: var(--dark);
   opacity: 0.5;
 }
-.buy-service .head .tab .tablinks.active {
+.buy-service .tablinks.active {
   background-color: var(--light-secondary);
   opacity: 1;
 }

@@ -1,0 +1,361 @@
+.border-blue {
+  border-color: var(--blue) !important;
+}
+
+.border-light-blue {
+  border-color: var(--light-blue) !important;
+}
+
+.border-dark-blue {
+  border-color: var(--dark-blue) !important;
+}
+
+.border-indigo {
+  border-color: var(--indigo) !important;
+}
+
+.border-purple {
+  border-color: var(--purple) !important;
+}
+
+.border-pink {
+  border-color: var(--pink) !important;
+}
+
+.border-red {
+  border-color: var(--red) !important;
+}
+
+.border-orange {
+  border-color: var(--orange) !important;
+}
+
+.border-yellow {
+  border-color: var(--yellow) !important;
+}
+
+.border-green {
+  border-color: var(--green) !important;
+}
+
+.border-soft-green {
+  border-color: var(--soft-green) !important;
+}
+
+.border-teal {
+  border-color: var(--teal) !important;
+}
+
+.border-cyan {
+  border-color: var(--cyan) !important;
+}
+
+.border-white {
+  border-color: var(--white) !important;
+}
+
+.border-black {
+  border-color: var(--black) !important;
+}
+
+.border-light-black {
+  border-color: var(--hov-black) !important;
+}
+
+.border-soft-black {
+  border-color: var(--soft-black) !important;
+}
+
+.border-gray {
+  border-color: var(--gray) !important;
+}
+
+.border-dark-gray {
+  border-color: var(--dark-gray) !important;
+}
+
+.border-primary {
+  border-color: var(--primary) !important;
+}
+
+.border-light-primary {
+  border-color: var(--light-primary) !important;
+}
+
+.border-dark-primary {
+  border-color: var(--hov-primary) !important;
+}
+
+.border-soft-primary {
+  border-color: var(--soft-primary) !important;
+}
+
+.border-secondary {
+  border-color: var(--secondary) !important;
+}
+
+.border-light-secondary {
+  border-color: var(--hov-secondary) !important;
+}
+
+.border-soft-secondary {
+  border-color: var(--soft-secondary) !important;
+}
+
+.border-third {
+  border-color: var(--third) !important;
+}
+
+.border-dark-third {
+  border-color: var(--hov-third) !important;
+}
+
+.border-soft-third {
+  border-color: var(--soft-third) !important;
+}
+
+.border-success {
+  border-color: var(--success) !important;
+}
+
+.border-soft-success {
+  border-color: var(--soft-success) !important;
+}
+
+.border-info {
+  border-color: var(--info) !important;
+}
+
+.border-soft-info {
+  border-color: var(--soft-info) !important;
+}
+
+.border-notification {
+  border-color: var(--notification) !important;
+}
+
+.border-warning {
+  border-color: var(--warning) !important;
+}
+
+.border-soft-warning {
+  border-color: var(--soft-warning) !important;
+}
+
+.border-danger {
+  border-color: var(--danger) !important;
+}
+
+.border-soft-danger {
+  border-color: var(--soft-danger) !important;
+}
+
+.border-light {
+  border-color: var(--light) !important;
+}
+
+.border-hard-light {
+  border-color: var(--hard-light) !important;
+}
+
+.border-dark-hard-light {
+  border-color: var(--hov-hard-light) !important;
+}
+
+.border-dark {
+  border-color: var(--dark) !important;
+}
+
+.border-light-dark {
+  border-color: var(--hov-dark) !important;
+}
+
+.border-soft-dark {
+  border-color: var(--soft-dark) !important;
+}
+
+.border-light-soft-dark {
+  border-color: var(--hov-soft-dark) !important;
+}
+
+.hov-border-blue:hover {
+  border-color: var(--blue) !important;
+}
+
+.hov-border-light-blue:hover {
+  border-color: var(--light-blue) !important;
+}
+
+.hov-border-dark-blue:hover {
+  border-color: var(--dark-blue) !important;
+}
+
+.hov-border-indigo:hover {
+  border-color: var(--indigo) !important;
+}
+
+.hov-border-purple:hover {
+  border-color: var(--purple) !important;
+}
+
+.hov-border-pink:hover {
+  border-color: var(--pink) !important;
+}
+
+.hov-border-red:hover {
+  border-color: var(--red) !important;
+}
+
+.hov-border-orange:hover {
+  border-color: var(--orange) !important;
+}
+
+.hov-border-yellow:hover {
+  border-color: var(--yellow) !important;
+}
+
+.hov-border-green:hover {
+  border-color: var(--green) !important;
+}
+
+.hov-border-soft-green:hover {
+  border-color: var(--soft-green) !important;
+}
+
+.hov-border-teal:hover {
+  border-color: var(--teal) !important;
+}
+
+.hov-border-cyan:hover {
+  border-color: var(--cyan) !important;
+}
+
+.hov-border-white:hover {
+  border-color: var(--white) !important;
+}
+
+.hov-border-black:hover {
+  border-color: var(--black) !important;
+}
+
+.hov-border-light-black:hover {
+  border-color: var(--hov-black) !important;
+}
+
+.hov-border-soft-black:hover {
+  border-color: var(--soft-black) !important;
+}
+
+.hov-border-gray:hover {
+  border-color: var(--gray) !important;
+}
+
+.hov-border-dark-gray:hover {
+  border-color: var(--dark-gray) !important;
+}
+
+.hov-border-primary:hover {
+  border-color: var(--primary) !important;
+}
+
+.hov-border-light-primary:hover {
+  border-color: var(--light-primary) !important;
+}
+
+.hov-border-dark-primary:hover {
+  border-color: var(--hov-primary) !important;
+}
+
+.hov-border-soft-primary:hover {
+  border-color: var(--soft-primary) !important;
+}
+
+.hov-border-secondary:hover {
+  border-color: var(--secondary) !important;
+}
+
+.hov-border-light-secondary:hover {
+  border-color: var(--hov-secondary) !important;
+}
+
+.hov-border-soft-secondary:hover {
+  border-color: var(--soft-secondary) !important;
+}
+
+.hov-border-third:hover {
+  border-color: var(--third) !important;
+}
+
+.hov-border-dark-third:hover {
+  border-color: var(--hov-third) !important;
+}
+
+.hov-border-soft-third:hover {
+  border-color: var(--soft-third) !important;
+}
+
+.hov-border-success:hover {
+  border-color: var(--success) !important;
+}
+
+.hov-border-soft-success:hover {
+  border-color: var(--soft-success) !important;
+}
+
+.hov-border-info:hover {
+  border-color: var(--info) !important;
+}
+
+.hov-border-soft-info:hover {
+  border-color: var(--soft-info) !important;
+}
+
+.hov-border-notification:hover {
+  border-color: var(--notification) !important;
+}
+
+.hov-border-warning:hover {
+  border-color: var(--warning) !important;
+}
+
+.hov-border-soft-warning:hover {
+  border-color: var(--soft-warning) !important;
+}
+
+.hov-border-danger:hover {
+  border-color: var(--danger) !important;
+}
+
+.hov-border-soft-danger:hover {
+  border-color: var(--soft-danger) !important;
+}
+
+.hov-border-light:hover {
+  border-color: var(--light) !important;
+}
+
+.hov-border-hard-light:hover {
+  border-color: var(--hard-light) !important;
+}
+
+.hov-border-dark-hard-light:hover {
+  border-color: var(--hov-hard-light) !important;
+}
+
+.hov-border-dark:hover {
+  border-color: var(--dark) !important;
+}
+
+.hov-border-light-dark:hover {
+  border-color: var(--hov-dark) !important;
+}
+
+.hov-border-soft-dark:hover {
+  border-color: var(--soft-dark) !important;
+}
+
+.hov-border-light-soft-dark:hover {
+  border-color: var(--hov-soft-dark) !important;
+}
+
+/*# sourceMappingURL=Colors.css.map */
