@@ -1,5 +1,5 @@
 {
-  "name": "alphax-vpn",
+  "name": "alpha-x-vpn",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -7,7 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "gitbuild": "ng build --base-href /AlphaX-VPN/",
+    "gitbuild": "ng build --base-href https://mr-waoow.github.io/AlphaX-VPN/",
     "live": "npx angular-cli-ghpages --dir=dist/alphax-vpn/browser"
   },
   "private": true,
