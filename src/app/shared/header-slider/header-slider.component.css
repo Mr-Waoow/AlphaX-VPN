@@ -21,7 +21,7 @@ h2 {
   margin-bottom: 1.5rem;
 }
 .header-bg {
-  background: #122839;
+  background-color: var(--secondary);
 }
 .header-bg::after,
 .header-bg::before {

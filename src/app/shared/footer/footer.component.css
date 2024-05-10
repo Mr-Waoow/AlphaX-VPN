@@ -14,11 +14,11 @@
 }
 
 .footer .single-footer a {
-  color: var(--third);
+  color: var(--tertiary);
 }
 
 .footer .single-footer a:hover {
-  color: var(--hov-third);
+  color: var(--hov-tertiary);
 }
 
 
@@ -101,11 +101,11 @@
 }
 
 .footer .single-footer.f-about .copyright-text a {
-  color: var(--third);
+  color: var(--tertiary);
 }
 
 .footer .single-footer.f-about .copyright-text a:hover {
-  color: var(--hov-third);
+  color: var(--hov-tertiary);
 }
 
 .footer .single-footer.f-link ul {

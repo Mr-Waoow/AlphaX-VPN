@@ -74,9 +74,9 @@
 }
 .buy-country-city.selected {
   color: var(--white);
-  background-color: var(--hard-third);
-  -webkit-box-shadow: 0 4px 8px var(--shadow-third);
-  box-shadow: 0 4px 8px var(--shadow-third);
+  background-color: var(--hard-tertiary);
+  -webkit-box-shadow: 0 4px 8px var(--shadow-tertiary);
+  box-shadow: 0 4px 8px var(--shadow-tertiary);
 }
 .buy-bill,
 .buy-bill-private {
@@ -92,7 +92,7 @@
   font-size: 14px;
   font-weight: 400;
   margin-right: 15px;
-  color: var(--hard-third);
+  color: var(--hard-tertiary);
 }
 label {
   font-weight: 700;
@@ -130,9 +130,9 @@ input[type="radio"] {
 }
 .buy-bill-item-period-button input:checked + span {
   color: var(--white);
-  background: var(--hard-third);
-  -webkit-box-shadow: 0 4px 8px var(--shadow-third);
-  box-shadow: 0 4px 8px var(--shadow-third);
+  background: var(--hard-tertiary);
+  -webkit-box-shadow: 0 4px 8px var(--shadow-tertiary);
+  box-shadow: 0 4px 8px var(--shadow-tertiary);
 }
 .buy-bill-item-count,
 .buy-bill-item-name,
@@ -180,7 +180,7 @@ input[type="radio"] {
   color: var(--white);
   border: none;
   border-radius: 2px;
-  background-color: var(--hard-third);
+  background-color: var(--hard-tertiary);
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -189,7 +189,7 @@ input[type="radio"] {
   justify-content: center;
 }
 .buy-bill-item-count-btn:hover {
-  background-color: var(--hov-third);
+  background-color: var(--hov-tertiary);
 }
 .buy-bill-item-count-btn.--minus {
   left: 3px;
@@ -250,10 +250,10 @@ input[type="radio"] {
 }
 .buy-countries-list-item.selected {
   color: var(--white);
-  border-color: var(--hard-third);
-  background-color: var(--hard-third);
-  -webkit-box-shadow: 0 4px 8px var(--shadow-third);
-  box-shadow: 0 4px 8px var(--shadow-third);
+  border-color: var(--hard-tertiary);
+  background-color: var(--hard-tertiary);
+  -webkit-box-shadow: 0 4px 8px var(--shadow-tertiary);
+  box-shadow: 0 4px 8px var(--shadow-tertiary);
 }
 .buy-countries-list-item-flag {
   display: block;
@@ -263,7 +263,7 @@ input[type="radio"] {
   border-radius: 2px;
 }
 .selected .buy-countries-list-item-flag {
-  border-color: var(--hard-third);
+  border-color: var(--hard-tertiary);
 }
 .buy-countries-list-item-name {
   color: var(--dark);
@@ -279,10 +279,10 @@ input[type="radio"] {
 .buy-countries-list-item-price {
   line-height: 1;
   margin-top: 5px;
-  color: var(--light-third);
+  color: var(--light-tertiary);
 }
 .selected .buy-countries-list-item-price {
-  color: var(--hov-light-third);
+  color: var(--hov-light-tertiary);
 }
 .buy-bill {
   display: flex;

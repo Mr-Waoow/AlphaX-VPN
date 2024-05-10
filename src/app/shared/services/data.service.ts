@@ -2941,7 +2941,7 @@ export class DataService {
       {
         question: 'How To Request A Refund?',
         answer:
-          "A customer can request a refund via contacting RSocks customer support. Refunds for Exclusive Mix line proxies are not possible. The minimum amount of a refund is 50 USD Refunds are issued with payment system's fees deducted. Hourly/daily packages and personal proxies are not refundable. Rotating, Twitch, YouTube weekly packages are not refundable. Data center proxy packages are refundable within the first hour after activation. Mobile proxy servers are refundable within the first 24 hours and if less than 20MB of data has been spent. Other packages are refundable within the first 24 hours after activation via contacting our customer support and providing reasonable excuse for the refund.",
+          "A customer can request a refund via contacting Alpha-x customer support. Refunds for Exclusive Mix line proxies are not possible. The minimum amount of a refund is 50 USD Refunds are issued with payment system's fees deducted. Hourly/daily packages and personal proxies are not refundable. Rotating, Twitch, YouTube weekly packages are not refundable. Data center proxy packages are refundable within the first hour after activation. Mobile proxy servers are refundable within the first 24 hours and if less than 20MB of data has been spent. Other packages are refundable within the first 24 hours after activation via contacting our customer support and providing reasonable excuse for the refund.",
         id: 5,
         isLink: false,
         isButton: false,
@@ -3074,7 +3074,7 @@ export class DataService {
         isAnswer1: false,
         answer1: '',
         link: '',
-        buttonName: 'Download «RSocks IP Changer»',
+        buttonName: 'Download «Alpha-x IP Changer»',
         host: '',
         port: 0,
         threads: 0,
@@ -5466,7 +5466,7 @@ export class DataService {
         title: 'Double VPN',
         descName: 'VPN + VPN',
         description:
-          'Rsocks offers the additional ability for encryption of packages for full anonymity in the network - DOUBLE VPN. This method of encryption allows to add additional server in the access chain.',
+          'Alpha-x offers the additional ability for encryption of packages for full anonymity in the network - DOUBLE VPN. This method of encryption allows to add additional server in the access chain.',
         priceDescription:
           'Consecutive connection to two VPN servers provides maximum protection on the Internet',
         icon: 'double-title',
@@ -5558,7 +5558,7 @@ export class DataService {
         id: 4,
         name: 'Unlimited traffic',
         description:
-          'Using our Rsocks VPN you can see streaming videos, speak via videochat and use other abilities of network.',
+          'Using our Alpha-x VPN you can see streaming videos, speak via videochat and use other abilities of network.',
         icon: 'ico_4',
       },
       {
@@ -5572,7 +5572,7 @@ export class DataService {
         id: 6,
         name: 'Constant support',
         description:
-          'Rsocks team always watch for quality of services. Our support will work with you all period of your use of VPN services.',
+          'Alpha-x team always watch for quality of services. Our support will work with you all period of your use of VPN services.',
         icon: 'ico_6',
       },
     ];

@@ -77,7 +77,7 @@ p {
 .one-decision .platform-version {
   font-size: 12px;
   font-weight: 400;
-  color: var(--light-third);
+  color: var(--light-tertiary);
 }
 .one-decision .img-box {
   position: absolute;
