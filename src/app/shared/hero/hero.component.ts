@@ -1,12 +1,17 @@
 import { AfterViewInit, Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { faClipboard, faClock, faLocationPin } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'xvpn-header-slider',
-  templateUrl: './header-slider.component.html',
-  styleUrl: './header-slider.component.css',
+  selector: 'xvpn-hero',
+  templateUrl: './hero.component.html',
+  styleUrl: './hero.component.css',
 })
-export class HeaderSliderComponent implements AfterViewInit {
+export class HeroComponent implements AfterViewInit {
+  faClipboard = faClipboard;
+  faClock = faClock;
+  faLocationPin = faLocationPin;
+  //fade in text
   showText = false; // Initially hide the text
   showText1 = false; // Initially hide the text
   showText2 = false; // Initially hide the text

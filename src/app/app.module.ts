@@ -14,16 +14,11 @@ import { HeaderComponent } from './shared/header/header.component';
 import { FooterComponent } from './shared/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { PreloaderComponent } from './shared/preloader/preloader.component';
-import { BlogComponent } from './home/blog/blog.component';
 import { OfferedServicesComponent } from './shared/offered-services/offered-services.component';
-import { ProxyServicesComponent } from './home/proxy-services/proxy-services.component';
-import { HeaderSliderComponent } from './shared/header-slider/header-slider.component';
+import { HeroComponent } from './shared/hero/hero.component';
 import { PricingCardComponent } from './shared/pricing-card/pricing-card.component';
-import { StatisticsComponent } from './home/statistics/statistics.component';
-import { TestimonialsComponent } from './home/testimonials/testimonials.component';
-import { SliderImgComponent } from './shared/header-slider/slider-img/slider-img.component';
+import { HeroImgComponent } from './shared/hero/hero-img/hero-img.component';
 import { ScrollTopComponent } from './shared/scroll-top/scroll-top.component';
-import { CompaniesComponent } from './home/companies/companies.component';
 import { FaqComponent } from './faq/faq.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { WhiteLabelComponent } from './white-label/white-label.component';
@@ -32,10 +27,9 @@ import { VpnServiceComponent } from './vpn-service/vpn-service.component';
 import { VpnPriceComponent } from './vpn-service/vpn-price/vpn-price.component';
 import { FilterByPropertyPipe } from './shared/pipes/filter-by-property.pipe';
 import { PersonalProxyComponent } from './personal-proxy/personal-proxy.component';
-import { SliderImgFlagsComponent } from './shared/header-slider/slider-img-flags/slider-img-flags.component';
+import { HeroImgFlagsComponent } from './shared/hero/hero-img-flags/hero-img-flags.component';
 import { GetPropertyAndAssignPipe } from './shared/pipes/get-property-and-assign.pipe';
 import { BuyServiceComponent } from './personal-proxy/buy-service/buy-service.component';
-import { DataCountryProxyDirective } from './personal-proxy/buy-service/directives/data-country-proxy.directive';
 import { FormsModule } from '@angular/forms';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectCountryModule } from '@angular-material-extensions/select-country';
@@ -47,7 +41,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { SelectOptionComponent } from './shared/select-option/select-option.component';
 import { SharedProxyComponent } from './shared-proxy/shared-proxy.component';
 import { MobileProxyComponent } from './mobile-proxy/mobile-proxy.component';
-import { SiderImgProvidersComponent } from './shared/header-slider/sider-img-providers/sider-img-providers.component';
+import { SiderImgProvidersComponent } from './shared/hero/hero-img-providers/hero-img-providers.component';
 
 @NgModule({
   declarations: [
@@ -56,16 +50,11 @@ import { SiderImgProvidersComponent } from './shared/header-slider/sider-img-pro
     FooterComponent,
     HomeComponent,
     PreloaderComponent,
-    BlogComponent,
     OfferedServicesComponent,
-    ProxyServicesComponent,
-    HeaderSliderComponent,
+    HeroComponent,
     PricingCardComponent,
-    StatisticsComponent,
-    TestimonialsComponent,
-    SliderImgComponent,
+    HeroImgComponent,
     ScrollTopComponent,
-    CompaniesComponent,
     FaqComponent,
     AboutUsComponent,
     WhiteLabelComponent,
@@ -74,10 +63,9 @@ import { SiderImgProvidersComponent } from './shared/header-slider/sider-img-pro
     VpnPriceComponent,
     FilterByPropertyPipe,
     PersonalProxyComponent,
-    SliderImgFlagsComponent,
+    HeroImgFlagsComponent,
     GetPropertyAndAssignPipe,
     BuyServiceComponent,
-    DataCountryProxyDirective,
     SelectOptionComponent,
     SharedProxyComponent,
     MobileProxyComponent,

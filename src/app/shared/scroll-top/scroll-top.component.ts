@@ -17,8 +17,8 @@ export class ScrollTopComponent {
       const scrollY = window.pageYOffset;
 
       // Show or hide the button based on scroll position (optional)
-      this.backToTop.nativeElement.style.display =
-        scrollY > 50 ? 'flex' : 'none';
+      this.backToTop.nativeElement.style.top =
+        scrollY > 50 ? '90%' : '-50%';
     }
   }
 

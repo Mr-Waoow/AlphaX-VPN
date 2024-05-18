@@ -9,6 +9,7 @@ import { DataService } from '../services/data.service';
 })
 export class OfferedServicesComponent implements OnInit {
   offeredServices: OfferedService[] = [];
+  assignedLink : string = '';
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
     this.offeredServices = this.dataService.getOfferedService();

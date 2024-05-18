@@ -1,8 +1,8 @@
-<section class="header-slider">
+<section class="hero">
   <div class="header-bg"></div>
   <div class="container">
-    <div *ngIf="routerLinkActive === 'Home'" class="row mt-4 mb-5">
-      <div class="col-lg-5">
+    <div *ngIf="routerLinkActive === 'Home'" class="row">
+      <div class="col-md-6 col-lg-5">
         <div class="slider-content mt-3 mt-md-0">
           <h5>
             <span *ngIf="showText" class="fade-in">Alpha-x Project</span>
@@ -13,19 +13,19 @@
             <span *ngIf="showText3" class="fade-in">&nbsp;a personal</span>
             <span *ngIf="showText4" class="fade-in">&nbsp;Privacy</span>
           </h3>
-          <div class="fade-in button d-flex flex-sm-row flex-column gap-3 align-items-center">
-            <a href="#"
-              class="fade-in btn btn-primary fs-16 fw-500 border bg-transparent hov-bg-primary hov-text-dark rounded-0 text-capitalize">Register
-              now</a>
+          <div *ngIf="showText5" class="fade-in button d-flex gap-3 align-items-center">
+            <a href="#" class="btn btn-outline-primary rounded-3">
+              Register now
+            </a>
             <span> and try for free</span>
           </div>
         </div>
       </div>
-      <div class="col-lg-7 d-md-block d-none">
-        <xvpn-slider-img></xvpn-slider-img>
+      <div class="col-md-6 col-lg-7 d-md-block d-none">
+        <xvpn-hero-img></xvpn-hero-img>
       </div>
     </div>
-    <div *ngIf="routerLinkActive === 'FAQ'" class="row pt-5">
+    <div *ngIf="routerLinkActive === 'FAQ'" class="row">
       <div class="col-lg-12">
         <div class="slider-content mt-3 mt-md-0 text-center h-140px">
           <h1>
@@ -37,7 +37,7 @@
         </div>
       </div>
     </div>
-    <div *ngIf="routerLinkActive === 'About-Us'" class="row pt-5">
+    <div *ngIf="routerLinkActive === 'About-Us'" class="row">
       <div class="col-lg-12">
         <div class="slider-content mt-3 mt-md-0 text-center h-140px">
           <h1>
@@ -49,7 +49,7 @@
         </div>
       </div>
     </div>
-    <div *ngIf="routerLinkActive === 'Contact-Us'" class="row pt-5">
+    <div *ngIf="routerLinkActive === 'Contact-Us'" class="row">
       <div class="col-lg-12">
         <div class="slider-content mt-3 mt-md-0 text-center h-140px">
           <h1>
@@ -61,8 +61,8 @@
         </div>
       </div>
     </div>
-    <div *ngIf="routerLinkActive === 'White-Label'" class="row pt-5">
-      <div class="col-xl-7">
+    <div *ngIf="routerLinkActive === 'White-Label'" class="row">
+      <div class="col-lg-7">
         <div class="slider-content mt-3 mt-md-0 h-140px">
           <h1 class="text-start">
             <span *ngIf="showText1" class="text-primary fade-in">white label</span>
@@ -72,7 +72,7 @@
             model.</p>
         </div>
       </div>
-      <div class="col-xl-5 d-md-block d-none">
+      <div class="col-lg-5 d-lg-block d-none">
         <div class="slider-content mt-3 mt-md-0 slider-map">
           <div class="img-box">
             <img src="assets/images/white_label/header/head_whitelabel.png" alt="head_whitelabel">
@@ -80,7 +80,7 @@
         </div>
       </div>
     </div>
-    <div *ngIf="routerLinkActive === 'VPN-Service'" class="row mt-4 mb-5">
+    <div *ngIf="routerLinkActive === 'VPN-Service'" class="row">
       <div class="col-lg-6">
         <div class="slider-content mt-3 mt-md-0">
           <h5>
@@ -108,26 +108,33 @@
             <span *ngIf="showText" class="fade-in">Buy personal proxy</span>
           </h1>
           <ul>
-            <li *ngIf="showText1" class="fade-in"><span class="icon-sm"><img
-                  src="assets/images/personal_proxy/header/icon/ip.png" title="Static IP"></span>Static IP for personal
-              use
+            <li *ngIf="showText1" class="fade-in">
+              <span class="icon-sm">
+                <fa-icon class="font-icon" [icon]="faLocationPin"></fa-icon>
+              </span>
+              Static IP for personal use
             </li>
-            <li *ngIf="showText2" class="fade-in"><span class="icon-sm"><img
-                  src="assets/images/personal_proxy/header/icon/clock.png" title="100% uptime"></span>100% uptime and
-              channel reliability</li>
-            <li *ngIf="showText3" class="fade-in"><span class="icon-sm"><img
-                  src="assets/images/personal_proxy/header/icon/checklist.png" title="Protocol support"></span>Protocol
-              support: SOCKS4 / 4a, SOCKS5, HTTP (S)
+            <li *ngIf="showText2" class="fade-in">
+              <span class="icon-sm">
+                <fa-icon class="font-icon" [icon]="faClock"></fa-icon>
+              </span>
+              100% uptime and channel reliability
+            </li>
+            <li *ngIf="showText3" class="fade-in">
+              <span class="icon-sm">
+                <fa-icon class="font-icon" [icon]="faClipboard"></fa-icon>
+              </span>
+              Protocol support: SOCKS4 / 4a, SOCKS5, HTTP (S)
             </li>
           </ul>
         </div>
-        <a href="#" class="btn btn-outline-light-primary py-3 px-5 fw-bold rounded-1 mt-5">Try it now</a>
+        <a href="#" class="btn btn-outline-primary py-3 px-5 fw-bold rounded-1 mt-5">Try it now</a>
       </div>
       <div class="col-lg-6 position-relative d-lg-block d-none mt-5">
-        <xvpn-slider-img-flags></xvpn-slider-img-flags>
+        <xvpn-hero-img-flags></xvpn-hero-img-flags>
       </div>
     </div>
-    <div *ngIf="routerLinkActive === 'Shared-Proxy'" class="row mt-4 mb-5">
+    <div *ngIf="routerLinkActive === 'Shared-Proxy'" class="row">
       <div class="col-lg-6">
         <div class="slider-content mt-3 mt-md-0">
           <h5 *ngIf="showText" class="fade-in">
@@ -180,7 +187,7 @@
         <a href="#" class="btn btn-outline-light-primary py-3 px-5 fw-bold rounded-1 mt-5">Try it now</a>
       </div>
       <div class="col-lg-6 position-relative d-lg-block d-none mt-5">
-        <xvpn-sider-img-providers></xvpn-sider-img-providers>
+        <xvpn-hero-img-providers></xvpn-hero-img-providers>
       </div>
     </div>
   </div>

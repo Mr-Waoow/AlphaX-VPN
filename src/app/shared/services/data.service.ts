@@ -4,7 +4,7 @@ import { Blog } from '../interfaces/blog';
 import { ProxyList } from '../interfaces/proxy-list';
 import { PopularRate } from '../interfaces/popular-rate';
 import { GeneralStatistic } from '../interfaces/general-statistic';
-import { ClientData } from '../../home/testimonials/interfaces/client-data';
+import { ClientData } from '../interfaces/client-data';
 import { IndividualRequest } from '../interfaces/individual-request';
 import { PersonalPrice } from '../interfaces/personal-price';
 import { PersonalQuestion } from '../interfaces/personal-question';

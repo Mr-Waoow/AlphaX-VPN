@@ -4,11 +4,11 @@ import { SubstringBetweenLetters } from '../../classes/substring-between-letters
 import { DataService } from '../../services/data.service';
 
 @Component({
-  selector: 'xvpn-slider-img-flags',
-  templateUrl: './slider-img-flags.component.html',
-  styleUrl: './slider-img-flags.component.css',
+  selector: 'xvpn-hero-img-flags',
+  templateUrl: './hero-img-flags.component.html',
+  styleUrl: './hero-img-flags.component.css',
 })
-export class SliderImgFlagsComponent implements OnInit {
+export class HeroImgFlagsComponent implements OnInit {
   flags: Flag[] = [];
   substringBetweenLetter = new SubstringBetweenLetters();
   assignedBoth: string[] = [];

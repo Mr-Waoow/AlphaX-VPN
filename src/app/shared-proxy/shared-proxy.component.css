@@ -4,7 +4,7 @@ input:focus-visible {
   outline: none;
 }
 .Proxy-lists {
-  background-color: var(--light);
+  background-color: var(--white);
 }
 
 .Proxy-lists p {
@@ -13,7 +13,7 @@ input:focus-visible {
 
 /* Shared locations */
 .shared-locations {
-  background-color: #e4e4e4;
+  background-color: var(--hov-tertiary);
 }
 
 .search{
@@ -96,7 +96,7 @@ overflow: hidden;
   font-size: 1.2rem;
   width: 3rem;
   height: 3rem;
-  border: 2px solid var(--dark);
+  border: 2px solid var(--secondary);
   border-radius: 50%;
 }
 

@@ -1,26 +1,30 @@
 .offered-services {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  background-color: var(--primary);
-  color: var(--dark);
-  padding: 10px 0;
+  background-color: var(--hov-tertiary);
+  color: var(--secondary);
+  padding: 1rem 0;
+  overflow: hidden;
+  overflow-x: auto;
 }
 
 .offered-services a {
-  color: inherit;
   cursor: pointer;
-  padding: 0.2rem;
-  border-radius: 0.5rem;
+  font-weight: 700;
+  padding: 0.5rem;
+  min-height: 5rem;
+  background-color: var(--hard-primary);
+  color: var(--tertiary);
+  border-radius: 1rem;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .offered-services a:hover {
-  background-color: var(--hov-primary);
-  border: none;
-  color: var(--white);
-  -webkit-transform: scale(1.05) translateZ(0);
-  transform: scale(1.05) translateZ(0);
-  -moz-transition: all 0.2s ease;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
+  background-color: var(--primary);
+  -webkit-transform: scale(1.1) translateZ(0);
+  transform: scale(1.1) translateZ(0);
 }
 
 .offered-services a.active {
@@ -51,7 +55,7 @@
   width: 50%;
   text-align: center;
   padding: 1px;
-  background-color: var(--red);
+  background-color: var(--success);
   border-radius: 3px;
   -webkit-animation: glow 1s ease-in-out infinite alternate;
   -moz-animation: glow 1s ease-in-out infinite alternate;
@@ -60,24 +64,32 @@
 
 @-webkit-keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
-      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--success);
   }
 
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
-      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    text-shadow: 0 0 20px #fff, 0 0 30px var(--light-success);
   }
 }
-
 @keyframes glow {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
-      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--success);
   }
 
   to {
-    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
-      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    text-shadow: 0 0 20px #fff, 0 0 30px var(--light-success);
   }
+}
+/*@keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px var(--success),
+      0 0 40px var(--success), 0 0 50px var(--success), 0 0 60px var(--success), 0 0 70px var(--success);
+  }
+
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px var(--light-success), 0 0 40px var(--light-success),
+      0 0 50px var(--light-success), 0 0 60px var(--light-success), 0 0 70px var(--light-success), 0 0 80px var(--light-success);
+  }
+}*/
+@media (max-width: 991px) {
 }

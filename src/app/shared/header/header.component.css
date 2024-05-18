@@ -15,29 +15,24 @@
   z-index: 1;
   padding-top: 5px;
   padding-bottom: 5px;
-  background-color: var(--tertiary);
+  background-color: var(--secondary);
   font-family: "Poppins", sans-serif;
 }
-.header-bar ul li a {
+.header-bar a {
+  color: var(--tertiary);
+  opacity: 0.7;
   -o-transition: all 0.4s ease;
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -ms-transition: all 0.4s ease;
   transition: all 0.4s ease;
 }
+.header-bar a:hover {
+  opacity: 1;
+}
 
 button {
   border: none;
-}
-
-.btn-primary {
-  background-color: var(--light-primary);
-  color: var(--tertiary);
-  font-weight: 600;
-}
-.btn-link {
-  color: var(--light-primary);
-  font-weight: 600;
 }
 
 /*======================================
@@ -52,8 +47,8 @@ button {
   z-index: 99;
   -webkit-box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
   box-shadow: 0px 20px 50px 0px rgba(0, 0, 0, 0.05);
-  -webkit-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
   top: 0;
   background-color: #fff;
 }
@@ -65,9 +60,12 @@ button {
 .navbar-area {
   width: 100%;
   z-index: 99;
-  -webkit-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
   padding: 0;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 .navbar-area.sticky {
@@ -75,15 +73,15 @@ button {
   z-index: 1000;
   -webkit-box-shadow: 0px 20px 50px 0px #0000000d;
   box-shadow: 0px 20px 50px 0px #0000000d;
-  background-color: var(--secondary);
+  background-color: var(--tertiary);
 }
 
 .navbar {
-  border-bottom: solid var(--soft-tertiary) 1px;
-  padding: 0;
+  padding: 0.5rem 0rem;
+  border-bottom: solid var(--shadow-tertiary) 1px;
   position: relative;
-  -webkit-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
+  -webkit-transition: all 0.4s ease 0s;
+  transition: all 0.4s ease 0s;
 }
 
 .navbar-area.sticky .navbar {
@@ -92,11 +90,11 @@ button {
 
 .navbar-collapse {
   display: flex;
-  -o-transition: right 0.4s ease !important;
-  -webkit-transition: right 0.4s ease !important;
-  -moz-transition: right 0.4s ease !important;
-  -ms-transition: right 0.4s ease !important;
-  transition: right 0.4s ease !important;
+  -o-transition: right 0.4s ease;
+  -webkit-transition: right 0.4s ease;
+  -moz-transition: right 0.4s ease;
+  -ms-transition: right 0.4s ease;
+  transition: right 0.4s ease;
 }
 
 .navbar-brand {
@@ -116,7 +114,7 @@ button {
 }
 
 .mobile-menu-btn .toggler-icon {
-  color: var(--tertiary);
+  color: var(--secondary);
   display: block;
 }
 
@@ -139,7 +137,7 @@ button {
 .navbar-nav .nav-item {
   display: flex;
   margin-right: 40px;
-  color: var(--tertiary);
+  color: var(--secondary);
   z-index: 1;
 }
 
@@ -149,9 +147,7 @@ button {
 
 .navbar-nav .nav-item a {
   font-size: 15px;
-  color: var(--tertiary);
-  -webkit-transition: all 0.3s ease-out 0s;
-  transition: all 0.3s ease-out 0s;
+  color: var(--secondary);
   position: relative;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -160,15 +156,27 @@ button {
   -ms-flex-align: center;
   align-items: center;
   font-weight: 600;
-  transition: all 0.3s ease-out 0s;
   text-transform: capitalize;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
+.navbar-nav .nav-item fa-icon {
+  color: var(--secondary);
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
 .navbar-nav .nav-item:hover a {
-  color: var(--light-primary);
+  color: var(--primary);
 }
 .navbar-nav .nav-item:hover fa-icon {
-  color: var(--light-primary);
+  color: var(--primary);
 }
 
 .navbar-nav .nav-item .sub-menu {
@@ -177,13 +185,16 @@ button {
   top: 103%;
   width: max-content;
   height: 0;
-  background-color: var(--hard-secondary);
+  background-color: var(--hard-tertiary);
   color: var(--tertiary);
   flex-direction: column;
   overflow: hidden;
   border-radius: 2px;
-  -webkit-transition: height 1s ease;
-  transition: height 1s ease;
+  -o-transition: all 0.9s ease;
+  -webkit-transition: all 0.9s ease;
+  -moz-transition: all 0.9s ease;
+  -ms-transition: all 0.9s ease;
+  transition: all 0.9s ease;
 }
 
 .navbar-nav .nav-item .sub-menu .nav-item {
@@ -194,19 +205,19 @@ button {
   padding: 10px;
   width: 100%;
   word-wrap: normal;
-  color: var(--tertiary) !important;
+  color: var(--secondary) !important;
 }
 
 .navbar-nav .nav-item .sub-menu .nav-item a:hover {
-  background-color: var(--hov-secondary);
-  color: var(--tertiary) !important;
+  background-color: var(--hov-tertiary);
+  color: var(--secondary) !important;
 }
 /*responsive*/
 @media (max-width: 991px) {
   .navbar-collapse {
     position: fixed;
     flex-direction: column;
-    background-color: var(--secondary);
+    background-color: var(--tertiary);
     width: 45%;
     top: 0;
     bottom: 0;
@@ -218,13 +229,9 @@ button {
   .navbar-nav {
     width: 100%;
   }
-  .nav-item,
-  .navbar fa-icon {
-    color: var(--tertiary) !important;
-  }
   .nav-item a,
   .toggler-icon {
-    color: var(--tertiary) !important;
+    color: var(--secondary) !important;
     padding: 0.5rem 1.5rem;
   }
   #nav.navbar-nav .nav-item {
@@ -235,7 +242,7 @@ button {
     font-size: 15px;
   }
   #nav.navbar-nav .nav-item:hover {
-    background-color: var(--hardest-secondary);
+    background-color: var(--hard-tertiary);
   }
   .navbar-nav .nav-item.list {
     flex-direction: column;

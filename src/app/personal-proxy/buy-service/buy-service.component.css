@@ -1,6 +1,7 @@
 .buy-service,
 .buy-service .tablinks {
-  background-color: var(--light-secondary);
+  background-color: var(--tertiary);
+  padding-top: 0;
 }
 .buy-bill-item-count input,
 .buy-bill-item-period-button span {
@@ -17,7 +18,7 @@
 }
 .buy-service .head {
   background-color: #cfe3f1;
-  color: var(--dark);
+  color: var(--secondary);
 }
 .buy-service .tab {
   overflow: hidden;
@@ -36,16 +37,16 @@
   transition: 0.3s;
   font-size: 17px;
   margin-right: 0.7rem;
-  color: var(--dark);
+  color: var(--secondary);
   opacity: 0.5;
 }
 .buy-service .tablinks.active {
-  background-color: var(--light-secondary);
+  background-color: var(--hardest-tertiary);
   opacity: 1;
 }
 .buy-service .content-box h4,
 .buy-service h1 {
-  color: var(--dark);
+  color: var(--secondary);
 }
 .buy-service .title {
   background-color: var(--white);
@@ -58,7 +59,7 @@
   margin-bottom: 25px;
 }
 .buy-country-city {
-  color: var(--dark);
+  color: var(--secondary);
   font-size: 14px;
   font-weight: 700;
   line-height: 22px;
@@ -130,9 +131,9 @@ input[type="radio"] {
 }
 .buy-bill-item-period-button input:checked + span {
   color: var(--white);
-  background: var(--hard-tertiary);
-  -webkit-box-shadow: 0 4px 8px var(--shadow-tertiary);
-  box-shadow: 0 4px 8px var(--shadow-tertiary);
+  background-color: var(--hard-quaternary);
+  -webkit-box-shadow: 0 4px 8px var(--shadow-quaternary);
+  box-shadow: 0 4px 8px var(--shadow-quaternary);
 }
 .buy-bill-item-count,
 .buy-bill-item-name,
@@ -180,7 +181,7 @@ input[type="radio"] {
   color: var(--white);
   border: none;
   border-radius: 2px;
-  background-color: var(--hard-tertiary);
+  background-color: var(--hard-quaternary);
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -189,7 +190,7 @@ input[type="radio"] {
   justify-content: center;
 }
 .buy-bill-item-count-btn:hover {
-  background-color: var(--hov-tertiary);
+  background-color: var(--hov-quaternary);
 }
 .buy-bill-item-count-btn.--minus {
   left: 3px;
@@ -250,10 +251,10 @@ input[type="radio"] {
 }
 .buy-countries-list-item.selected {
   color: var(--white);
-  border-color: var(--hard-tertiary);
-  background-color: var(--hard-tertiary);
-  -webkit-box-shadow: 0 4px 8px var(--shadow-tertiary);
-  box-shadow: 0 4px 8px var(--shadow-tertiary);
+  border-color: var(--hard-quaternary);
+  background-color: var(--hard-quaternary);
+  -webkit-box-shadow: 0 4px 8px var(--shadow-quaternary);
+  box-shadow: 0 4px 8px var(--shadow-quaternary);
 }
 .buy-countries-list-item-flag {
   display: block;
@@ -263,10 +264,10 @@ input[type="radio"] {
   border-radius: 2px;
 }
 .selected .buy-countries-list-item-flag {
-  border-color: var(--hard-tertiary);
+  border-color: var(--hard-quaternary);
 }
 .buy-countries-list-item-name {
-  color: var(--dark);
+  color: var(--secondary);
   font-weight: 700;
   max-width: 100%;
   margin-top: 10px;
@@ -279,10 +280,10 @@ input[type="radio"] {
 .buy-countries-list-item-price {
   line-height: 1;
   margin-top: 5px;
-  color: var(--light-tertiary);
+  color: var(--hard-quaternary);
 }
 .selected .buy-countries-list-item-price {
-  color: var(--hov-light-tertiary);
+  color: var(--light-quaternary);
 }
 .buy-bill {
   display: flex;
@@ -319,7 +320,7 @@ input[type="radio"] {
   background-color: var(--white);
   padding: 0.5rem 1rem;
   font-weight: 600;
-  border: 0.1rem solid var(--soft-black);
+  border: 0.1rem solid var(--soft-secondary);
   border-radius: 0.2rem;
   width: 100%;
   height: 100%;

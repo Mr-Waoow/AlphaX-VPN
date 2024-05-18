@@ -1,6 +1,225 @@
 <xvpn-offered-services></xvpn-offered-services>
-<xvpn-statistics></xvpn-statistics>
-<xvpn-proxy-services></xvpn-proxy-services>
-<xvpn-blog></xvpn-blog>
-<xvpn-testimonials></xvpn-testimonials>
-<xvpn-companies></xvpn-companies>
+<!-- Statistics Start -->
+<section class="statistics">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8">
+        <div class="popular-rates">
+          <h4 class="line-after"><span>popular rates</span></h4>
+          <div class="row align-items-center mt-4">
+            <div class="col-6 col-sm-3 col-md-6 col-lg-3 content-box mt-lg-0 mt-2" *ngFor="let rate of popularRates">
+              <div class="icon">
+                <img alt="{{rate.name}}" src="assets/images/statistics/{{rate.img}}.png" />
+              </div>
+              <span class="text-capitalize fs-18 fs-sm-14 fs-md-18 fw-bold">{{rate.name}}</span>
+              <span class="text-primary text-uppercase fw-bold">{{rate.ip}}</span>
+            </div>
+          </div>
+        </div>
+        <div class="service-statistics">
+          <h4 class="line-after">general service statistics</h4>
+          <div class="row align-items-center mt-4">
+            <div class="col-6 col-sm-3 col-md-6 col-lg-3 mt-sm-0 mt-md-3 mt-lg-0 mt-3 content-box"
+              *ngFor="let statistic of generalStatistics">
+              <h1 class="icon fs-40 fs-sm-37 fs-md-40">{{statistic.generalStatisticNumber}}<sub
+                  *ngIf="statistic.generalStatisticIsK">k</sub></h1>
+              <span class="stat-desc fs-18 fs-sm-14 fs-md-18">{{statistic.generalStatisticName}}</span>
+              <hr />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="blog">
+          <h4 class="line-after"><span>news</span></h4>
+          <div class="row gap-7 mt-3">
+            <div class="col-md-12 gap-1 d-flex flex-column" *ngFor="let blog of blogs">
+              <div class="d-flex gap-1">
+                <div class="d-flex flex-nowrap gap fw-bold">
+                  <h2>{{blog.blogDateDay}}</h2>
+                  <div class="d-flex flex-column align-items-start">
+                    <span>{{blog.blogDateMonth}}</span>
+                    <span>{{blog.blogDateYear}}</span>
+                  </div>
+                </div>
+                <div class="title">
+                  <p>{{blog.blogName}}</p>
+                </div>
+              </div>
+              <hr />
+              <p>{{blog.blogDescription}}</p>
+              <div class="d-flex gap-10 align-items-center justify-content-left fs-12">
+                <div class="interaction">
+                  <fa-icon [icon]="faShare"></fa-icon>
+                  <span>
+                    {{blog.blogShares}}
+                  </span>
+                </div>
+                <div class="interaction">
+                  <fa-icon class [icon]="faEye"></fa-icon>
+                  <span>
+                    {{blog.blogViwers}}
+                  </span>
+                </div>
+                <div class="interaction">
+                  <fa-icon class [icon]="faComment"></fa-icon>
+                  <span>
+                    {{blog.blogCommentNumber}}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Statistics Start -->
+
+<!-- Services End -->
+<section class="proxy-service">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="line-after">
+          proxy services for professionals
+        </h4>
+        <div class="row py-2">
+          <div class="col-lg-6 my-3" *ngFor="let list of proxyLists">
+            <!-- Start Pricing Card -->
+            <xvpn-pricing-card [inputList]="list" [isPricingCard]="false"></xvpn-pricing-card>
+            <!-- END Pricing Card -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Services End -->
+
+<!-- Blog Start -->
+<section class="blog pb-5">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h4 class="line-after">
+          blog
+        </h4>
+      </div>
+      <div class="col-lg-4 gap-1 d-flex flex-column mt-5" *ngFor="let blog of blogs">
+        <div class="d-flex gap-1">
+          <div class="d-flex flex-nowrap gap fw-bold">
+            <h2>{{blog.blogDateDay}}</h2>
+            <div class="d-flex flex-column align-items-start">
+              <span>{{blog.blogDateMonth}}</span>
+              <span>{{blog.blogDateYear}}</span>
+            </div>
+          </div>
+          <div class="title">
+            <p>{{blog.blogName}}</p>
+          </div>
+        </div>
+        <hr />
+        <p>{{blog.blogDescription}}</p>
+        <div class="d-flex gap-10 align-items-center justify-content-left fs-12">
+          <div class="interaction">
+            <fa-icon [icon]="faShare"></fa-icon>
+            <span>
+              {{blog.blogShares}}
+            </span>
+          </div>
+          <div class="interaction">
+            <fa-icon class [icon]="faEye"></fa-icon>
+            <span>
+              {{blog.blogViwers}}
+            </span>
+          </div>
+          <div class="interaction">
+            <fa-icon class [icon]="faComment"></fa-icon>
+            <span>
+              {{blog.blogCommentNumber}}
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Blog End -->
+
+<!-- Testimonials Start -->
+<section id="testimonials" class="testimonials">
+  <div class="container">
+    <div class="row text-center text-white">
+      <h4 class="line-before line-after"><span>the feedback from our clients about our proxies</span></h4>
+    </div>
+    <!-- START THE CAROUSEL CONTENT  -->
+    <div class="row align-items-center">
+      <div class="reviews">
+        <owl-carousel-o [options]="customOptions">
+          <ng-container *ngFor="let client of clientsData">
+            <ng-template class="review" carouselSlide [id]="client.id.toString()">
+              <!-- client name & client picture  -->
+              <div class="testimonials-picture">
+                <span class="client-name fw-bold">{{client.firstName + ' ' + client.lastName}}</span>
+                <span class="client-img">
+                  <img src="assets/images/testimonials/{{client.img}}.jpg"
+                    [title]="client.firstName + ' ' + client.lastName" alt="client-{{client.id}} picture"
+                    class="rounded-circle img-fluid"></span>
+                <span class="client-date">{{client.commentDate}}</span>
+              </div>
+              <!-- testimonials card  -->
+              <div class="testimonials-card">
+                <p class="lh-lg">{{client.comment}}</p>
+              </div>
+              <div class="icon-container">
+                <fa-icon class="font-icon" [icon]="faLink"></fa-icon>
+              </div>
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Testimonials End -->
+
+<!-- Companies Start -->
+<section class="companies pt-5">
+  <div class="container">
+    <ul class="row">
+      <li class="col-4 col-lg d-flex justify-content-center mt-3">
+        <span class="icon-lg">
+          <img src="assets/images/Companies/Companies-1.png" alt="Companies-1">
+        </span>
+      </li>
+      <li class="col-4 col-lg d-flex justify-content-center mt-3">
+        <span class="icon-lg">
+          <img src="assets/images/Companies/Companies-2.png" alt="Companies-2">
+        </span>
+      </li>
+      <li class="col-4 col-lg d-flex justify-content-center mt-3">
+        <span class="icon-lg">
+          <img src="assets/images/Companies/Companies-3.png" alt="Companies-3">
+        </span>
+      </li>
+      <li class="col-4 col-lg d-flex justify-content-center mt-3">
+        <span class="icon-lg">
+          <img src="assets/images/Companies/Companies-4.png" alt="Companies-4">
+        </span>
+      </li>
+      <li class="col-4 col-lg d-flex justify-content-center mt-3">
+        <span class="icon-lg">
+          <img src="assets/images/Companies/Companies-5.png" alt="Companies-5">
+        </span>
+      </li>
+      <li class="col-4 col-lg d-flex justify-content-center mt-3">
+        <span class="icon-lg">
+          <img src="assets/images/Companies/Companies-6.png" alt="Companies-6">
+        </span>
+      </li>
+    </ul>
+  </div>
+</section>
+<!-- Companies End -->

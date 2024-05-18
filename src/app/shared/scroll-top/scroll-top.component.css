@@ -2,10 +2,8 @@
   width: 45px;
   height: 45px;
   line-height: 45px;
-  background: #61DB81;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: none;
+  background-color: var(--primary);
+  top: -50%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -30,5 +28,5 @@
   box-shadow: 0 1rem 3rem rgba(35, 38, 45, 0.15) !important;
   -webkit-transform: translate3d(0, -5px, 0);
   transform: translate3d(0, -5px, 0);
-  background-color: #54bb70;
+  background-color: var(--hov-primary);
 }

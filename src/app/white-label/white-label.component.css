@@ -44,7 +44,7 @@
 }
 
 .scheme {
-  background-color: #1f2b3a;
+  background-color: var(--light-secondary);
 }
 
 .scheme .container {
