@@ -1,6 +1,7 @@
 .contact-us {
   background-color: var(--light);
   position: relative;
+  margin-bottom: 3rem;
 }
 
 .contact-us .container {
@@ -91,4 +92,10 @@ table a.btn {
   padding: 0.6rem 1rem;
   font-size: 1.2rem;
   border-radius: 0.5rem;
+}
+
+@media (max-width: 991px) {
+  .contact-us {
+    margin-bottom: 6rem;
+  }
 }
