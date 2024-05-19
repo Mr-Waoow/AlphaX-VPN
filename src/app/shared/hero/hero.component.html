@@ -80,27 +80,6 @@
         </div>
       </div>
     </div>
-    <div *ngIf="routerLinkActive === 'VPN-Service'" class="row">
-      <div class="col-lg-6">
-        <div class="slider-content mt-3 mt-md-0">
-          <h5>
-            <span *ngIf="showText" class="fade-in">Alpha-x Project</span>
-          </h5>
-          <h2 class="mb-3"><span *ngIf="showText1" class="fade-in">Reliable VPN Service by Alpha-x</span></h2>
-          <ul class="list-disc list">
-            <li *ngIf="showText2" class="fade-in">Total security of the data</li>
-            <li *ngIf="showText3" class="fade-in">Unlimited bandwidth</li>
-            <li *ngIf="showText4" class="fade-in">Support service 24/7</li>
-            <li *ngIf="showText5" class="fade-in">Apps for every major platform</li>
-          </ul>
-        </div>
-      </div>
-      <div class="col-lg-6 d-md-block d-none d-flex align-items-center">
-        <div class="img-container">
-          <img src="assets/images/vpn/Map picks.png" alt="shared">
-        </div>
-      </div>
-    </div>
     <div *ngIf="routerLinkActive === 'Personal-Proxy'" class="row personal-silder align-items-center">
       <div class="col-lg-6 mt-5">
         <div class="slider-content mt-3 mt-md-0 text-start h-240px justify-content-center">
@@ -184,10 +163,31 @@
             </li>
           </ul>
         </div>
-        <a href="#" class="btn btn-outline-light-primary py-3 px-5 fw-bold rounded-1 mt-5">Try it now</a>
+        <a href="#" class="btn btn-outline-primary py-3 px-5 fw-bold rounded-1 mt-5">Try it now</a>
       </div>
       <div class="col-lg-6 position-relative d-lg-block d-none mt-5">
         <xvpn-hero-img-providers></xvpn-hero-img-providers>
+      </div>
+    </div>
+    <div *ngIf="routerLinkActive === 'VPN-Service'" class="row">
+      <div class="col-lg-6">
+        <div class="slider-content mt-3 mt-md-0">
+          <h5>
+            <span *ngIf="showText" class="fade-in">Alpha-x Project</span>
+          </h5>
+          <h3 *ngIf="showText1" class="mb-3 fade-in h-auto">Reliable VPN Service by Alpha-x</h3>
+          <ul class="list-disc list">
+            <li *ngIf="showText2" class="fade-in">Total security of the data</li>
+            <li *ngIf="showText3" class="fade-in">Unlimited bandwidth</li>
+            <li *ngIf="showText4" class="fade-in">Support service 24/7</li>
+            <li *ngIf="showText5" class="fade-in">Apps for every major platform</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-6 d-md-block d-none d-flex align-items-center">
+        <div class="img-container">
+          <img src="assets/images/vpn/Map picks.png" alt="shared">
+        </div>
       </div>
     </div>
   </div>

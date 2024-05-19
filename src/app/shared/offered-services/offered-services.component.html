@@ -1,8 +1,8 @@
 <div class="offered-services">
   <div class="container">
     <div class="d-flex gap-3 align-items-center justify-content-center">
-      <a *ngFor="let offeredService of offeredServices | getPropertyAndAssign: this: 'link': 'assignedLink'"
-        class="d-flex gap align-items-center justify-content-center" [routerLink]="[assignedLink]" routerLinkActive="router-link-active">
+      <a *ngFor="let i = index; let offeredService of offeredServices | getPropertyAndAssign: this: 'link': 'assignedLinks'"
+        class="d-flex gap align-items-center justify-content-center" [routerLink]="[assignedLinks[i]]" routerLinkActive="router-link-active">
         <div class="icon m-0">
           <img [title]="offeredService.name" alt="{{offeredService.name}}"
             src="assets/images/Offered-Services/{{offeredService.img}}.png" />

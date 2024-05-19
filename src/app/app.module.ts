@@ -42,6 +42,10 @@ import { SelectOptionComponent } from './shared/select-option/select-option.comp
 import { SharedProxyComponent } from './shared-proxy/shared-proxy.component';
 import { MobileProxyComponent } from './mobile-proxy/mobile-proxy.component';
 import { SiderImgProvidersComponent } from './shared/hero/hero-img-providers/hero-img-providers.component';
+import { ResidentialProxyComponent } from './residential-proxy/residential-proxy.component';
+import { ExclusivePlusComponent } from './exclusive-plus/exclusive-plus.component';
+import { ServerProxiesComponent } from './server-proxies/server-proxies.component';
+import { NewsComponent } from './news/news.component';
 
 @NgModule({
   declarations: [
@@ -70,6 +74,10 @@ import { SiderImgProvidersComponent } from './shared/hero/hero-img-providers/her
     SharedProxyComponent,
     MobileProxyComponent,
     SiderImgProvidersComponent,
+    ResidentialProxyComponent,
+    ExclusivePlusComponent,
+    ServerProxiesComponent,
+    NewsComponent,
   ],
   imports: [
     BrowserModule,
