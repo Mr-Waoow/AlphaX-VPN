@@ -7,12 +7,12 @@ viewBox="0 0 1075.39 305.49"
  <defs>
   <style type="text/css">
    <![CDATA[
-    .str0 {stroke:#6CEF85;stroke-width:4.34;stroke-miterlimit:22.9256}
+    .str0 {stroke:#ff0000;stroke-width:4.34;stroke-miterlimit:22.9256}
     .fil19 {fill:#151921}
     .fil1 {fill:#72778B}
     .fil6 {fill:#72778B}
     .fil5 {fill:#008EE6;fill-rule:nonzero}
-    .fil2 {fill:#6CEF85;fill-rule:nonzero}
+    .fil2 {fill:#ff0000;fill-rule:nonzero}
     .fil0 {fill:#72778B;fill-rule:nonzero}
     .fil18 {fill:#7495BB;fill-rule:nonzero}
     .fil12 {fill:#72778B;fill-opacity:0.188235}
@@ -20,7 +20,7 @@ viewBox="0 0 1075.39 305.49"
     .fil20 {fill:#72778B;fill-opacity:0.250980}
     .fil9 {fill:#72778B;fill-opacity:0.258824}
     .fil3 {fill:#7495BB;fill-opacity:0.258824}
-    .fil4 {fill:#6CEF85;fill-opacity:0.400000}
+    .fil4 {fill:#ff0000;fill-opacity:0.400000}
     .fil13 {fill:#72778B;fill-opacity:0.400000}
     .fil16 {fill:#72778B;fill-opacity:0.419608}
     .fil10 {fill:#72778B;fill-opacity:0.450980}
