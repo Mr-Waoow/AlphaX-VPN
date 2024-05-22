@@ -1,10 +1,9 @@
-.buy-service,
-.buy-service .tablinks {
+.tablinks {
   background-color: var(--tertiary);
   padding-top: 0;
 }
 .buy-bill-item-count input,
-.buy-bill-item-period-button span {
+.buy-bill-item-radio-button span {
   font-size: 13px;
   height: 36px;
   font-weight: 600;
@@ -16,16 +15,16 @@
   -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
-.buy-service .head {
+.head {
   background-color: #cfe3f1;
   color: var(--secondary);
 }
-.buy-service .tab {
+.tab {
   overflow: hidden;
   display: flex;
   gap: 0.5rem;
 }
-.buy-service .tablinks {
+.tablinks {
   display: inline-flex;
   align-items: center;
   gap: 1rem;
@@ -40,15 +39,15 @@
   color: var(--secondary);
   opacity: 0.5;
 }
-.buy-service .tablinks.active {
+.tablinks.active {
   background-color: var(--hardest-tertiary);
   opacity: 1;
 }
-.buy-service .content-box h4,
-.buy-service h1 {
+.content-box h4,
+h1 {
   color: var(--secondary);
 }
-.buy-service .title {
+.title {
   background-color: var(--white);
   padding: 1rem;
 }
@@ -74,10 +73,10 @@
   margin-left: 1rem;
 }
 .buy-country-city.selected {
-  color: var(--white);
-  background-color: var(--hard-tertiary);
-  -webkit-box-shadow: 0 4px 8px var(--shadow-tertiary);
-  box-shadow: 0 4px 8px var(--shadow-tertiary);
+  color: var(--tertiary);
+  background-color: var(--hard-quaternary);
+  -webkit-box-shadow: 0 4px 8px var(--shadow-quaternary);
+  box-shadow: 0 4px 8px var(--shadow-quaternary);
 }
 .buy-bill,
 .buy-bill-private {
@@ -92,8 +91,8 @@
 .buy-bill-item-label {
   font-size: 14px;
   font-weight: 400;
-  margin-right: 15px;
-  color: var(--hard-tertiary);
+  color: var(--hard-quaternary);
+  opacity: 0.9;
 }
 label {
   font-weight: 700;
@@ -101,8 +100,7 @@ label {
   max-width: 100%;
   margin-bottom: 5px;
 }
-.buy-bill-item-period-button {
-  margin: 0 15px 0 0;
+.buy-bill-item-radio-button {
   cursor: pointer;
 }
 input[type="checkbox"],
@@ -113,31 +111,38 @@ input[type="radio"] {
   box-sizing: border-box;
   padding: 0;
 }
-.buy-bill-item-period-button input,
+.buy-bill-item-radio-button input,
 .buy-bill-item.template {
   display: none;
 }
-.buy-bill-item-period-button span {
+.buy-bill-item-radio-button span {
   line-height: 18px;
-  display: inline-block;
+  display: flex;
+  text-transform: capitalize;
+  align-items: center;
+  justify-content: center;
   width: 85px;
-  padding: 8px 0;
+  padding: 0.5rem;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
   text-align: center;
   border: 1px solid var(--notification);
-  border-radius: 3px;
+  border-radius: 5px;
 }
-.buy-bill-item-period-button input:checked + span {
+.buy-bill-item-radio-button input:checked + span {
   color: var(--white);
   background-color: var(--hard-quaternary);
   -webkit-box-shadow: 0 4px 8px var(--shadow-quaternary);
   box-shadow: 0 4px 8px var(--shadow-quaternary);
 }
+.buy-bill-item-radio-button input:checked + span img {
+  -webkit-filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
+}
 .buy-bill-item-count,
 .buy-bill-item-name,
-.buy-bill-item-period,
+.buy-bill-item-radio,
 .buy-bill-total {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -145,6 +150,7 @@ input[type="radio"] {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  gap: 0.5rem;
 }
 .buy-bill-item-count-container {
   position: relative;
@@ -312,16 +318,186 @@ input[type="radio"] {
   width: 100px;
   padding-right: 5px;
 }
-.buy-service .title h4 {
+.title h4 {
   margin: 0;
 }
-.buy-service .search .textfield {
-  color: var(--secondary);
-  background-color: var(--white);
+.search-container .form-control.search {
   padding: 0.5rem 1rem;
   font-weight: 600;
-  border: 0.1rem solid var(--soft-secondary);
-  border-radius: 0.2rem;
+  font-size: 16px;
+  border-radius: 4px;
   width: 100%;
   height: 100%;
+}
+.search-container .form-control.search:focus {
+  border-color: var(--hard-quaternary);
+  -webkit-box-shadow: 0 0 3px 0rem var(--hov-quaternary);
+  box-shadow: 0 0 3px 0rem var(--hov-quaternary);
+}
+
+/* Mobile */
+.cards-container {
+  display: grid;
+  grid-template-columns: repeat(3, 33.333333%);
+  grid-gap: 1rem 1.5rem;
+}
+.mobile-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: var(--tertiary);
+  padding: 1rem;
+  border: 1px solid var(--hard-tertiary);
+  height: 8rem;
+  -o-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+.mobile-card::after {
+  position: absolute;
+  right: -18px;
+  bottom: -21px;
+  width: 40px;
+  height: 44px;
+  content: "";
+  -webkit-transform: rotate(46deg);
+  -ms-transform: rotate(46deg);
+  transform: rotate(46deg);
+  border-left: 1px solid #ccdeeb;
+  background-color: #fff;
+}
+
+.mobile-card span.label {
+  display: block;
+  font-size: 14px;
+  text-transform: capitalize;
+  margin-top: 5px;
+  font-weight: 700;
+  color: var(--hard-quaternary);
+}
+
+.mobile-card .card-header {
+  position: absolute;
+  top: 2.7rem;
+  left: 1rem;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  width: 100%;
+  -o-transition: all 0.4s ease-out;
+  -webkit-transition: all 0.4s ease-out;
+  -moz-transition: all 0.4s ease-out;
+  -ms-transition: all 0.4s ease-out;
+  transition: all 0.4s ease-out;
+}
+
+.mobile-card.active .card-header {
+  position: static;
+}
+
+.mobile-card .card-content {
+  display: flex;
+  border-top: 1px solid var(--light-quaternary);
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 1rem;
+  margin-top: 1rem;
+  overflow: hidden;
+  visibility: hidden;
+}
+
+.mobile-card.active .card-content {
+  visibility: visible;
+}
+
+.card-radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.custom-radio {
+  position: relative;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 22px;
+  color: var(--secondary);
+}
+
+.custom-radio:before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: "";
+  border: 1px solid var(--light-quaternary);
+  border-radius: 50%;
+  background: #fff;
+  -webkit-box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.05);
+}
+
+.custom-radio:after {
+  position: absolute;
+  opacity: 0;
+  top: 25%;
+  left: 25%;
+  width: 50%;
+  height: 50%;
+  content: "";
+  border-radius: 50%;
+  background: -webkit-linear-gradient(
+    338.65deg,
+    var(--primary) 22.94%,
+    var(--hard-primary) 60.23%
+  );
+  background: -o-linear-gradient(
+    338.65deg,
+    var(--primary) 22.94%,
+    var(--hard-primary) 60.23%
+  );
+  background: linear-gradient(
+    338.65deg,
+    var(--primary) 22.94%,
+    var(--hard-primary) 60.23%
+  );
+  -o-transition: all 0.3s ease-out;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.custom-radio.checked:after {
+  opacity: 1;
+}
+
+.real-radio {
+  margin: 0 !important;
+  visibility: hidden;
+  position: absolute;
+  top: 25%;
+  left: 25%;
+}
+
+.card-radio label {
+  margin: 0;
+}
+
+.card-content .buy-bill-total {
+  flex-direction: column;
+  align-items: start;
 }

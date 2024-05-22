@@ -1,0 +1,19 @@
+p {
+  font-size: 16px;
+}
+.features-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+  padding: 2rem;
+  background-color: var(--tertiary);
+  border: 1px solid var(--hard-tertiary);
+  border-radius: 5px;
+  font-size: 22px;
+  color: var(--hardest-quaternary);
+  font-weight: 700;
+}
+.buy-mobile {
+  padding-top: 0;
+}

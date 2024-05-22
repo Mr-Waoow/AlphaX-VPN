@@ -9,7 +9,9 @@
     </div>
   </div>
 </section>
-<xvpn-buy-service></xvpn-buy-service>
+<section class="buy-personal">
+  <xvpn-buy-service [isMobile]="notMobile" [title]="title"></xvpn-buy-service>
+</section>
 <section class="individual_request">
   <div class="container">
     <div class="row my-4">
@@ -34,7 +36,7 @@
         <div class="content-box flex-column flex-md-row align-items-start align-items-md-center">
           <div class="form_group w-100 w-md-auto flex-basis-auto flex-basis-md-18rem">
             <select-option [isCountries]="true" [inputList]="countries"
-              imgPath="assets/images/personal_proxy/buy personal proxy/private/"></select-option>
+              imgPath="assets/lib/flag_icons_main/flags/4x3/"></select-option>
           </div>
           <div class="form_group w-100 w-md-auto flex-basis-auto flex-basis-md-18rem">
             <input type="number" name="number" value="1" min="1" class="form_control --qty">

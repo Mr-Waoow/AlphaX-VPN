@@ -1,3 +1,39 @@
 <xvpn-preloader></xvpn-preloader>
 <xvpn-offered-services></xvpn-offered-services>
-<p>mobile-proxy works!</p>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <img src="assets/images/mobile_proxy/unlimited/cloud.svg" alt="logo" class="img-fluid">
+      </div>
+      <div class="col-10 d-flex flex-column gap-3">
+        <h4>
+          Unlimited mobile proxies
+        </h4>
+        <p>
+          Even though there are millions of mobile broadband users, MNO's IP addresses range is very limited. That’s why
+          tracking
+          and blocking systems cautiously verify mobile IP addresses because a recklessly blocked address can lead to
+          blocking of
+          a thousand users.
+        </p>
+        <p class="fw-600">
+          Alpha-X presents its new private and unlimited 3G/4G proxies with rotating IP address for every 5, 10 and 30
+          minutes.
+        </p>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let feature of unlimitedFeatures" class="col-lg-3 col-6">
+        <div class="features-box">
+          <span>
+            {{ feature }}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="buy-mobile">
+  <xvpn-buy-service [isMobile]="isMobile" [title]="title"></xvpn-buy-service>
+</section>

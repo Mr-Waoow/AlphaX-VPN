@@ -10,6 +10,10 @@
   display: flex;
   margin: 2rem 0;
 }
+.buy-personal {
+  background-color: var(--tertiary);
+  padding-top: 0;
+}
 .individual_request {
   background-color: var(--secondary);
   text-align: center;

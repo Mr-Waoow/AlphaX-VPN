@@ -8,6 +8,7 @@ export class Methods {
   openable = {
     r180: 'r-180',
     r90: 'r-90',
+    active: 'active',
     renderer: this.renderer2,
     pxToRem(px: number): string {
       const remNum = (px * 0.0625).toString();
@@ -25,8 +26,10 @@ export class Methods {
           window.getComputedStyle(el, null).getPropertyValue('height')
         );
         const baseHeightRem = parseFloat(this.pxToRem(baseHeight));
-        this.renderer?.setStyle(el, 'height', 'auto');
-        const elHeight = el.scrollHeight;
+        el.style.height = 'auto';
+        const elHeight = parseFloat(
+          window.getComputedStyle(el, null).getPropertyValue('height')
+        );
         const paddingTop = parseFloat(
           window.getComputedStyle(el, null).getPropertyValue('padding-top')
         );
@@ -54,9 +57,9 @@ export class Methods {
           marginTop +
           marginBottom;
         const fullHeightToRem = parseFloat(this.pxToRem(fullHeight));
-        el.dataset['height'] = `${fullHeightToRem}rem`;
-        el.dataset['baseHeight'] = `${baseHeightRem}rem`;
-        this.renderer?.setStyle(el, 'height', `${baseHeightRem}rem`);
+        el.dataset['height'] = fullHeightToRem + 'rem';
+        el.dataset['baseHeight'] = baseHeightRem + 'rem';
+        el.style.height = baseHeightRem + 'rem';
       }
       return el;
     },
@@ -109,6 +112,22 @@ export class Methods {
         btnIcon.classList.remove(this.r180);
         btnContent.innerHTML = 'Show all';
         let div2 = this.getDivElement(evt, elementId);
+        div2.style.height = div2.dataset['baseHeight'] ?? '';
+      }
+    },
+    openMobileTarget(evt: Event): void {
+      const currentTarget = evt.currentTarget as HTMLElement;
+      const element = currentTarget.parentNode as HTMLElement;
+      const active = this.active;
+      if (!element.classList.contains(active)) {
+        element.classList.add(active);
+        let div1 = this.getDivElement(evt);
+        setTimeout(() => {
+          div1.style.height = div1.dataset['height'] ?? '';
+        }, 20);
+      } else {
+        element.classList.remove(active);
+        let div2 = this.getDivElement(evt);
         div2.style.height = div2.dataset['baseHeight'] ?? '';
       }
     },

@@ -30,6 +30,8 @@ export class BuyServiceComponent implements OnInit {
   citiesBtnElementRef!: QueryList<ElementRef>;
 
   //InputElement
+  @ViewChild('radioDay')
+  radioDayInputElement!: ElementRef<HTMLInputElement>;
   @ViewChild('radioWeek')
   radioWeekInputElement!: ElementRef<HTMLInputElement>;
   @ViewChild('radioMonth')
@@ -37,10 +39,15 @@ export class BuyServiceComponent implements OnInit {
   @ViewChild('radioHalfyear')
   radioHalfyearInputElement!: ElementRef<HTMLInputElement>;
   @ViewChild('radioYear') radioYearInputElement!: ElementRef<HTMLInputElement>;
+  @ViewChild('operatorsRadio')
+  operatorsRadioInputElement!: QueryList<HTMLInputElement>;
+  @ViewChild('citiesBtn')
+  citiesBtnInputElement!: QueryList<HTMLInputElement>;
   @ViewChild('countInput')
   countInputElement!: ElementRef<HTMLInputElement>;
 
-  @Input() compName: string = 'Buy Personal Proxy';
+  @Input() title: string | undefined;
+  @Input() isMobile: boolean | undefined;
   //Icons
   faUser = faUser;
   faUserGroup = faUserGroup;
@@ -50,15 +57,24 @@ export class BuyServiceComponent implements OnInit {
   isPeriodSelected = false;
   isCountButtonChanged = false;
   isPrivate = true;
+  mobileIsShow = false;
   //Numbers
   cityNo = -1;
   totalCost = 0;
   costPerDay = 0;
   privateCountriesNumber = 0;
   sharedCountriesNumber = 0;
+  array1length = 0;
+  array2length = 0;
+  array3length = 0;
+  //Strings
   periodValue = 'month';
   //Objects
+  assignedOperator: string[] = [];
   private countriesProxy: CountryProxy[] = [];
+  private countriesProxy1: CountryProxy[] = [];
+  private countriesProxy2: CountryProxy[] = [];
+  private countriesProxy3: CountryProxy[] = [];
   private _filteredCountriesProxy: CountryProxy[] = [];
   get filteredCountriesProxy(): CountryProxy[] {
     return this._filteredCountriesProxy;
@@ -90,7 +106,7 @@ export class BuyServiceComponent implements OnInit {
       if (this.isPrivate) {
         if (this.isCitySelected && this.isPeriodSelected) {
           this._countInputValue = value;
-          this.calculateTotalCost(this.periodValue, this.isPrivate);
+          this.calculateTotalCost(this.periodValue, 'private');
         } else {
           this._countInputValue = parseInt(
             this.countInputElement.nativeElement.min
@@ -99,7 +115,7 @@ export class BuyServiceComponent implements OnInit {
       } else {
         if (this.isPeriodSelected) {
           this._countInputValue = value;
-          this.calculateTotalCost(this.periodValue, this.isPrivate);
+          this.calculateTotalCost(this.periodValue, 'shared');
         } else {
           this._countInputValue = parseInt(
             this.countInputElement.nativeElement.min
@@ -130,6 +146,21 @@ export class BuyServiceComponent implements OnInit {
   ngOnInit(): void {
     this.countriesProxy = this.dataService.getCountriesProxy();
     this.filteredCountriesProxy = this.countriesProxy;
+    this.array1length = this.filteredCountriesProxy.length / 3;
+    this.array2length = 2 * this.array1length;
+    this.array3length = this.filteredCountriesProxy.length;
+    this.countriesProxy1 = this.filteredCountriesProxy.splice(
+      0,
+      this.array1length
+    );
+    this.countriesProxy2 = this.filteredCountriesProxy.splice(
+      this.array1length + 1,
+      this.array2length
+    );
+    this.countriesProxy2 = this.filteredCountriesProxy.splice(
+      this.array2length + 1,
+      this.array3length
+    );
     this.countryProxy = this.filteredCountriesProxy[0];
     this.privateCountriesNumber = this.countriesProxy.filter(
       (country) => country.isPrivate
@@ -137,6 +168,12 @@ export class BuyServiceComponent implements OnInit {
     this.sharedCountriesNumber = this.countriesProxy.filter(
       (country) => country.isShared
     ).length;
+    if (this.isMobile) {
+    } else {
+      setTimeout(() => {
+        this.countriesBtnElementRef.toArray()[0].nativeElement.click();
+      }, 50);
+    }
   }
   ngOnChanges(): void {}
 
@@ -156,6 +193,9 @@ export class BuyServiceComponent implements OnInit {
     );
     this.isPrivate = true;
     this.resetValues(this.isPrivate);
+    setTimeout(() => {
+      this.countriesBtnElementRef.toArray()[0].nativeElement.click();
+    }, 50);
   }
   showShared(evt: Event): void {
     this.methods.showHide.showShared(
@@ -170,13 +210,21 @@ export class BuyServiceComponent implements OnInit {
       'selected'
     );
     this.isPrivate = false;
-    this.resetValues(this.isPrivate);
+    setTimeout(() => {
+      this.countriesBtnElementRef.toArray()[0].nativeElement.click();
+    }, 50);
   }
   //Selected
   selectedCountry(evt: Event, i: number): void {
     this.methods.selected.selectedBtn(evt, this.countriesBtnElementRef);
     this.methods.selected.removeClass(this.citiesBtnElementRef, 0, 'selected');
     this.resetValues(this.isPrivate);
+    if (this.isPrivate) {
+      this.radioMonthInputElement.nativeElement.checked = true;
+      this.citiesBtnElementRef.toArray()[0].nativeElement.click();
+    } else {
+      this.radioWeekInputElement.nativeElement.checked = true;
+    }
     this.countryProxy = this.filteredCountriesProxy[i];
   }
   selectedCity(evt: Event, i: number): void {
@@ -184,57 +232,88 @@ export class BuyServiceComponent implements OnInit {
     this.cityNo = i;
     this.methods.selected.selectedBtn(evt, this.citiesBtnElementRef);
   }
-  selectedPeriod(evt: Event): void {
+  selectedPeriod(evt: Event, billType: string): void {
     this.isPeriodSelected = true;
     const element = evt.currentTarget as HTMLInputElement;
     this.periodValue = element.value;
-    this.calculateTotalCost(this.periodValue, this.isPrivate);
+    this.calculateTotalCost(this.periodValue, billType);
   }
   //Calculate Total Cost
-  calculateTotalCost(periodValue: string, isPrivate: boolean): void {
-    if (isPrivate) {
-      switch (periodValue) {
-        case 'month':
-          this.totalCost =
-            (this.countryProxy?.pricePrivate[0] ?? 0) * this.countInputValue;
-          this.costPerDay = this.totalCost / 30;
-          break;
-        case 'halfyear':
-          this.totalCost =
-            (this.countryProxy?.pricePrivate[1] ?? 0) * this.countInputValue;
-          this.costPerDay = this.totalCost / 180;
-          break;
-        case 'year':
-          this.totalCost =
-            (this.countryProxy?.pricePrivate[2] ?? 0) * this.countInputValue;
-          this.costPerDay = this.totalCost / 365;
-          break;
-        default:
-          this.totalCost =
-            (this.countryProxy?.pricePrivate[0] ?? 0) * this.countInputValue;
-          this.costPerDay = this.totalCost / 30;
-      }
-    } else {
-      switch (periodValue) {
-        case 'week':
-          this.totalCost =
-            (this.countryProxy?.priceShared[0] ?? 0) * this.countInputValue;
-          this.costPerDay = this.totalCost / 7;
-          break;
-        case 'month':
-          this.totalCost =
-            (this.countryProxy?.priceShared[1] ?? 0) * this.countInputValue;
-          this.costPerDay = this.totalCost / 30;
-          break;
-        case 'halfyear':
-          this.totalCost =
-            (this.countryProxy?.priceShared[2] ?? 0) * this.countInputValue;
-          this.costPerDay = this.totalCost / 180;
-          break;
-        default:
-          this.totalCost =
-            (this.countryProxy?.priceShared[0] ?? 0) * this.countInputValue;
-          this.costPerDay = this.totalCost / 7;
+  calculateTotalCost(periodValue: string, billType: string): void {
+    billType = billType.toLowerCase();
+    switch (billType) {
+      case 'private':
+        switch (periodValue) {
+          case 'month':
+            this.totalCost =
+              (this.countryProxy?.pricePrivate[0] ?? 0) * this.countInputValue;
+            this.costPerDay = this.totalCost / 30;
+            break;
+          case 'halfyear':
+            this.totalCost =
+              (this.countryProxy?.pricePrivate[1] ?? 0) * this.countInputValue;
+            this.costPerDay = this.totalCost / 180;
+            break;
+          case 'year':
+            this.totalCost =
+              (this.countryProxy?.pricePrivate[2] ?? 0) * this.countInputValue;
+            this.costPerDay = this.totalCost / 365;
+            break;
+          default:
+            this.totalCost =
+              (this.countryProxy?.pricePrivate[0] ?? 0) * this.countInputValue;
+            this.costPerDay = this.totalCost / 30;
+        }
+        break;
+      case 'shared':
+        switch (periodValue) {
+          case 'week':
+            this.totalCost =
+              (this.countryProxy?.priceShared[0] ?? 0) * this.countInputValue;
+            this.costPerDay = this.totalCost / 7;
+            break;
+          case 'month':
+            this.totalCost =
+              (this.countryProxy?.priceShared[1] ?? 0) * this.countInputValue;
+            this.costPerDay = this.totalCost / 30;
+            break;
+          case 'halfyear':
+            this.totalCost =
+              (this.countryProxy?.priceShared[2] ?? 0) * this.countInputValue;
+            this.costPerDay = this.totalCost / 180;
+            break;
+          default:
+            this.totalCost =
+              (this.countryProxy?.priceShared[0] ?? 0) * this.countInputValue;
+            this.costPerDay = this.totalCost / 7;
+        }
+        break;
+      case 'mobile':
+        switch (periodValue) {
+          case 'day':
+            this.totalCost =
+              (this.countryProxy?.priceMobile[0] ?? 0) * this.countInputValue;
+            this.costPerDay = this.totalCost / 1;
+            break;
+          case 'week':
+            this.totalCost =
+              (this.countryProxy?.priceMobile[1] ?? 0) * this.countInputValue;
+            this.costPerDay = this.totalCost / 7;
+            break;
+          case 'month':
+            this.totalCost =
+              (this.countryProxy?.priceMobile[2] ?? 0) * this.countInputValue;
+            this.costPerDay = this.totalCost / 30;
+            break;
+          default:
+            this.totalCost =
+              (this.countryProxy?.priceShared[0] ?? 0) * this.countInputValue;
+            this.costPerDay = this.totalCost / 1;
+        }
+        break;
+      default: {
+        alert('there is no such bill type');
+        break;
       }
     }
   }
@@ -246,6 +325,7 @@ export class BuyServiceComponent implements OnInit {
       this.isPrivate
     );
     this.countryProxy = this.filteredCountriesProxy[0];
+    this.radioDayInputElement.nativeElement.checked = false;
     this.radioWeekInputElement.nativeElement.checked = false;
     this.radioMonthInputElement.nativeElement.checked = false;
     this.radioHalfyearInputElement.nativeElement.checked = false;
@@ -263,5 +343,26 @@ export class BuyServiceComponent implements OnInit {
       this.periodValue = 'week';
       this.costPerDay = this.totalCost / 7;
     }
+  }
+  ridoChange(evt: Event): void {
+    const element = evt.currentTarget as HTMLInputElement;
+    const radios = element.parentElement?.querySelectorAll(
+      '.real-radio'
+    ) as unknown as HTMLInputElement;
+    const customRadios =
+      element.parentElement?.querySelectorAll('.custom-radio');
+    const radio = element.querySelector('.real-radio') as HTMLInputElement;
+    const customRadio = element.querySelector('.custom-radio');
+    customRadios?.forEach((customRadio) => {
+      radios.checked = false;
+      customRadio.classList.remove('checked');
+    });
+    radio.checked = true;
+    customRadio?.classList.add('checked');
+  }
+  openMobileTarge(evt: Event): void {
+    this.methods.openable.openMobileTarget(evt);
+  }
+  calculateSplitedCountries():void {
   }
 }

@@ -14,6 +14,8 @@ import { Feature } from '../shared/interfaces/feature';
   styleUrl: './personal-proxy.component.css',
 })
 export class PersonalProxyComponent implements OnInit {
+  title: string = 'Buy Personal Proxy';
+  notMobile:boolean = false;
   //Icons
   faCaretDown = faCaretDown;
   //Data
@@ -33,9 +35,7 @@ export class PersonalProxyComponent implements OnInit {
   //Methods
   methods = new Methods();
 
-  constructor(
-    private dataService: DataService
-  ) {}
+  constructor(private dataService: DataService) {}
   ngOnInit(): void {
     this.personalPrices = this.dataService.getPersonalPrices();
     this.countries = this.dataService.getCountriesProxy();

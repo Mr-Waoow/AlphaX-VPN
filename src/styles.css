@@ -45,8 +45,9 @@
   --soft-tertiary: #F8FBFF26;
   --shadow-tertiary: #c9c9c9b3;
   --quaternary: #466bc2;
-  --hard-quaternary: #3a4f8c;
   --light-quaternary: #7d9edf;
+  --hard-quaternary: #3a4f8c;
+  --hardest-quaternary: #374264;
   --hov-quaternary: #2e3f6b;
   --soft-quaternary: #466bc226;
   --shadow-quaternary: #466bc2b3;
@@ -97,7 +98,7 @@ body {
   font-family: var(--font-family-Waoow);
   font-weight: normal;
   font-style: normal;
-  color: var(--dark);
+  color: var(--secondary);
   overflow-x: hidden;
   font-size: 15px;
   background-color: var(--white);
@@ -117,7 +118,7 @@ p {
   margin: 0;
   padding: 0;
   font-size: 15px;
-  color: var(--dark);
+  color: var(--secondary);
   font-weight: 400;
 }
 
@@ -135,7 +136,7 @@ select {
   -webkit-writing-mode: horizontal-tb !important;
   writing-mode: horizontal-tb !important;
   text-rendering: auto;
-  color: #151515;
+  color: var(--secondary);
   letter-spacing: normal;
   word-spacing: normal;
   text-transform: none;
@@ -153,7 +154,7 @@ select {
   align-items: center;
   white-space: pre;
   -webkit-rtl-ordering: logical;
-  background-color: -internal-light-dark(white, #3b3b3b);
+  background-color: -internal-light-dark(var(--tertiary), var(--light-secondary));
   cursor: default;
   margin: 0em;
   font: 400 14px;
@@ -192,7 +193,7 @@ h5,
 h6 {
   font-weight: 800;
   margin: 0px;
-  color: var(--dark);
+  color: var(--secondary);
 }
 
 h1 a,
@@ -387,7 +388,7 @@ ol {
   transition: border-color ease-in-out 0.15s, box-shadow ease,
     -webkit-box-shadow ease;
   color: var(--soft-dark);
-  border-radius: 4px;
+  border-radius: 0;
   background-image: none;
   -webkit-box-shadow: inset 1px 1px 5px #00000014;
   box-shadow: inset 1px 1px 5px #00000014;
@@ -397,10 +398,6 @@ ol {
   border-color: var(--primary);
   -webkit-box-shadow: 0 0 3px 0rem var(--primary);
   box-shadow: 0 0 3px 0rem var(--primary);
-}
-
-.form-control {
-  border-radius: 0;
 }
 
 .has-error .form-control {

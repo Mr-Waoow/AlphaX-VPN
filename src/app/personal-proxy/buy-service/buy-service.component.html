@@ -1,9 +1,10 @@
-<section class="buy-service">
+<div class="personal" *ngIf="!isMobile">
   <div class="head">
     <div class="container">
       <div class="row">
-        <div class="col-md-12 my-4 d-flex gap-3 gap-md-0 flex-md-row flex-column align-items-start align-items-md-center justify-content-between">
-          <h1 class="line-after"><span>{{this.compName}}</span></h1>
+        <div
+          class="col-md-12 my-4 d-flex gap-3 gap-md-0 flex-md-row flex-column align-items-start align-items-md-center justify-content-between">
+          <h1 class="line-after"><span>{{this.title}}</span></h1>
           <div>
             <span class="me-2">Available</span>
             <span *ngIf="isPrivate" class="p-2 text-light bg-primary rounded-1">{{privateCountriesNumber}}
@@ -28,16 +29,18 @@
   <div class="pb-5">
     <div class="container">
       <div class="row">
-        <div class="search my-4 p-0">
-          <input class="textfield" type="text" placeholder="Find a country" [(ngModel)]="this.filteredCountriesValue" />
+        <div class="search-container my-4 p-0">
+          <input class="form-control search" type="text" placeholder="Find a country"
+            [(ngModel)]="this.filteredCountriesValue" />
         </div>
       </div>
       <div class="content-box">
         <div *ngIf="this.isPrivate" class="row title box">
-          <div class="col-md-12 pb-2 d-flex gap-3 gap-md-0 flex-md-row flex-column align-items-start align-items-md-center justify-content-between">
+          <div
+            class="col-md-12 pb-2 d-flex gap-3 gap-md-0 flex-md-row flex-column align-items-start align-items-md-center justify-content-between">
             <div class="d-flex align-items-center gap-1 gap-md-3">
               <span class="icon-sm">
-                <img src="assets/images/personal_proxy/buy personal proxy/private/{{this.countryProxy?.icon}}.svg"
+                <img src="assets/lib/flag_icons_main/flags/4x3/{{this.countryProxy?.icon}}.svg"
                   title="{{this.countryProxy?.name}}">
               </span>
               <h4>
@@ -78,25 +81,29 @@
           </div>
           <div class="col-lg-12">
             <div class="buy-bill-private flex-lg-row gap-3 gap-lg-0">
-              <div class="buy-bill-item-period">
+              <div class="buy-bill-item-radio">
                 <div class="buy-bill-item-label">
                   Period:
                 </div>
-                <label data-value="week" class="buy-bill-item-period-button js-period-private d-none">
-                  <input #radioWeek (change)="this.selectedPeriod($event)" data-index="0" type="radio" name="period"
-                    value="week"><span>Week</span>
+                <label data-value="day" class="buy-bill-item-radio-button d-none">
+                  <input #radioDay (change)="this.selectedPeriod($event, 'private')" data-index="0" type="radio"
+                    name="period" value="day"><span>day</span>
                 </label>
-                <label data-value="month" class="buy-bill-item-period-button js-period-private">
-                  <input #radioMonth (change)="this.selectedPeriod($event)" data-index="1" type="radio" name="period"
-                    value="month"><span>Month</span>
+                <label data-value="week" class="buy-bill-item-radio-button d-none">
+                  <input #radioWeek (change)="this.selectedPeriod($event, 'private')" data-index="1" type="radio"
+                    name="period" value="week"><span>Week</span>
                 </label>
-                <label data-value="halfyear" class="buy-bill-item-period-button js-period-private">
-                  <input #radioHalfyear (change)="this.selectedPeriod($event)" data-index="2" type="radio" name="period"
-                    value="halfyear"><span>Halfyear</span>
+                <label data-value="month" class="buy-bill-item-radio-button">
+                  <input #radioMonth (change)="this.selectedPeriod($event, 'private')" data-index="2" type="radio"
+                    name="period" value="month"><span>Month</span>
                 </label>
-                <label data-value="year" class="buy-bill-item-period-button js-period-private">
-                  <input #radioYear (change)="this.selectedPeriod($event)" data-index="3" type="radio" name="period"
-                    value="year"><span>Year</span>
+                <label data-value="halfyear" class="buy-bill-item-radio-button">
+                  <input #radioHalfyear (change)="this.selectedPeriod($event, 'private')" data-index="3" type="radio"
+                    name="period" value="halfyear"><span>Halfyear</span>
+                </label>
+                <label data-value="year" class="buy-bill-item-radio-button">
+                  <input #radioYear (change)="this.selectedPeriod($event, 'private')" data-index="4" type="radio"
+                    name="period" value="year"><span>Year</span>
                 </label>
               </div>
               <div class="buy-bill-item-count">
@@ -141,8 +148,7 @@
               class="buy-countries-list-item {{countryProxy.privateClass}}{{countryProxy.sharedClass}}{{countryProxy.disabledClass}}"
               (click)="this.selectedCountry($event, i)">
               <img class="buy-countries-list-item-flag"
-                src="assets/images/personal_proxy/buy personal proxy/private/{{countryProxy.icon}}.svg"
-                alt="{{countryProxy.name}}">
+                src="assets/lib/flag_icons_main/flags/4x3/{{countryProxy.icon}}.svg" alt="{{countryProxy.name}}">
               <div class="buy-countries-list-item-name">{{countryProxy.name}}</div>
               <div *ngIf="isPrivate" class="buy-countries-list-item-price">from
                 {{countryProxy.pricePrivate[0] | currency: 'USD'}}</div>
@@ -155,7 +161,7 @@
           <div class="col-md-12 pb-2 d-flex align-items-center justify-content-between">
             <div class="d-flex align-items-center gap-3">
               <span class="icon-sm">
-                <img src="assets/images/personal_proxy/buy personal proxy/private/{{this.countryProxy?.icon}}.svg"
+                <img src="assets/lib/flag_icons_main/flags/4x3/{{this.countryProxy?.icon}}.svg"
                   title="{{this.countryProxy?.name}}">
               </span>
               <h4>
@@ -179,25 +185,29 @@
             </div>
           </div>
           <div class="buy-bill flex-lg-row">
-            <div class="buy-bill-item-period">
+            <div class="buy-bill-item-radio">
               <div class="buy-bill-item-label">
                 Period:
               </div>
-              <label data-value="week" class="buy-bill-item-period-button js-period-private">
-                <input #radioWeek (change)="this.selectedPeriod($event)" data-index="0" type="radio" name="period"
-                  value="week"><span>Week</span>
+              <label data-value="day" class="buy-bill-item-radio-button d-none">
+                <input #radioDay (change)="this.selectedPeriod($event, 'Shared')" data-index="0" type="radio"
+                  name="period" value="day"><span>day</span>
               </label>
-              <label data-value="month" class="buy-bill-item-period-button js-period-private">
-                <input #radioMonth (change)="this.selectedPeriod($event)" data-index="1" type="radio" name="period"
-                  value="month"><span>Month</span>
+              <label data-value="week" class="buy-bill-item-radio-button">
+                <input #radioWeek (change)="this.selectedPeriod($event, 'Shared')" data-index="1" type="radio"
+                  name="period" value="week"><span>Week</span>
               </label>
-              <label data-value="halfyear" class="buy-bill-item-period-button js-period-private">
-                <input #radioHalfyear (change)="this.selectedPeriod($event)" data-index="2" type="radio" name="period"
-                  value="halfyear"><span>Halfyear</span>
+              <label data-value="month" class="buy-bill-item-radio-button">
+                <input #radioMonth (change)="this.selectedPeriod($event, 'Shared')" data-index="2" type="radio"
+                  name="period" value="month"><span>Month</span>
               </label>
-              <label data-value="year" class="buy-bill-item-period-button js-period-private d-none">
-                <input #radioYear (change)="this.selectedPeriod($event)" data-index="3" type="radio" name="period"
-                  value="year"><span>Year</span>
+              <label data-value="halfyear" class="buy-bill-item-radio-button">
+                <input #radioHalfyear (change)="this.selectedPeriod($event, 'Shared')" data-index="3" type="radio"
+                  name="period" value="halfyear"><span>Halfyear</span>
+              </label>
+              <label data-value="year" class="buy-bill-item-radio-button d-none">
+                <input #radioYear (change)="this.selectedPeriod($event, 'Shared')" data-index="4" type="radio"
+                  name="period" value="year"><span>Year</span>
               </label>
             </div>
             <div class="buy-bill-item-count">
@@ -239,4 +249,92 @@
       </div>
     </div>
   </div>
-</section>
+</div>
+<div class="mobile" *ngIf="isMobile">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h4>
+          {{title}}
+        </h4>
+      </div>
+      <div class="col-12">
+        <div class="search-container my-4 p-0">
+          <input class="form-control search" type="text" placeholder="Find a country"
+            [(ngModel)]="this.filteredCountriesValue" />
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="cards-container">
+        <div *ngFor="let countryProxy of filteredCountriesProxy; let i = index" class="mobile-card">
+          <div (click)="this.openMobileTarge($event)" class="card-header">
+            <span class="flex-basis-10">
+              <img src="assets/lib/flag_icons_main/flags/4x3/{{this.countryProxy?.icon}}.svg"
+                title="{{this.countryProxy?.name}}">
+            </span>
+            <h3>
+              {{this.countryProxy?.name}}
+            </h3>
+          </div>
+          <div class="card-content">
+            <span class="label"> Cities </span>
+            <div class="d-flex gap-3 flex-wrap align-items-center">
+              <div (click)="this.ridoChange($event)" *ngFor="let i = index, let city of countryProxy?.cities"
+                class="card-radio">
+                <span class="custom-radio">
+                </span>
+                <input #citiesBtn class="real-radio" type="radio" name="{{this.countryProxy?.alpha2Code}}-city-select" [id]="city">
+                <label for="{{city}}">{{city}}</label>
+              </div>
+            </div>
+            <span class="label"> operators </span>
+            <div class="buy-bill-item-radio">
+              <label *ngFor="let i = index;let operator of this.countryProxy?.operators"
+                class="buy-bill-item-radio-button">
+                <input #operatorsRadio type="radio" name="operator" value="{{operator}}">
+                <span>
+                  <img src="assets/images/mobile_proxy/operators/{{countryProxy?.operatorsIcon?.at(i)}}" alt="">
+                </span>
+              </label>
+            </div>
+            <span class="label"> Period </span>
+            <div class="buy-bill-item-radio"><label data-value="day" class="buy-bill-item-radio-button">
+                <input #radioDay (change)="this.selectedPeriod($event, 'mobile')" data-index="0" type="radio"
+                  name="period" value="day"><span>day</span>
+              </label>
+              <label data-value="week" class="buy-bill-item-radio-button">
+                <input #radioWeek (change)="this.selectedPeriod($event, 'mobile')" data-index="1" type="radio"
+                  name="period" value="week"><span>Week</span>
+              </label>
+              <label data-value="month" class="buy-bill-item-radio-button">
+                <input #radioMonth (change)="this.selectedPeriod($event, 'mobile')" data-index="2" type="radio"
+                  name="period" value="month"><span>Month</span>
+              </label>
+              <label data-value="halfyear" class="buy-bill-item-radio-button d-none">
+                <input #radioHalfyear (change)="this.selectedPeriod($event, 'mobile')" data-index="3" type="radio"
+                  name="period" value="halfyear"><span>Halfyear</span>
+              </label>
+              <label data-value="year" class="buy-bill-item-radio-button d-none">
+                <input #radioYear (change)="this.selectedPeriod($event, 'mobile')" data-index="4" type="radio"
+                  name="period" value="year"><span>Year</span>
+              </label>
+            </div>
+            <span class="label"> cost </span>
+            <div class="buy-bill-total">
+              <div class="buy-bill-total-day buy-bill-item-label">
+                <span class="buy-bill-total-day-num">{{this.costPerDay.toFixed(2)}}</span> per day
+              </div>
+              <button class="buy-bill-total-btn">
+                Add for
+                <span #price class="buy-bill-total-price-num">
+                  {{this.totalCost | currency: 'USD'}}
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

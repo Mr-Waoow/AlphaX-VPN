@@ -17,6 +17,10 @@ export interface CountryProxy {
   ipAvailiblePrivateCities: number[];
   priceShared: number[];
   pricePrivate: number[];
+  isMobile: boolean;
+  operators: string[];
+  operatorsIcon: string[];
+  priceMobile: number[];
   priceWithDiscount: number;
   discount: number;
 }
