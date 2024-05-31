@@ -20,6 +20,7 @@ import { Country } from '../interfaces/country';
 import { Platform } from '../interfaces/platform';
 import { SharedPrice } from '../interfaces/shared-price';
 import { ProviderTitle } from '../interfaces/provider-title';
+import { MajorServices } from '../interfaces/major-services';
 
 @Injectable({
   providedIn: 'root',
@@ -6172,6 +6173,50 @@ export class DataService {
         isFlipper: false,
       },
     ];
+  }
+  getMajorServices(): MajorServices[]{
+ return [
+  {
+    id: 1,
+    name: 'facebook',
+    icon: 'fb'
+  },
+  {
+    id: 2,
+    name: 'instagram',
+    icon: 'insta'
+  },
+  {
+    id: 3,
+    name: 'netfilx',
+    icon: 'netfilx'
+  },
+  {
+    id: 4,
+    name: 'amazon',
+    icon: 'amazon'
+  },
+  {
+    id: 5,
+    name: 'ebay',
+    icon: 'ebay'
+  },
+  {
+    id: 6,
+    name: 'google',
+    icon: 'google'
+  },
+  {
+    id: 7,
+    name: 'yandex',
+    icon: 'yandex'
+  },
+  {
+    id: 8,
+    name: 'foot locker',
+    icon: 'footlocker'
+  },
+ ]
   }
   constructor() {}
 }
