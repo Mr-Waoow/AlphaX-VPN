@@ -352,6 +352,7 @@ input[type="radio"] {
   padding: 1rem;
   border: 1px solid var(--hard-tertiary);
   height: 8rem;
+  margin-top: 1rem;
   -o-transition: all 0.4s ease-out;
   -webkit-transition: all 0.4s ease-out;
   -moz-transition: all 0.4s ease-out;

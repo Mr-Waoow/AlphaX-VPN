@@ -46,7 +46,8 @@ export class SelectOptionComponent implements OnInit {
     this.filteredList = this.methods.filter.filterCountriesProxy(
       this.inputList,
       value,
-      true
+      true,
+      false
     );
   }
 

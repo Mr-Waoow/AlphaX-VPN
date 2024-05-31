@@ -248,19 +248,27 @@ export class Methods {
     filterCountriesProxy(
       countriesProxy: CountryProxy[],
       value: string,
-      isPrivate: boolean
+      isPrivate: boolean,
+      isMobile: boolean
     ): CountryProxy[] {
       return countriesProxy.filter((countryProxy) => {
-        if (isPrivate) {
+        if (isMobile){
           return (
             countryProxy.name.toLowerCase().includes(value.toLowerCase()) &&
-            countryProxy.isPrivate
+            countryProxy.isMobile
           );
-        } else {
-          return (
-            countryProxy.name.toLowerCase().includes(value.toLowerCase()) &&
-            countryProxy.isShared
-          );
+        }else{
+          if (isPrivate) {
+            return (
+              countryProxy.name.toLowerCase().includes(value.toLowerCase()) &&
+              countryProxy.isPrivate
+            );
+          } else {
+            return (
+              countryProxy.name.toLowerCase().includes(value.toLowerCase()) &&
+              countryProxy.isShared
+            );
+          }
         }
       });
     },

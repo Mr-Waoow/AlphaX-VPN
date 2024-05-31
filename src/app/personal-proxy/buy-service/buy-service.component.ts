@@ -28,6 +28,8 @@ export class BuyServiceComponent implements OnInit {
   countriesBtnElementRef!: QueryList<ElementRef>;
   @ViewChildren('citiesBtn')
   citiesBtnElementRef!: QueryList<ElementRef>;
+  @ViewChild('citiesRadio')
+  citiesRadioElementRef!: QueryList<ElementRef>;
 
   //InputElement
   @ViewChild('radioDay')
@@ -41,8 +43,6 @@ export class BuyServiceComponent implements OnInit {
   @ViewChild('radioYear') radioYearInputElement!: ElementRef<HTMLInputElement>;
   @ViewChild('operatorsRadio')
   operatorsRadioInputElement!: QueryList<HTMLInputElement>;
-  @ViewChild('citiesBtn')
-  citiesBtnInputElement!: QueryList<HTMLInputElement>;
   @ViewChild('countInput')
   countInputElement!: ElementRef<HTMLInputElement>;
 
@@ -69,12 +69,12 @@ export class BuyServiceComponent implements OnInit {
   array3length = 0;
   //Strings
   periodValue = 'month';
-  //Objects
+  //Arrays
   assignedOperator: string[] = [];
   private countriesProxy: CountryProxy[] = [];
-  private countriesProxy1: CountryProxy[] = [];
-  private countriesProxy2: CountryProxy[] = [];
-  private countriesProxy3: CountryProxy[] = [];
+  countriesProxy1: CountryProxy[] = [];
+  countriesProxy2: CountryProxy[] = [];
+  countriesProxy3: CountryProxy[] = [];
   private _filteredCountriesProxy: CountryProxy[] = [];
   get filteredCountriesProxy(): CountryProxy[] {
     return this._filteredCountriesProxy;
@@ -131,11 +131,33 @@ export class BuyServiceComponent implements OnInit {
   }
   set filteredCountriesValue(value: string) {
     this._filteredCountriesValue = value;
-    this.filteredCountriesProxy = this.methods.filter.filterCountriesProxy(
-      this.countriesProxy,
-      value,
-      this.isPrivate
-    );
+    if (this.isMobile) {
+      this.filteredCountriesProxy = this.methods.filter.filterCountriesProxy(
+        this.countriesProxy,
+        value,
+        this.isPrivate,
+        this.isMobile ?? false
+      );
+      this.countriesProxy1 = this.filteredCountriesProxy.slice(
+        0,
+        Math.floor(this.filteredCountriesProxy.length / 3) + 1
+      );
+      this.countriesProxy2 = this.filteredCountriesProxy.slice(
+        Math.floor(this.filteredCountriesProxy.length / 3) + 1,
+        Math.floor((this.filteredCountriesProxy.length / 3) * 2) + 1
+      );
+      this.countriesProxy3 = this.filteredCountriesProxy.slice(
+        Math.floor((this.filteredCountriesProxy.length / 3) * 2) + 1,
+        this.filteredCountriesProxy.length
+      );
+    } else {
+      this.filteredCountriesProxy = this.methods.filter.filterCountriesProxy(
+        this.countriesProxy,
+        value,
+        this.isPrivate,
+        this.isMobile ?? false
+      );
+    }
     this.countryProxy = this.filteredCountriesProxy[0];
   }
 
@@ -145,22 +167,25 @@ export class BuyServiceComponent implements OnInit {
   //Lifecycle Hooks
   ngOnInit(): void {
     this.countriesProxy = this.dataService.getCountriesProxy();
-    this.filteredCountriesProxy = this.countriesProxy;
-    this.array1length = this.filteredCountriesProxy.length / 3;
-    this.array2length = 2 * this.array1length;
-    this.array3length = this.filteredCountriesProxy.length;
-    this.countriesProxy1 = this.filteredCountriesProxy.splice(
-      0,
-      this.array1length
-    );
-    this.countriesProxy2 = this.filteredCountriesProxy.splice(
-      this.array1length + 1,
-      this.array2length
-    );
-    this.countriesProxy2 = this.filteredCountriesProxy.splice(
-      this.array2length + 1,
-      this.array3length
-    );
+    if (this.isMobile) {
+      this.filteredCountriesProxy = this.countriesProxy.filter((country) => {
+        return country.isMobile;
+      });
+      this.countriesProxy1 = this.filteredCountriesProxy.slice(
+        0,
+        Math.floor(this.filteredCountriesProxy.length / 3) + 1
+      );
+      this.countriesProxy2 = this.filteredCountriesProxy.slice(
+        Math.floor(this.filteredCountriesProxy.length / 3) + 1,
+        Math.floor((this.filteredCountriesProxy.length / 3) * 2) + 1
+      );
+      this.countriesProxy3 = this.filteredCountriesProxy.slice(
+        Math.floor((this.filteredCountriesProxy.length / 3) * 2) + 1,
+        this.filteredCountriesProxy.length
+      );
+    } else {
+      this.filteredCountriesProxy = this.countriesProxy;
+    }
     this.countryProxy = this.filteredCountriesProxy[0];
     this.privateCountriesNumber = this.countriesProxy.filter(
       (country) => country.isPrivate
@@ -322,7 +347,8 @@ export class BuyServiceComponent implements OnInit {
     this.filteredCountriesProxy = this.methods.filter.filterCountriesProxy(
       this.countriesProxy,
       this.filteredCountriesValue,
-      this.isPrivate
+      this.isPrivate,
+      this.isMobile ?? false
     );
     this.countryProxy = this.filteredCountriesProxy[0];
     this.radioDayInputElement.nativeElement.checked = false;
@@ -360,9 +386,8 @@ export class BuyServiceComponent implements OnInit {
     radio.checked = true;
     customRadio?.classList.add('checked');
   }
-  openMobileTarge(evt: Event): void {
+  openMobileTarge(evt: Event, i: number): void {
+    this.countryProxy = this.filteredCountriesProxy[i];
     this.methods.openable.openMobileTarget(evt);
-  }
-  calculateSplitedCountries():void {
   }
 }
