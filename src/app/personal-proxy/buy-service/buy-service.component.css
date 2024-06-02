@@ -399,6 +399,10 @@ input[type="radio"] {
   transition: all 0.4s ease-out;
 }
 
+.mobile-card h3 {
+  font-size: 1.6rem;
+}
+
 .mobile-card.active .card-header {
   position: static;
 }
@@ -501,4 +505,20 @@ input[type="radio"] {
 .card-content .buy-bill-total {
   flex-direction: column;
   align-items: start;
+}
+
+@media (max-width: 991px) {
+  .mobile-card {
+    height: 5rem;
+  }
+  .mobile-card .card-header {
+    width: 85%;
+    top: 1.7rem;
+  }
+  .mobile-card h3 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 767px) {
 }

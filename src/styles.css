@@ -132,6 +132,10 @@ p {
   border-color: var(--success);
 }
 
+.container {
+  overflow: hidden;
+}
+
 select {
   -webkit-writing-mode: horizontal-tb !important;
   writing-mode: horizontal-tb !important;

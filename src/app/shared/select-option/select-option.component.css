@@ -25,11 +25,15 @@
   flex-basis: 2.5rem;
   padding: 0.4rem;
 }
+.select .img-box img {
+ width: 100%;
+}
 .select .text {
   flex-basis: 85%;
   font-size: 14px;
   font-weight: 700;
   letter-spacing: 1px;
+  text-wrap: balance;
 }
 .select-display {
   display: flex;

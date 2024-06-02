@@ -5,7 +5,6 @@ import { ProxyList } from '../interfaces/proxy-list';
 import { PopularRate } from '../interfaces/popular-rate';
 import { GeneralStatistic } from '../interfaces/general-statistic';
 import { ClientData } from '../interfaces/client-data';
-import { IndividualRequest } from '../interfaces/individual-request';
 import { PersonalPrice } from '../interfaces/personal-price';
 import { PersonalQuestion } from '../interfaces/personal-question';
 import { CountryProxy } from '../interfaces/country-proxy';
@@ -3416,7 +3415,7 @@ export class DataService {
       },
     ];
   }
-  getIndividualRequests(): IndividualRequest[] {
+  getIndividualRequests(): MajorServices[] {
     return [
       {
         id: 1,
@@ -6174,49 +6173,83 @@ export class DataService {
       },
     ];
   }
-  getMajorServices(): MajorServices[]{
- return [
-  {
-    id: 1,
-    name: 'facebook',
-    icon: 'fb'
-  },
-  {
-    id: 2,
-    name: 'instagram',
-    icon: 'insta'
-  },
-  {
-    id: 3,
-    name: 'netfilx',
-    icon: 'netfilx'
-  },
-  {
-    id: 4,
-    name: 'amazon',
-    icon: 'amazon'
-  },
-  {
-    id: 5,
-    name: 'ebay',
-    icon: 'ebay'
-  },
-  {
-    id: 6,
-    name: 'google',
-    icon: 'google'
-  },
-  {
-    id: 7,
-    name: 'yandex',
-    icon: 'yandex'
-  },
-  {
-    id: 8,
-    name: 'foot locker',
-    icon: 'footlocker'
-  },
- ]
+  getMajorServices(): MajorServices[] {
+    return [
+      {
+        id: 1,
+        name: 'facebook',
+        icon: 'fb'
+      },
+      {
+        id: 2,
+        name: 'instagram',
+        icon: 'insta'
+      },
+      {
+        id: 3,
+        name: 'netfilx',
+        icon: 'netfilx'
+      },
+      {
+        id: 4,
+        name: 'amazon',
+        icon: 'amazon'
+      },
+      {
+        id: 5,
+        name: 'ebay',
+        icon: 'ebay'
+      },
+      {
+        id: 6,
+        name: 'google',
+        icon: 'google'
+      },
+      {
+        id: 7,
+        name: 'yandex',
+        icon: 'yandex'
+      },
+      {
+        id: 8,
+        name: 'foot locker',
+        icon: 'footlocker'
+      },
+    ]
   }
-  constructor() {}
+  getMessengerApps(): MajorServices[] {
+    return [
+      {
+        id: 1,
+        name: 'Massenger',
+        icon: 'messenger'
+      },
+      {
+        id: 2,
+        name: 'Telegram',
+        icon: 'telegram'
+      },
+      {
+        id: 3,
+        name: 'WhatsApp',
+        icon: 'whatsapp'
+      },
+      {
+        id: 4,
+        name: 'Viber',
+        icon: 'viber'
+      },
+      {
+        id: 5,
+        name: 'Skype',
+        icon: 'skype'
+      },
+      {
+        id: 6,
+        name: 'mail',
+        icon: 'mail'
+      },
+    ]
+  }
+  constructor() { }
 }

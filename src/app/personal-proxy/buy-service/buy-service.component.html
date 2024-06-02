@@ -406,8 +406,148 @@
           </div>
         </div>
       </div>
-      <div class="col-6 col-md-4">
+      <div class="d-none d-md-block col-md-4">
         <div #countriesBtn *ngFor="let countryProxy of this.countriesProxy3; let i = index" class="mobile-card">
+          <div (click)="this.openMobileTarge($event, i)" class="card-header">
+            <span class="flex-basis-10">
+              <img src="assets/lib/flag_icons_main/flags/4x3/{{this.countryProxy?.icon}}.svg"
+                title="{{this.countryProxy?.name}}">
+            </span>
+            <h3>
+              {{this.countryProxy?.name}}
+            </h3>
+          </div>
+          <div class="card-content">
+            <span class="label"> Cities </span>
+            <div class="d-flex gap-3 flex-wrap align-items-center">
+              <div #citiesRadio (click)="this.ridoChange($event)" *ngFor="let i = index, let city of countryProxy?.cities"
+                class="card-radio">
+                <span class="custom-radio">
+                </span>
+                <input class="real-radio" type="radio" name="{{this.countryProxy?.alpha2Code}}-city-select" [id]="city">
+                <label for="{{city}}">{{city}}</label>
+              </div>
+            </div>
+            <span class="label"> operators </span>
+            <div class="buy-bill-item-radio">
+              <label *ngFor="let i = index;let operator of this.countryProxy?.operators"
+                class="buy-bill-item-radio-button">
+                <input #operatorsRadio type="radio" name="operator" value="{{operator}}">
+                <span>
+                  <img src="assets/images/mobile_proxy/operators/{{countryProxy?.operatorsIcon?.at(i)}}" alt="">
+                </span>
+              </label>
+            </div>
+            <span class="label"> Period </span>
+            <div class="buy-bill-item-radio">
+              <label data-value="day" class="buy-bill-item-radio-button">
+                <input #radioDay (change)="this.selectedPeriod($event, 'mobile')" data-index="0" type="radio"
+                  name="period" value="day"><span>day</span>
+              </label>
+              <label data-value="week" class="buy-bill-item-radio-button">
+                <input #radioWeek (change)="this.selectedPeriod($event, 'mobile')" data-index="1" type="radio"
+                  name="period" value="week"><span>Week</span>
+              </label>
+              <label data-value="month" class="buy-bill-item-radio-button">
+                <input #radioMonth (change)="this.selectedPeriod($event, 'mobile')" data-index="2" type="radio"
+                  name="period" value="month"><span>Month</span>
+              </label>
+              <label data-value="halfyear" class="buy-bill-item-radio-button d-none">
+                <input #radioHalfyear (change)="this.selectedPeriod($event, 'mobile')" data-index="3" type="radio"
+                  name="period" value="halfyear"><span>Halfyear</span>
+              </label>
+              <label data-value="year" class="buy-bill-item-radio-button d-none">
+                <input #radioYear (change)="this.selectedPeriod($event, 'mobile')" data-index="4" type="radio"
+                  name="period" value="year"><span>Year</span>
+              </label>
+            </div>
+            <span class="label"> cost </span>
+            <div class="buy-bill-total">
+              <div class="buy-bill-total-day buy-bill-item-label">
+                <span class="buy-bill-total-day-num">{{this.costPerDay.toFixed(2)}}</span> per day
+              </div>
+              <button class="buy-bill-total-btn">
+                Add for
+                <span #price class="buy-bill-total-price-num">
+                  {{this.totalCost | currency: 'USD'}}
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 d-block d-md-none">
+        <div #countriesBtn *ngFor="let countryProxy of this.countriesProxy31; let i = index" class="mobile-card">
+          <div (click)="this.openMobileTarge($event, i)" class="card-header">
+            <span class="flex-basis-10">
+              <img src="assets/lib/flag_icons_main/flags/4x3/{{this.countryProxy?.icon}}.svg"
+                title="{{this.countryProxy?.name}}">
+            </span>
+            <h3>
+              {{this.countryProxy?.name}}
+            </h3>
+          </div>
+          <div class="card-content">
+            <span class="label"> Cities </span>
+            <div class="d-flex gap-3 flex-wrap align-items-center">
+              <div #citiesRadio (click)="this.ridoChange($event)" *ngFor="let i = index, let city of countryProxy?.cities"
+                class="card-radio">
+                <span class="custom-radio">
+                </span>
+                <input class="real-radio" type="radio" name="{{this.countryProxy?.alpha2Code}}-city-select" [id]="city">
+                <label for="{{city}}">{{city}}</label>
+              </div>
+            </div>
+            <span class="label"> operators </span>
+            <div class="buy-bill-item-radio">
+              <label *ngFor="let i = index;let operator of this.countryProxy?.operators"
+                class="buy-bill-item-radio-button">
+                <input #operatorsRadio type="radio" name="operator" value="{{operator}}">
+                <span>
+                  <img src="assets/images/mobile_proxy/operators/{{countryProxy?.operatorsIcon?.at(i)}}" alt="">
+                </span>
+              </label>
+            </div>
+            <span class="label"> Period </span>
+            <div class="buy-bill-item-radio">
+              <label data-value="day" class="buy-bill-item-radio-button">
+                <input #radioDay (change)="this.selectedPeriod($event, 'mobile')" data-index="0" type="radio"
+                  name="period" value="day"><span>day</span>
+              </label>
+              <label data-value="week" class="buy-bill-item-radio-button">
+                <input #radioWeek (change)="this.selectedPeriod($event, 'mobile')" data-index="1" type="radio"
+                  name="period" value="week"><span>Week</span>
+              </label>
+              <label data-value="month" class="buy-bill-item-radio-button">
+                <input #radioMonth (change)="this.selectedPeriod($event, 'mobile')" data-index="2" type="radio"
+                  name="period" value="month"><span>Month</span>
+              </label>
+              <label data-value="halfyear" class="buy-bill-item-radio-button d-none">
+                <input #radioHalfyear (change)="this.selectedPeriod($event, 'mobile')" data-index="3" type="radio"
+                  name="period" value="halfyear"><span>Halfyear</span>
+              </label>
+              <label data-value="year" class="buy-bill-item-radio-button d-none">
+                <input #radioYear (change)="this.selectedPeriod($event, 'mobile')" data-index="4" type="radio"
+                  name="period" value="year"><span>Year</span>
+              </label>
+            </div>
+            <span class="label"> cost </span>
+            <div class="buy-bill-total">
+              <div class="buy-bill-total-day buy-bill-item-label">
+                <span class="buy-bill-total-day-num">{{this.costPerDay.toFixed(2)}}</span> per day
+              </div>
+              <button class="buy-bill-total-btn">
+                Add for
+                <span #price class="buy-bill-total-price-num">
+                  {{this.totalCost | currency: 'USD'}}
+                </span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-6 d-block d-md-none">
+        <div #countriesBtn *ngFor="let countryProxy of this.countriesProxy32; let i = index" class="mobile-card">
           <div (click)="this.openMobileTarge($event, i)" class="card-header">
             <span class="flex-basis-10">
               <img src="assets/lib/flag_icons_main/flags/4x3/{{this.countryProxy?.icon}}.svg"

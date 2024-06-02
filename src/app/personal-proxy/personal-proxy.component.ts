@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { PersonalPrice } from '../shared/interfaces/personal-price';
-import { IndividualRequest } from '../shared/interfaces/individual-request';
 import { CountryProxy } from '../shared/interfaces/country-proxy';
 import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { PersonalQuestion } from '../shared/interfaces/personal-question';
 import { Methods } from '../shared/classes/methods';
 import { DataService } from '../shared/services/data.service';
 import { Feature } from '../shared/interfaces/feature';
+import { MajorServices } from '../shared/interfaces/major-services';
 
 @Component({
   selector: 'xvpn-personal-proxy',
@@ -20,18 +20,11 @@ export class PersonalProxyComponent implements OnInit {
   faCaretDown = faCaretDown;
   //Data
   personalPrices: PersonalPrice[] = [];
-  individualRequests: IndividualRequest[] = [];
+  individualRequests: MajorServices[] = [];
   countries: CountryProxy[] = [];
   proxiesProps: Feature[] = [];
   personalQuestions: PersonalQuestion[] = [];
-  messengerApps: { name: string; icon: string }[] = [
-    { name: 'Massenger', icon: 'messenger' },
-    { name: 'Telegram', icon: 'telegram' },
-    { name: 'WhatsApp', icon: 'whatsapp' },
-    { name: 'Viber', icon: 'viber' },
-    { name: 'Skype', icon: 'skype' },
-    { name: 'mail', icon: 'mail' },
-  ];
+  messengerApps: MajorServices[] = [];
   //Methods
   methods = new Methods();
 
@@ -42,6 +35,7 @@ export class PersonalProxyComponent implements OnInit {
     this.individualRequests = this.dataService.getIndividualRequests();
     this.proxiesProps = this.dataService.getProxiesProps();
     this.personalQuestions = this.dataService.getPersonalQuestions();
+    this.messengerApps = this.dataService.getMessengerApps();
   }
   openDiv(evt: Event): void {
     this.methods.openable.openDiv(evt);

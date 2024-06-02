@@ -35,15 +35,48 @@
   </div>
 </section>
 <section class="buy-mobile">
-  <xvpn-buy-service [isMobile]="isMobile" [title]="title"></xvpn-buy-service>
+  <xvpn-buy-service class="mb-5" [isMobile]="isMobile" [title]="title"></xvpn-buy-service>
   <div class="container">
-    <div class="row">
+    <div class="row mt-5">
       <h4>
         Proxies work with all the major services
       </h4>
-      <div class="col">
-        <div class="box">
-          <img src="src/assets/images/mobile_proxy/major_services/" alt="">
+      <div *ngFor="let majorService of this.majorServices" class="col-6 col-sm-3 col-lg mt-4">
+        <div class="box-img">
+          <img src="assets/images/mobile_proxy/major_services/{{ majorService.icon }}.svg" alt="{{majorService.name}}">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="private-rent">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <h1>
+          Private rent of a device
+        </h1>
+      </div>
+      <div class="col-md-4">
+        <div class="try-now">
+          <h6>Try it now!</h6>
+          <div class="form_group">
+            <select-option [isCountries]="true" [inputList]="countries"
+              imgPath="assets/lib/flag_icons_main/flags/4x3/"></select-option>
+          </div>
+          <div class="form_group">
+            <input type="number" name="number" value="1" min="1" class="form_control --qty">
+            <span class="form-placeholder">
+              Qnty: </span>
+          </div>
+          <div class="form_group">
+            <select-option [inputList]="messengerApps" imgPath="assets/images/icons/social/"
+              imgType="png"></select-option>
+          </div>
+          <div class="form_group">
+            <input type="text" name="nickname" class="form_control messenger-value" placeholder="@Example">
+          </div>
+          <a href="#" class="btn btn-primary mt-3 fs-15 fw-600 py-2">Send request</a>
         </div>
       </div>
     </div>

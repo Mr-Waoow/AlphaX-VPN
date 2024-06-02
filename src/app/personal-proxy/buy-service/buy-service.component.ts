@@ -75,6 +75,8 @@ export class BuyServiceComponent implements OnInit {
   countriesProxy1: CountryProxy[] = [];
   countriesProxy2: CountryProxy[] = [];
   countriesProxy3: CountryProxy[] = [];
+  countriesProxy31: CountryProxy[] = [];
+  countriesProxy32: CountryProxy[] = [];
   private _filteredCountriesProxy: CountryProxy[] = [];
   get filteredCountriesProxy(): CountryProxy[] {
     return this._filteredCountriesProxy;
@@ -150,6 +152,14 @@ export class BuyServiceComponent implements OnInit {
         Math.floor((this.filteredCountriesProxy.length / 3) * 2) + 1,
         this.filteredCountriesProxy.length
       );
+      this.countriesProxy31 = this.filteredCountriesProxy.slice(
+        0,
+        Math.floor(this.countriesProxy3.length / 2) + 1
+      );
+      this.countriesProxy32 = this.filteredCountriesProxy.slice(
+        Math.floor(this.countriesProxy3.length / 2) + 1,
+        this.countriesProxy3.length
+      );
     } else {
       this.filteredCountriesProxy = this.methods.filter.filterCountriesProxy(
         this.countriesProxy,
@@ -162,7 +172,7 @@ export class BuyServiceComponent implements OnInit {
   }
 
   //Constructor
-  constructor(private dataService: DataService) {}
+  constructor(private dataService: DataService) { }
 
   //Lifecycle Hooks
   ngOnInit(): void {
@@ -183,6 +193,14 @@ export class BuyServiceComponent implements OnInit {
         Math.floor((this.filteredCountriesProxy.length / 3) * 2) + 1,
         this.filteredCountriesProxy.length
       );
+      this.countriesProxy31 = this.filteredCountriesProxy.slice(
+        0,
+        Math.floor(this.countriesProxy3.length / 2) + 1
+      );
+      this.countriesProxy32 = this.filteredCountriesProxy.slice(
+        Math.floor(this.countriesProxy3.length / 2) + 1,
+        this.countriesProxy3.length
+      );
     } else {
       this.filteredCountriesProxy = this.countriesProxy;
     }
@@ -200,7 +218,7 @@ export class BuyServiceComponent implements OnInit {
       }, 50);
     }
   }
-  ngOnChanges(): void {}
+  ngOnChanges(): void { }
 
   //Methods
   //ShowHide
