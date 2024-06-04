@@ -1,0 +1,200 @@
+.residential-flags {
+  position: relative;
+  height: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 auto;
+  flex: 1 auto;
+}
+
+.flags {
+  position: absolute;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+  height: 100%;
+  -webkit-mask-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(15%, #000), color-stop(85%, #000), to(transparent));
+  -webkit-mask-image: -webkit-linear-gradient(transparent, #000 15%, #000 85%, transparent 100%);
+  mask-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(15%, #000), color-stop(85%, #000), to(transparent));
+  mask-image: linear-gradient(transparent, #000 15%, #000 85%, transparent 100%);
+}
+
+.flags-container {
+  display: grid;
+  padding-top: 10px;
+  -webkit-animation: move linear 8s infinite;
+  animation: move linear 8s infinite;
+  grid-template-columns: repeat(4, 90px);
+  grid-template-rows: repeat(4, 90px);
+  grid-gap: 10px;
+}
+
+.flags-item {
+  position: relative;
+  -webkit-perspective: 10000px;
+  perspective: 10000px;
+}
+
+.item-flipper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: -webkit-transform 2s;
+  -o-transition: transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+  -webkit-animation: flip 5s infinite;
+  animation: flip 5s infinite;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.item-flipper.--delay-0 {
+  -webkit-animation-delay: 0s;
+  animation-delay: 0s;
+}
+
+.item-flipper.--delay-1 {
+  -webkit-animation-delay: .3s;
+  animation-delay: .3s;
+}
+
+.item-flipper.--delay-2 {
+  -webkit-animation-delay: .6s;
+  animation-delay: .6s;
+}
+
+.item-flipper.--delay-3 {
+  -webkit-animation-delay: .9s;
+  animation-delay: .9s;
+}
+
+.item-flipper.--delay-4 {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.item-flipper.--delay-5 {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
+
+.item-flipper.--delay-6 {
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+}
+
+.item-flipper.--delay-7 {
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+}
+
+.item-flipper.--delay-8 {
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
+}
+
+.item-flipper.--delay-9 {
+  -webkit-animation-delay: 2.7s;
+  animation-delay: 2.7s;
+}
+
+.item-flipper.--delay-10 {
+  -webkit-animation-delay: 3s;
+  animation-delay: 3s;
+}
+
+.item-flipper.--delay-11 {
+  -webkit-animation-delay: 3.3s;
+  animation-delay: 3.3s;
+}
+
+.item-flipper.--delay-12 {
+  -webkit-animation-delay: 3.6s;
+  animation-delay: 3.6s;
+}
+
+.item-flipper.--delay-13 {
+  -webkit-animation-delay: 3.9s;
+  animation-delay: 3.9s;
+}
+
+.item-flipper.--delay-14 {
+  -webkit-animation-delay: 4.2s;
+  animation-delay: 4.2s;
+}
+
+.item-flipper.--delay-15 {
+  -webkit-animation-delay: 4.5s;
+  animation-delay: 4.5s;
+}
+
+.item-flipper .item {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.item-flipper .item.--front {
+  -webkit-transform: rotatex(0deg);
+  transform: rotatex(0deg);
+}
+
+.item-flipper .item.--back {
+  -webkit-transform: rotatex(180deg);
+  transform: rotatex(180deg);
+}
+
+.item-flipper .item.--youtube {
+  background: red;
+}
+
+/* animations */
+@keyframes move {
+  0% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+}
+
+@keyframes flip {
+  0% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+  }
+
+  10% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+  }
+
+  40%,
+  60% {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+
+  100%,
+  90% {
+    -webkit-transform: rotateX(0);
+    transform: rotateX(0);
+  }
+}

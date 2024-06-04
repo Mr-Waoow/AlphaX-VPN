@@ -1,3 +1,114 @@
 <xvpn-preloader></xvpn-preloader>
 <xvpn-offered-services></xvpn-offered-services>
-<p>residential-proxy works!</p>
+<section>
+  <div class="container">
+    <div class="row">
+      <div class="col-2">
+        <img src="assets/images/residential_proxy/features/description.svg" alt="logo" class="img-fluid">
+      </div>
+      <div class="col-10 d-flex flex-column gap-3">
+        <h4>
+          Buy residential proxy
+        </h4>
+        <p>
+          RSocks team offers a huge amount of residential plans which were developed for plenty of tasks and, most
+          importantly, has been proved to be quite efficient. Such variety has been created on purpose to let everyone
+          choose a plan for a reasonable price, online, rotation and other parameters.
+        </p>
+        <div class="service-props residential-feature">
+          <ul class="row">
+            <li *ngFor="let residentialFeature of this.residentialFeatures"
+              class="col-4 gap-1">
+              <span class="icon">
+                <img class="icon-img"
+                  src="assets/images/residential_proxy/features/{{residentialFeature.icon}}-{{residentialFeature.id}}.svg"
+                  title="{{residentialFeature.name}}" alt="{{residentialFeature.name}}">
+              </span>
+              <p>
+                {{residentialFeature.description}}
+              </p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Start Service Props Area -->
+<section class="service-props">
+  <div class="container">
+    <div class="row my-4">
+      <div class="col-lg-12">
+        <h4 class="line-after">
+          <span>
+            Mobile proxies will be the best choice for:
+          </span>
+        </h4>
+        <ul class="row">
+          <li *ngFor="let proxyProps of this.mobileProxiesProps" class="col-md-6 mb-3 gap-3">
+            <span class="icon">
+              <img class="icon-img-md"
+                src="assets/images/mobile_proxy/mobile_proxies/{{proxyProps.icon}}-{{proxyProps.id}}.svg"
+                title="{{proxyProps.name}}" alt="{{proxyProps.name}}">
+            </span>
+            <div class="content-box">
+              <span class="fw-bold mb-1 text-uppercase">
+                {{proxyProps.name}}
+              </span>
+              <br>
+              <p>
+                {{proxyProps.description}}
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Service Props Area -->
+<!-- Start Service Asked Questions Area -->
+<section class="service-asked-questions">
+  <div class="container">
+    <div class="row my-4">
+      <div>
+        <h4>Frequently asked questions</h4>
+      </div>
+      <div class="col-lg-12">
+        <div *ngFor="let frequentlyAske of frequentlyAskes" class="openable">
+          <h6 (click)="this.openDiv($event)" class="d-flex justify-content-between">
+            <span>{{frequentlyAske.question}}</span>
+            <span class="icon-sm"><fa-icon [icon]='faCaretDown'></fa-icon></span>
+          </h6>
+          <p>
+            {{frequentlyAske.answers}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Service Asked Questions Area -->
+<!-- Start Service Prefooter Area -->
+<section class="service-prefooter">
+  <div class="container">
+    <div class="row my-4">
+      <div>
+        <h4>Interested?</h4>
+      </div>
+      <div class="col-lg-12">
+        <h5 class="w-sm-55">
+          Check the quality of high-end mobile IPs by RSocks ASAP
+        </h5>
+      </div>
+      <div class="col-lg-12">
+        <a href="#" class="btn btn-primary mt-3 mb-1">Get proxies</a>
+        <br>
+        <span class="opacity-70 fs-12 fw-400">Start your free trial period now!</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End Service Prefooter Area -->

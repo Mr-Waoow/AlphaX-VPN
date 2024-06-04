@@ -1,0 +1,18 @@
+<div class="residential-flags">
+  <div class="flags">
+    <div *ngFor="let item of createRange(3);" class="flags-container">
+      <div *ngFor="let scrollingFlag of this.scrollingFlags" class="flags-item">
+        <div class="item-flipper --delay-{{scrollingFlag.delay}}">
+          <div class="item --front {{scrollingFlag.frontClasses}}">
+            <img src="assets/images/hero/residential_proxy/residential_flags/{{scrollingFlag.frontIcon}}.svg"
+              alt="{{scrollingFlag.frontName}}">
+          </div>
+          <div class="item --back {{scrollingFlag.backClasses}}">
+            <img src="assets/images/hero/residential_proxy/residential_flags/{{scrollingFlag.backIcon}}.svg"
+              alt="{{scrollingFlag.backName}}">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

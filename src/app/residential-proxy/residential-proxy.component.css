@@ -1,0 +1,8 @@
+.service-props.residential-feature{
+  background-color: inherit;
+  color: inherit;
+  text-align: unset;
+}
+.service-props.residential-feature .icon {
+  padding: 0.5rem;
+}

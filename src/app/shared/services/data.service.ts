@@ -20,6 +20,7 @@ import { Platform } from '../interfaces/platform';
 import { SharedPrice } from '../interfaces/shared-price';
 import { ProviderTitle } from '../interfaces/provider-title';
 import { MajorServices } from '../interfaces/major-services';
+import { ScrollingFlag } from '../interfaces/scrolling-flag';
 
 @Injectable({
   providedIn: 'root',
@@ -3549,6 +3550,67 @@ export class DataService {
       },
     ];
   }
+  getFrequentlyAskes(): PersonalQuestion[] {
+    return [
+      {
+        id: 1,
+        question:
+          "Can I change rotation time or completely remove proxy's rotation?",
+        answers:
+          "You can't do that on regular packages, but it's available on our private devices.",
+      },
+      {
+        id: 2,
+        question: 'What is a private device rental?',
+        answers:
+          "It's an opportunity to purchase a dedicated mobile device for individual use. Buying it you can set your own rotation time, grant access to completely unique IPs and wholly remove thread limits.",
+      },
+      {
+        id: 3,
+        question: 'Can I use a mobile proxy on my PC?',
+        answers:
+          'Sure thing. Proxies are called mobile because of having IPs of mobile carriers. You are free to use it with any type of device.',
+      },
+      {
+        id: 4,
+        question:
+          'Why are mobile proxies the best option for account creation?',
+        answers:
+          "Users of the mobile Internet don't have individual IP addresses. One IP is assigned to thousands of users, that’s why mobile visitors get much more credit from demanding web-resources. ",
+      },
+      {
+        id: 5,
+        question: 'What speed is available with mobile proxies?',
+        answers: 'Its average speed is from 5 to 15 Mb/s',
+      },
+      {
+        id: 6,
+        question: 'Does it support login and password authorization?',
+        answers:
+          'Absolutely. You can pick authorization method in your dashboard: it will either be login and password or an IP',
+      },
+      {
+        id: 8,
+        question: 'Does it have any traffic limits?',
+        answers: "It doesn't, traffic is completely unlimited",
+      },
+      {
+        id: 9,
+        question: 'Is there any thread limit?',
+        answers: 'There is, you can only use up to 10 threads.',
+      },
+      {
+        id: 10,
+        question: 'Can I buy a proxy with unlimited thread count?',
+        answers: 'Yes, you can rent a private device with unlimited threads.',
+      },
+      {
+        id: 11,
+        question: 'Can I buy several mobile proxies within one city?',
+        answers: 'You surely can, proxies amount is unlimited',
+      },
+    ];
+  }
   getProxiesProps(): Feature[] {
     return [
       {
@@ -6178,78 +6240,338 @@ export class DataService {
       {
         id: 1,
         name: 'facebook',
-        icon: 'fb'
+        icon: 'fb',
       },
       {
         id: 2,
         name: 'instagram',
-        icon: 'insta'
+        icon: 'insta',
       },
       {
         id: 3,
         name: 'netfilx',
-        icon: 'netfilx'
+        icon: 'netfilx',
       },
       {
         id: 4,
         name: 'amazon',
-        icon: 'amazon'
+        icon: 'amazon',
       },
       {
         id: 5,
         name: 'ebay',
-        icon: 'ebay'
+        icon: 'ebay',
       },
       {
         id: 6,
         name: 'google',
-        icon: 'google'
+        icon: 'google',
       },
       {
         id: 7,
         name: 'yandex',
-        icon: 'yandex'
+        icon: 'yandex',
       },
       {
         id: 8,
         name: 'foot locker',
-        icon: 'footlocker'
+        icon: 'footlocker',
       },
-    ]
+    ];
   }
   getMessengerApps(): MajorServices[] {
     return [
       {
         id: 1,
         name: 'Massenger',
-        icon: 'messenger'
+        icon: 'messenger',
       },
       {
         id: 2,
         name: 'Telegram',
-        icon: 'telegram'
+        icon: 'telegram',
       },
       {
         id: 3,
         name: 'WhatsApp',
-        icon: 'whatsapp'
+        icon: 'whatsapp',
       },
       {
         id: 4,
         name: 'Viber',
-        icon: 'viber'
+        icon: 'viber',
       },
       {
         id: 5,
         name: 'Skype',
-        icon: 'skype'
+        icon: 'skype',
       },
       {
         id: 6,
         name: 'mail',
-        icon: 'mail'
+        icon: 'mail',
       },
+    ];
+  }
+  getPrivateRentFeatures(): Feature[] {
+    return [
+      {
+        id: 1,
+        name: 'Speed',
+        description: 'Speed up to 50 mb/s.',
+        icon: 'private-feature-1',
+      },
+      {
+        id: 2,
+        name: 'Ability',
+        description: 'The ability to change IP at any time.',
+        icon: 'private-feature-2',
+      },
+      {
+        id: 3,
+        name: 'Trust',
+        description: 'Excellent level of trust.',
+        icon: 'private-feature-3',
+      },
+      {
+        id: 4,
+        name: 'Configuration',
+        description: 'The configuration of all parameters you need',
+        icon: 'private-feature-4',
+      },
+    ];
+  }
+  getMobileProxiesProps(): Feature[] {
+    return [
+      {
+        id: 1,
+        name: 'Data parsing',
+        description:
+          'Compile search engine results, content, and prices from any source with minimal chance of blocking.',
+        icon: 'mobile-Proxy-feature',
+      },
+      {
+        id: 2,
+        name: 'Testing features',
+        description:
+          'Check the accessibility of public websites, software performance, and operation of process automation.',
+        icon: 'mobile-Proxy-feature',
+      },
+      {
+        id: 3,
+        name: 'SEO-optimization',
+        description:
+          "Engage in data verification and other activities to improve your site's rank.",
+        icon: 'mobile-Proxy-feature',
+      },
+      {
+        id: 4,
+        name: 'CPA networks and affiliate marketing',
+        description:
+          "Create and manage campaigns on the world's largest advertising platforms.",
+        icon: 'mobile-Proxy-feature',
+      },
+      {
+        id: 5,
+        name: 'All areas of SMM',
+        description:
+          'Automate registrations, account management, posting and mailings in social networks.',
+        icon: 'mobile-Proxy-feature',
+      },
+      {
+        id: 6,
+        name: 'Surfing the Web',
+        description:
+          'Preserve the safety and anonymity, and also get access to blocked sites.',
+        icon: 'mobile-Proxy-feature',
+      },
+    ];
+  }
+  getScrollingFlags(): ScrollingFlag[] {
+    return [
+      {
+        id: 1,
+        frontName: 'France',
+        backName: 'Youtube',
+        frontIcon: 'fr',
+        backIcon: 'youtube',
+        frontClasses: '',
+        backClasses: '--youtube',
+        delay: 0,
+      },
+      {
+        id: 2,
+        frontName: 'Germany',
+        backName: 'Spain',
+        frontIcon: 'de',
+        backIcon: 'es',
+        frontClasses: '',
+        backClasses: '',
+        delay: 1,
+      },
+      {
+        id: 3,
+        frontName: 'Turkey',
+        backName: 'Republic of Korea',
+        frontIcon: 'tr',
+        backIcon: 'kr',
+        frontClasses: '',
+        backClasses: '',
+        delay: 2,
+      },
+      {
+        id: 4,
+        frontName: 'Switzerland',
+        backName: 'Gmail',
+        frontIcon: 'ch',
+        backIcon: 'gmail',
+        frontClasses: '',
+        backClasses: '',
+        delay: 3,
+      },
+      {
+        id: 5,
+        frontName: 'India',
+        backName: 'Euro',
+        frontIcon: 'in',
+        backIcon: 'euro',
+        frontClasses: '',
+        backClasses: '',
+        delay: 4,
+      },
+      {
+        id: 6,
+        frontName: 'Canada',
+        backName: 'Facebook',
+        frontIcon: 'ca',
+        backIcon: 'fb',
+        frontClasses: '',
+        backClasses: '',
+        delay: 5,
+      },
+      {
+        id: 7,
+        frontName: 'Vietnam',
+        backName: 'Diamond',
+        frontIcon: 'vd',
+        backIcon: 'diamond',
+        frontClasses: '',
+        backClasses: '',
+        delay: 6,
+      },
+      {
+        id: 8,
+        frontName: 'Netherlands',
+        backName: 'Ukraine',
+        frontIcon: 'nl',
+        backIcon: 'ua',
+        frontClasses: '',
+        backClasses: '',
+        delay: 7,
+      },
+      {
+        id: 9,
+        frontName: 'China',
+        backName: 'Rotation',
+        frontIcon: 'cn',
+        backIcon: 'rotation',
+        frontClasses: '',
+        backClasses: '',
+        delay: 8,
+      },
+      {
+        id: 10,
+        frontName: 'United States',
+        backName: 'Instagram',
+        frontIcon: 'us',
+        backIcon: 'insta',
+        frontClasses: '',
+        backClasses: '',
+        delay: 9,
+      },
+      {
+        id: 11,
+        frontName: 'Thailand',
+        backName: 'Twitch',
+        frontIcon: 'th',
+        backIcon: 'twitch',
+        frontClasses: '',
+        backClasses: '',
+        delay: 10,
+      },
+      {
+        id: 12,
+        frontName: 'United Kingdom',
+        backName: 'Poland',
+        frontIcon: 'uk',
+        backIcon: 'pl',
+        frontClasses: '',
+        backClasses: '',
+        delay: 11,
+      },
+      {
+        id: 13,
+        frontName: 'Brazil',
+        backName: 'Amazon',
+        frontIcon: 'br',
+        backIcon: 'amazon',
+        frontClasses: '',
+        backClasses: '',
+        delay: 12,
+      },
+      {
+        id: 14,
+        frontName: 'Australia',
+        backName: 'Japan',
+        frontIcon: 'au',
+        backIcon: 'jp',
+        frontClasses: '',
+        backClasses: '',
+        delay: 13,
+      },
+      {
+        id: 15,
+        frontName: 'Italy',
+        backName: 'Russia',
+        frontIcon: 'it',
+        backIcon: 'ru',
+        frontClasses: '',
+        backClasses: '',
+        delay: 14,
+      },
+      {
+        id: 16,
+        frontName: 'Argentina',
+        backName: 'Country',
+        frontIcon: 'ar',
+        backIcon: 'country',
+        frontClasses: '',
+        backClasses: '',
+        delay: 15,
+      },
+    ];
+  }
+  getResidentialFeatures(): Feature[] {
+    return [
+      {
+        id: 1,
+        name: 'Proxy number',
+        icon: 'description-benefit',
+        description: 'More than 3 000 000 proxy online.'
+      },
+      {
+        id: 2,
+        name: 'Proxy packages',
+        icon: 'description-benefit',
+        description: '70 unique proxy packages.'
+      },
+      {
+        id: 3,
+        name: 'data cap',
+        icon: 'description-benefit',
+        description: 'No data cap on all packages.'
+      }
     ]
   }
-  constructor() { }
+  constructor() {}
 }

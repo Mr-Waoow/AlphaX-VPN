@@ -1,3 +1,6 @@
+.container {
+  overflow: visible;
+}
 .header-bg,
 .header-bg::after,
 .header-bg::before {
@@ -32,10 +35,10 @@ h2 {
   position: relative;
 }
 .header-bg::before {
-  background-image: url(../../../assets/images/header/bg.png);
+  background-image: url(../../../assets/images/hero/bg.png);
 }
 .slider-map {
-  background: url(../../../assets/images/white_label/header/maps_beta2.svg) 50%
+  background: url(../../../assets/images/hero/white_label/maps_beta2.svg) 50%
     50% no-repeat;
   display: flex;
   align-items: center;
@@ -91,6 +94,10 @@ h2 {
   display: inline-block;
   margin: 10px;
   color: var(--primary);
+}
+xvpn-hero-img-scroll {
+  display: flex;
+  height: 25rem;
 }
 @media only screen and (min-width: 992px) and (max-width: 1199px) {
   .hero .slider-content h1 {

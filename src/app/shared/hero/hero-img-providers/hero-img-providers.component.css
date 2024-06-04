@@ -1,3 +1,6 @@
+.container {
+  overflow: visible;
+}
 .providers-titles {
   display: grid;
   grid-template-columns: repeat(14, 59px);

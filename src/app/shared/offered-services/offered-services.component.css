@@ -1,3 +1,6 @@
+.container {
+  overflow: visible;
+}
 .offered-services {
   background-color: var(--hov-tertiary);
   color: var(--secondary);

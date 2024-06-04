@@ -46,6 +46,7 @@ import { ResidentialProxyComponent } from './residential-proxy/residential-proxy
 import { ExclusivePlusComponent } from './exclusive-plus/exclusive-plus.component';
 import { ServerProxiesComponent } from './server-proxies/server-proxies.component';
 import { NewsComponent } from './news/news.component';
+import { HeroImgScrollComponent } from './shared/hero/hero-img-scroll/hero-img-scroll.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import { NewsComponent } from './news/news.component';
     ExclusivePlusComponent,
     ServerProxiesComponent,
     NewsComponent,
+    HeroImgScrollComponent,
   ],
   imports: [
     BrowserModule,

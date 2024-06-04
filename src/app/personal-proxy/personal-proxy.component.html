@@ -58,8 +58,8 @@
     </div>
   </div>
 </section>
-<!-- Start About Area -->
-<section class="About">
+<!-- Start Service Props Area -->
+<section class="service-props">
   <div class="container">
     <div class="row my-4">
       <div class="col-lg-12">
@@ -69,18 +69,18 @@
           </span>
         </h4>
         <ul class="row">
-          <li *ngFor="let proxiyProps of proxiesProps" class="col-md-6">
-            <span class="icon me-4">
-              <img src="assets/images/personal_proxy/About/{{proxiyProps.icon}}.svg" title="{{proxiyProps.name}}"
-                alt="{{proxiyProps.name}}">
+          <li *ngFor="let proxyProps of proxiesProps" class="col-md-6 mb-3 gap-3">
+            <span class="icon">
+              <img class="icon-img-md" src="assets/images/personal_proxy/about/{{proxyProps.icon}}.svg" title="{{proxyProps.name}}"
+                alt="{{proxyProps.name}}">
             </span>
             <div class="content-box">
               <span class="fw-bold mb-1 text-uppercase">
-                {{proxiyProps.name}}
+                {{proxyProps.name}}
               </span>
               <br>
               <p>
-                {{proxiyProps.description}}
+                {{proxyProps.description}}
               </p>
             </div>
           </li>
@@ -89,9 +89,9 @@
     </div>
   </div>
 </section>
-<!-- End About Area -->
-<!-- Start Questions Area -->
-<section class="questions">
+<!-- End Service Props Area -->
+<!-- Start Service Asked Questions Area -->
+<section class="service-asked-questions">
   <div class="container">
     <div class="row my-4">
       <div>
@@ -111,9 +111,9 @@
     </div>
   </div>
 </section>
-<!-- End Questions Area -->
-<!-- Start Prefooter Area -->
-<section class="prefooter">
+<!-- End Service Asked Questions Area -->
+<!-- Start Service Prefooter Area -->
+<section class="service-prefooter">
   <div class="container">
     <div class="row my-4">
       <div>
@@ -133,4 +133,4 @@
     </div>
   </div>
 </section>
-<!-- End Prefooter Area -->
+<!-- End Service Prefooter Area -->

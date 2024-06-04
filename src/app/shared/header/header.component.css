@@ -2,6 +2,9 @@
 /*======================================
   01. Start Header Area CSS
 ========================================*/
+.container {
+  overflow: visible;
+}
 .header {
   width: 100%;
   background-color: transparent;

@@ -1,3 +1,6 @@
+.container {
+  overflow: visible;
+}
 .img-container {
   position: relative;
 }

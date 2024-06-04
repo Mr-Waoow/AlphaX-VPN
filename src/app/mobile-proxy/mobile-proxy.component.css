@@ -1,6 +1,7 @@
 p {
   font-size: 16px;
 }
+
 .features-box {
   display: flex;
   align-items: center;
@@ -14,12 +15,15 @@ p {
   color: var(--hardest-quaternary);
   font-weight: 700;
 }
+
 .buy-mobile {
   padding-top: 0;
 }
+
 .buy-mobile h4 {
   text-align: center;
 }
+
 .box-img {
   display: flex;
   align-items: center;
@@ -29,10 +33,22 @@ p {
   border: 1px solid var(--soft-quaternary);
   border-radius: 5px;
 }
+
 .private-rent {
   position: relative;
-  background-color: var(--light-secondary);
+  background-color: var(--hov-secondary);
   color: var(--tertiary);
+}
+
+.private-rent::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 40%;
+  height: 100%;
+  z-index: 0;
+  background-color: var(--secondary);
 }
 
 .private-rent h1 {
@@ -41,30 +57,34 @@ p {
   font-weight: 700;
 }
 
-.private-rent .try-now {
+.private-rent p {
+  font-size: 14px;
+  color: var(--hard-tertiary);
+  opacity: 0.8;
+}
+
+.private-rent p.description {
+  color: var(--tertiary);
+  opacity: 1;
+}
+
+.try-now {
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
 }
-.private-rent .try-now h6{
+
+.try-now h6 {
   color: var(--tertiary);
   position: relative;
   z-index: 1;
 }
-.private-rent .try-now::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 40%;
-  height: 100%;
-  z-index: 0;
-  background-color: var(--secondary);
-}
+
 .form_group {
   position: relative;
 }
+
 .form_control {
   font-weight: 600;
   width: 100%;
@@ -75,9 +95,11 @@ p {
   border-radius: 3px;
   background-color: var(--hard-secondary);
 }
+
 .form_control.--qty {
   padding-left: 70px;
 }
+
 .form-placeholder {
   font-size: 13px;
   position: absolute;
@@ -85,13 +107,16 @@ p {
   left: 16px;
   color: #7e8b9e;
 }
-.private-rent .try-now .btn{
+
+.private-rent .try-now .btn {
   position: relative;
   z-index: 1;
 }
+
 @media (max-width: 767px) {
-  .private-rent .try-now::before {
+  .private-rent::before {
     width: 100%;
+    height: 47%;
     top: auto;
     bottom: 0;
   }

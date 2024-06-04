@@ -80,6 +80,39 @@
         </div>
       </div>
     </div>
+    <div *ngIf="routerLinkActive === 'Residential-Proxy'" class="row justify-content-between personal-silder align-items-center">
+      <div class="col-lg-7 mt-5">
+        <div class="slider-content mt-3 mt-md-0 text-start h-240px justify-content-center">
+          <h1>
+            <span *ngIf="showText" class="fade-in">Residential proxy from RSocks</span>
+          </h1>
+          <ul>
+            <li *ngIf="showText1" class="fade-in">
+              <span class="icon-sm">
+                <img src="assets/images/hero/residential_proxy/benefit_1.svg" title="Constant proxy">
+              </span>
+              Constant proxy lists updates
+            </li>
+            <li *ngIf="showText2" class="fade-in">
+              <span class="icon-sm">
+                <img src="assets/images/hero/residential_proxy/benefit_2.svg" title="Real IPs">
+              </span>
+              Real residential IPs
+            </li>
+            <li *ngIf="showText3" class="fade-in">
+              <span class="icon-sm">
+                <img src="assets/images/hero/residential_proxy/benefit_3.svg" title="Supported">
+              </span>
+              All protocols and programs are supported
+            </li>
+          </ul>
+        </div>
+        <a href="#" class="btn btn-outline-primary py-3 px-5 fs-17 fw-bold rounded-3 mt-5">Try it for free</a>
+      </div>
+      <div class="col-lg-5 position-relative d-lg-block d-none">
+        <xvpn-hero-img-scroll></xvpn-hero-img-scroll>
+      </div>
+    </div>
     <div *ngIf="routerLinkActive === 'Personal-Proxy'" class="row personal-silder align-items-center">
       <div class="col-lg-6 mt-5">
         <div class="slider-content mt-3 mt-md-0 text-start h-240px justify-content-center">
