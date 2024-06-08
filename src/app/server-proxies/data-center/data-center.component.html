@@ -11,7 +11,7 @@
         </div>
       </div>
     </div>
-    <div class="{{!this.isGridView? 'grid-table shadow':''}}">
+    <div class="{{!this.isGridView && (this.windowWidth > 767) ? 'grid-table shadow':''}}">
       <div class="grid-table-head">
         <div>
           <span>Package</span>
@@ -27,11 +27,13 @@
         </div>
       </div>
       <div class="grid-table-body">
-        <div *ngFor="let dataCenterProxy of this.dataCenterProxies" class="grid-table-row {{this.isGridView? 'shadow':''}}">
+        <div *ngFor="let dataCenterProxy of this.dataCenterProxies"
+          class="grid-table-row {{this.isGridView? 'shadow':''}}">
           <div class="grid-table-cell-l">
             <div class="d-flex gap-3">
               <span class="icon">
-                <img class="icon-img" src="assets/lib/flag_icons_main/flags/4x3/{{dataCenterProxy.icon}}.svg" alt="{{dataCenterProxy.name}}">
+                <img class="icon-img" src="assets/lib/flag_icons_main/flags/4x3/{{dataCenterProxy.icon}}.svg"
+                  alt="{{dataCenterProxy.name}}">
               </span>
               <span>{{dataCenterProxy.name}}</span>
             </div>
@@ -55,13 +57,23 @@
               <span>month</span>
             </span>
             <div class="price">
-                <span>{{dataCenterProxy.priceDataCenter[0]| currency: 'USD'}}</span>
-                <span>{{dataCenterProxy.priceDataCenter[1] | currency: 'USD'}}</span>
-                <span>{{dataCenterProxy.priceDataCenter[2] | currency: 'USD'}}</span>
+              <span>{{dataCenterProxy.priceDataCenter[0]| currency: 'USD'}}</span>
+              <span>{{dataCenterProxy.priceDataCenter[1] | currency: 'USD'}}</span>
+              <span>{{dataCenterProxy.priceDataCenter[2] | currency: 'USD'}}</span>
             </div>
           </div>
         </div>
       </div>
+    </div>
+    <div class="row my-2">
+      <a class="d-flex align-items-center justify-content-center gap-3 c-pointer">
+        <span class="icon">
+          <img class="icon-img-md" src="assets/images/server_proxies/icon_more.svg" alt="icon_more">
+        </span>
+        <p class="fw-600">
+          Don't know which one to choose?
+        </p>
+      </a>
     </div>
   </div>
 </section>

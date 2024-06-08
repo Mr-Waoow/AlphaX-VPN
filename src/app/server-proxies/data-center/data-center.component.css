@@ -229,8 +229,8 @@ span {
   transition: box-shadow .3s, -webkit-box-shadow .3s;
   border-radius: 3px;
   background: #fff;
-  -webkit-box-shadow: 0 0 .5em 0 rgba(0, 0, 0, .18);
-  box-shadow: 0 0 .5em 0 rgba(0, 0, 0, .18);
+  -webkit-box-shadow: 0 0 .5em 0 #0000002e;
+  box-shadow: 0 0 .5em 0 #0000002e;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
@@ -247,11 +247,11 @@ span {
   flex-direction: row;
   width: 100%;
   margin: 0;
-  border-bottom: 1px solid #cdd5e3;
+  border-bottom: 1px solid var(--light-quaternary);
   border-radius: 0;
-  background: #fff;
-  -webkit-box-shadow: 0 0 0 0 rgba(0, 0, 0, .18);
-  box-shadow: 0 0 0 0 rgba(0, 0, 0, .18);
+  background-color: var(--white);
+  -webkit-box-shadow: 0 0 0 0 #0000002e;
+  box-shadow: 0 0 0 0 #0000002e;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
   -ms-flex-direction: row;
@@ -269,13 +269,13 @@ span {
   height: 46px;
   padding-left: 10px;
   text-align: left;
-  color: #fff;
-  background: #304054;
-  background: -webkit-gradient(left top, right top, color-stop(0, #304054), color-stop(100%, #2d3642));
-  background: -webkit-linear-gradient(left, #304054 0, #2d3642 100%);
-  background: -o-linear-gradient(left, #304054 0, #2d3642 100%);
-  background: -webkit-gradient(linear, left top, right top, from(#304054), to(#2d3642));
-  background: linear-gradient(to right, #304054 0, #2d3642 100%);
+  color: var(--tertiary);
+  background-color: var(--secondary);
+  background: -webkit-gradient(left top, right top, color-stop(0, var(--hov-secondary)), color-stop(100%, var(--secondary)));
+  background: -webkit-linear-gradient(left, var(--hov-secondary) 0, var(--secondary) 100%);
+  background: -o-linear-gradient(left, var(--hov-secondary) 0, var(--secondary) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(var(--hov-secondary)), to(var(--secondary)));
+  background: linear-gradient(to right, var(--hov-secondary) 0, var(--secondary) 100%);
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
@@ -284,15 +284,15 @@ span {
 .grid-table .grid-table-cell-l {
   width: 280px;
   height: 60px;
-  color: #2e3847;
-  background: #f3f6f8;
+  color: var(--secondary);
+  background: var(--tertiary);
 }
 
 .grid-table-cell-r {
   position: relative;
   padding: 20px 15px 25px;
   text-align: left;
-  background: #fff;
+  background-color: var(--white);
 }
 
 .grid-table .grid-table-cell-r {
@@ -322,7 +322,7 @@ span {
   font-weight: 400;
   margin-bottom: 1rem;
   white-space: nowrap;
-  color: #2f3a4a;
+  color: var(--secondary);
 }
 
 .grid-table .grid-table-cell-r>div {
@@ -375,4 +375,46 @@ span {
 
 .grid-table-row:hover .buy-buttons {
   opacity: 1;
+}
+
+@media (max-width: 1199px) {
+  .grid-table-row {
+    width: 23%;
+    margin: 0 1% 20px;
+  }
+}
+
+@media (max-width: 991px) {
+  .grid-table-row {
+    width: 31.333332%;
+    margin: 0 1% 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .viwe-buttons {
+    display: none;
+  }
+
+  .grid-table-row {
+    width: 46%;
+    margin: 0 2% 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-table-body {
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  .grid-table-row {
+    width: 220px;
+    margin: 0 0 20px;
+  }
 }
