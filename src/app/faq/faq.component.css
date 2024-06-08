@@ -10,15 +10,16 @@
   margin-bottom: 0.9rem;
 }
 
-.faq .openable a {
+.openable a {
     margin-left: 3rem;
 }
 
-.faq .openable .icon-md {
+.openable .icon {
   position: relative;
+
 }
 
-.faq .openable .icon-md .toggler-icon {
+.openable .icon .toggler-icon {
   position: absolute;
   width: 2rem;
   height: 0.5rem;
@@ -32,37 +33,25 @@
   transition: all 0.3s ease;
 }
 
-.faq .openable h6 {
+.openable h6 {
   width: fit-content;
 }
 
-.faq .openable p {
+.openable p {
   margin-left: 3rem;
 }
 
-.faq .openable .btn {
+.openable .btn {
   border-radius: 3px;
 }
 
-.faq .openable table {
+.openable table {
   width: 40%;
   margin-left: 3rem;
   font-size: 0.8rem;
   margin-bottom: 0rem;
 }
 
-.faq .openable table tr td{
+.openable table tr td{
   padding: 0.7rem;
-}
-
-.notification .btn {
-  background-color: var(--soft-dark);
-  color: var(--light);
-  border: none;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 3px;
-}
-.notification .btn:hover {
-  background-color: var(--hov-primary);
 }

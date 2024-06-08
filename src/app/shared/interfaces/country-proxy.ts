@@ -21,6 +21,14 @@ export interface CountryProxy {
   operators: string[];
   operatorsIcon: string[];
   priceMobile: number[];
+  isResidential: boolean;
+  isGeo: boolean;
+  geoOnlineIPs: number[];
+  geoThreads: number;
+  geoPriceResidential: number[];
+  onlineIPs: number[];
+  threads: number;
+  priceResidential: number[];
   priceWithDiscount: number;
   discount: number;
 }

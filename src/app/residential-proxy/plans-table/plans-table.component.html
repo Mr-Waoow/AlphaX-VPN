@@ -1,0 +1,364 @@
+<section>
+  <div class="container">
+    <div class="row">
+      <div
+        class="col-md-12 my-4 d-flex gap-3 gap-md-0 flex-md-row flex-column align-items-start align-items-md-center justify-content-between">
+        <h2>
+          <span>
+            {{this.title}}
+          </span>
+        </h2>
+        <div>
+          <span class="me-2">Available</span>
+          <span class="p-2 text-light bg-primary rounded-3 shadow">83 packages</span>
+        </div>
+      </div>
+      <div class="col-md-12">
+        <div class="filter-buttons">
+          <a (click)="filterClicked($event)"
+            class="btn btn-primary-secondary {{this.isMix&&this.isGeo&&this.isRotating&&this.isThemed&&this.isPremium? 'active':''}}"
+            data-filter="all">All</a>
+          <a (click)="filterClicked($event)" class="btn btn-primary-secondary {{this.isMix&&!this.isGeo&&!this.isRotating&&!this.isThemed&&!this.isPremium? 'active':''}}"
+            data-filter="mix">Mix</a>
+          <a (click)="filterClicked($event)" class="btn btn-primary-secondary {{!this.isMix&&this.isGeo&&!this.isRotating&&!this.isThemed&&!this.isPremium? 'active':''}}"
+            data-filter="geo">Geo</a>
+          <a (click)="filterClicked($event)" class="btn btn-primary-secondary {{!this.isMix&&!this.isGeo&&this.isRotating&&!this.isThemed&&!this.isPremium? 'active':''}}"
+            data-filter="rotating">Rotating</a>
+          <a (click)="filterClicked($event)" class="btn btn-primary-secondary {{!this.isMix&&!this.isGeo&&!this.isRotating&&this.isThemed&&!this.isPremium? 'active':''}}"
+            data-filter="themed">Themed</a>
+          <a (click)="filterClicked($event)" class="btn btn-primary-secondary {{!this.isMix&&!this.isGeo&&!this.isRotating&&!this.isThemed&&this.isPremium? 'active':''}}"
+            data-filter="premium">Premium</a>
+        </div>
+      </div>
+    </div>
+    <div class="grid-table">
+      <div class="grid-table-head">
+        <div class="grid-table-row">
+          <div class="grid-table-cell-l">
+            <div class="grid-table-cell">
+              <span>Package</span>
+            </div>
+            <div class="grid-table-cell">
+              <span>Online IP</span>
+            </div>
+          </div>
+          <div class="grid-table-cell-r">
+            <div class="grid-table-cell">
+              <span>Threads</span>
+            </div>
+            <div class="grid-table-cell">
+              <span>hour</span>
+            </div>
+            <div class="grid-table-cell">
+              <span>day</span>
+            </div>
+            <div class="grid-table-cell">
+              <span>week</span>
+            </div>
+            <div class="grid-table-cell">
+              <span>month</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="grid-table-body">
+        <div *ngIf="this.isMix" class="mix">
+          <div class="grid-table-cell --section mt-2">
+            <span>Mix</span>
+          </div>
+          <div class="grid-table-row">
+            <div class="grid-table-cell-l">
+              <div class="grid-table-cell">
+                <div class="country-container">
+                  <span class="icon">
+                    <img class="icon-" src="assets/images/residential_proxy/proxies_plans/worldwide.svg"
+                      alt="worldwide">
+                  </span>
+                  <span class="name">
+                    World Mix
+                  </span>
+                </div>
+              </div>
+              <div class="grid-table-cell drop">
+                <div class="dropdown">
+                  <button (click)="this.dropDowen($event)" #dropDownButton class="btn btn-secondary dropdown-button"
+                    type="button">
+                    20000 IP
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a (click)="dropDowenItem($event)" class="dropdown-item">20000 IP</a></li>
+                    <li><a (click)="dropDowenItem($event)" class="dropdown-item">30000 IP</a></li>
+                    <li><a (click)="dropDowenItem($event)" class="dropdown-item">40000 IP</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="grid-table-cell-r">
+              <div class="buy-buttons">
+                <a class="btn btn-primary" href="">buy</a>
+                <a class="btn btn-secondary" href="">Request test</a>
+              </div>
+              <div class="grid-table-cell">
+                <span>300</span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{5 | currency: 'USD'}}</span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{20 | currency: 'USD'}}</span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{100 | currency: 'USD'}}</span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{360 | currency: 'USD'}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="this.isPremium" class="premium">
+          <div class="grid-table-cell --section mt-2">
+            <span>Premium World Mix</span>
+          </div>
+          <div class="grid-table-row">
+            <div class="grid-table-cell-l">
+              <div class="grid-table-cell">
+                <div class="country-container">
+                  <span class="icon">
+                    <img class="icon-" src="assets/images/residential_proxy/proxies_plans/premium.svg" alt="Premium">
+                  </span>
+                  <span class="name">
+                    Premium Mix
+                  </span>
+                </div>
+              </div>
+              <div class="grid-table-cell drop">
+                <div class="dropdown">
+                  <button (click)="this.dropDowen($event)" #dropDownButton class="btn btn-secondary dropdown-button"
+                    type="button">
+                    10000 IP
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a (click)="dropDowenItem($event)" class="dropdown-item">10000 IP</a></li>
+                    <li><a (click)="dropDowenItem($event)" class="dropdown-item">15000 IP</a></li>
+                    <li><a (click)="dropDowenItem($event)" class="dropdown-item">20000 IP</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="grid-table-cell-r">
+              <div class="buy-buttons">
+                <a class="btn btn-primary" href="">buy</a>
+                <a class="btn btn-secondary" href="">Request test</a>
+              </div>
+              <div class="grid-table-cell">
+                <span>500</span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{5 | currency: 'USD'}}</span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{15 | currency: 'USD'}}</span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{60 | currency: 'USD'}}</span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{200 | currency: 'USD'}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="this.isGeo" class="geo">
+          <div class="grid-table-cell --section mt-2">
+            <span>Geo proxy plans</span>
+          </div>
+          <div *ngFor="let geo of this.geoProxy; let n = index" class="grid-table-row">
+            <div class="grid-table-cell-l {{n % 2 === 0? '':'--second'}}">
+              <div class="grid-table-cell">
+                <div class="country-container">
+                  <span class="icon">
+                    <img class="icon-" src="assets/lib/flag_icons_main/flags/4x3/{{geo.icon}}.svg" alt="{{geo.name}}">
+                  </span>
+                  <span class="name">
+                    {{geo.name}}
+                  </span>
+                </div>
+              </div>
+              <div class="grid-table-cell drop">
+                <div *ngIf="geo.geoOnlineIPs.length > 1" class="dropdown">
+                  <button (click)="this.dropDowen($event)" #dropDownButton class="btn btn-secondary dropdown-button"
+                    type="button">
+                    {{geo.geoOnlineIPs[0]}}
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li *ngFor="let item of this.createRange(geo.geoOnlineIPs.length); let i = index">
+                      <a (click)="dropDowenItem($event)" class="dropdown-item">
+                        {{geo.geoOnlineIPs[i]}}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <span *ngIf="geo.geoOnlineIPs.length <= 1">
+                  {{geo.geoOnlineIPs}}
+                </span>
+              </div>
+            </div>
+            <div class="grid-table-cell-r {{n % 2 === 0? '':'--second'}}">
+              <div class="buy-buttons">
+                <a class="btn btn-primary" href="">buy</a>
+                <a class="btn btn-secondary" href="">Request test</a>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{geo.geoThreads}}</span>
+              </div>
+              <div class="grid-table-cell">
+                <span *ngIf="geo.geoPriceResidential[0]">{{geo.geoPriceResidential[0] | currency: 'USD'}}</span>
+                <span *ngIf="!geo.geoPriceResidential[0]"> ——— </span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{geo.geoPriceResidential[1] | currency: 'USD'}}</span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{geo.geoPriceResidential[2] | currency: 'USD'}}</span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{geo.geoPriceResidential[3] | currency: 'USD'}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="this.isThemed" class="themed">
+          <div class="grid-table-cell --section mt-2">
+            <span>Themed proxy plans</span>
+          </div>
+          <div *ngFor="let themed of this.themedProxy; let n = index" class="grid-table-row">
+            <div class="grid-table-cell-l {{n % 2 === 0? '':'--second'}}">
+              <div class="grid-table-cell">
+                <div class="country-container">
+                  <span class="icon">
+                    <img class="icon-" src="assets/images/residential_proxy/proxies_plans/{{themed.icon}}.svg"
+                      alt="{{themed.name}}">
+                  </span>
+                  <span class="name">
+                    {{themed.name}}
+                  </span>
+                </div>
+              </div>
+              <div class="grid-table-cell drop">
+                <div *ngIf="themed.onlineIPs.length > 1" class="dropdown">
+                  <button (click)="this.dropDowen($event)" #dropDownButton class="btn btn-secondary dropdown-button"
+                    type="button">
+                    {{themed.onlineIPs[0]}}
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li *ngFor="let item of this.createRange(themed.onlineIPs.length); let i = index">
+                      <a (click)="dropDowenItem($event)" class="dropdown-item">
+                        {{themed.onlineIPs[i]}}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <span *ngIf="themed.onlineIPs.length <= 1">
+                  {{themed.onlineIPs}}
+                </span>
+              </div>
+            </div>
+            <div class="grid-table-cell-r {{n % 2 === 0? '':'--second'}}">
+              <div class="buy-buttons">
+                <a class="btn btn-primary" href="">buy</a>
+                <a class="btn btn-secondary" href="">Request test</a>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{themed.threads}}</span>
+              </div>
+              <div class="grid-table-cell">
+                <span *ngIf="themed.priceResidential[0]">{{themed.priceResidential[0] | currency: 'USD'}}</span>
+                <span *ngIf="!themed.priceResidential[0]"> ——— </span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{themed.priceResidential[1] | currency: 'USD'}}</span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{themed.priceResidential[2] | currency: 'USD'}}</span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{themed.priceResidential[3] | currency: 'USD'}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div *ngIf="this.isRotating" class="rotating">
+          <div class="grid-table-cell --section mt-2">
+            <span>Rotating proxy plans</span>
+          </div>
+          <div *ngFor="let rotating of this.rotatingProxy let n = index" class="grid-table-row">
+            <div class="grid-table-cell-l {{n % 2 === 0? '':'--second'}}">
+              <div class="grid-table-cell">
+                <div class="country-container">
+                  <span class="icon">
+                    <img class="icon-" src="assets/lib/flag_icons_main/flags/4x3/{{rotating.icon}}.svg"
+                      alt="{{rotating.name}}">
+                  </span>
+                  <span class="name">
+                    rotating <span>{{rotating.alpha2Code}}</span>
+                  </span>
+                </div>
+              </div>
+              <div class="grid-table-cell drop">
+                <div *ngIf="rotating.onlineIPs.length > 1" class="dropdown">
+                  <button (click)="this.dropDowen($event)" #dropDownButton class="btn btn-secondary dropdown-button"
+                    type="button">
+                    {{rotating.onlineIPs[0]}}
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li *ngFor="let item of this.createRange(rotating.onlineIPs.length); let i = index">
+                      <a (click)="dropDowenItem($event)" class="dropdown-item">
+                        {{rotating.onlineIPs[i]}}
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <span *ngIf="rotating.onlineIPs.length <= 1">
+                  {{rotating.onlineIPs}}
+                </span>
+              </div>
+            </div>
+            <div class="grid-table-cell-r {{n % 2 === 0? '':'--second'}}">
+              <div class="buy-buttons">
+                <a class="btn btn-primary" href="">buy</a>
+                <a class="btn btn-secondary" href="">Request test</a>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{rotating.threads}}</span>
+              </div>
+              <div class="grid-table-cell">
+                <span *ngIf="rotating.priceResidential[0]">{{rotating.priceResidential[0] | currency: 'USD'}}</span>
+                <span *ngIf="!rotating.priceResidential[0]"> ——— </span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{rotating.priceResidential[1] | currency: 'USD'}}</span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{rotating.priceResidential[2] | currency: 'USD'}}</span>
+              </div>
+              <div class="grid-table-cell">
+                <span>{{rotating.priceResidential[3] | currency: 'USD'}}</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row my-5">
+      <a class="d-flex align-items-center justify-content-center gap-3 c-pointer">
+        <p class="text-tertiary fw-600">
+          Don't know which one to choose?
+        </p>
+        <span class="icon">
+          <img src="assets/images/residential_proxy/proxies_plans/select.svg" alt="select">
+        </span>
+      </a>
+    </div>
+  </div>
+</section>

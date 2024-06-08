@@ -172,7 +172,7 @@ export class BuyServiceComponent implements OnInit {
   }
 
   //Constructor
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) {}
 
   //Lifecycle Hooks
   ngOnInit(): void {
@@ -218,7 +218,7 @@ export class BuyServiceComponent implements OnInit {
       }, 50);
     }
   }
-  ngOnChanges(): void { }
+  ngOnChanges(): void {}
 
   //Methods
   //ShowHide

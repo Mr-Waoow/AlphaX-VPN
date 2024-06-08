@@ -4,12 +4,12 @@
       <div class="row">
         <div
           class="col-md-12 my-4 d-flex gap-3 gap-md-0 flex-md-row flex-column align-items-start align-items-md-center justify-content-between">
-          <h1 class="line-after"><span>{{this.title}}</span></h1>
+          <h1><span>{{this.title}}</span></h1>
           <div>
             <span class="me-2">Available</span>
-            <span *ngIf="isPrivate" class="p-2 text-light bg-primary rounded-1">{{privateCountriesNumber}}
+            <span *ngIf="isPrivate" class="p-2 text-light bg-primary rounded-3 shadow">{{privateCountriesNumber}}
               countries</span>
-            <span *ngIf="!isPrivate" class="p-2 text-light bg-primary rounded-1">{{sharedCountriesNumber}}
+            <span *ngIf="!isPrivate" class="p-2 text-light bg-primary rounded-3 shadow">{{sharedCountriesNumber}}
               countries</span>
           </div>
         </div>
@@ -60,7 +60,7 @@
                 </span>
                 :&nbsp;
               </div>
-              <div class="px-2 py-1 text-light bg-primary rounded-1">
+              <div class="px-2 py-1 text-light bg-primary rounded-3 shadow">
                 <span *ngIf="this.cityNo == -1">
                   {{countryProxy?.ipAvailiblePrivate}}
                 </span>

@@ -17,8 +17,7 @@
         </p>
         <div class="service-props residential-feature">
           <ul class="row">
-            <li *ngFor="let residentialFeature of this.residentialFeatures"
-              class="col-4 gap-1">
+            <li *ngFor="let residentialFeature of this.residentialFeatures" class="col-4 gap-1">
               <span class="icon">
                 <img class="icon-img"
                   src="assets/images/residential_proxy/features/{{residentialFeature.icon}}-{{residentialFeature.id}}.svg"
@@ -34,8 +33,7 @@
     </div>
   </div>
 </section>
-
-
+<xvpn-plans-table [title]="this.title"></xvpn-plans-table>
 <!-- Start Service Props Area -->
 <section class="service-props">
   <div class="container">
@@ -47,19 +45,19 @@
           </span>
         </h4>
         <ul class="row">
-          <li *ngFor="let proxyProps of this.mobileProxiesProps" class="col-md-6 mb-3 gap-3">
+          <li *ngFor="let universalProxyList of this.universalProxyLists" class="col-md-6 mb-3 gap-3">
             <span class="icon">
               <img class="icon-img-md"
-                src="assets/images/mobile_proxy/mobile_proxies/{{proxyProps.icon}}-{{proxyProps.id}}.svg"
-                title="{{proxyProps.name}}" alt="{{proxyProps.name}}">
+                src="assets/images/residential_proxy/universal_proxy/{{universalProxyList.icon}}-{{universalProxyList.id}}.svg"
+                title="{{universalProxyList.name}}" alt="{{universalProxyList.name}}">
             </span>
             <div class="content-box">
               <span class="fw-bold mb-1 text-uppercase">
-                {{proxyProps.name}}
+                {{universalProxyList.name}}
               </span>
               <br>
               <p>
-                {{proxyProps.description}}
+                {{universalProxyList.description}}
               </p>
             </div>
           </li>
@@ -96,17 +94,17 @@
   <div class="container">
     <div class="row my-4">
       <div>
-        <h4>Interested?</h4>
+        <h4>Residential proxies from RSocks</h4>
       </div>
       <div class="col-lg-12">
-        <h5 class="w-sm-55">
-          Check the quality of high-end mobile IPs by RSocks ASAP
-        </h5>
+        <p class="w-sm-55">
+          Choose the plan you're interested in and evaluate its work here and now.Our round-the-clock <span
+            class="text-primary">support service</span>
+          will help you to pick a fitting plan
+        </p>
       </div>
       <div class="col-lg-12">
-        <a href="#" class="btn btn-primary mt-3 mb-1">Get proxies</a>
-        <br>
-        <span class="opacity-70 fs-12 fw-400">Start your free trial period now!</span>
+        <a href="#" class="btn btn-primary mt-3 mb-1">Try for free</a>
       </div>
     </div>
   </div>

@@ -1,15 +1,15 @@
 <xvpn-preloader></xvpn-preloader>
-<section class="faq p-3">
+<section>
   <div class="container">
     <div class="row my-4">
       <div class="col-md-8">
         <div class="openable" *ngFor="let question of questions">
           <h6 (click)="openDivPlus($event)" class="d-flex align-items-center">
-            <div class="icon-md">
+            <div class="icon ms-2">
               <span class="toggler-icon r-90 plus"></span>
               <span class="toggler-icon minus"></span>
             </div>
-            <span>{{question.question}}</span>
+            <span class="ms-4">{{question.question}}</span>
           </h6>
           <p>
             {{question.answer}}
@@ -52,7 +52,7 @@
           <p>
             Did not find an answer?
           </p>
-          <a href="#" class="btn">Ask a question</a>
+          <a href="#" class="btn btn-soft-dark-primary">Ask a question</a>
         </div>
       </div>
     </div>

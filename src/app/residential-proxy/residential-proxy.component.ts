@@ -15,14 +15,14 @@ import { Methods } from '../shared/classes/methods';
 export class ResidentialProxyComponent {
   //Icons
   faCaretDown = faCaretDown;
-  title: string = 'Buy Mobile Proxies';
+  title: string = 'Residential proxies plans';
   isMobile: boolean = true;
   methods = new Methods();
   allCountries: CountryProxy[] = [];
   countries: CountryProxy[] = [];
   messengerApps: MajorServices[] = [];
   residentialFeatures: Feature[] = [];
-  mobileProxiesProps: Feature[] = [];
+  universalProxyLists: Feature[] = [];
   frequentlyAskes: PersonalQuestion[] = [];
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
@@ -32,8 +32,8 @@ export class ResidentialProxyComponent {
     }); //get countries from data service
     this.messengerApps = this.dataService.getMessengerApps();
     this.residentialFeatures = this.dataService.getResidentialFeatures();
-    this.mobileProxiesProps = this.dataService.getMobileProxiesProps();
-    this.frequentlyAskes = this.dataService.getFrequentlyAskes();
+    this.universalProxyLists = this.dataService.getUniversalProxyLists();
+    this.frequentlyAskes = this.dataService.getFrequentlyAskesResidential();
   }
   openDiv(evt: Event): void {
     this.methods.openable.openDiv(evt);

@@ -47,6 +47,8 @@ import { ExclusivePlusComponent } from './exclusive-plus/exclusive-plus.componen
 import { ServerProxiesComponent } from './server-proxies/server-proxies.component';
 import { NewsComponent } from './news/news.component';
 import { HeroImgScrollComponent } from './shared/hero/hero-img-scroll/hero-img-scroll.component';
+import { PlansTableComponent } from './residential-proxy/plans-table/plans-table.component';
+import { DataCenterComponent } from './server-proxies/data-center/data-center.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +82,8 @@ import { HeroImgScrollComponent } from './shared/hero/hero-img-scroll/hero-img-s
     ServerProxiesComponent,
     NewsComponent,
     HeroImgScrollComponent,
+    PlansTableComponent,
+    DataCenterComponent,
   ],
   imports: [
     BrowserModule,

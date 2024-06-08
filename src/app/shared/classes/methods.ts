@@ -81,7 +81,7 @@ export class Methods {
     },
     openDivPlus(evt: Event): void {
       const el = evt.currentTarget as HTMLElement;
-      const icon = el?.querySelector('.icon-md');
+      const icon = el?.querySelector('.icon');
       const plus = icon?.querySelector('.plus') as HTMLElement;
       const iconAnimation = this.r90;
       if (plus?.classList.contains(iconAnimation)) {
