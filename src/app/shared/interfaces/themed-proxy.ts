@@ -3,7 +3,7 @@ export interface ThemedProxy {
   name: string;
   icon: string;
   isInfo:boolean;
-  onlineIPs: number[];
-  threads: number;
+  residentialOnlineIPs: number[];
+  residentialThreads: number;
   priceResidential: number[];
 }

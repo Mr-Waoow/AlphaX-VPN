@@ -246,21 +246,21 @@
                 </div>
               </div>
               <div class="grid-table-cell drop">
-                <div *ngIf="themed.onlineIPs.length > 1" class="dropdown">
+                <div *ngIf="themed.residentialOnlineIPs.length > 1" class="dropdown">
                   <button (click)="this.dropDowen($event)" #dropDownButton class="btn btn-secondary dropdown-button"
                     type="button">
-                    {{themed.onlineIPs[0]}}
+                    {{themed.residentialOnlineIPs[0]}}
                   </button>
                   <ul class="dropdown-menu">
-                    <li *ngFor="let item of this.createRange(themed.onlineIPs.length); let i = index">
+                    <li *ngFor="let item of this.createRange(themed.residentialOnlineIPs.length); let i = index">
                       <a (click)="dropDowenItem($event)" class="dropdown-item">
-                        {{themed.onlineIPs[i]}}
+                        {{themed.residentialOnlineIPs[i]}}
                       </a>
                     </li>
                   </ul>
                 </div>
-                <span *ngIf="themed.onlineIPs.length <= 1">
-                  {{themed.onlineIPs}}
+                <span *ngIf="themed.residentialOnlineIPs.length <= 1">
+                  {{themed.residentialOnlineIPs}}
                 </span>
               </div>
             </div>
@@ -270,7 +270,7 @@
                 <a class="btn btn-secondary" href="">Request test</a>
               </div>
               <div class="grid-table-cell">
-                <span>{{themed.threads}}</span>
+                <span>{{themed.residentialThreads}}</span>
               </div>
               <div class="grid-table-cell">
                 <span *ngIf="themed.priceResidential[0]">{{themed.priceResidential[0] | currency: 'USD'}}</span>
@@ -306,21 +306,21 @@
                 </div>
               </div>
               <div class="grid-table-cell drop">
-                <div *ngIf="rotating.onlineIPs.length > 1" class="dropdown">
+                <div *ngIf="rotating.residentialOnlineIPs.length > 1" class="dropdown">
                   <button (click)="this.dropDowen($event)" #dropDownButton class="btn btn-secondary dropdown-button"
                     type="button">
-                    {{rotating.onlineIPs[0]}}
+                    {{rotating.residentialOnlineIPs[0]}}
                   </button>
                   <ul class="dropdown-menu">
-                    <li *ngFor="let item of this.createRange(rotating.onlineIPs.length); let i = index">
+                    <li *ngFor="let item of this.createRange(rotating.residentialOnlineIPs.length); let i = index">
                       <a (click)="dropDowenItem($event)" class="dropdown-item">
-                        {{rotating.onlineIPs[i]}}
+                        {{rotating.residentialOnlineIPs[i]}}
                       </a>
                     </li>
                   </ul>
                 </div>
-                <span *ngIf="rotating.onlineIPs.length <= 1">
-                  {{rotating.onlineIPs}}
+                <span *ngIf="rotating.residentialOnlineIPs.length <= 1">
+                  {{rotating.residentialOnlineIPs}}
                 </span>
               </div>
             </div>
@@ -330,7 +330,7 @@
                 <a class="btn btn-secondary" href="">Request test</a>
               </div>
               <div class="grid-table-cell">
-                <span>{{rotating.threads}}</span>
+                <span>{{rotating.residentialThreads}}</span>
               </div>
               <div class="grid-table-cell">
                 <span *ngIf="rotating.priceResidential[0]">{{rotating.priceResidential[0] | currency: 'USD'}}</span>

@@ -26,9 +26,13 @@ export interface CountryProxy {
   geoOnlineIPs: number[];
   geoThreads: number;
   geoPriceResidential: number[];
-  onlineIPs: number[];
-  threads: number;
+  residentialOnlineIPs: number[];
+  residentialThreads: number;
   priceResidential: number[];
+  isDataCenter: boolean;
+  dataCenterOnlineIPs: number;
+  dataCenterThreads: number;
+  priceDataCenter: number[];
   priceWithDiscount: number;
   discount: number;
 }

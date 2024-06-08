@@ -8,6 +8,10 @@ section {
   margin-bottom: 1rem;
 }
 
+span {
+  text-wrap: nowrap;
+}
+
 .viwe-buttons {
   display: flex;
   align-items: center;
@@ -153,6 +157,62 @@ section {
   flex-wrap: wrap;
 }
 
+.grid-table .online {
+  display: block;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 12%;
+  flex: 0 0 12%;
+}
+
+.grid-table .threads {
+  display: block;
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 10%;
+  flex: 0 0 10%;
+}
+
+.grid-table .price {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 60%;
+  flex: 0 0 60%;
+}
+
+.grid-table .price>span {
+  text-align: center;
+}
+
+.online {
+  display: flex;
+  flex-direction: column;
+}
+
+.threads {
+  display: flex;
+  flex-direction: column;
+}
+
+.price>span {
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 33.3333%;
+  flex: 0 0 33.3333%;
+}
+
+.grid-table .label {
+  display: none;
+}
+
+.label {
+  text-transform: capitalize;
+  font-size: 13px;
+  font-weight: 700;
+  opacity: 0.7;
+}
+
+.price {
+  display: flex;
+}
+
+
 .grid-table-row {
   display: -ms-flex;
   display: -webkit-box;
@@ -207,7 +267,7 @@ section {
   display: -ms-flexbox;
   display: flex;
   height: 46px;
-  padding-left: 55px;
+  padding-left: 10px;
   text-align: left;
   color: #fff;
   background: #304054;
@@ -226,4 +286,93 @@ section {
   height: 60px;
   color: #2e3847;
   background: #f3f6f8;
+}
+
+.grid-table-cell-r {
+  position: relative;
+  padding: 20px 15px 25px;
+  text-align: left;
+  background: #fff;
+}
+
+.grid-table .grid-table-cell-r {
+  position: relative;
+  display: -ms-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  flex-direction: row;
+  height: 60px;
+  padding: 0;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.grid-table-cell-r>div {
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  color: #2f3a4a;
+}
+
+.grid-table .grid-table-cell-r>div {
+  margin: 0;
+  padding: 0 10px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.grid-table .grid-table-cell-r .buy-buttons {
+  flex-direction: row;
+  justify-content: start;
+}
+
+.grid-table-cell-r .buy-buttons {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--soft-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 1rem;
+  -o-transition: all 0.4s ease;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  z-index: 1;
+}
+
+.grid-table .grid-table-cell-r .buy-buttons .btn {
+  width: auto;
+}
+
+.grid-table-cell-r .buy-buttons .btn {
+  width: 100%;
+}
+
+.grid-table-row:hover .online,
+.grid-table-row:hover .threads,
+.grid-table-row:hover .price {
+  opacity: 0.5;
+}
+
+.grid-table-row:hover .buy-buttons {
+  opacity: 1;
 }

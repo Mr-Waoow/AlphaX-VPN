@@ -4,34 +4,62 @@
       <div class="section-title">
         <h4>Buy data center proxies</h4>
         <div class="viwe-buttons">
-          <button><fa-icon [icon]="faGrip"></fa-icon></button>
-          <button><fa-icon [icon]="faList"></fa-icon></button>
+          <button (click)="this.gridView()" class="{{this.isGridView? 'active':''}}"><fa-icon
+              [icon]="faGrip"></fa-icon></button>
+          <button (click)="this.listView()" class="{{!this.isGridView? 'active':''}}"><fa-icon
+              [icon]="faList"></fa-icon></button>
         </div>
       </div>
     </div>
-    <div class="grid-table shadow">
+    <div class="{{!this.isGridView? 'grid-table shadow':''}}">
       <div class="grid-table-head">
         <div>
           <span>Package</span>
         </div>
         <div>
-          <span>online</span>
-          <span>Threads</span>
-          <span>day</span>
-          <span>week</span>
-          <span>month</span>
+          <span class="online">online</span>
+          <span class="threads">threads</span>
+          <span class="price">
+            <span>day</span>
+            <span>week</span>
+            <span>month</span>
+          </span>
         </div>
       </div>
       <div class="grid-table-body">
-        <div>
-          <span>Package</span>
-        </div>
-        <div>
-          <span>online</span>
-          <span>Threads</span>
-          <span>day</span>
-          <span>week</span>
-          <span>month</span>
+        <div *ngFor="let dataCenterProxy of this.dataCenterProxies" class="grid-table-row {{this.isGridView? 'shadow':''}}">
+          <div class="grid-table-cell-l">
+            <div class="d-flex gap-3">
+              <span class="icon">
+                <img class="icon-img" src="assets/lib/flag_icons_main/flags/4x3/{{dataCenterProxy.icon}}.svg" alt="{{dataCenterProxy.name}}">
+              </span>
+              <span>{{dataCenterProxy.name}}</span>
+            </div>
+          </div>
+          <div class="grid-table-cell-r">
+            <div class="buy-buttons">
+              <a class="btn btn-primary py-2 px-4" href="">buy</a>
+              <a class="btn btn-soft-dark py-2 px-4" href="">Request test</a>
+            </div>
+            <div class="online">
+              <span class="label">online</span>
+              <span>{{dataCenterProxy.dataCenterOnlineIPs}} IP</span>
+            </div>
+            <div class="threads">
+              <span class="label">threads</span>
+              <span>{{dataCenterProxy.dataCenterThreads}}</span>
+            </div>
+            <span class="price label">
+              <span>day</span>
+              <span>week</span>
+              <span>month</span>
+            </span>
+            <div class="price">
+                <span>{{dataCenterProxy.priceDataCenter[0]| currency: 'USD'}}</span>
+                <span>{{dataCenterProxy.priceDataCenter[1] | currency: 'USD'}}</span>
+                <span>{{dataCenterProxy.priceDataCenter[2] | currency: 'USD'}}</span>
+            </div>
+          </div>
         </div>
       </div>
     </div>
