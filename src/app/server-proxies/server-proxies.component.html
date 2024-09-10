@@ -43,3 +43,36 @@
   </div>
 </section>
 <xvpn-data-center></xvpn-data-center>
+<section>
+  <div class="container">
+    <div class="row mb-5">
+      <div class="col-md-2">
+        <div class="d-flex align-items-center gap-2">
+          <fa-icon class="fs-16 text-primary" [icon]="faBookBookmark"></fa-icon>
+          <h4>Information</h4>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div class="section-Paragraph">
+          <p>
+            Data center proxies are suitable only for white projects. It is strictly prohibited to violate usage rules
+            is strictly prohibited. In case of violation of the rules, the service reserves the right to unilaterally
+            terminate the customer service without the possibility of recovery.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div *ngFor="let dataCenterFeature of this.dataCenterFeatures" class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="d-flex align-items-center gap-3">
+          <div class="icon flex-basis-10">
+            <img src="assets/images/server_proxies/features/{{dataCenterFeature.icon}}_{{dataCenterFeature.id}}.png" alt="{{dataCenterFeature.name}}">
+          </div>
+          <p class="flex-basis-90">
+            {{dataCenterFeature.description}}
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -7,6 +7,10 @@ input:focus-visible {
   background-color: var(--white);
 }
 
+.Proxy-lists .container {
+  overflow: visible;
+}
+
 .Proxy-lists p {
   margin-bottom: 2rem;
 }

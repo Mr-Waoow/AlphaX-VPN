@@ -4,10 +4,12 @@
       <div class="section-title">
         <h4>Buy data center proxies</h4>
         <div class="viwe-buttons">
-          <button (click)="this.gridView()" class="{{this.isGridView? 'active':''}}"><fa-icon
-              [icon]="faGrip"></fa-icon></button>
-          <button (click)="this.listView()" class="{{!this.isGridView? 'active':''}}"><fa-icon
-              [icon]="faList"></fa-icon></button>
+          <button (click)="this.gridView()" class="{{this.isGridView? 'active':''}}">
+            <fa-icon [icon]="faGrip"></fa-icon>
+          </button>
+          <button (click)="this.listView()" class="{{!this.isGridView? 'active':''}}">
+            <fa-icon [icon]="faList"></fa-icon>
+          </button>
         </div>
       </div>
     </div>

@@ -14,7 +14,7 @@
             <span *ngIf="showText4" class="fade-in">&nbsp;Privacy</span>
           </h3>
           <div *ngIf="showText5" class="fade-in button d-flex gap-3 align-items-center">
-            <a href="#" class="btn btn-outline-primary rounded-3">
+            <a href="#" class="btn fw-600 btn-outline-secondary-primary-an rounded-2 px-5 py-3">
               Register now
             </a>
             <span> and try for free</span>
@@ -75,12 +75,13 @@
       <div class="col-lg-5 d-lg-block d-none">
         <div class="slider-content mt-3 mt-md-0 slider-map">
           <div class="img-box">
-            <img src="assets/images/white_label/header/head_whitelabel.png" alt="head_whitelabel">
+            <img src="assets/images/hero/white_label/head_whitelabel.png" alt="head_whitelabel">
           </div>
         </div>
       </div>
     </div>
-    <div *ngIf="routerLinkActive === 'Residential-Proxy'" class="row justify-content-between personal-silder align-items-center">
+    <div *ngIf="routerLinkActive === 'Residential-Proxy'"
+      class="row justify-content-between personal-silder align-items-center">
       <div class="col-lg-7 mt-5">
         <div class="slider-content mt-3 mt-md-0 text-start h-240px justify-content-center">
           <h1>
@@ -107,10 +108,49 @@
             </li>
           </ul>
         </div>
-        <a href="#" class="btn btn-outline-primary py-3 px-5 fs-17 fw-bold rounded-3 mt-5">Try it for free</a>
+        <a href="#" class="btn fw-600 btn-outline-secondary-primary-an rounded-2 px-5 py-3 mt-5">Try it for free</a>
       </div>
       <div class="col-lg-5 position-relative d-lg-block d-none">
         <xvpn-hero-img-scroll></xvpn-hero-img-scroll>
+      </div>
+    </div>
+    <div *ngIf="routerLinkActive === 'Exclusive-Plus'"
+      class="row justify-content-between personal-silder align-items-center">
+      <div class="col-12 d-flex flex-column align-items-center gap-4">
+        <h1 class="text-center text-primary fw-700 fs-50">
+          Exclusive Proxy
+        </h1>
+        <h4>
+          More than 8 000 000 top quality IPs
+        </h4>
+        <p class="fw-600 fs-19 w-50 text-center">
+          Get the maximum plan of 50 thousand proxies for 30 days! Easy of use. Equal tariff. Pay only for data
+          traffic.
+        </p>
+        <ul class="d-flex w-80 align-items-center justify-content-between fs-18 fw-600">
+          <li class="fade-in d-flex gap-2 align-items-center">
+            <span class="icon-">
+              <img src="assets/images/hero/exclusive_proxy/icon_clock.svg" title="Constant proxy">
+            </span>
+            <span>Update every 15 minutes</span>
+          </li>
+          <li class="fade-in d-flex gap-2 align-items-center">
+            <span class="icon-">
+              <img src="assets/images/hero/exclusive_proxy/icon_support.svg" title="Real IPs">
+            </span>
+            <span>100MB trial for $3</span>
+          </li>
+          <li class="fade-in d-flex gap-2 align-items-center">
+            <span class="icon-">
+              <img src="assets/images/hero/exclusive_proxy/icon_test-mb.svg" title="Supported">
+            </span>
+            <span>Personal support 24/7</span>
+          </li>
+        </ul>
+        <div class="d-flex align-items-center gap-3 mt-4">
+          <a href="#" class="btn btn-primary rounded-2 px-5 py-2">Start using</a>
+          <a href="#" class="btn btn-outline-primary-an rounded-2 px-5 py-2">Log in for trial</a>
+        </div>
       </div>
     </div>
     <div *ngIf="routerLinkActive === 'Personal-Proxy'" class="row personal-silder align-items-center">
@@ -140,10 +180,26 @@
             </li>
           </ul>
         </div>
-        <a href="#" class="btn btn-outline-primary py-3 px-5 fw-bold rounded-1 mt-5">Try it now</a>
+        <a href="#" class="btn fw-600 btn-outline-secondary-primary-an rounded-2 px-5 py-3 mt-5">Try it now</a>
       </div>
       <div class="col-lg-6 position-relative d-lg-block d-none mt-5">
         <xvpn-hero-img-flags></xvpn-hero-img-flags>
+      </div>
+    </div>
+    <div *ngIf="routerLinkActive === 'Server-Proxies'" class="row">
+      <div class="col-lg-6 d-flex align-items-center">
+        <div class="slider-content mt-3 mt-md-0">
+          <h5>
+            <span *ngIf="showText" class="fade-in">Alpha-x Project</span>
+          </h5>
+          <h3 *ngIf="showText1" class="mb-3 fade-in h-auto">Buy Dedicated Server Proxy</h3>
+          <div class="btn fw-600 btn-outline-secondary-primary-an rounded-2 px-5 py-3">Try Now</div>
+        </div>
+      </div>
+      <div class="col-lg-6 d-md-block d-none d-flex align-items-center">
+        <div class="img-container">
+          <img src="assets/images/hero/server_proxy/server.png" alt="shared">
+        </div>
       </div>
     </div>
     <div *ngIf="routerLinkActive === 'Shared-Proxy'" class="row">

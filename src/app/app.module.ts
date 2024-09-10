@@ -49,6 +49,7 @@ import { NewsComponent } from './news/news.component';
 import { HeroImgScrollComponent } from './shared/hero/hero-img-scroll/hero-img-scroll.component';
 import { PlansTableComponent } from './residential-proxy/plans-table/plans-table.component';
 import { DataCenterComponent } from './server-proxies/data-center/data-center.component';
+import { CardBuyPlusComponent } from './exclusive-plus/card-buy-plus/card-buy-plus.component';
 
 @NgModule({
   declarations: [
@@ -84,6 +85,7 @@ import { DataCenterComponent } from './server-proxies/data-center/data-center.co
     HeroImgScrollComponent,
     PlansTableComponent,
     DataCenterComponent,
+    CardBuyPlusComponent,
   ],
   imports: [
     BrowserModule,

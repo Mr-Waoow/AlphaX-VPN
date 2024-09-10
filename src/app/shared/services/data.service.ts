@@ -7614,7 +7614,7 @@ export class DataService {
         name: 'FREE TEST',
         icon: 'reason',
         description:
-          'We provide all proxies to the test, so that you don’t make the wrong choice, and technical support will help you select proxy pack for specific tasks.',
+          "We provide all proxies to the test, so that you don't make the wrong choice, and technical support will help you select proxy pack for specific tasks.",
       },
       {
         id: 5,
@@ -7625,5 +7625,52 @@ export class DataService {
       },
     ];
   }
+  getDataCenterFeatures(): Feature[] {
+    return [
+      {
+        id: 1,
+        name: 'Technical support',
+        icon: 'feature',
+        description:
+          'Skilled technical support via Jabber, Skype, Telegram, ICQ.',
+      },
+      {
+        id: 2,
+        name: 'Network protocols',
+        icon: 'feature',
+        description:
+          'Support for HTTP(S), Socks 4/5 network protocols.',
+      },
+      {
+        id: 3,
+        name: 'Clean proxies',
+        icon: 'feature',
+        description:
+          'Always clean proxies. Lock 25, 2525, 587, 465, 2526 ports.',
+      },
+      {
+        id: 4,
+        name: 'Moneyback',
+        icon: 'feature',
+        description:
+          '1 hour moneyback guaranteed.',
+      },
+      {
+        id: 5,
+        name: 'Spam-free',
+        icon: 'feature',
+        description:
+          'Everyday clean spam-free proxy lists.',
+      },
+      {
+        id: 6,
+        name: 'Individual approach',
+        icon: 'feature',
+        description:
+          'Individual approach to each client.',
+      },
+    ];
+  }
+
   constructor() {}
 }
