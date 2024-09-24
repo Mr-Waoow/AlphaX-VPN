@@ -1,0 +1,44 @@
+<svg width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24.5 6.5H38" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.5 9.5H44" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.5 12.5H30" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M33 12.5H44" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.5 19.5H38" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.5 22.5H44" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.5 25.5H30" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M33 25.5H44" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.5 32.5H27" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M30 32.5H39" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.5 35.5H35" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.5 38.5H30" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.5 45.5H27" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.5 48.5H29" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.5 51.5H31" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M39.4301 44.8C39.4611 44.7317 39.4878 44.6616 39.5101 44.59M41.8301 35.64L41.2001 38.21C40.7137 38.3651 40.2419 38.5625 39.7901 38.8L37.7901 37.61C37.6655 37.5324 37.518 37.5 37.3723 37.5182C37.2267 37.5364 37.0917 37.6041 36.9901 37.71L35.1401 39.56C35.0342 39.6616 34.9665 39.7966 34.9483 39.9423C34.9301 40.0879 34.9625 40.2354 35.0401 40.36L36.2301 42.36C35.9917 42.8102 35.7974 43.2824 35.6501 43.77L33.0801 44.4C32.9381 44.4336 32.8116 44.5141 32.7209 44.6284C32.6302 44.7426 32.5806 44.8841 32.5801 45.03V47.65C32.5801 47.7971 32.6294 47.94 32.72 48.056C32.8106 48.1719 32.9373 48.2543 33.0801 48.29L35.6401 48.92C35.8077 49.435 36.0219 49.9338 36.2801 50.41L35.0401 52.48C34.9625 52.6046 34.9301 52.7521 34.9483 52.8977C34.9665 53.0434 35.0342 53.1783 35.1401 53.28L37.0001 55.12C37.1036 55.2227 37.2383 55.2882 37.383 55.3063C37.5278 55.3244 37.6744 55.2941 37.8001 55.22L39.9401 53.94C40.3448 54.1482 40.7663 54.3221 41.2001 54.46L41.8301 57C41.8658 57.1427 41.9481 57.2695 42.0641 57.3601C42.18 57.4507 42.3229 57.4999 42.4701 57.5H45.0901C45.236 57.4994 45.3774 57.4498 45.4917 57.3591C45.606 57.2684 45.6864 57.1419 45.7201 57L46.3601 54.44C46.8543 54.2805 47.3329 54.0764 47.7901 53.83L49.7001 55C49.8262 55.0724 49.9725 55.1018 50.1168 55.0838C50.2611 55.0657 50.3957 55.0012 50.5001 54.9L52.3501 53C52.4528 52.8964 52.5183 52.7618 52.5364 52.617C52.5545 52.4723 52.5242 52.3256 52.4501 52.2L51.3001 50.33C51.5491 49.8789 51.7502 49.403 51.9001 48.91L54.4701 48.28C54.6118 48.244 54.7373 48.1612 54.8263 48.0451C54.9152 47.929 54.9623 47.7862 54.9601 47.64V45C54.9618 44.855 54.9143 44.7137 54.8253 44.5992C54.7363 44.4848 54.611 44.4039 54.4701 44.37L51.9001 43.74C51.7392 43.2351 51.5316 42.7464 51.2801 42.28L52.4501 40.34C52.5242 40.2143 52.5545 40.0677 52.5364 39.9229C52.5183 39.7782 52.4528 39.6435 52.3501 39.54L50.5001 37.71C50.3984 37.6041 50.2635 37.5364 50.1178 37.5182C49.9722 37.5 49.8247 37.5324 49.7001 37.61L47.7001 38.79C47.2629 38.5535 46.8041 38.3593 46.3301 38.21L45.6901 35.64C45.6561 35.499 45.5753 35.3738 45.4608 35.2847C45.3464 35.1957 45.2051 35.1482 45.0601 35.15H42.4701C42.3238 35.1477 42.1811 35.1949 42.065 35.2838C41.9488 35.3727 41.8661 35.4982 41.8301 35.64ZM40.8301 42.81C41.6827 42.1019 42.7636 41.7277 43.8715 41.7572C44.9794 41.7867 46.0388 42.2178 46.8525 42.9703C47.6663 43.7227 48.1788 44.7453 48.2948 45.8475C48.4107 46.9497 48.1222 48.0565 47.4829 48.9618C46.8435 49.8671 45.897 50.5093 44.8195 50.7687C43.742 51.0281 42.6069 50.8871 41.6256 50.3719C40.6443 49.8568 39.8837 49.0025 39.4853 47.9683C39.0869 46.9341 39.078 45.7903 39.4601 44.75L40.8301 42.81ZM40.8301 42.81L40.2101 43.44L39.8301 43.99L39.5401 44.54L40.8301 42.81Z" stroke="url(#paint0_linear)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32.6299 55.5H9.41992V15.38L21.8099 3H46.5799V32.22" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.8099 3L9.41992 15.38H21.8099V3Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.5 50.15V53.5H11.5V44.5H17.7" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.5 37.15V40.5H11.5V31.5H17.7" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.5 24.15V27.5H11.5V18.5H17.7" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.7898 18L15.5298 23.26L14.2398 22L12.8398 23.4L15.5298 26.09L22.1998 19.43L20.7898 18Z" stroke="url(#paint1_linear)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.7898 31L15.5298 36.26L14.2398 35L12.8398 36.4L15.5298 39.09L22.1998 32.43L20.7898 31Z" stroke="url(#paint2_linear)" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M20.7898 44L15.5298 49.26L14.2398 48L12.8398 49.4L15.5298 52.09L22.1998 45.43L20.7898 44Z" stroke="url(#paint3_linear)" stroke-linecap="round" stroke-linejoin="round"/>
+<defs>
+<linearGradient id="paint0_linear" x1="39.7227" y1="35.1499" x2="49.7869" y2="39.0899" gradientUnits="userSpaceOnUse">
+<stop stop-color="#08EE7F"/>
+<stop offset="1" stop-color="#20CF92"/>
+</linearGradient>
+<linearGradient id="paint1_linear" x1="15.8271" y1="18" x2="19.8568" y2="19.8228" gradientUnits="userSpaceOnUse">
+<stop stop-color="#08EE7F"/>
+<stop offset="1" stop-color="#20CF92"/>
+</linearGradient>
+<linearGradient id="paint2_linear" x1="15.8271" y1="31" x2="19.8568" y2="32.8228" gradientUnits="userSpaceOnUse">
+<stop stop-color="#08EE7F"/>
+<stop offset="1" stop-color="#20CF92"/>
+</linearGradient>
+<linearGradient id="paint3_linear" x1="15.8271" y1="44" x2="19.8568" y2="45.8228" gradientUnits="userSpaceOnUse">
+<stop stop-color="#08EE7F"/>
+<stop offset="1" stop-color="#20CF92"/>
+</linearGradient>
+</defs>
+</svg>
