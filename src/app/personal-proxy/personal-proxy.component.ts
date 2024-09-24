@@ -27,6 +27,7 @@ export class PersonalProxyComponent implements OnInit {
   messengerApps: MajorServices[] = [];
   //Methods
   methods = new Methods();
+  intiated: boolean = false;
 
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
@@ -72,6 +73,13 @@ export class PersonalProxyComponent implements OnInit {
         console.error('Error fetching messenger apps data', error),
     });
   }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.intiated = true;
+    }, 200);
+  }
+
   openDiv(evt: Event): void {
     this.methods.openable.openDiv(evt);
   }

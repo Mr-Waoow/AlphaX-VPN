@@ -9,6 +9,7 @@ import { DataService } from '../shared/services/data.service';
 })
 export class WhiteLabelComponent implements OnInit {
   features: Feature[] = [];
+  intiated: boolean = false;
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
     this.dataService.getWhiteLabelFeatures().subscribe({
@@ -17,5 +18,11 @@ export class WhiteLabelComponent implements OnInit {
       },
       error: (error) => console.error('Error fetching features data', error),
     });
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.intiated = true;
+    }, 200);
   }
 }

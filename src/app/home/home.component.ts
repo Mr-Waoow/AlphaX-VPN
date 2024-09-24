@@ -4,7 +4,12 @@ import { GeneralStatistic } from '../shared/interfaces/general-statistic';
 import { PopularRate } from '../shared/interfaces/popular-rate';
 import { DataService } from '../shared/services/data.service';
 import { ProxyList } from '../shared/interfaces/proxy-list';
-import { faShare, faEye, faComment, faLink } from '@fortawesome/free-solid-svg-icons';
+import {
+  faShare,
+  faEye,
+  faComment,
+  faLink,
+} from '@fortawesome/free-solid-svg-icons';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { ClientData } from '../shared/interfaces/client-data';
 
@@ -27,6 +32,7 @@ export class HomeComponent implements OnInit {
   //Testimonials
   faLink = faLink;
   clientsData: ClientData[] = [];
+  intiated: boolean = false;
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
     //Statistics
@@ -34,7 +40,8 @@ export class HomeComponent implements OnInit {
       next: (data: GeneralStatistic[]) => {
         this.generalStatistics = data;
       },
-      error: (error) => console.error('Error fetching general statistics data', error),
+      error: (error) =>
+        console.error('Error fetching general statistics data', error),
     });
     //Blog
     this.dataService.getBlogs().subscribe({
@@ -48,7 +55,8 @@ export class HomeComponent implements OnInit {
       next: (data: PopularRate[]) => {
         this.popularRates = data;
       },
-      error: (error) => console.error('Error fetching popular rates data', error),
+      error: (error) =>
+        console.error('Error fetching popular rates data', error),
     });
     //Proxy Services
     this.dataService.getProxyList().subscribe({
@@ -58,12 +66,17 @@ export class HomeComponent implements OnInit {
       error: (error) => console.error('Error fetching proxy list data', error),
     });
     //Testimonials
-   this.dataService.getClientData().subscribe({
+    this.dataService.getClientData().subscribe({
       next: (data: ClientData[]) => {
         this.clientsData = data;
       },
       error: (error) => console.error('Error fetching client data', error),
-   });
+    });
+  }
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.intiated = true;
+    }, 200);
   }
   customOptions: OwlOptions = {
     mouseDrag: false,

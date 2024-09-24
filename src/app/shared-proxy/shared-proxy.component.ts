@@ -34,6 +34,7 @@ export class SharedProxyComponent implements OnInit {
   operatingSystems: OperatingSystem[] = [];
   freeProxies: Feature[] = [];
   private _filteredCountries: Country[] = [];
+  intiated: boolean = false;
   get filteredCountries(): Country[] {
     return this._filteredCountries;
   }
@@ -81,6 +82,13 @@ export class SharedProxyComponent implements OnInit {
         console.error('Error fetching free proxies data', error),
     });
   }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.intiated = true;
+    }, 200);
+  }
+
   openDivTarget(evt: Event, id: string): void {
     this.methods.openable.openDivTarget(evt, id);
   }

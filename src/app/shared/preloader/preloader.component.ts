@@ -9,7 +9,6 @@ export class PreloaderComponent implements OnInit {
   constructor(private el: ElementRef) {}
 
   ngOnInit() {
-    window.setTimeout(() => this.fadeout(), 500);
   }
 
   fadeout() {

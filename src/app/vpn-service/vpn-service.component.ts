@@ -16,6 +16,7 @@ export class VpnServiceComponent implements OnInit {
   vpnPrices: VpnPrice[] = [];
   platforms: Platform[] = [];
   features: Feature[] = [];
+  intiated: boolean = false;
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
@@ -43,5 +44,11 @@ export class VpnServiceComponent implements OnInit {
       },
       error: (error) => console.error('Error fetching features data', error),
     });
+  }
+
+  ngAfterViewInit(): void {
+    setTimeout(() => {
+      this.intiated = true;
+    }, 200);
   }
 }
