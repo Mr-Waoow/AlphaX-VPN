@@ -33,15 +33,45 @@ export class MobileProxyComponent implements OnInit{
   frequentlyAskes: PersonalQuestion[] = [];
   constructor(private dataService:DataService) {}
   ngOnInit(): void {
-    this.majorServices = this.dataService.getMajorServices();
-    this.allCountries = this.dataService.getCountriesProxy();
+    this.dataService.getMajorServices().subscribe({
+     next:(data: MajorServices[]) => {
+       this.majorServices = data;
+     },
+      error:(error) => console.error('Error fetching major services data', error),
+    });
+    this.dataService.getCountriesProxy().subscribe({
+      next:(data: CountryProxy[]) => {
+        this.allCountries = data;
+      },
+      error:(error) => console.error('Error fetching countries data', error),
+    });
     this.countries = this.allCountries.filter((country) => {
       return country.isMobile;
     }); //get countries from data service
-    this.messengerApps = this.dataService.getMessengerApps();
-    this.privateRentFeatures = this.dataService.getPrivateRentFeatures();
-    this.mobileProxiesProps = this.dataService.getMobileProxiesProps();
-    this.frequentlyAskes = this.dataService.getFrequentlyAskes();
+    this.dataService.getMessengerApps().subscribe({
+      next:(data: MajorServices[]) => {
+        this.messengerApps = data;
+      },
+      error:(error) => console.error('Error fetching messenger apps data', error),
+    });
+    this.dataService.getPrivateRentFeatures().subscribe({
+      next:(data: Feature[]) => {
+        this.privateRentFeatures = data;
+      },
+      error:(error) => console.error('Error fetching private rent features data', error),
+    });
+    this.dataService.getMobileProxiesProps().subscribe({
+      next:(data: Feature[]) => {
+        this.mobileProxiesProps = data;
+      },
+      error:(error) => console.error('Error fetching mobile proxies props data', error),
+    });
+    this.dataService.getFrequentlyAskes().subscribe({
+      next:(data: PersonalQuestion[]) => {
+        this.frequentlyAskes = data;
+      },
+      error:(error) => console.error('Error fetching frequently askes data', error),
+    });
   }
   openDiv(evt: Event): void {
     this.methods.openable.openDiv(evt);

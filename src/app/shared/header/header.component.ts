@@ -1,4 +1,10 @@
-import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import {
+  Component,
+  ElementRef,
+  HostListener,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 import {
   faFacebook,
   faLinkedinIn,
@@ -45,7 +51,10 @@ export class HeaderComponent implements OnInit {
   offeredServices: OfferedService[] = [];
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
-    this.offeredServices = this.dataService.getOfferedService();
+    this.dataService.getOfferedService().subscribe({
+      next: (data: OfferedService[]) => (this.offeredServices = data),
+      error: (error) => (console.error('Error fetching offered services data', error)),
+    });
   }
   ngAfterViewInit() {
     if (this.headerNavbar) {

@@ -1,22 +1,48 @@
-<div class="select">
+<div *ngIf="this.isCountries" class="select">
   <div (click)="this.toggleSelect()" class="selected-option">
     <div #selectDisplay class="select-display">
-    <div class="img-box">
-      <img src="{{this.imgPath}}{{this.filteredList[0].icon}}.{{this.imgType}}" alt="{{this.filteredList[0].name}}"
-        title="{{this.filteredList[0].name}}">
+      <div class="img-box">
+        <img src="{{this.imgPath}}{{this.countriesList[0].icon}}.{{this.imgType}}" alt="{{this.countriesList[0].name}}"
+          title="{{this.countriesList[0].name}}">
+      </div>
+      <div class="text">
+        <span>{{this.countriesList[0].name}}</span>
+      </div>
     </div>
-    <div class="text">
-      <span>{{this.filteredList[0].name}}</span>
-    </div>
-  </div>
     <span #icon class='icon'><fa-icon [icon]='faCaretDown'></fa-icon></span>
   </div>
-  <div #selectList class="select-list">
-    <div *ngIf="this.isCountries" class="form-group">
+  <div *ngIf="this.isCountries" #selectList class="select-list">
+    <div class="form-group">
       <input [(ngModel)]="this.filteredCountriesValue" type="text">
     </div>
     <ul class="options">
       <li *ngFor="let item of this.filteredList" (click)="selectedOption($event)" class="option">
+        <div class="img-box">
+          <img src="{{this.imgPath}}{{this.item.icon}}.{{this.imgType}}" alt="{{item.name}}" title="{{item.name}}">
+        </div>
+        <div class="text">
+          <span>{{item.name}}</span>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>
+<div *ngIf="!this.isCountries" class="select">
+  <div (click)="this.toggleSelect()" class="selected-option">
+    <div #selectDisplay class="select-display">
+      <div class="img-box">
+        <img src="{{this.imgPath}}{{this.massangersList[0].icon}}.{{this.imgType}}"
+          alt="{{this.massangersList[0].name}}" title="{{this.massangersList[0].name}}">
+      </div>
+      <div class="text">
+        <span>{{this.massangersList[0].name}}</span>
+      </div>
+    </div>
+    <span #icon class='icon'><fa-icon [icon]='faCaretDown'></fa-icon></span>
+  </div>
+  <div #selectList class="select-list">
+    <ul class="options">
+      <li *ngFor="let item of this.massangersList" (click)="selectedOption($event)" class="option">
         <div class="img-box">
           <img src="{{this.imgPath}}{{this.item.icon}}.{{this.imgType}}" alt="{{item.name}}" title="{{item.name}}">
         </div>

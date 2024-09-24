@@ -14,6 +14,11 @@ export class ServerProxiesComponent implements OnInit {
 
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
-    this.dataCenterFeatures = this.dataService.getDataCenterFeatures();
+    this.dataService.getDataCenterFeatures().subscribe({
+      next: (features: Feature[]) => {
+        this.dataCenterFeatures = features;
+      },
+      error: (error) => console.error('Error fetching data center features data', error),
+    });
   }
 }

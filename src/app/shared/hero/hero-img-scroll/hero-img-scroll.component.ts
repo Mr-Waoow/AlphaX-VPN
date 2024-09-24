@@ -11,7 +11,12 @@ export class HeroImgScrollComponent implements OnInit {
   scrollingFlags: ScrollingFlag[] = [];
   constructor(private dataService: DataService) { }
   ngOnInit(): void {
-    this.scrollingFlags = this.dataService.getScrollingFlags();
+    this.dataService.getScrollingFlags().subscribe({
+      next: (data: ScrollingFlag[]) => {
+        this.scrollingFlags = data;
+      },
+      error: (error) => console.error('Error fetching scrolling flags data', error),
+    });
   }
   createRange(number:number){
     // return new Array(number);

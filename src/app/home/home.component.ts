@@ -30,13 +30,40 @@ export class HomeComponent implements OnInit {
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
     //Statistics
-    this.generalStatistics = this.dataService.getGeneralStatistics();
-    this.blogs = this.dataService.getBlogs();
-    this.popularRates = this.dataService.getPopularRates();
+    this.dataService.getGeneralStatistics().subscribe({
+      next: (data: GeneralStatistic[]) => {
+        this.generalStatistics = data;
+      },
+      error: (error) => console.error('Error fetching general statistics data', error),
+    });
+    //Blog
+    this.dataService.getBlogs().subscribe({
+      next: (data: Blog[]) => {
+        this.blogs = data;
+      },
+      error: (error) => console.error('Error fetching blogs data', error),
+    });
+    //Popular Rates
+    this.dataService.getPopularRates().subscribe({
+      next: (data: PopularRate[]) => {
+        this.popularRates = data;
+      },
+      error: (error) => console.error('Error fetching popular rates data', error),
+    });
     //Proxy Services
-    this.proxyLists = this.dataService.getProxyList();
+    this.dataService.getProxyList().subscribe({
+      next: (data: ProxyList[]) => {
+        this.proxyLists = data;
+      },
+      error: (error) => console.error('Error fetching proxy list data', error),
+    });
     //Testimonials
-    this.clientsData = this.dataService.getClientData();
+   this.dataService.getClientData().subscribe({
+      next: (data: ClientData[]) => {
+        this.clientsData = data;
+      },
+      error: (error) => console.error('Error fetching client data', error),
+   });
   }
   customOptions: OwlOptions = {
     mouseDrag: false,

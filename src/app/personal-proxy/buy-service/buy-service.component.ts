@@ -176,49 +176,63 @@ export class BuyServiceComponent implements OnInit {
 
   //Lifecycle Hooks
   ngOnInit(): void {
-    this.countriesProxy = this.dataService.getCountriesProxy();
-    if (this.isMobile) {
-      this.filteredCountriesProxy = this.countriesProxy.filter((country) => {
-        return country.isMobile;
+    try {
+      this.dataService.getCountriesProxy().subscribe({
+        next: (data: CountryProxy[]) => {
+          this.countriesProxy = data;
+          if (this.isMobile) {
+            this.filteredCountriesProxy = this.countriesProxy.filter(
+              (country) => {
+                return country.isMobile;
+              }
+            );
+            this.countriesProxy1 = this.filteredCountriesProxy.slice(
+              0,
+              Math.floor(this.filteredCountriesProxy.length / 3) + 1
+            );
+            this.countriesProxy2 = this.filteredCountriesProxy.slice(
+              Math.floor(this.filteredCountriesProxy.length / 3) + 1,
+              Math.floor((this.filteredCountriesProxy.length / 3) * 2) + 1
+            );
+            this.countriesProxy3 = this.filteredCountriesProxy.slice(
+              Math.floor((this.filteredCountriesProxy.length / 3) * 2) + 1,
+              this.filteredCountriesProxy.length
+            );
+            this.countriesProxy31 = this.filteredCountriesProxy.slice(
+              0,
+              Math.floor(this.countriesProxy3.length / 2) + 1
+            );
+            this.countriesProxy32 = this.filteredCountriesProxy.slice(
+              Math.floor(this.countriesProxy3.length / 2) + 1,
+              this.countriesProxy3.length
+            );
+          } else {
+            this.filteredCountriesProxy = data;
+          }
+          this.countryProxy = this.filteredCountriesProxy[0];
+          this.privateCountriesNumber = data.filter(
+            (country) => country.isPrivate
+          ).length;
+          this.sharedCountriesNumber = data.filter(
+            (country) => country.isShared
+          ).length;
+          setTimeout(() => {
+            if (this.isMobile) {
+            } else {
+              this.countriesBtnElementRef.toArray()[0].nativeElement.click();
+              if (this.isPrivate)
+                this.radioMonthInputElement.nativeElement.click();
+              else this.radioWeekInputElement.nativeElement.click();
+            }
+          }, 50);
+        },
+        error: (error) =>
+          console.error('Error fetching countries proxy data', error),
       });
-      this.countriesProxy1 = this.filteredCountriesProxy.slice(
-        0,
-        Math.floor(this.filteredCountriesProxy.length / 3) + 1
-      );
-      this.countriesProxy2 = this.filteredCountriesProxy.slice(
-        Math.floor(this.filteredCountriesProxy.length / 3) + 1,
-        Math.floor((this.filteredCountriesProxy.length / 3) * 2) + 1
-      );
-      this.countriesProxy3 = this.filteredCountriesProxy.slice(
-        Math.floor((this.filteredCountriesProxy.length / 3) * 2) + 1,
-        this.filteredCountriesProxy.length
-      );
-      this.countriesProxy31 = this.filteredCountriesProxy.slice(
-        0,
-        Math.floor(this.countriesProxy3.length / 2) + 1
-      );
-      this.countriesProxy32 = this.filteredCountriesProxy.slice(
-        Math.floor(this.countriesProxy3.length / 2) + 1,
-        this.countriesProxy3.length
-      );
-    } else {
-      this.filteredCountriesProxy = this.countriesProxy;
-    }
-    this.countryProxy = this.filteredCountriesProxy[0];
-    this.privateCountriesNumber = this.countriesProxy.filter(
-      (country) => country.isPrivate
-    ).length;
-    this.sharedCountriesNumber = this.countriesProxy.filter(
-      (country) => country.isShared
-    ).length;
-    if (this.isMobile) {
-    } else {
-      setTimeout(() => {
-        this.countriesBtnElementRef.toArray()[0].nativeElement.click();
-      }, 50);
+    } catch (error) {
+      console.error('Error fetching countries proxy data', error);
     }
   }
-  ngOnChanges(): void {}
 
   //Methods
   //ShowHide
@@ -238,6 +252,7 @@ export class BuyServiceComponent implements OnInit {
     this.resetValues(this.isPrivate);
     setTimeout(() => {
       this.countriesBtnElementRef.toArray()[0].nativeElement.click();
+      this.radioMonthInputElement.nativeElement.click();
     }, 50);
   }
   showShared(evt: Event): void {
@@ -255,6 +270,7 @@ export class BuyServiceComponent implements OnInit {
     this.isPrivate = false;
     setTimeout(() => {
       this.countriesBtnElementRef.toArray()[0].nativeElement.click();
+      this.radioWeekInputElement.nativeElement.click();
     }, 50);
   }
   //Selected
@@ -263,10 +279,14 @@ export class BuyServiceComponent implements OnInit {
     this.methods.selected.removeClass(this.citiesBtnElementRef, 0, 'selected');
     this.resetValues(this.isPrivate);
     if (this.isPrivate) {
-      this.radioMonthInputElement.nativeElement.checked = true;
       this.citiesBtnElementRef.toArray()[0].nativeElement.click();
+      setTimeout(() => {
+        this.radioMonthInputElement.nativeElement.click();
+      }, 50);
     } else {
-      this.radioWeekInputElement.nativeElement.checked = true;
+      setTimeout(() => {
+        this.radioWeekInputElement.nativeElement.click();
+      }, 50);
     }
     this.countryProxy = this.filteredCountriesProxy[i];
   }

@@ -13,7 +13,13 @@ export class FaqComponent implements OnInit {
   methods = new Methods();
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
-    this.questions = this.dataService.getQuestionsData();
+    this.dataService.getQuestionsData().subscribe({
+      next: (data: QuestionData[]) => {
+        this.questions = data;
+        console.log('Questions data', data);
+      },
+      error: (error) => (console.error('Error fetching questions data', error)),
+    });
   }
   openDivPlus(evt: Event): void {
     this.methods.openable.openDivPlus(evt);

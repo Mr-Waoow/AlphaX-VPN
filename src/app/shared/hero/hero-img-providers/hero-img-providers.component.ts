@@ -12,6 +12,11 @@ export class SiderImgProvidersComponent implements OnInit {
   assignClass: string[] = [];
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
-    this.providersTitle = this.dataService.getProvidersTitles();
+    this.dataService.getProvidersTitles().subscribe({
+      next: (data: ProviderTitle[]) => {
+        this.providersTitle = data;
+      },
+      error: (error) => console.error('Error fetching providers titles data', error),
+    });
   }
 }

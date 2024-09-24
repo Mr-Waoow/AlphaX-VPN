@@ -86,23 +86,23 @@
                   Period:
                 </div>
                 <label data-value="day" class="buy-bill-item-radio-button d-none">
-                  <input #radioDay (change)="this.selectedPeriod($event, 'private')" data-index="0" type="radio"
+                  <input #radioDay (click)="this.selectedPeriod($event, 'private')" data-index="0" type="radio"
                     name="period" value="day"><span>day</span>
                 </label>
                 <label data-value="week" class="buy-bill-item-radio-button d-none">
-                  <input #radioWeek (change)="this.selectedPeriod($event, 'private')" data-index="1" type="radio"
+                  <input #radioWeek (click)="this.selectedPeriod($event, 'private')" data-index="1" type="radio"
                     name="period" value="week"><span>Week</span>
                 </label>
                 <label data-value="month" class="buy-bill-item-radio-button">
-                  <input #radioMonth (change)="this.selectedPeriod($event, 'private')" data-index="2" type="radio"
+                  <input #radioMonth (click)="this.selectedPeriod($event, 'private')" data-index="2" type="radio"
                     name="period" value="month"><span>Month</span>
                 </label>
                 <label data-value="halfyear" class="buy-bill-item-radio-button">
-                  <input #radioHalfyear (change)="this.selectedPeriod($event, 'private')" data-index="3" type="radio"
+                  <input #radioHalfyear (click)="this.selectedPeriod($event, 'private')" data-index="3" type="radio"
                     name="period" value="halfyear"><span>Halfyear</span>
                 </label>
                 <label data-value="year" class="buy-bill-item-radio-button">
-                  <input #radioYear (change)="this.selectedPeriod($event, 'private')" data-index="4" type="radio"
+                  <input #radioYear (click)="this.selectedPeriod($event, 'private')" data-index="4" type="radio"
                     name="period" value="year"><span>Year</span>
                 </label>
               </div>
@@ -190,23 +190,23 @@
                 Period:
               </div>
               <label data-value="day" class="buy-bill-item-radio-button d-none">
-                <input #radioDay (change)="this.selectedPeriod($event, 'Shared')" data-index="0" type="radio"
+                <input #radioDay (click)="this.selectedPeriod($event, 'Shared')" data-index="0" type="radio"
                   name="period" value="day"><span>day</span>
               </label>
               <label data-value="week" class="buy-bill-item-radio-button">
-                <input #radioWeek (change)="this.selectedPeriod($event, 'Shared')" data-index="1" type="radio"
+                <input #radioWeek (click)="this.selectedPeriod($event, 'Shared')" data-index="1" type="radio"
                   name="period" value="week"><span>Week</span>
               </label>
               <label data-value="month" class="buy-bill-item-radio-button">
-                <input #radioMonth (change)="this.selectedPeriod($event, 'Shared')" data-index="2" type="radio"
+                <input #radioMonth (click)="this.selectedPeriod($event, 'Shared')" data-index="2" type="radio"
                   name="period" value="month"><span>Month</span>
               </label>
               <label data-value="halfyear" class="buy-bill-item-radio-button">
-                <input #radioHalfyear (change)="this.selectedPeriod($event, 'Shared')" data-index="3" type="radio"
+                <input #radioHalfyear (click)="this.selectedPeriod($event, 'Shared')" data-index="3" type="radio"
                   name="period" value="halfyear"><span>Halfyear</span>
               </label>
               <label data-value="year" class="buy-bill-item-radio-button d-none">
-                <input #radioYear (change)="this.selectedPeriod($event, 'Shared')" data-index="4" type="radio"
+                <input #radioYear (click)="this.selectedPeriod($event, 'Shared')" data-index="4" type="radio"
                   name="period" value="year"><span>Year</span>
               </label>
             </div>
@@ -266,7 +266,7 @@
       </div>
     </div>
     <div class="row">
-      <div class="col-6 col-md-4">
+      <div class="col-12 col-md-6 col-lg-4">
         <div #countriesBtn *ngFor="let countryProxy of this.countriesProxy1; let i = index" class="mobile-card">
           <div (click)="this.openMobileTarge($event, i)" class="card-header">
             <span class="flex-basis-10">
@@ -301,23 +301,23 @@
             <span class="label"> Period </span>
             <div class="buy-bill-item-radio">
               <label data-value="day" class="buy-bill-item-radio-button">
-                <input #radioDay (change)="this.selectedPeriod($event, 'mobile')" data-index="0" type="radio"
+                <input #radioDay (click)="this.selectedPeriod($event, 'mobile')" data-index="0" type="radio"
                   name="period" value="day"><span>day</span>
               </label>
               <label data-value="week" class="buy-bill-item-radio-button">
-                <input #radioWeek (change)="this.selectedPeriod($event, 'mobile')" data-index="1" type="radio"
+                <input #radioWeek (click)="this.selectedPeriod($event, 'mobile')" data-index="1" type="radio"
                   name="period" value="week"><span>Week</span>
               </label>
               <label data-value="month" class="buy-bill-item-radio-button">
-                <input #radioMonth (change)="this.selectedPeriod($event, 'mobile')" data-index="2" type="radio"
+                <input #radioMonth (click)="this.selectedPeriod($event, 'mobile')" data-index="2" type="radio"
                   name="period" value="month"><span>Month</span>
               </label>
               <label data-value="halfyear" class="buy-bill-item-radio-button d-none">
-                <input #radioHalfyear (change)="this.selectedPeriod($event, 'mobile')" data-index="3" type="radio"
+                <input #radioHalfyear (click)="this.selectedPeriod($event, 'mobile')" data-index="3" type="radio"
                   name="period" value="halfyear"><span>Halfyear</span>
               </label>
               <label data-value="year" class="buy-bill-item-radio-button d-none">
-                <input #radioYear (change)="this.selectedPeriod($event, 'mobile')" data-index="4" type="radio"
+                <input #radioYear (click)="this.selectedPeriod($event, 'mobile')" data-index="4" type="radio"
                   name="period" value="year"><span>Year</span>
               </label>
             </div>
@@ -336,7 +336,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6 col-md-4">
+      <div class="col-12 col-md-6 col-lg-4">
         <div #countriesBtn *ngFor="let countryProxy of this.countriesProxy2; let i = index" class="mobile-card">
           <div (click)="this.openMobileTarge($event, i)" class="card-header">
             <span class="flex-basis-10">
@@ -371,23 +371,23 @@
             <span class="label"> Period </span>
             <div class="buy-bill-item-radio">
               <label data-value="day" class="buy-bill-item-radio-button">
-                <input #radioDay (change)="this.selectedPeriod($event, 'mobile')" data-index="0" type="radio"
+                <input #radioDay (click)="this.selectedPeriod($event, 'mobile')" data-index="0" type="radio"
                   name="period" value="day"><span>day</span>
               </label>
               <label data-value="week" class="buy-bill-item-radio-button">
-                <input #radioWeek (change)="this.selectedPeriod($event, 'mobile')" data-index="1" type="radio"
+                <input #radioWeek (click)="this.selectedPeriod($event, 'mobile')" data-index="1" type="radio"
                   name="period" value="week"><span>Week</span>
               </label>
               <label data-value="month" class="buy-bill-item-radio-button">
-                <input #radioMonth (change)="this.selectedPeriod($event, 'mobile')" data-index="2" type="radio"
+                <input #radioMonth (click)="this.selectedPeriod($event, 'mobile')" data-index="2" type="radio"
                   name="period" value="month"><span>Month</span>
               </label>
               <label data-value="halfyear" class="buy-bill-item-radio-button d-none">
-                <input #radioHalfyear (change)="this.selectedPeriod($event, 'mobile')" data-index="3" type="radio"
+                <input #radioHalfyear (click)="this.selectedPeriod($event, 'mobile')" data-index="3" type="radio"
                   name="period" value="halfyear"><span>Halfyear</span>
               </label>
               <label data-value="year" class="buy-bill-item-radio-button d-none">
-                <input #radioYear (change)="this.selectedPeriod($event, 'mobile')" data-index="4" type="radio"
+                <input #radioYear (click)="this.selectedPeriod($event, 'mobile')" data-index="4" type="radio"
                   name="period" value="year"><span>Year</span>
               </label>
             </div>
@@ -406,7 +406,7 @@
           </div>
         </div>
       </div>
-      <div class="d-none d-md-block col-md-4">
+      <div class="d-none d-lg-block col-lg-4">
         <div #countriesBtn *ngFor="let countryProxy of this.countriesProxy3; let i = index" class="mobile-card">
           <div (click)="this.openMobileTarge($event, i)" class="card-header">
             <span class="flex-basis-10">
@@ -441,23 +441,23 @@
             <span class="label"> Period </span>
             <div class="buy-bill-item-radio">
               <label data-value="day" class="buy-bill-item-radio-button">
-                <input #radioDay (change)="this.selectedPeriod($event, 'mobile')" data-index="0" type="radio"
+                <input #radioDay (click)="this.selectedPeriod($event, 'mobile')" data-index="0" type="radio"
                   name="period" value="day"><span>day</span>
               </label>
               <label data-value="week" class="buy-bill-item-radio-button">
-                <input #radioWeek (change)="this.selectedPeriod($event, 'mobile')" data-index="1" type="radio"
+                <input #radioWeek (click)="this.selectedPeriod($event, 'mobile')" data-index="1" type="radio"
                   name="period" value="week"><span>Week</span>
               </label>
               <label data-value="month" class="buy-bill-item-radio-button">
-                <input #radioMonth (change)="this.selectedPeriod($event, 'mobile')" data-index="2" type="radio"
+                <input #radioMonth (click)="this.selectedPeriod($event, 'mobile')" data-index="2" type="radio"
                   name="period" value="month"><span>Month</span>
               </label>
               <label data-value="halfyear" class="buy-bill-item-radio-button d-none">
-                <input #radioHalfyear (change)="this.selectedPeriod($event, 'mobile')" data-index="3" type="radio"
+                <input #radioHalfyear (click)="this.selectedPeriod($event, 'mobile')" data-index="3" type="radio"
                   name="period" value="halfyear"><span>Halfyear</span>
               </label>
               <label data-value="year" class="buy-bill-item-radio-button d-none">
-                <input #radioYear (change)="this.selectedPeriod($event, 'mobile')" data-index="4" type="radio"
+                <input #radioYear (click)="this.selectedPeriod($event, 'mobile')" data-index="4" type="radio"
                   name="period" value="year"><span>Year</span>
               </label>
             </div>
@@ -476,7 +476,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6 d-block d-md-none">
+      <div class="col-12 col-md-6 d-block d-lg-none">
         <div #countriesBtn *ngFor="let countryProxy of this.countriesProxy31; let i = index" class="mobile-card">
           <div (click)="this.openMobileTarge($event, i)" class="card-header">
             <span class="flex-basis-10">
@@ -511,23 +511,23 @@
             <span class="label"> Period </span>
             <div class="buy-bill-item-radio">
               <label data-value="day" class="buy-bill-item-radio-button">
-                <input #radioDay (change)="this.selectedPeriod($event, 'mobile')" data-index="0" type="radio"
+                <input #radioDay (click)="this.selectedPeriod($event, 'mobile')" data-index="0" type="radio"
                   name="period" value="day"><span>day</span>
               </label>
               <label data-value="week" class="buy-bill-item-radio-button">
-                <input #radioWeek (change)="this.selectedPeriod($event, 'mobile')" data-index="1" type="radio"
+                <input #radioWeek (click)="this.selectedPeriod($event, 'mobile')" data-index="1" type="radio"
                   name="period" value="week"><span>Week</span>
               </label>
               <label data-value="month" class="buy-bill-item-radio-button">
-                <input #radioMonth (change)="this.selectedPeriod($event, 'mobile')" data-index="2" type="radio"
+                <input #radioMonth (click)="this.selectedPeriod($event, 'mobile')" data-index="2" type="radio"
                   name="period" value="month"><span>Month</span>
               </label>
               <label data-value="halfyear" class="buy-bill-item-radio-button d-none">
-                <input #radioHalfyear (change)="this.selectedPeriod($event, 'mobile')" data-index="3" type="radio"
+                <input #radioHalfyear (click)="this.selectedPeriod($event, 'mobile')" data-index="3" type="radio"
                   name="period" value="halfyear"><span>Halfyear</span>
               </label>
               <label data-value="year" class="buy-bill-item-radio-button d-none">
-                <input #radioYear (change)="this.selectedPeriod($event, 'mobile')" data-index="4" type="radio"
+                <input #radioYear (click)="this.selectedPeriod($event, 'mobile')" data-index="4" type="radio"
                   name="period" value="year"><span>Year</span>
               </label>
             </div>
@@ -546,7 +546,7 @@
           </div>
         </div>
       </div>
-      <div class="col-6 d-block d-md-none">
+      <div class="col-12 col-md-6 d-block d-lg-none">
         <div #countriesBtn *ngFor="let countryProxy of this.countriesProxy32; let i = index" class="mobile-card">
           <div (click)="this.openMobileTarge($event, i)" class="card-header">
             <span class="flex-basis-10">
@@ -581,23 +581,23 @@
             <span class="label"> Period </span>
             <div class="buy-bill-item-radio">
               <label data-value="day" class="buy-bill-item-radio-button">
-                <input #radioDay (change)="this.selectedPeriod($event, 'mobile')" data-index="0" type="radio"
+                <input #radioDay (click)="this.selectedPeriod($event, 'mobile')" data-index="0" type="radio"
                   name="period" value="day"><span>day</span>
               </label>
               <label data-value="week" class="buy-bill-item-radio-button">
-                <input #radioWeek (change)="this.selectedPeriod($event, 'mobile')" data-index="1" type="radio"
+                <input #radioWeek (click)="this.selectedPeriod($event, 'mobile')" data-index="1" type="radio"
                   name="period" value="week"><span>Week</span>
               </label>
               <label data-value="month" class="buy-bill-item-radio-button">
-                <input #radioMonth (change)="this.selectedPeriod($event, 'mobile')" data-index="2" type="radio"
+                <input #radioMonth (click)="this.selectedPeriod($event, 'mobile')" data-index="2" type="radio"
                   name="period" value="month"><span>Month</span>
               </label>
               <label data-value="halfyear" class="buy-bill-item-radio-button d-none">
-                <input #radioHalfyear (change)="this.selectedPeriod($event, 'mobile')" data-index="3" type="radio"
+                <input #radioHalfyear (click)="this.selectedPeriod($event, 'mobile')" data-index="3" type="radio"
                   name="period" value="halfyear"><span>Halfyear</span>
               </label>
               <label data-value="year" class="buy-bill-item-radio-button d-none">
-                <input #radioYear (change)="this.selectedPeriod($event, 'mobile')" data-index="4" type="radio"
+                <input #radioYear (click)="this.selectedPeriod($event, 'mobile')" data-index="4" type="radio"
                   name="period" value="year"><span>Year</span>
               </label>
             </div>

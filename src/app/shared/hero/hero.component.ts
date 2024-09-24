@@ -19,7 +19,6 @@ export class HeroComponent implements AfterViewInit {
   showText4 = false; // Initially hide the text
   showText5 = false; // Initially hide the text
   showText6 = false; // Initially hide the text
-
   ngAfterViewInit() {
     // Ensure element and styles are loaded before displaying
     setTimeout(() => {

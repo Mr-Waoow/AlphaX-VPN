@@ -33,7 +33,7 @@ import { BuyServiceComponent } from './personal-proxy/buy-service/buy-service.co
 import { FormsModule } from '@angular/forms';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatSelectCountryModule } from '@angular-material-extensions/select-country';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -98,13 +98,12 @@ import { CardBuyPlusComponent } from './exclusive-plus/card-buy-plus/card-buy-pl
     FormsModule,
     MatSlideToggleModule,
     MatSelectCountryModule,
-    HttpClientModule,
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
     FormsModule,
   ],
-  providers: [provideAnimationsAsync()],
+  providers: [provideAnimationsAsync(),provideHttpClient()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

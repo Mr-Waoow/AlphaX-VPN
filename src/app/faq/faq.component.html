@@ -3,7 +3,7 @@
   <div class="container">
     <div class="row my-4">
       <div class="col-md-8">
-        <div class="openable" *ngFor="let question of questions">
+        <div class="openable" *ngFor="let question of this.questions">
           <h6 (click)="openDivPlus($event)" class="d-flex align-items-center">
             <div class="icon ms-2">
               <span class="toggler-icon r-90 plus"></span>

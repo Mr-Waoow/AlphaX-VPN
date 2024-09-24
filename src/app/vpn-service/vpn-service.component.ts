@@ -19,9 +19,29 @@ export class VpnServiceComponent implements OnInit {
   constructor(private dataService: DataService) {}
 
   ngOnInit(): void {
-    this.vpnPeriods = this.dataService.getVpnPeriods();
-    this.vpnPrices = this.dataService.getVpnPrices();
-    this.platforms = this.dataService.getPlatforms();
-    this.features = this.dataService.getVpnFeatures();
+    this.dataService.getVpnPeriods().subscribe({
+      next: (data: VpnPeriod[]) => {
+        this.vpnPeriods = data;
+      },
+      error: (error) => console.error('Error fetching vpn periods data', error),
+    });
+    this.dataService.getVpnPrices().subscribe({
+      next: (data: VpnPrice[]) => {
+        this.vpnPrices = data;
+      },
+      error: (error) => console.error('Error fetching vpn prices data', error),
+    });
+    this.dataService.getPlatforms().subscribe({
+      next: (data: Platform[]) => {
+        this.platforms = data;
+      },
+      error: (error) => console.error('Error fetching platforms data', error),
+    });
+    this.dataService.getVpnFeatures().subscribe({
+      next: (data: Feature[]) => {
+        this.features = data;
+      },
+      error: (error) => console.error('Error fetching features data', error),
+    });
   }
 }

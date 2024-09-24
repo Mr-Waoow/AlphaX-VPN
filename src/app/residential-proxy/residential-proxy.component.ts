@@ -26,14 +26,39 @@ export class ResidentialProxyComponent {
   frequentlyAskes: PersonalQuestion[] = [];
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
-    this.allCountries = this.dataService.getCountriesProxy();
+    this.dataService.getCountriesProxy().subscribe({
+      next: (data: CountryProxy[]) => {
+        this.allCountries = data;
+      },
+      error: (error) => console.error('Error fetching countries data', error),
+    });
     this.countries = this.allCountries.filter((country) => {
       return country.isMobile;
     }); //get countries from data service
-    this.messengerApps = this.dataService.getMessengerApps();
-    this.residentialFeatures = this.dataService.getResidentialFeatures();
-    this.universalProxyLists = this.dataService.getUniversalProxyLists();
-    this.frequentlyAskes = this.dataService.getFrequentlyAskesResidential();
+    this.dataService.getMessengerApps().subscribe({
+      next: (data: MajorServices[]) => {
+        this.messengerApps = data;
+      },
+      error: (error) => console.error('Error fetching messenger apps data', error),
+    });
+    this.dataService.getResidentialFeatures().subscribe({
+      next: (data: Feature[]) => {
+        this.residentialFeatures = data;
+      },
+      error: (error) => console.error('Error fetching residential features data', error),
+    });
+    this.dataService.getUniversalProxyLists().subscribe({
+      next: (data: Feature[]) => {
+        this.universalProxyLists = data;
+      },
+      error: (error) => console.error('Error fetching universal proxy lists data', error),
+    });
+    this.dataService.getFrequentlyAskesResidential().subscribe({
+      next: (data: PersonalQuestion[]) => {
+        this.frequentlyAskes = data;
+      },
+      error: (error) => console.error('Error fetching frequently asked questions data', error),
+    });
   }
   openDiv(evt: Event): void {
     this.methods.openable.openDiv(evt);

@@ -6,7 +6,11 @@ import { DataService } from '../shared/services/data.service';
 import { Country } from '../shared/interfaces/country';
 import { ProxyChecker } from '../shared/interfaces/proxy-checker';
 import { OperatingSystem } from '../shared/interfaces/operating-system';
-import { faApple, faLinux, faWindows } from '@fortawesome/free-brands-svg-icons';
+import {
+  faApple,
+  faLinux,
+  faWindows,
+} from '@fortawesome/free-brands-svg-icons';
 import { Feature } from '../shared/interfaces/feature';
 
 @Component({
@@ -49,12 +53,33 @@ export class SharedProxyComponent implements OnInit {
   }
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
-    this.sharedPrices = this.dataService.getSharedPrices();
-    this.countries = this.dataService.getCountries();
-    this.filteredCountries = this.countries;
-    this.operatingSystems = this.dataService.getOperatingSystems();
-    this.proxyCheckers = this.dataService.getProxiesCheckers();
-    this.freeProxies = this.dataService.getFreeProxies();
+    this.dataService.getSharedPrices().subscribe({
+      next: (data: SharedPrice[]) => (this.sharedPrices = data),
+      error: (error) =>
+        console.error('Error fetching shared prices data', error),
+    });
+    this.dataService.getCountries().subscribe({
+      next: (data: Country[]) => {
+        this.countries = data;
+        this.filteredCountries = this.countries;
+      },
+      error: (error) => console.error('Error fetching countries data', error),
+    });
+    this.dataService.getOperatingSystems().subscribe({
+      next: (data: OperatingSystem[]) => (this.operatingSystems = data),
+      error: (error) =>
+        console.error('Error fetching operating systems data', error),
+    });
+    this.dataService.getProxiesCheckers().subscribe({
+      next: (data: ProxyChecker[]) => (this.proxyCheckers = data),
+      error: (error) =>
+        console.error('Error fetching proxy checkers data', error),
+    });
+    this.dataService.getFreeProxies().subscribe({
+      next: (data: Feature[]) => (this.freeProxies = data),
+      error: (error) =>
+        console.error('Error fetching free proxies data', error),
+    });
   }
   openDivTarget(evt: Event, id: string): void {
     this.methods.openable.openDivTarget(evt, id);

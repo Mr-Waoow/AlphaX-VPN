@@ -9,9 +9,13 @@ import { DataService } from '../services/data.service';
 })
 export class OfferedServicesComponent implements OnInit {
   offeredServices: OfferedService[] = [];
-  assignedLinks : string[] = [];
+  assignedLinks: string[] = [];
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
-    this.offeredServices = this.dataService.getOfferedService();
+    this.dataService.getOfferedService().subscribe({
+      next: (data: OfferedService[]) => (this.offeredServices = data),
+      error: (error) =>
+        console.error('Error fetching offered services data', error),
+    });
   }
 }

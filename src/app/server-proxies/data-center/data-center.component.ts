@@ -6,9 +6,9 @@ import { DataService } from '../../shared/services/data.service';
 @Component({
   selector: 'xvpn-data-center',
   templateUrl: './data-center.component.html',
-  styleUrl: './data-center.component.css'
+  styleUrl: './data-center.component.css',
 })
-export class DataCenterComponent implements OnInit{
+export class DataCenterComponent implements OnInit {
   faList = faList;
   faGrip = faGrip;
   isGridView = false;
@@ -16,13 +16,18 @@ export class DataCenterComponent implements OnInit{
   dataCenterProxies: CountryProxy[] = [];
   windowWidth = window.innerWidth;
 
-
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
     this.windowWidth = window.innerWidth;
-    this.countriesProxy = this.dataService.getCountriesProxy();
-    this.dataCenterProxies = this.countriesProxy.filter((dataCenter) => {
-      return dataCenter.isDataCenter;
+    this.dataService.getCountriesProxy().subscribe({
+      next: (data: CountryProxy[]) => {
+        this.countriesProxy = data;
+        this.dataCenterProxies = this.countriesProxy.filter((dataCenter) => {
+          return dataCenter.isDataCenter;
+        });
+      },
+      error: (error) =>
+        console.error('Error fetching countries proxy data', error),
     });
   }
   @HostListener('window:resize')

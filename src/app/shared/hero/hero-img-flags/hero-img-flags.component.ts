@@ -18,6 +18,11 @@ export class HeroImgFlagsComponent implements OnInit {
 
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
-    this.flags = this.dataService.getFlags();
+    this.dataService.getFlags().subscribe({
+      next: (data: Flag[]) => {
+        this.flags = data;
+      },
+      error: (error) => console.error('Error fetching flags data', error),
+    });
   }
 }

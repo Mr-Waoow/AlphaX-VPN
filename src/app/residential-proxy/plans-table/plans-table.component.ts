@@ -36,11 +36,23 @@ export class PlansTableComponent implements OnInit {
 
   constructor(private dataService: DataService) {}
   ngOnInit(): void {
-    this.countriesProxy = this.dataService.getCountriesProxy();
+    this.dataService.getCountriesProxy().subscribe({
+      next: (data: CountryProxy[]) => {
+        this.countriesProxy = data;
+      },
+      error: (error) =>
+        console.error('Error fetching countries proxy data', error),
+    });
     this.geoProxy = this.countriesProxy.filter((geo) => {
       return geo.isGeo;
     });
-    this.themedProxy = this.dataService.getThemedProxy();
+    this.dataService.getThemedProxy().subscribe({
+      next: (data: ThemedProxy[]) => {
+        this.themedProxy = data;
+      },
+      error: (error) =>
+        console.error('Error fetching themed proxy data', error),
+    });
     this.rotatingProxy = this.countriesProxy.filter((rotating) => {
       return rotating.isResidential;
     });
