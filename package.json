@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "gitbuild": "ng build --base-href https://mr-waoow.github.io/AlphaX-VPN/",
-    "live": "npx angular-cli-ghpages --dir=docs/browser"
+    "live": "npx angular-cli-ghpages --dir=build/browser"
   },
   "private": true,
   "dependencies": {
